@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 import AllResources from "../components/ProfilePage/AllResources";
 import Location from "../components/ProfilePage/Location";
@@ -15,8 +16,8 @@ function Profile() {
   };
 
   return (
-    <div>
-      <Navbar />
+    <Layout>
+      {/* <Navbar /> */}
       <div className="py-10 flex w-11/12 mx-auto justify-between">
         <div className="flex flex-col w-3/4">
           <Status/>
@@ -30,7 +31,7 @@ function Profile() {
           <Location/>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
