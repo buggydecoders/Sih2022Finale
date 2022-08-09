@@ -4,8 +4,24 @@ import { AiOutlineHome, AiFillBell } from "react-icons/ai";
 import {Link} from 'react-router-dom'
 import {BiCheckDouble} from 'react-icons/bi'
 import {GrStatusCritical} from 'react-icons/gr'
-import {BsFillBagCheckFill} from 'react-icons/bs'
+import {BsBagCheck} from 'react-icons/bs'
 import {RiAccountCircleLine} from 'react-icons/ri'
+import {BsCheck2All} from 'react-icons/bs';
+import Status from "../pages/Status";
+import {MdOutlineGames} from 'react-icons/md';
+import { useLocation } from "react-router-dom";
+
+const NavbarLink = ({text,icon,href})=>{
+  const location = useLocation();
+  const active = location.pathname===href;
+  return (
+    <Link to={href || '/'}className={`${active?' bg-opacity-20 ':'bg-opacity-0 hover:bg-opacity-5'} transition-all rounded-xl text-primary bg-primary flex items-center gap-2 py-3 px-6`}>
+    {icon}
+    <p>{text}</p>
+  </Link>
+  )
+}
+
 
 function Navbar() {
   return (
@@ -21,27 +37,12 @@ function Navbar() {
           <p className="text-gray-500 text-xs">Higher Education Institutes </p>
         </div>
       </div>
-      <ul className="flex font-medium items-center space-x-10">
-        <Link to="/" className="text-primary flex items-center space-x-1">
-          <AiOutlineHome />
-          <p>Dashboard</p>
-        </Link>
-        <Link to="/" className="text-primary flex items-center space-x-1">
-          <BiCheckDouble />
-          <p>Request</p>
-        </Link>
-        <Link to="/" className="text-primary flex items-center space-x-1">
-          <GrStatusCritical />
-          <p>Status</p>
-        </Link>
-        <Link to="/" className="text-primary flex items-center space-x-1">
-          <BsFillBagCheckFill />
-          <p>Saved Items</p>
-        </Link>
-        <Link to="/" className="text-primary flex items-center space-x-1">
-          <RiAccountCircleLine />
-          <p>Profile</p>
-        </Link>
+      <ul className="flex font-medium items-center space-x-4">
+        <NavbarLink href='/' text='Dashboard' icon={<AiOutlineHome size={18}/>}/>
+        <NavbarLink href='/requests' text='Requests' icon={<BsCheck2All size={18}/>}/>
+        <NavbarLink href='/status' text='Status' icon={<MdOutlineGames size={18}/>}/>
+        <NavbarLink href='/saved-items' text='Saved Items' icon={<BsBagCheck size={18}/>}/>
+        <NavbarLink href='/profile' text='Profile' icon={<RiAccountCircleLine size={20}/>}/>
       </ul>
       <button className="rounded-full bg-lightGray p-4">
         <AiFillBell />
