@@ -15,6 +15,7 @@ const globalErrorHandler = require('./middlewares/globalErrorHandler');
 const AppError = require('./utils/appError');
 const authRoute = require('./routes/auth-route')
 const reqRoute = require('./routes/request-route')
+const resRoute = require('./routes/resource-route')
 // view engine setup
 
 // var whitelist = ['http://example1.com', 'http://example2.com']
@@ -78,6 +79,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/api/auth', authRoute)
 app.use('/api/request', reqRoute)
+app.use('/api/resource', resRoute)
 
 
 // handling all (get,post,update,delete.....) unhandled routes
