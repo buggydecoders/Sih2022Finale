@@ -1,0 +1,1752 @@
+[
+  {
+    "IIC ID": "IC201810688",
+    "code": "U-0286",
+    "instituteName": "Pandit Dwarka Prasad Mishra Indian\nInstitute of Information Technology, Design & Manufacturing",
+    "State": "Madhya Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811120",
+    "code": "U-0967",
+    "instituteName": "ATMIYA UNIVERSITY",
+    "State": "Gujarat",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811481",
+    "code": "U-0763",
+    "instituteName": "PARUL UNIVERSITY",
+    "State": "Gujarat",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811566",
+    "code": "U-0970",
+    "instituteName": "INTERNATIONAL INSTITUTE OF\nINFORMATION TECHNOLOGY",
+    "State": "Chhattisgarh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811582",
+    "code": "U-0147",
+    "instituteName": "Pandit Deendayal Petroleum University",
+    "State": "Gujarat",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811638",
+    "code": "U-0834",
+    "instituteName": "MEDI-CAPS UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811648",
+    "code": "U-0757",
+    "instituteName": "AMITY UNIVERSITY",
+    "State": "Chhattisgarh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912350",
+    "code": "U-0727",
+    "instituteName": "JAGRAN LAKECITY UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC202015218",
+    "code": "U-0662",
+    "instituteName": "ORIENTAL UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC202115720",
+    "code": "U-0633",
+    "instituteName": "ITM UNIVERSITY",
+    "State": "Chhattisgarh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810009",
+    "code": "U-0091",
+    "instituteName": "MATS University",
+    "State": "Chhattisgarh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810037",
+    "code": "U-0129",
+    "instituteName": "Dharmsinh Desai univeristy",
+    "State": "Gujarat",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811192",
+    "code": "U-0893",
+    "instituteName": "Swarnim Startup & Innovation University",
+    "State": "Gujarat",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811415",
+    "code": "U-0135",
+    "instituteName": "Gujarat Technological University",
+    "State": "Gujarat",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811890",
+    "code": "U-0656",
+    "instituteName": "RABINDRANATH TAGORE UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810241",
+    "code": "U-0946",
+    "instituteName": "Indian Institute of Technology Bhilai",
+    "State": "Chhattisgarh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810946",
+    "code": "U-0289",
+    "instituteName": "Rani Durgavati Vishwavidyalaya",
+    "State": "Madhya Pradesh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202013029",
+    "code": "U-0604",
+    "instituteName": "Amity University",
+    "State": "Madhya Pradesh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202014845",
+    "code": "U-0921",
+    "instituteName": "Symbiosis University of Applied Sciences",
+    "State": "Madhya Pradesh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810175",
+    "code": "U-0092",
+    "instituteName": "National Institute of Technology",
+    "State": "Chhattisgarh",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810394",
+    "code": "U-0148",
+    "instituteName": "Sardar Patel University",
+    "State": "Gujarat",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912746",
+    "code": "U-0832",
+    "instituteName": "OP JINDAL UNIVERSITY",
+    "State": "Chhattisgarh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202115535",
+    "code": "U-0977",
+    "instituteName": "G.H. RAISONI UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912432",
+    "code": "U-0626",
+    "instituteName": "School of Planning & Architecture",
+    "State": "Madhya Pradesh",
+    "Star Rating": 1.5
+  },
+  {
+    "IIC ID": "IC201810792",
+    "code": "U-0648",
+    "instituteName": "ITM UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811485",
+    "code": "U-0139",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Gujarat",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014361",
+    "code": "U-0916",
+    "instituteName": "SAGE UNIVERSITY",
+    "State": "Madhya Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014549",
+    "code": "U-0914",
+    "instituteName": "Karnavati University",
+    "State": "Gujarat",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015177",
+    "code": "U-0771",
+    "instituteName": "INSTITUTE OF ADVANCED RESEARCH",
+    "State": "Gujarat",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115600",
+    "code": "U-0668",
+    "instituteName": "UKA TARSADIA UNIVERSITY",
+    "State": "Gujarat",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115788",
+    "code": "U-0759",
+    "instituteName": "G S F C UNIVERSITY",
+    "State": "Gujarat",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115806",
+    "code": "U-0270",
+    "instituteName": "Devi Ahilya Vishwavidyalaya, Indore",
+    "State": "Madhya Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810172",
+    "code": "U-0865",
+    "instituteName": "TECHNO INDIA UNIVERSITY",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810216",
+    "code": "U-0584",
+    "instituteName": "INDIAN INSTITUTE OF ENGINEERING\nSCIENCE AND TECHNOLOGY",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810217",
+    "code": "U-0846",
+    "instituteName": "BRAINWARE UNIVERSITY",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810314",
+    "code": "U-0577",
+    "instituteName": "National Institute of Technology",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810469",
+    "code": "U-0205",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Jharkhand",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810631",
+    "code": "U-0055",
+    "instituteName": "National Institute of Technology",
+    "State": "Assam",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811389",
+    "code": "U-1080",
+    "instituteName": "C. V. Raman Global University",
+    "State": "Odisha",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811433",
+    "code": "U-0823",
+    "instituteName": "UNIVERSITY OF ENGINEERING AND\nMANAGEMENT",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811636",
+    "code": "U-0575",
+    "instituteName": "Jadavpur University",
+    "State": "West Bengal",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912699",
+    "code": "U-0762",
+    "instituteName": "JHARKHAND RAI UNIVERSITY",
+    "State": "Jharkhand",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810255",
+    "code": "U-0573",
+    "instituteName": "Indian Institute of Technology",
+    "State": "West Bengal",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810600",
+    "code": "U-0495",
+    "instituteName": "Tripura University",
+    "State": "Tripura",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811124",
+    "code": "U-0202",
+    "instituteName": "Birla Institute of Technology",
+    "State": "Jharkhand",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811225",
+    "code": "U-0615",
+    "instituteName": "National Institute of Technology\nArunachal Pradesh",
+    "State": "Arunachal Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912007",
+    "code": "U-0682",
+    "instituteName": "KAZIRANGA UNIVERSITY",
+    "State": "Assam",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912124",
+    "code": "U-0613",
+    "instituteName": "National Institute of Technology Manipur",
+    "State": "Manipur",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202014433",
+    "code": "U-0353",
+    "instituteName": "Centurion University of Technology and\nManagement",
+    "State": "Odisha",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810223",
+    "code": "U-0494",
+    "instituteName": "Institute of Chartered Financial Analysts\nof India University",
+    "State": "Tripura",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810245",
+    "code": "U-0796",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
+    "State": "West Bengal",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810263",
+    "code": "U-0049",
+    "instituteName": "DON BOSCO COLLEGE OF ENGINEERING\nAND TECHNOLOGY",
+    "State": "Assam",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201912256",
+    "code": "U-0894",
+    "instituteName": "Assam Royal Global University",
+    "State": "Assam",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202013128",
+    "code": "U-0211",
+    "instituteName": "The Institute of Chartered Financial\nAnalysts of India University",
+    "State": "Jharkhand",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202013134",
+    "code": "U-0861",
+    "instituteName": "JIS UNIVERSITY",
+    "State": "West Bengal",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810193",
+    "code": "U-0795",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
+    "State": "Assam",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810917",
+    "code": "U-0356",
+    "instituteName": "Kalinga Institute of Industrial Technology",
+    "State": "Odisha",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811014",
+    "code": "U-0649",
+    "instituteName": "SRI SRI UNIVERSITY",
+    "State": "Odisha",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912033",
+    "code": "U-1071",
+    "instituteName": "GANDHI INSTITUTE OF ENGINEERING\nAND TECHNOLOGY UNIVERSITY",
+    "State": "Odisha",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912211",
+    "code": "U-0493",
+    "instituteName": "National Institute of Technology",
+    "State": "Tripura",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202015202",
+    "code": "U-0857",
+    "instituteName": "ADAMAS UNIVERSITY",
+    "State": "West Bengal",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202115907",
+    "code": "U-0884",
+    "instituteName": "ST. JOSEPH UNIVERSITY, DIMAPUR",
+    "State": "Nagaland",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810201",
+    "code": "U-1003",
+    "instituteName": "INDIAN INSTITUTE OF MANAGEMENT\nRANCHI",
+    "State": "Jharkhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810427",
+    "code": "U-0204",
+    "instituteName": "Central University of Jharkhand",
+    "State": "Jharkhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810536",
+    "code": "U-0358",
+    "instituteName": "National Law University",
+    "State": "Odisha",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810645",
+    "code": "U-0592",
+    "instituteName": "Maulana Abul Kalam Azad University of\nTechnology",
+    "State": "West Bengal",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811477",
+    "code": "U-0683",
+    "instituteName": "ASSAM DOWN TOWN UNIVERSITY",
+    "State": "Assam",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201911985",
+    "code": "U-0875",
+    "instituteName": "AMITY UNIVERSITY",
+    "State": "Jharkhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201912487",
+    "code": "U-0932",
+    "instituteName": "Odisha State Open University",
+    "State": "Odisha",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014792",
+    "code": "U-0764",
+    "instituteName": "SHRI RAMASAMY MEMORIAL\nUNIVERSITY",
+    "State": "Sikkim",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015446",
+    "code": "U-0567",
+    "instituteName": "Aliah University",
+    "State": "West Bengal",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115548",
+    "code": "U-0881",
+    "instituteName": "MANIPUR TECHNICAL UNIVERSITY",
+    "State": "Manipur",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810128",
+    "code": "U-0497",
+    "instituteName": "Amity University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810178",
+    "code": "U-0530",
+    "instituteName": "Motilal Nehru National Institute of\nTechnology",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810424",
+    "code": "U-0525",
+    "instituteName": "Mahatama Jyotiba Phule Rohikhand\nUniversity",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810936",
+    "code": "U-0889",
+    "instituteName": "IIMT University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811222",
+    "code": "U-0500",
+    "instituteName": "Banaras Hindu University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811637",
+    "code": "U-0544",
+    "instituteName": "Teerthanker Mahaveer University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912504",
+    "code": "U-0774",
+    "instituteName": "DIT UNIVERSITY",
+    "State": "Uttarakhand",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912626",
+    "code": "U-0522",
+    "instituteName": "Jaypee Institute of Information\nTechnology",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912703",
+    "code": "U-0643",
+    "instituteName": "GALGOTIAS UNIVERSITY",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC202014064",
+    "code": "U-0541",
+    "instituteName": "Sharda University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810239",
+    "code": "U-0516",
+    "instituteName": "Indian Institute of Information\nTechnology",
+    "State": "Uttar Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912898",
+    "code": "U-0513",
+    "instituteName": "G.L.A University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202014336",
+    "code": "U-0556",
+    "instituteName": "Gurukul Kangri Vishwavidyalaya",
+    "State": "Uttarakhand",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810620",
+    "code": "U-0507",
+    "instituteName": "Dayalbagh Educational Institute",
+    "State": "Uttar Pradesh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811122",
+    "code": "U-0701",
+    "instituteName": "INDIAN INSTITUTE OF TECHNOLOGY\nBANARAS HINDU UNIVERSITY",
+    "State": "Uttar Pradesh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811706",
+    "code": "U-0557",
+    "instituteName": "Hemwati Nandan Bahuguna Garhwal\nUniveristy",
+    "State": "Uttarakhand",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202015027",
+    "code": "U-0562",
+    "instituteName": "Kumaun University",
+    "State": "Uttarakhand",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202115861",
+    "code": "U-1009",
+    "instituteName": "INDIAN INSTITUTE OF MANAGEMENT",
+    "State": "Uttarakhand",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810291",
+    "code": "U-0509",
+    "instituteName": "Institute of Engineering and Technology, Dr. B. R. Ambedkar University\\n",
+    "State": "Uttar Pradesh",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810432",
+    "code": "U-0616",
+    "instituteName": "National Institute of Technology\nUttarakhand",
+    "State": "Uttarakhand",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811670",
+    "code": "U-0555",
+    "instituteName": "Graphic Era University",
+    "State": "Uttarakhand",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912860",
+    "code": "U-0505",
+    "instituteName": "Chatrapati Sahuji Maharaj Kanpur\nUniversity",
+    "State": "Uttar Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202015426",
+    "code": "U-0520",
+    "instituteName": "Invertis University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202115905",
+    "code": "U-0502",
+    "instituteName": "Bundelkhand University,  Jhansi",
+    "State": "Uttar Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810462",
+    "code": "U-0543",
+    "instituteName": "Swami Vivekanand Subharti University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810552",
+    "code": "U-0496",
+    "instituteName": "Aligarh Muslim University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810636",
+    "code": "U-0064",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Bihar",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811405",
+    "code": "U-0560",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Uttarakhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014289",
+    "code": "U-0937",
+    "instituteName": "Dr. C.V. Raman University",
+    "State": "Bihar",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014557",
+    "code": "U-0561",
+    "instituteName": "The ICFAI University",
+    "State": "Uttarakhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015269",
+    "code": "U-0529",
+    "instituteName": "Mohammad Ali Jauhar University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115673",
+    "code": "U-0498",
+    "instituteName": "Babasheb Bhimrao Ambedkar",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115715",
+    "code": "U-0950",
+    "instituteName": "Quantum University",
+    "State": "Uttarakhand",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115790",
+    "code": "U-0753",
+    "instituteName": "SHRI RAMSWAROOP MEMORIAL\nUNIVERSITY",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115814",
+    "code": "U-0809",
+    "instituteName": "J S University",
+    "State": "Uttar Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810062",
+    "code": "U-0373",
+    "instituteName": "Chitkara University",
+    "State": "Punjab",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810095",
+    "code": "U-0756",
+    "instituteName": "UNIVERSITY OF ENGINEERING AND\nMANAGEMENT",
+    "State": "Rajasthan",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810280",
+    "code": "U-0104",
+    "instituteName": "Indira Gandhi National Open University",
+    "State": "Delhi",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810543",
+    "code": "U-0374",
+    "instituteName": "Dr. B. R. Ambedkar National Institute of\nTechnology",
+    "State": "Punjab",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810551",
+    "code": "U-0818",
+    "instituteName": "Manav Rachna University",
+    "State": "Haryana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810554",
+    "code": "U-0749",
+    "instituteName": "MANIPAL UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810562",
+    "code": "U-0379",
+    "instituteName": "Lovely Professional University",
+    "State": "Punjab",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810599",
+    "code": "U-0175",
+    "instituteName": "J.C. Bose University of Science and\nTechnology, YMCA",
+    "State": "Haryana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810743",
+    "code": "U-0748",
+    "instituteName": "VIVEKANANDA GLOBAL UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810979",
+    "code": "U-0394",
+    "instituteName": "I.I.S. University",
+    "State": "Rajasthan",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811699",
+    "code": "U-0190",
+    "instituteName": "Shoolini University of Bio Technology and\nManagement Sciences",
+    "State": "Himachal Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811856",
+    "code": "U-0195",
+    "instituteName": "University of Jammu",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811960",
+    "code": "U-0372",
+    "instituteName": "Central University of Punjab",
+    "State": "Punjab",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912457",
+    "code": "U-0735",
+    "instituteName": "BML MUNJAL UNIVERSITY",
+    "State": "Haryana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912465",
+    "code": "U-0163",
+    "instituteName": "The Northcap University",
+    "State": "Haryana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810379",
+    "code": "U-0098",
+    "instituteName": "Delhi Technological University",
+    "State": "Delhi",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810420",
+    "code": "U-0410",
+    "instituteName": "Malviya National Institute of Technology",
+    "State": "Rajasthan",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810557",
+    "code": "U-0201",
+    "instituteName": "Shri Mata Vaishno Devi University",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810741",
+    "code": "U-0671",
+    "instituteName": "MAHARAJA AGRASEN UNIVERSITY",
+    "State": "Himachal Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810744",
+    "code": "U-0385",
+    "instituteName": "Thapar Institute of Engineering and\nTechnology",
+    "State": "Punjab",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811418",
+    "code": "U-0186",
+    "instituteName": "Jaypee University of Information\nTechnology",
+    "State": "Himachal Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811629",
+    "code": "U-0789",
+    "instituteName": "GNA UNIVERSITY",
+    "State": "Punjab",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811633",
+    "code": "U-0422",
+    "instituteName": "Rajasthan University",
+    "State": "Rajasthan",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912289",
+    "code": "U-0107",
+    "instituteName": "Jamia Hamdard",
+    "State": "Delhi",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912382",
+    "code": "U-0892",
+    "instituteName": "CT University",
+    "State": "Punjab",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912536",
+    "code": "U-0657",
+    "instituteName": "JK LAKSHMIPAT UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202014129",
+    "code": "U-0851",
+    "instituteName": "IIHMR UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202115679",
+    "code": "U-0388",
+    "instituteName": "Amity University Rajasthan,",
+    "State": "Rajasthan",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810229",
+    "code": "U-0197",
+    "instituteName": "National Institute of Technology",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810656",
+    "code": "U-0392",
+    "instituteName": "Central University of Rajasthan",
+    "State": "Rajasthan",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810734",
+    "code": "U-0382",
+    "instituteName": "I K Gujral Punjab Technical University",
+    "State": "Punjab",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810745",
+    "code": "U-0988",
+    "instituteName": "IILM UNIVERSITY",
+    "State": "Haryana",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810994",
+    "code": "U-0685",
+    "instituteName": "INDIRA GANDHI DELHI TECHNICAL\nUNIVERSITY FOR WOMEN",
+    "State": "Delhi",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811283",
+    "code": "U-0080",
+    "instituteName": "Punjab Engineering College",
+    "State": "Chandigarh",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811689",
+    "code": "U-0900",
+    "instituteName": "SANT BABA BHAG SINGH UNIVERSITY",
+    "State": "Punjab",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811951",
+    "code": "U-0949",
+    "instituteName": "Bhartiya Skill Development Univesity",
+    "State": "Rajasthan",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202014331",
+    "code": "U-1053",
+    "instituteName": "OM STERLING GLOBAL UNIVERSITY",
+    "State": "Haryana",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202014431",
+    "code": "U-0747",
+    "instituteName": "CHANDIGARH UNIVERSITY",
+    "State": "Punjab",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC202014457",
+    "code": "U-0684",
+    "instituteName": "DESH BHAGAT UNIVERSITY",
+    "State": "Punjab",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810502",
+    "code": "U-0109",
+    "instituteName": "Jawahar Lal Nehru University",
+    "State": "Delhi",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810105",
+    "code": "U-0906",
+    "instituteName": "Indian Institute of Technology Jammu",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810370",
+    "code": "U-0376",
+    "instituteName": "Guru Nanak Dev University",
+    "State": "Punjab",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810825",
+    "code": "U-0119",
+    "instituteName": "TERI School of Advanced Studies",
+    "State": "Delhi",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811430",
+    "code": "U-0168",
+    "instituteName": "Maharishi Markandeshwar University",
+    "State": "Haryana",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811726",
+    "code": "U-0398",
+    "instituteName": "JAGANNATH UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202014855",
+    "code": "U-0925",
+    "instituteName": "Career Point University",
+    "State": "Rajasthan",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202015304",
+    "code": "U-0695",
+    "instituteName": "INSTITUTE OF CHARTERED FINANCIAL ANALYSTS OF INDIA UNIVERSITY",
+    "State": "Himachal Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810480",
+    "code": "U-0161",
+    "instituteName": "Deenbandhu Chhotu Ram University of\nScience & Technology",
+    "State": "Haryana",
+    "Star Rating": 1.5
+  },
+  {
+    "IIC ID": "IC201810293",
+    "code": "U-0162",
+    "instituteName": "Guru  Jambheshwar University of Science\nand Technology",
+    "State": "Haryana",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810438",
+    "code": "U-0384",
+    "instituteName": "Sant Longowal Institute of Engg. & Tech.",
+    "State": "Punjab",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810489",
+    "code": "U-0191",
+    "instituteName": "Baba Ghulam Shah Badshah University",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810617",
+    "code": "U-0078",
+    "instituteName": "Panjab University",
+    "State": "Chandigarh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810731",
+    "code": "U-0631",
+    "instituteName": "CENTRAL UNIVERSITY OF JAMMU",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811175",
+    "code": "U-0811",
+    "instituteName": "MAHARAJA RANJIT SINGH STATE\nTECHNICAL UNIVERSITY",
+    "State": "Punjab",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811460",
+    "code": "U-0395",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Rajasthan",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811527",
+    "code": "U-0200",
+    "instituteName": "Sher-e-Kashmir University of Agricultural Science & Technology of Kashmir",
+    "State": "Jammu and Kashmir",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811855",
+    "code": "U-0180",
+    "instituteName": "Chitkara University",
+    "State": "Himachal Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201912387",
+    "code": "U-0182",
+    "instituteName": "Eternal University",
+    "State": "Himachal Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201912661",
+    "code": "U-0694",
+    "instituteName": "CAREER POINT UNIVERSITY",
+    "State": "Himachal Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202013032",
+    "code": "U-0155",
+    "instituteName": "Amity University Haryana",
+    "State": "Haryana",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014620",
+    "code": "U-0741",
+    "instituteName": "JECRC UNIVERSITY",
+    "State": "Rajasthan",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115562",
+    "code": "U-0184",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Himachal Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811251",
+    "code": "U-0013",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Telangana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811602",
+    "code": "U-0020",
+    "instituteName": "Koneru Lakshmaiah Education\nFoundation",
+    "State": "Andhra Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811614",
+    "code": "U-0012",
+    "instituteName": "ICFAI Foundation for Higher Education",
+    "State": "Telangana",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811697",
+    "code": "U-0034",
+    "instituteName": "Sri Padmavathi Mahila Visva Vidyalayam",
+    "State": "Andhra Pradesh",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810530",
+    "code": "U-0037",
+    "instituteName": "S.V.U. College of Engineering",
+    "State": "Andhra Pradesh",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811269",
+    "code": "U-0042",
+    "instituteName": "University of Hyderabad",
+    "State": "Telangana",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810634",
+    "code": "U-0025",
+    "instituteName": "National Institute of Technology",
+    "State": "Telangana",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810090",
+    "code": "U-0016",
+    "instituteName": "Jawaharlal Nehru Technological\nUniversity",
+    "State": "Andhra Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912268",
+    "code": "U-0011",
+    "instituteName": "Gandhi Institute of Technology &\nManagement",
+    "State": "Andhra Pradesh",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810564",
+    "code": "U-0827",
+    "instituteName": "Indian Institute of Science Education &\nResearch",
+    "State": "Andhra Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810640",
+    "code": "U-0855",
+    "instituteName": "NATIONAL INSTITUTE OF TECHNOLOGY",
+    "State": "Andhra Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810781",
+    "code": "U-0760",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
+    "State": "Andhra Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811573",
+    "code": "U-0627",
+    "instituteName": "School of Planning & Architecture\nVijaywada",
+    "State": "Andhra Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202013070",
+    "code": "U-0863",
+    "instituteName": "Indian Institute of Information\nTechnology Design And Manufacturing",
+    "State": "Andhra Pradesh",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810043",
+    "code": "U-0461",
+    "instituteName": "M.G.R. Educational and Research Institute",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810082",
+    "code": "U-0489",
+    "instituteName": "Vel Tech Rangarajan Dr. Sagunthala R & D\nInstitute of Science & Technology",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810156",
+    "code": "U-0458",
+    "instituteName": "Kalasalingam Academy of Research and\nEducation",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810168",
+    "code": "U-0445",
+    "instituteName": "B.S. Abdur Rahman Crescent Institute of\nScience & Technology",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810288",
+    "code": "U-0434",
+    "instituteName": "Academy of Maritime Education and\nTraining",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810533",
+    "code": "U-0459",
+    "instituteName": "Karpagam Academy of Higher Education",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810783",
+    "code": "U-0490",
+    "instituteName": "VELLORE INSTITUTE OF TECHNOLOGY",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811324",
+    "code": "U-0474",
+    "instituteName": "Sathyabama Institute of Science &\nTechnology",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811410",
+    "code": "U-0460",
+    "instituteName": "Karunya Institute of Technology and\nSciences",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912846",
+    "code": "U-0492",
+    "instituteName": "VINAYAKA MISSIONs RESEARCH\nFOUNDATION",
+    "State": "Tamil Nadu",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810049",
+    "code": "U-0455",
+    "instituteName": "Indian Institute of Information\nTechnology, Design & Manufacturing, Kancheepuram",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810638",
+    "code": "U-0436",
+    "instituteName": "Amrita Vishwa Vidyapeetham",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810657",
+    "code": "U-0469",
+    "instituteName": "Periyar Maniammai Institute of Science & Technology (Deemed to be University)",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811341",
+    "code": "U-0444",
+    "instituteName": "Avinashilingam Institute for Home Science\n& Higher Education for Women",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811483",
+    "code": "U-0491",
+    "instituteName": "Vels Institute of Science  Technology and\nAdvanced Studies",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202014278",
+    "code": "U-0475",
+    "instituteName": "Saveetha University",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202115688",
+    "code": "U-0435",
+    "instituteName": "Alagappa University, Alagappa",
+    "State": "Tamil Nadu",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810597",
+    "code": "U-0454",
+    "instituteName": "Hindustan Institute of Technology &\nScience",
+    "State": "Tamil Nadu",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811362",
+    "code": "U-0447",
+    "instituteName": "Bharathiar University",
+    "State": "Tamil Nadu",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811678",
+    "code": "U-0471",
+    "instituteName": "Ponnaiyah Ramajayam Institute of Science\n& Technology",
+    "State": "Tamil Nadu",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201810080",
+    "code": "U-0478",
+    "instituteName": "Sri Ramachandra Institute of Higher Education and Research Deemed\nUniversity",
+    "State": "Tamil Nadu",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811123",
+    "code": "U-0479",
+    "instituteName": "St. Peter's Institute of Higher Education\nand Research",
+    "State": "Tamil Nadu",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201912792",
+    "code": "U-0473",
+    "instituteName": "S.R.M. Institute of Science & Technology",
+    "State": "Tamil Nadu",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201810668",
+    "code": "U-0621",
+    "instituteName": "National Institute of Technology\nPuducherry",
+    "State": "Puducherry",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810911",
+    "code": "U-0468",
+    "instituteName": "Noorul Islam Centre for Higher Education",
+    "State": "Tamil Nadu",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201912204",
+    "code": "U-0477",
+    "instituteName": "Sri Chandrasekharendra Saraswathi\nVishwa Mahavidyalaya",
+    "State": "Tamil Nadu",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015373",
+    "code": "U-0457",
+    "instituteName": "Indian Maritime University",
+    "State": "Tamil Nadu",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015480",
+    "code": "U-0465",
+    "instituteName": "Meenakshi Academy of Higher Education\nand Research",
+    "State": "Tamil Nadu",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810153",
+    "code": "U-0263",
+    "instituteName": "National Institute of Technology",
+    "State": "Kerala",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810299",
+    "code": "U-0237",
+    "instituteName": "National Institute of Technology\nKarnataka",
+    "State": "Karnataka",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810477",
+    "code": "U-0854",
+    "instituteName": "KLE TECHNOLOGICAL UNIVERSITY",
+    "State": "Karnataka",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912186",
+    "code": "U-0725",
+    "instituteName": "REVA UNIVERSITY",
+    "State": "Karnataka",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810200",
+    "code": "U-0724",
+    "instituteName": "M.S. RAMAIAH UNIVERSITY OF APPLIED\nSCIENCES",
+    "State": "Karnataka",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201912922",
+    "code": "U-0262",
+    "instituteName": "Mahatma Gandhi University",
+    "State": "Kerala",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202015414",
+    "code": "U-0239",
+    "instituteName": "NITTE Unversity",
+    "State": "Karnataka",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811767",
+    "code": "U-0250",
+    "instituteName": "Yenepoya University",
+    "State": "Karnataka",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811435",
+    "code": "U-0234",
+    "instituteName": "Manipal Academy of Higher Education",
+    "State": "Karnataka",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201912410",
+    "code": "U-0899",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Karnataka",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201810646",
+    "code": "U-0222",
+    "instituteName": "JSS ACADEMY OF HIGHER EDUCATION &\nRESEARCH",
+    "State": "Karnataka",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811801",
+    "code": "U-0214",
+    "instituteName": "B.L.D.E. University",
+    "State": "Karnataka",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811499",
+    "code": "U-0878",
+    "instituteName": "Indian Institute of Technology, Palakkad",
+    "State": "Kerala",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201811878",
+    "code": "U-0931",
+    "instituteName": "JSS Science and Technology University",
+    "State": "Karnataka",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014170",
+    "code": "U-0723",
+    "instituteName": "CMR UNIVERSITY",
+    "State": "Karnataka",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014287",
+    "code": "U-0802",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
+    "State": "Kerala",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015331",
+    "code": "U-0217",
+    "instituteName": "Christ University",
+    "State": "Karnataka",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202115629",
+    "code": "U-0256",
+    "instituteName": "Kannur University, Kannur",
+    "State": "Kerala",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201810648",
+    "code": "U-0308",
+    "instituteName": "Institute of Chemical Technology",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811546",
+    "code": "U-0299",
+    "instituteName": "Dr. Babasaheb Ambedkar Technological\nUniversity",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811558",
+    "code": "U-0295",
+    "instituteName": "Datta Meghe Institute of Medical Sciences",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201811655",
+    "code": "U-0979",
+    "instituteName": "SYMBIOSIS SKILLS AND OPEN\nUNIVERSITY",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912308",
+    "code": "U-0331",
+    "instituteName": "Tata Institute of Social Sciences",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912426",
+    "code": "U-0891",
+    "instituteName": "MIT Art  Design and Technology\nUniversity",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201912615",
+    "code": "U-0317",
+    "instituteName": "MGM Institute of Health Sciences",
+    "State": "Maharashtra",
+    "Star Rating": 4
+  },
+  {
+    "IIC ID": "IC201810243",
+    "code": "U-0329",
+    "instituteName": "SYMBIOSIS International University",
+    "State": "Maharashtra",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810400",
+    "code": "U-0121",
+    "instituteName": "Goa University",
+    "State": "Goa",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201811762",
+    "code": "U-0319",
+    "instituteName": "Narsee Monjee Institute of Management\nStudies",
+    "State": "Maharashtra",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC202015051",
+    "code": "U-0995",
+    "instituteName": "AMITY UNIVERSITY MUMBAI",
+    "State": "Maharashtra",
+    "Star Rating": 3.5
+  },
+  {
+    "IIC ID": "IC201810635",
+    "code": "U-0301",
+    "instituteName": "Dr. D.Y.Patil Vidyapeeth",
+    "State": "Maharashtra",
+    "Star Rating": 3
+  },
+  {
+    "IIC ID": "IC201811717",
+    "code": "U-0938",
+    "instituteName": "Dr. Vishwanath Karad MIT World Peace\nUniversity",
+    "State": "Maharashtra",
+    "Star Rating": 2.5
+  },
+  {
+    "IIC ID": "IC201811117",
+    "code": "U-0907",
+    "instituteName": "Indian Institute of Technology",
+    "State": "Goa",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811191",
+    "code": "U-0297",
+    "instituteName": "Defence Institute of Advanced Technology",
+    "State": "Maharashtra",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811745",
+    "code": "U-0326",
+    "instituteName": "Smt. Nathibai Damodar Thackersey\nWomen's Univeristy",
+    "State": "Maharashtra",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC202013328",
+    "code": "U-0841",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY, NAGPUR",
+    "State": "Maharashtra",
+    "Star Rating": 2
+  },
+  {
+    "IIC ID": "IC201811511",
+    "code": "U-0334",
+    "instituteName": "Visvesvaraya National Institute of\nTechnology",
+    "State": "Maharashtra",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC201912631",
+    "code": "U-0322",
+    "instituteName": "Pravara Institute of Medical Sciences",
+    "State": "Maharashtra",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202014271",
+    "code": "U-0804",
+    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY, Pune",
+    "State": "Maharashtra",
+    "Star Rating": 1
+  },
+  {
+    "IIC ID": "IC202015203",
+    "code": "U-0888",
+    "instituteName": "VISHWAKARMA UNIVERSITY",
+    "State": "Maharashtra",
+    "Star Rating": 1
+  }
+]
