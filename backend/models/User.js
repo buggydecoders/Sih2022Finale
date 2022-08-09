@@ -12,7 +12,38 @@ const UserSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
+    address: {
+        street: {
+            type: String
+        },
+        city: {
+            type: String
+        },
+        state: {
+            type: String
+        }
+    },
+    contactPerson: {
+        name: {
+            type: String
+        },
+        email: {
+            type: String
+        },
+        position: {
+            type: String
+        }
+    },
+    resource: {
+        type: [mongoose.Schema.Types.ObjectId]
+    },
     aisheCode: {
+        type: String
+    },
+    naac: {
+        type: String
+    },
+    reputationPoint: {
         type: String
     },
     role: {

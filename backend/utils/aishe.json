@@ -1,1752 +1,2234 @@
 [
   {
-    "IIC ID": "IC201810688",
-    "code": "U-0286",
-    "instituteName": "Pandit Dwarka Prasad Mishra Indian\nInstitute of Information Technology, Design & Manufacturing",
-    "State": "Madhya Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811120",
-    "code": "U-0967",
-    "instituteName": "ATMIYA UNIVERSITY",
-    "State": "Gujarat",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811481",
-    "code": "U-0763",
-    "instituteName": "PARUL UNIVERSITY",
-    "State": "Gujarat",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811566",
-    "code": "U-0970",
-    "instituteName": "INTERNATIONAL INSTITUTE OF\nINFORMATION TECHNOLOGY",
-    "State": "Chhattisgarh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811582",
-    "code": "U-0147",
-    "instituteName": "Pandit Deendayal Petroleum University",
-    "State": "Gujarat",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811638",
-    "code": "U-0834",
-    "instituteName": "MEDI-CAPS UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811648",
-    "code": "U-0757",
-    "instituteName": "AMITY UNIVERSITY",
-    "State": "Chhattisgarh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912350",
-    "code": "U-0727",
-    "instituteName": "JAGRAN LAKECITY UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC202015218",
-    "code": "U-0662",
-    "instituteName": "ORIENTAL UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC202115720",
-    "code": "U-0633",
-    "instituteName": "ITM UNIVERSITY",
-    "State": "Chhattisgarh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810009",
-    "code": "U-0091",
-    "instituteName": "MATS University",
-    "State": "Chhattisgarh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810037",
-    "code": "U-0129",
-    "instituteName": "Dharmsinh Desai univeristy",
-    "State": "Gujarat",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811192",
-    "code": "U-0893",
-    "instituteName": "Swarnim Startup & Innovation University",
-    "State": "Gujarat",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811415",
-    "code": "U-0135",
-    "instituteName": "Gujarat Technological University",
-    "State": "Gujarat",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811890",
-    "code": "U-0656",
-    "instituteName": "RABINDRANATH TAGORE UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810241",
-    "code": "U-0946",
-    "instituteName": "Indian Institute of Technology Bhilai",
-    "State": "Chhattisgarh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810946",
-    "code": "U-0289",
-    "instituteName": "Rani Durgavati Vishwavidyalaya",
-    "State": "Madhya Pradesh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202013029",
-    "code": "U-0604",
-    "instituteName": "Amity University",
-    "State": "Madhya Pradesh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202014845",
-    "code": "U-0921",
-    "instituteName": "Symbiosis University of Applied Sciences",
-    "State": "Madhya Pradesh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810175",
-    "code": "U-0092",
-    "instituteName": "National Institute of Technology",
-    "State": "Chhattisgarh",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810394",
-    "code": "U-0148",
-    "instituteName": "Sardar Patel University",
-    "State": "Gujarat",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912746",
-    "code": "U-0832",
-    "instituteName": "OP JINDAL UNIVERSITY",
-    "State": "Chhattisgarh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202115535",
-    "code": "U-0977",
-    "instituteName": "G.H. RAISONI UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912432",
-    "code": "U-0626",
-    "instituteName": "School of Planning & Architecture",
-    "State": "Madhya Pradesh",
-    "Star Rating": 1.5
-  },
-  {
-    "IIC ID": "IC201810792",
-    "code": "U-0648",
-    "instituteName": "ITM UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811485",
-    "code": "U-0139",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Gujarat",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014361",
-    "code": "U-0916",
-    "instituteName": "SAGE UNIVERSITY",
-    "State": "Madhya Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014549",
-    "code": "U-0914",
-    "instituteName": "Karnavati University",
-    "State": "Gujarat",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015177",
-    "code": "U-0771",
-    "instituteName": "INSTITUTE OF ADVANCED RESEARCH",
-    "State": "Gujarat",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115600",
-    "code": "U-0668",
-    "instituteName": "UKA TARSADIA UNIVERSITY",
-    "State": "Gujarat",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115788",
-    "code": "U-0759",
-    "instituteName": "G S F C UNIVERSITY",
-    "State": "Gujarat",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115806",
-    "code": "U-0270",
-    "instituteName": "Devi Ahilya Vishwavidyalaya, Indore",
-    "State": "Madhya Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810172",
-    "code": "U-0865",
-    "instituteName": "TECHNO INDIA UNIVERSITY",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810216",
-    "code": "U-0584",
-    "instituteName": "INDIAN INSTITUTE OF ENGINEERING\nSCIENCE AND TECHNOLOGY",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810217",
-    "code": "U-0846",
-    "instituteName": "BRAINWARE UNIVERSITY",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810314",
-    "code": "U-0577",
-    "instituteName": "National Institute of Technology",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810469",
-    "code": "U-0205",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Jharkhand",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810631",
-    "code": "U-0055",
-    "instituteName": "National Institute of Technology",
-    "State": "Assam",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811389",
-    "code": "U-1080",
-    "instituteName": "C. V. Raman Global University",
-    "State": "Odisha",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811433",
-    "code": "U-0823",
-    "instituteName": "UNIVERSITY OF ENGINEERING AND\nMANAGEMENT",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811636",
-    "code": "U-0575",
-    "instituteName": "Jadavpur University",
-    "State": "West Bengal",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912699",
-    "code": "U-0762",
-    "instituteName": "JHARKHAND RAI UNIVERSITY",
-    "State": "Jharkhand",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810255",
-    "code": "U-0573",
-    "instituteName": "Indian Institute of Technology",
-    "State": "West Bengal",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810600",
-    "code": "U-0495",
-    "instituteName": "Tripura University",
-    "State": "Tripura",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811124",
-    "code": "U-0202",
-    "instituteName": "Birla Institute of Technology",
-    "State": "Jharkhand",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811225",
-    "code": "U-0615",
-    "instituteName": "National Institute of Technology\nArunachal Pradesh",
-    "State": "Arunachal Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912007",
-    "code": "U-0682",
-    "instituteName": "KAZIRANGA UNIVERSITY",
-    "State": "Assam",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912124",
-    "code": "U-0613",
-    "instituteName": "National Institute of Technology Manipur",
-    "State": "Manipur",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202014433",
-    "code": "U-0353",
-    "instituteName": "Centurion University of Technology and\nManagement",
-    "State": "Odisha",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810223",
-    "code": "U-0494",
-    "instituteName": "Institute of Chartered Financial Analysts\nof India University",
-    "State": "Tripura",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810245",
-    "code": "U-0796",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
-    "State": "West Bengal",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810263",
-    "code": "U-0049",
-    "instituteName": "DON BOSCO COLLEGE OF ENGINEERING\nAND TECHNOLOGY",
-    "State": "Assam",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201912256",
-    "code": "U-0894",
-    "instituteName": "Assam Royal Global University",
-    "State": "Assam",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202013128",
-    "code": "U-0211",
-    "instituteName": "The Institute of Chartered Financial\nAnalysts of India University",
-    "State": "Jharkhand",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202013134",
-    "code": "U-0861",
-    "instituteName": "JIS UNIVERSITY",
-    "State": "West Bengal",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810193",
-    "code": "U-0795",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
-    "State": "Assam",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810917",
-    "code": "U-0356",
-    "instituteName": "Kalinga Institute of Industrial Technology",
-    "State": "Odisha",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811014",
-    "code": "U-0649",
-    "instituteName": "SRI SRI UNIVERSITY",
-    "State": "Odisha",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912033",
-    "code": "U-1071",
-    "instituteName": "GANDHI INSTITUTE OF ENGINEERING\nAND TECHNOLOGY UNIVERSITY",
-    "State": "Odisha",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912211",
-    "code": "U-0493",
-    "instituteName": "National Institute of Technology",
-    "State": "Tripura",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202015202",
-    "code": "U-0857",
-    "instituteName": "ADAMAS UNIVERSITY",
-    "State": "West Bengal",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202115907",
-    "code": "U-0884",
-    "instituteName": "ST. JOSEPH UNIVERSITY, DIMAPUR",
-    "State": "Nagaland",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810201",
-    "code": "U-1003",
-    "instituteName": "INDIAN INSTITUTE OF MANAGEMENT\nRANCHI",
-    "State": "Jharkhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810427",
-    "code": "U-0204",
-    "instituteName": "Central University of Jharkhand",
-    "State": "Jharkhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810536",
-    "code": "U-0358",
-    "instituteName": "National Law University",
-    "State": "Odisha",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810645",
-    "code": "U-0592",
-    "instituteName": "Maulana Abul Kalam Azad University of\nTechnology",
-    "State": "West Bengal",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811477",
-    "code": "U-0683",
-    "instituteName": "ASSAM DOWN TOWN UNIVERSITY",
-    "State": "Assam",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201911985",
-    "code": "U-0875",
-    "instituteName": "AMITY UNIVERSITY",
-    "State": "Jharkhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201912487",
-    "code": "U-0932",
-    "instituteName": "Odisha State Open University",
-    "State": "Odisha",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014792",
-    "code": "U-0764",
-    "instituteName": "SHRI RAMASAMY MEMORIAL\nUNIVERSITY",
-    "State": "Sikkim",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015446",
-    "code": "U-0567",
-    "instituteName": "Aliah University",
-    "State": "West Bengal",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115548",
-    "code": "U-0881",
-    "instituteName": "MANIPUR TECHNICAL UNIVERSITY",
-    "State": "Manipur",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810128",
-    "code": "U-0497",
-    "instituteName": "Amity University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810178",
-    "code": "U-0530",
-    "instituteName": "Motilal Nehru National Institute of\nTechnology",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810424",
-    "code": "U-0525",
-    "instituteName": "Mahatama Jyotiba Phule Rohikhand\nUniversity",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810936",
-    "code": "U-0889",
-    "instituteName": "IIMT University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811222",
-    "code": "U-0500",
-    "instituteName": "Banaras Hindu University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811637",
-    "code": "U-0544",
-    "instituteName": "Teerthanker Mahaveer University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912504",
-    "code": "U-0774",
-    "instituteName": "DIT UNIVERSITY",
-    "State": "Uttarakhand",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912626",
-    "code": "U-0522",
-    "instituteName": "Jaypee Institute of Information\nTechnology",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912703",
-    "code": "U-0643",
-    "instituteName": "GALGOTIAS UNIVERSITY",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC202014064",
-    "code": "U-0541",
-    "instituteName": "Sharda University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810239",
-    "code": "U-0516",
-    "instituteName": "Indian Institute of Information\nTechnology",
-    "State": "Uttar Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912898",
-    "code": "U-0513",
-    "instituteName": "G.L.A University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202014336",
-    "code": "U-0556",
-    "instituteName": "Gurukul Kangri Vishwavidyalaya",
-    "State": "Uttarakhand",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810620",
-    "code": "U-0507",
-    "instituteName": "Dayalbagh Educational Institute",
-    "State": "Uttar Pradesh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811122",
-    "code": "U-0701",
-    "instituteName": "INDIAN INSTITUTE OF TECHNOLOGY\nBANARAS HINDU UNIVERSITY",
-    "State": "Uttar Pradesh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811706",
-    "code": "U-0557",
-    "instituteName": "Hemwati Nandan Bahuguna Garhwal\nUniveristy",
-    "State": "Uttarakhand",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202015027",
-    "code": "U-0562",
-    "instituteName": "Kumaun University",
-    "State": "Uttarakhand",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202115861",
-    "code": "U-1009",
-    "instituteName": "INDIAN INSTITUTE OF MANAGEMENT",
-    "State": "Uttarakhand",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810291",
-    "code": "U-0509",
-    "instituteName": "Institute of Engineering and Technology, Dr. B. R. Ambedkar University\\n",
-    "State": "Uttar Pradesh",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810432",
-    "code": "U-0616",
-    "instituteName": "National Institute of Technology\nUttarakhand",
-    "State": "Uttarakhand",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811670",
-    "code": "U-0555",
-    "instituteName": "Graphic Era University",
-    "State": "Uttarakhand",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912860",
-    "code": "U-0505",
-    "instituteName": "Chatrapati Sahuji Maharaj Kanpur\nUniversity",
-    "State": "Uttar Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202015426",
-    "code": "U-0520",
-    "instituteName": "Invertis University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202115905",
-    "code": "U-0502",
-    "instituteName": "Bundelkhand University,  Jhansi",
-    "State": "Uttar Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810462",
-    "code": "U-0543",
-    "instituteName": "Swami Vivekanand Subharti University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810552",
-    "code": "U-0496",
-    "instituteName": "Aligarh Muslim University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810636",
-    "code": "U-0064",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Bihar",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811405",
-    "code": "U-0560",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Uttarakhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014289",
-    "code": "U-0937",
-    "instituteName": "Dr. C.V. Raman University",
-    "State": "Bihar",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014557",
-    "code": "U-0561",
-    "instituteName": "The ICFAI University",
-    "State": "Uttarakhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015269",
-    "code": "U-0529",
-    "instituteName": "Mohammad Ali Jauhar University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115673",
-    "code": "U-0498",
-    "instituteName": "Babasheb Bhimrao Ambedkar",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115715",
-    "code": "U-0950",
-    "instituteName": "Quantum University",
-    "State": "Uttarakhand",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115790",
-    "code": "U-0753",
-    "instituteName": "SHRI RAMSWAROOP MEMORIAL\nUNIVERSITY",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115814",
-    "code": "U-0809",
-    "instituteName": "J S University",
-    "State": "Uttar Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810062",
-    "code": "U-0373",
-    "instituteName": "Chitkara University",
-    "State": "Punjab",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810095",
-    "code": "U-0756",
-    "instituteName": "UNIVERSITY OF ENGINEERING AND\nMANAGEMENT",
-    "State": "Rajasthan",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810280",
-    "code": "U-0104",
-    "instituteName": "Indira Gandhi National Open University",
-    "State": "Delhi",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810543",
-    "code": "U-0374",
-    "instituteName": "Dr. B. R. Ambedkar National Institute of\nTechnology",
-    "State": "Punjab",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810551",
-    "code": "U-0818",
-    "instituteName": "Manav Rachna University",
-    "State": "Haryana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810554",
-    "code": "U-0749",
-    "instituteName": "MANIPAL UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810562",
-    "code": "U-0379",
-    "instituteName": "Lovely Professional University",
-    "State": "Punjab",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810599",
-    "code": "U-0175",
-    "instituteName": "J.C. Bose University of Science and\nTechnology, YMCA",
-    "State": "Haryana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810743",
-    "code": "U-0748",
-    "instituteName": "VIVEKANANDA GLOBAL UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810979",
-    "code": "U-0394",
-    "instituteName": "I.I.S. University",
-    "State": "Rajasthan",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811699",
-    "code": "U-0190",
-    "instituteName": "Shoolini University of Bio Technology and\nManagement Sciences",
-    "State": "Himachal Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811856",
-    "code": "U-0195",
-    "instituteName": "University of Jammu",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811960",
-    "code": "U-0372",
-    "instituteName": "Central University of Punjab",
-    "State": "Punjab",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912457",
-    "code": "U-0735",
-    "instituteName": "BML MUNJAL UNIVERSITY",
-    "State": "Haryana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912465",
-    "code": "U-0163",
-    "instituteName": "The Northcap University",
-    "State": "Haryana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810379",
-    "code": "U-0098",
-    "instituteName": "Delhi Technological University",
-    "State": "Delhi",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810420",
-    "code": "U-0410",
-    "instituteName": "Malviya National Institute of Technology",
-    "State": "Rajasthan",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810557",
-    "code": "U-0201",
-    "instituteName": "Shri Mata Vaishno Devi University",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810741",
-    "code": "U-0671",
-    "instituteName": "MAHARAJA AGRASEN UNIVERSITY",
-    "State": "Himachal Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810744",
-    "code": "U-0385",
-    "instituteName": "Thapar Institute of Engineering and\nTechnology",
-    "State": "Punjab",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811418",
-    "code": "U-0186",
-    "instituteName": "Jaypee University of Information\nTechnology",
-    "State": "Himachal Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811629",
-    "code": "U-0789",
-    "instituteName": "GNA UNIVERSITY",
-    "State": "Punjab",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811633",
-    "code": "U-0422",
-    "instituteName": "Rajasthan University",
-    "State": "Rajasthan",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912289",
-    "code": "U-0107",
-    "instituteName": "Jamia Hamdard",
-    "State": "Delhi",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912382",
-    "code": "U-0892",
-    "instituteName": "CT University",
-    "State": "Punjab",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912536",
-    "code": "U-0657",
-    "instituteName": "JK LAKSHMIPAT UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202014129",
-    "code": "U-0851",
-    "instituteName": "IIHMR UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202115679",
-    "code": "U-0388",
-    "instituteName": "Amity University Rajasthan,",
-    "State": "Rajasthan",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810229",
-    "code": "U-0197",
-    "instituteName": "National Institute of Technology",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810656",
-    "code": "U-0392",
-    "instituteName": "Central University of Rajasthan",
-    "State": "Rajasthan",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810734",
-    "code": "U-0382",
-    "instituteName": "I K Gujral Punjab Technical University",
-    "State": "Punjab",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810745",
-    "code": "U-0988",
-    "instituteName": "IILM UNIVERSITY",
-    "State": "Haryana",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810994",
-    "code": "U-0685",
-    "instituteName": "INDIRA GANDHI DELHI TECHNICAL\nUNIVERSITY FOR WOMEN",
-    "State": "Delhi",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811283",
-    "code": "U-0080",
-    "instituteName": "Punjab Engineering College",
-    "State": "Chandigarh",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811689",
-    "code": "U-0900",
-    "instituteName": "SANT BABA BHAG SINGH UNIVERSITY",
-    "State": "Punjab",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811951",
-    "code": "U-0949",
-    "instituteName": "Bhartiya Skill Development Univesity",
-    "State": "Rajasthan",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202014331",
-    "code": "U-1053",
-    "instituteName": "OM STERLING GLOBAL UNIVERSITY",
-    "State": "Haryana",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202014431",
-    "code": "U-0747",
-    "instituteName": "CHANDIGARH UNIVERSITY",
-    "State": "Punjab",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC202014457",
-    "code": "U-0684",
-    "instituteName": "DESH BHAGAT UNIVERSITY",
-    "State": "Punjab",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810502",
-    "code": "U-0109",
-    "instituteName": "Jawahar Lal Nehru University",
-    "State": "Delhi",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810105",
-    "code": "U-0906",
-    "instituteName": "Indian Institute of Technology Jammu",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810370",
-    "code": "U-0376",
-    "instituteName": "Guru Nanak Dev University",
-    "State": "Punjab",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810825",
-    "code": "U-0119",
-    "instituteName": "TERI School of Advanced Studies",
-    "State": "Delhi",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811430",
-    "code": "U-0168",
-    "instituteName": "Maharishi Markandeshwar University",
-    "State": "Haryana",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811726",
-    "code": "U-0398",
-    "instituteName": "JAGANNATH UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202014855",
-    "code": "U-0925",
-    "instituteName": "Career Point University",
-    "State": "Rajasthan",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202015304",
-    "code": "U-0695",
-    "instituteName": "INSTITUTE OF CHARTERED FINANCIAL ANALYSTS OF INDIA UNIVERSITY",
-    "State": "Himachal Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810480",
-    "code": "U-0161",
-    "instituteName": "Deenbandhu Chhotu Ram University of\nScience & Technology",
-    "State": "Haryana",
-    "Star Rating": 1.5
-  },
-  {
-    "IIC ID": "IC201810293",
-    "code": "U-0162",
-    "instituteName": "Guru  Jambheshwar University of Science\nand Technology",
-    "State": "Haryana",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810438",
-    "code": "U-0384",
-    "instituteName": "Sant Longowal Institute of Engg. & Tech.",
-    "State": "Punjab",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810489",
-    "code": "U-0191",
-    "instituteName": "Baba Ghulam Shah Badshah University",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810617",
-    "code": "U-0078",
-    "instituteName": "Panjab University",
-    "State": "Chandigarh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810731",
-    "code": "U-0631",
-    "instituteName": "CENTRAL UNIVERSITY OF JAMMU",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811175",
-    "code": "U-0811",
-    "instituteName": "MAHARAJA RANJIT SINGH STATE\nTECHNICAL UNIVERSITY",
-    "State": "Punjab",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811460",
-    "code": "U-0395",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Rajasthan",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811527",
-    "code": "U-0200",
-    "instituteName": "Sher-e-Kashmir University of Agricultural Science & Technology of Kashmir",
-    "State": "Jammu and Kashmir",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811855",
-    "code": "U-0180",
-    "instituteName": "Chitkara University",
-    "State": "Himachal Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201912387",
-    "code": "U-0182",
-    "instituteName": "Eternal University",
-    "State": "Himachal Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201912661",
-    "code": "U-0694",
-    "instituteName": "CAREER POINT UNIVERSITY",
-    "State": "Himachal Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202013032",
-    "code": "U-0155",
-    "instituteName": "Amity University Haryana",
-    "State": "Haryana",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014620",
-    "code": "U-0741",
-    "instituteName": "JECRC UNIVERSITY",
-    "State": "Rajasthan",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115562",
-    "code": "U-0184",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Himachal Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811251",
-    "code": "U-0013",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Telangana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811602",
-    "code": "U-0020",
-    "instituteName": "Koneru Lakshmaiah Education\nFoundation",
-    "State": "Andhra Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811614",
-    "code": "U-0012",
-    "instituteName": "ICFAI Foundation for Higher Education",
-    "State": "Telangana",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811697",
-    "code": "U-0034",
-    "instituteName": "Sri Padmavathi Mahila Visva Vidyalayam",
-    "State": "Andhra Pradesh",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810530",
-    "code": "U-0037",
-    "instituteName": "S.V.U. College of Engineering",
-    "State": "Andhra Pradesh",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811269",
-    "code": "U-0042",
-    "instituteName": "University of Hyderabad",
-    "State": "Telangana",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810634",
-    "code": "U-0025",
-    "instituteName": "National Institute of Technology",
-    "State": "Telangana",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810090",
-    "code": "U-0016",
-    "instituteName": "Jawaharlal Nehru Technological\nUniversity",
-    "State": "Andhra Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912268",
-    "code": "U-0011",
-    "instituteName": "Gandhi Institute of Technology &\nManagement",
-    "State": "Andhra Pradesh",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810564",
-    "code": "U-0827",
-    "instituteName": "Indian Institute of Science Education &\nResearch",
-    "State": "Andhra Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810640",
-    "code": "U-0855",
-    "instituteName": "NATIONAL INSTITUTE OF TECHNOLOGY",
-    "State": "Andhra Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810781",
-    "code": "U-0760",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
-    "State": "Andhra Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811573",
-    "code": "U-0627",
-    "instituteName": "School of Planning & Architecture\nVijaywada",
-    "State": "Andhra Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202013070",
-    "code": "U-0863",
-    "instituteName": "Indian Institute of Information\nTechnology Design And Manufacturing",
-    "State": "Andhra Pradesh",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810043",
-    "code": "U-0461",
-    "instituteName": "M.G.R. Educational and Research Institute",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810082",
-    "code": "U-0489",
-    "instituteName": "Vel Tech Rangarajan Dr. Sagunthala R & D\nInstitute of Science & Technology",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810156",
-    "code": "U-0458",
-    "instituteName": "Kalasalingam Academy of Research and\nEducation",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810168",
-    "code": "U-0445",
-    "instituteName": "B.S. Abdur Rahman Crescent Institute of\nScience & Technology",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810288",
-    "code": "U-0434",
-    "instituteName": "Academy of Maritime Education and\nTraining",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810533",
-    "code": "U-0459",
-    "instituteName": "Karpagam Academy of Higher Education",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810783",
-    "code": "U-0490",
-    "instituteName": "VELLORE INSTITUTE OF TECHNOLOGY",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811324",
-    "code": "U-0474",
-    "instituteName": "Sathyabama Institute of Science &\nTechnology",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811410",
-    "code": "U-0460",
-    "instituteName": "Karunya Institute of Technology and\nSciences",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912846",
-    "code": "U-0492",
-    "instituteName": "VINAYAKA MISSIONs RESEARCH\nFOUNDATION",
-    "State": "Tamil Nadu",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810049",
-    "code": "U-0455",
-    "instituteName": "Indian Institute of Information\nTechnology, Design & Manufacturing, Kancheepuram",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810638",
-    "code": "U-0436",
-    "instituteName": "Amrita Vishwa Vidyapeetham",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810657",
-    "code": "U-0469",
-    "instituteName": "Periyar Maniammai Institute of Science & Technology (Deemed to be University)",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811341",
-    "code": "U-0444",
-    "instituteName": "Avinashilingam Institute for Home Science\n& Higher Education for Women",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811483",
-    "code": "U-0491",
-    "instituteName": "Vels Institute of Science  Technology and\nAdvanced Studies",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202014278",
-    "code": "U-0475",
-    "instituteName": "Saveetha University",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202115688",
-    "code": "U-0435",
-    "instituteName": "Alagappa University, Alagappa",
-    "State": "Tamil Nadu",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810597",
-    "code": "U-0454",
-    "instituteName": "Hindustan Institute of Technology &\nScience",
-    "State": "Tamil Nadu",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811362",
-    "code": "U-0447",
-    "instituteName": "Bharathiar University",
-    "State": "Tamil Nadu",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811678",
-    "code": "U-0471",
-    "instituteName": "Ponnaiyah Ramajayam Institute of Science\n& Technology",
-    "State": "Tamil Nadu",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201810080",
-    "code": "U-0478",
-    "instituteName": "Sri Ramachandra Institute of Higher Education and Research Deemed\nUniversity",
-    "State": "Tamil Nadu",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811123",
-    "code": "U-0479",
-    "instituteName": "St. Peter's Institute of Higher Education\nand Research",
-    "State": "Tamil Nadu",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201912792",
-    "code": "U-0473",
-    "instituteName": "S.R.M. Institute of Science & Technology",
-    "State": "Tamil Nadu",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201810668",
-    "code": "U-0621",
-    "instituteName": "National Institute of Technology\nPuducherry",
-    "State": "Puducherry",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810911",
-    "code": "U-0468",
-    "instituteName": "Noorul Islam Centre for Higher Education",
-    "State": "Tamil Nadu",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201912204",
-    "code": "U-0477",
-    "instituteName": "Sri Chandrasekharendra Saraswathi\nVishwa Mahavidyalaya",
-    "State": "Tamil Nadu",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015373",
-    "code": "U-0457",
-    "instituteName": "Indian Maritime University",
-    "State": "Tamil Nadu",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015480",
-    "code": "U-0465",
-    "instituteName": "Meenakshi Academy of Higher Education\nand Research",
-    "State": "Tamil Nadu",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810153",
-    "code": "U-0263",
-    "instituteName": "National Institute of Technology",
-    "State": "Kerala",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810299",
-    "code": "U-0237",
-    "instituteName": "National Institute of Technology\nKarnataka",
-    "State": "Karnataka",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810477",
-    "code": "U-0854",
-    "instituteName": "KLE TECHNOLOGICAL UNIVERSITY",
-    "State": "Karnataka",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912186",
-    "code": "U-0725",
-    "instituteName": "REVA UNIVERSITY",
-    "State": "Karnataka",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810200",
-    "code": "U-0724",
-    "instituteName": "M.S. RAMAIAH UNIVERSITY OF APPLIED\nSCIENCES",
-    "State": "Karnataka",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201912922",
-    "code": "U-0262",
-    "instituteName": "Mahatma Gandhi University",
-    "State": "Kerala",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202015414",
-    "code": "U-0239",
-    "instituteName": "NITTE Unversity",
-    "State": "Karnataka",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811767",
-    "code": "U-0250",
-    "instituteName": "Yenepoya University",
-    "State": "Karnataka",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811435",
-    "code": "U-0234",
-    "instituteName": "Manipal Academy of Higher Education",
-    "State": "Karnataka",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201912410",
-    "code": "U-0899",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Karnataka",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201810646",
-    "code": "U-0222",
-    "instituteName": "JSS ACADEMY OF HIGHER EDUCATION &\nRESEARCH",
-    "State": "Karnataka",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811801",
-    "code": "U-0214",
-    "instituteName": "B.L.D.E. University",
-    "State": "Karnataka",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811499",
-    "code": "U-0878",
-    "instituteName": "Indian Institute of Technology, Palakkad",
-    "State": "Kerala",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201811878",
-    "code": "U-0931",
-    "instituteName": "JSS Science and Technology University",
-    "State": "Karnataka",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014170",
-    "code": "U-0723",
-    "instituteName": "CMR UNIVERSITY",
-    "State": "Karnataka",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014287",
-    "code": "U-0802",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY",
-    "State": "Kerala",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015331",
-    "code": "U-0217",
-    "instituteName": "Christ University",
-    "State": "Karnataka",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202115629",
-    "code": "U-0256",
-    "instituteName": "Kannur University, Kannur",
-    "State": "Kerala",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201810648",
-    "code": "U-0308",
-    "instituteName": "Institute of Chemical Technology",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811546",
-    "code": "U-0299",
-    "instituteName": "Dr. Babasaheb Ambedkar Technological\nUniversity",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811558",
-    "code": "U-0295",
-    "instituteName": "Datta Meghe Institute of Medical Sciences",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201811655",
-    "code": "U-0979",
-    "instituteName": "SYMBIOSIS SKILLS AND OPEN\nUNIVERSITY",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912308",
-    "code": "U-0331",
-    "instituteName": "Tata Institute of Social Sciences",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912426",
-    "code": "U-0891",
-    "instituteName": "MIT Art  Design and Technology\nUniversity",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201912615",
-    "code": "U-0317",
-    "instituteName": "MGM Institute of Health Sciences",
-    "State": "Maharashtra",
-    "Star Rating": 4
-  },
-  {
-    "IIC ID": "IC201810243",
-    "code": "U-0329",
-    "instituteName": "SYMBIOSIS International University",
-    "State": "Maharashtra",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810400",
-    "code": "U-0121",
-    "instituteName": "Goa University",
-    "State": "Goa",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201811762",
-    "code": "U-0319",
-    "instituteName": "Narsee Monjee Institute of Management\nStudies",
-    "State": "Maharashtra",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC202015051",
-    "code": "U-0995",
-    "instituteName": "AMITY UNIVERSITY MUMBAI",
-    "State": "Maharashtra",
-    "Star Rating": 3.5
-  },
-  {
-    "IIC ID": "IC201810635",
-    "code": "U-0301",
-    "instituteName": "Dr. D.Y.Patil Vidyapeeth",
-    "State": "Maharashtra",
-    "Star Rating": 3
-  },
-  {
-    "IIC ID": "IC201811717",
-    "code": "U-0938",
-    "instituteName": "Dr. Vishwanath Karad MIT World Peace\nUniversity",
-    "State": "Maharashtra",
-    "Star Rating": 2.5
-  },
-  {
-    "IIC ID": "IC201811117",
-    "code": "U-0907",
-    "instituteName": "Indian Institute of Technology",
-    "State": "Goa",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811191",
-    "code": "U-0297",
-    "instituteName": "Defence Institute of Advanced Technology",
-    "State": "Maharashtra",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811745",
-    "code": "U-0326",
-    "instituteName": "Smt. Nathibai Damodar Thackersey\nWomen's Univeristy",
-    "State": "Maharashtra",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC202013328",
-    "code": "U-0841",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY, NAGPUR",
-    "State": "Maharashtra",
-    "Star Rating": 2
-  },
-  {
-    "IIC ID": "IC201811511",
-    "code": "U-0334",
-    "instituteName": "Visvesvaraya National Institute of\nTechnology",
-    "State": "Maharashtra",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC201912631",
-    "code": "U-0322",
-    "instituteName": "Pravara Institute of Medical Sciences",
-    "State": "Maharashtra",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202014271",
-    "code": "U-0804",
-    "instituteName": "INDIAN INSTITUTE OF INFORMATION\nTECHNOLOGY, Pune",
-    "State": "Maharashtra",
-    "Star Rating": 1
-  },
-  {
-    "IIC ID": "IC202015203",
-    "code": "U-0888",
-    "instituteName": "VISHWAKARMA UNIVERSITY",
-    "State": "Maharashtra",
-    "Star Rating": 1
+    "hei_assessment_id": 6824,
+    "hei_name": "CHAUDHARY DEVI LAL UNIVERSITY, SIRSA",
+    "aishe_id": "U-0160",
+    "other_address": "Haryana , Sirsa , 125055 , Lal Bahadur Shastri Bhawan, Chaudhary Devi Lal University, Barnala Road, Sirsa",
+    "state_name": "Haryana",
+    "iiqa_submitted_date": "2022-07-12",
+    "date_of_decleration": "2027-07-11 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;6824&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 7565,
+    "hei_name": "MODY UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    "aishe_id": "U-0412",
+    "other_address": "Rajasthan , Lakshmangarh , 332311 , NH 52, Lakshmangarh, Dist - Sikar",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;7565&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6954,
+    "hei_name": "TEERTHANKER MAHAVEER UNIVERSITY",
+    "aishe_id": "U-0544",
+    "other_address": "Uttar pradesh , Moradabad , 244001 , Bagarpur, Delhi Road, Moradabad",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2022-06-21",
+    "date_of_decleration": "2027-06-20 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;6954&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 7103,
+    "hei_name": "JAIPUR NATIONAL UNIVERSITY",
+    "aishe_id": "U-0401",
+    "other_address": "Rajasthan , Jaipur , 302017 , Jaipur-Agra Bypass , Near New RTO Office , Jagatpura",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2022-05-03",
+    "date_of_decleration": "2027-05-02 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;7103&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 7162,
+    "hei_name": "SHAHEED MAHENDRA KARMA VISHWAVIDYALAYA, BASTAR (FORMERLY BASTAR VISHWAVIDYALAYA)",
+    "aishe_id": "U-0082",
+    "other_address": "Chhattisgarh , Jagdalpur , 494001 , Shaheed Mahendra Karma Vishwavidyalaya, Bastar, Dharampura-2",
+    "state_name": "Chhattisgarh",
+    "iiqa_submitted_date": "2022-06-21",
+    "date_of_decleration": "2027-06-20 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;7162&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6976,
+    "hei_name": "DAVANGERE UNIVERSITY",
+    "aishe_id": "U-0218",
+    "other_address": "Karnataka , Davangere , 577007 , Davangere University, Shivagangotri, Davangere",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-05-10",
+    "date_of_decleration": "2027-05-09 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;6976&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6247,
+    "hei_name": "SAVEETHA INSTITUTE OF MEDICAL AND TECHNICAL SCIENCES",
+    "aishe_id": "U-0475",
+    "other_address": "Tamil Nadu , Chennai , 600077 , No.162,PH Road ,Velappanchavadi ,Chennai -600077 ,Tamilnadu,India",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-06-28",
+    "date_of_decleration": "2027-06-27 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6247&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6178,
+    "hei_name": "GUJARAT VIDYAPITH AHMEDABAD",
+    "aishe_id": "U-137",
+    "other_address": "Gujarat , Ahmedabad , 380014 , Nr. Income Tax Office, Ashram Road, Ahmedabad",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2022-07-12",
+    "date_of_decleration": "2027-07-11 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;6178&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6906,
+    "hei_name": "JAIN(Deemed-to- be University)",
+    "aishe_id": "U-0223",
+    "other_address": "Karnataka , BANGALORE , 560004 , JAIN GLOBAL CAMPUS, JAKKASANDRA POST, KANAKAPURA TALUK, RAMANAGARA DISTRICT - 562 112",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-12-06",
+    "date_of_decleration": "2026-12-05 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6906&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3902,
+    "hei_name": "MADAN MOHAN MALAVIYA UNIVERSITY OF TECHNOLOGY GORAKHPUR",
+    "aishe_id": "U-0739",
+    "other_address": "Uttar pradesh , Gorakhpur , 273010 , Madan Mohan Malaviya University of Technology, Deoria Road",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;3902&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6630,
+    "hei_name": "UNIVERSITY OF KERALA",
+    "aishe_id": "U-0260",
+    "other_address": "Kerala , Thiruvananthapuram , 695034 , University of Kerala,  Senate House Campus,  Palayam,  Thiruvananthapuram, Kerala, India",
+    "state_name": "Kerala",
+    "iiqa_submitted_date": "2022-06-21",
+    "date_of_decleration": "2027-06-20 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6630&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6649,
+    "hei_name": "YASHWANTRAO CHAVAN MAHARASHTRA OPEN UNIVERSITY, NASHIK",
+    "aishe_id": "U-0335",
+    "other_address": "Maharashtra , Nashik , 422222 , Dnyangangotri, Near Gangapur Dam, Govardhan, Nashik - 422 222",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-04-12",
+    "date_of_decleration": "2027-04-11 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;6649&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6634,
+    "hei_name": "SPICER ADVENTIST UNIVERSITY, PUNE",
+    "aishe_id": "U-0992",
+    "other_address": "Maharashtra , PUNE , 411067 , Spicer Adventist University, Pune Aundh Road,  Aundh-Pune Maharashtra",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-06-07",
+    "date_of_decleration": "2027-06-06 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;6634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6453,
+    "hei_name": "MANIPAL ACADEMY OF HIGHER EDUCATION (DEEMED-TO-BE-UNIVERSITY U/S 3 OF THE UGC ACT)",
+    "aishe_id": "U-0234",
+    "other_address": "Karnataka , Manipal Udupi , 576104 , manipal.edu Madhav Nagar Manipal",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-05-31",
+    "date_of_decleration": "2027-05-30 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6453&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6349,
+    "hei_name": "INTERNATIONAL INSTITUTE OF INFORMATION TECHNOLOGY",
+    "aishe_id": "U-0221",
+    "other_address": "Karnataka , Bangalore , 560100 , International Institute of information Technology Bangalore 26/C Electronics City  Phase 1 Hosur Road Bangalore",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-12-21",
+    "date_of_decleration": "2026-12-20 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;6349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6585,
+    "hei_name": "AVINASHILINGAM INSTITUTE FOR HOME SCIENCE AND HIGHER EDUCATION FOR WOMEN",
+    "aishe_id": "U-0444",
+    "other_address": "Tamil Nadu , Coimbatore , 641043 , Avinashlingam Institute for Home Science and Higher Education for Women,  Bharathi Park Road,  Coimbatore",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-02-22",
+    "date_of_decleration": "2027-02-21 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6585&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6559,
+    "hei_name": "Punyashlok Ahilyadevi Holkar Solapur University, Solapur",
+    "aishe_id": "U-0327",
+    "other_address": "Maharashtra , Solapur , 413255 , Solapur- Pune National Highway, Kegaon, Solapur,",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-01-25",
+    "date_of_decleration": "2027-01-24 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;6559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6531,
+    "hei_name": "GNA UNIVERSITY",
+    "aishe_id": "U-0789",
+    "other_address": "Punjab , Phagwara , 144401 , Sri Hargobindgarh, Phagwara Hoshiarpur Road",
+    "state_name": "Punjab",
+    "iiqa_submitted_date": "2022-03-29",
+    "date_of_decleration": "2027-03-28 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;6531&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6213,
+    "hei_name": "CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    "aishe_id": "U-0128",
+    "other_address": "Gujarat , Changa , 388421 , CHARUSAT Campus, Off. Nadiad-Petlad Highway,",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2022-07-12",
+    "date_of_decleration": "2027-07-11 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;6213&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6407,
+    "hei_name": "INTERNATIONAL INSTITUTE FOR POPULATION SCIENCES",
+    "aishe_id": "U-0309",
+    "other_address": "Maharashtra , Mumbai , 400088 , International Institute for Population Sciences (IIPS), Govandi Station Road, Deonar, Mumbai",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-02-08",
+    "date_of_decleration": "2027-02-07 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;6407&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4623,
+    "hei_name": "SHANMUGHA ARTS, SCIENCE, TECHNOLOGY AND RESEARCH ACADEMY (SASTRA) DEEMED-TO-BE-UNIVERSITY",
+    "aishe_id": "U-0476",
+    "other_address": "Tamil Nadu , Thanjavur , 613401 , SASTRA Deemed University Tirumalaisamudram",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-03-08",
+    "date_of_decleration": "2027-03-07 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4623&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5373,
+    "hei_name": "SRI BALAJI VIDYAPEETH",
+    "aishe_id": "U-0370",
+    "other_address": "Puducherry , Pondicherry , 607402 , SBV Campus, Pillaiyarkuppam",
+    "state_name": "Puducherry",
+    "iiqa_submitted_date": "2021-12-21",
+    "date_of_decleration": "2026-12-20 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;5373&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6245,
+    "hei_name": "KANNUR UNIVERSITY",
+    "aishe_id": "U-0256",
+    "other_address": "Kerala , KANNUR , 670002 , THAVAKKARA, CIVIL STATION  P.O.,  KANNUR. PIN 670002",
+    "state_name": "Kerala",
+    "iiqa_submitted_date": "2021-10-26",
+    "date_of_decleration": "2026-10-25 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;6245&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5194,
+    "hei_name": "PERIYAR UNIVERSITY",
+    "aishe_id": "U-0470",
+    "other_address": "Tamil Nadu , SALEM , 636011 , Periyar University,  Salem-636011",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-12-28",
+    "date_of_decleration": "2026-12-27 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;5194&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5532,
+    "hei_name": "NIRMA UNIVERSITY",
+    "aishe_id": "U-0146",
+    "other_address": "Gujarat , Ahmedabad , 382481 , Nirma University S. G. Highway Chharodi Ahmedabad",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2022-04-05",
+    "date_of_decleration": "2027-04-04 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5532&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6231,
+    "hei_name": "JK LAKSHMIPAT UNIVERSITY",
+    "aishe_id": "U-0657",
+    "other_address": "Rajasthan , Jaipur , 302026 , Near Mahindra SEZ, Mahapura, Ajmer Road",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2022-04-26",
+    "date_of_decleration": "2027-04-25 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;6231&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 6031,
+    "hei_name": "MAHARISHI MARKANDESHWAR (DEEMED TO BE UNIVERSITY), MULLANA-AMBALA",
+    "aishe_id": "U-0168",
+    "other_address": "Haryana , MULLANA , 133207 , Maharishi Markandeshwar (Deemed to be University),  Ambala-Yamunanagar Highway No. 344,  Mullana, District Ambala",
+    "state_name": "Haryana",
+    "iiqa_submitted_date": "2021-12-21",
+    "date_of_decleration": "2026-12-20 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;6031&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5477,
+    "hei_name": "INDRAPRASTHA INSTITUTE OF INFORMATION TECHNOLOGY, DELHI",
+    "aishe_id": "U-0105",
+    "other_address": "Delhi , New Delhi , 110020 , Indraprastha Institute of Information Technology Delhi Okhla Industrial Estate, Phase III (Near Govind Puri Metro Station)",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2022-03-22",
+    "date_of_decleration": "2027-03-21 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;5477&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5873,
+    "hei_name": "JAGAN NATH UNIVERSITY",
+    "aishe_id": "U-0398",
+    "other_address": "Rajasthan , Jaipur , 303901 , NH-12 Chaksu Bypass, Tonk Road, Jaipur",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2022-06-28",
+    "date_of_decleration": "2027-06-27 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5873&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5905,
+    "hei_name": "CHANAKYA NATIONAL LAW UNIVERSITY",
+    "aishe_id": "U-0063",
+    "other_address": "Bihar , PATNA , 800001 , Chanakya National Law University, Near Jakkanpur Police Station, Nyaya Nagar, Mithapur, Patna-800001, Bihar, (India)",
+    "state_name": "Bihar",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5905&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5610,
+    "hei_name": "UNIVERSITY OF ENGINEERING AND MANAGEMENT, JAIPUR",
+    "aishe_id": "U-0756",
+    "other_address": "Rajasthan , Jaipur , 303807 , Gurukul, 6 km from chomu on Sikar Road (NH-11), Udaipuria Mod",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-11-03",
+    "date_of_decleration": "2026-11-02 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5610&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5759,
+    "hei_name": "UNIVERSITY OF AGRICULTURAL SCIENCES, RAICHUR",
+    "aishe_id": "U-0247",
+    "other_address": "Karnataka , Raichur , 584104 , UNIVERSITY OF AGRICULTURAL SCIENCES, RAICHUR, LINGASUGUR ROAD, RAICHUR - 584 104, KARNATAKA",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5759&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5827,
+    "hei_name": "KLE TECHNOLOGICAL UNIVERSITY-HUBBALLI",
+    "aishe_id": "U-0854",
+    "other_address": "Karnataka , Hubballi , 580031 , KLE Technological University, B V Bhoomaraddi College Campus, Vidyanagar, Hubballi-580031",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-03-15",
+    "date_of_decleration": "2027-03-14 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5827&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5720,
+    "hei_name": "CAREER POINT UNIVERSITY, HAMIRPUR, HIMACHAL PRADESH",
+    "aishe_id": "U-0694",
+    "other_address": "Himachal pradesh , Hamirpur , 176041 , Career Point University, Hamipur.  Village Tikker (Kharwarian) Post Office Kharwar Tehsil Bhoranj , District Hamirpur.",
+    "state_name": "Himachal pradesh",
+    "iiqa_submitted_date": "2021-11-22",
+    "date_of_decleration": "2026-11-21 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5720&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5174,
+    "hei_name": "KRISHNA INSTITUTE OF MEDICAL SCIENCES DEEMED TO BE UNIVERSITY, KARAD",
+    "aishe_id": "U-0311",
+    "other_address": "Maharashtra , Karad , 415539 , KRISHNA INSTITUTE OF MEDICAL SCIENCES DEEMED TO BE UNIVERSITY KARAD NEAR DHEBEWADI ROAD, MALAKAPUR- KARAD 415539 DISTRICT- SATARA,",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-10-20",
+    "date_of_decleration": "2026-10-19 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5174&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5559,
+    "hei_name": "SUMANDEEP VIDYAPEETH",
+    "aishe_id": "U-0154",
+    "other_address": "Gujarat , Vadodara , 391760 , Sumandeep Vidyapeeth, At and PO-Piparia, Taluka-Waghodia",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2022-01-11",
+    "date_of_decleration": "2027-01-10 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;5559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5732,
+    "hei_name": "MOTHER TERESA WOMEN&amp;#39;S UNIVERSITY",
+    "aishe_id": "U-0466",
+    "other_address": "Tamil Nadu , Kodaikanal , 624101 , Attuvampatti,Kodaikanal",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-11-16",
+    "date_of_decleration": "2026-11-15 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5732&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5806,
+    "hei_name": "PERIYAR MANIAMMAI INSTITUTE OF SCIENCE AND TECHNOLOGY",
+    "aishe_id": "U-0469",
+    "other_address": "Tamil Nadu , Thanjavur , 613403 , Periyar Nagar, Vallam",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-07-12",
+    "date_of_decleration": "2027-07-11 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;5806&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5664,
+    "hei_name": "CHETTINAD ACADEMY OF RESEARCH AND EDUCATION",
+    "aishe_id": "U-0451",
+    "other_address": "Tamil Nadu , KELAMBAKKAM , 603103 , Chettinad Health City campus, Rajiv Gandhi Salai, Kelambakkam, Chengalpattu District",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;5664&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5747,
+    "hei_name": "VISVA BHARATI UNIVERSITY",
+    "aishe_id": "U-0589",
+    "other_address": "West Bengal , Santiniketan , 731235 , Santiniketan, Birbhum",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-11-30",
+    "date_of_decleration": "2026-11-29 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5782,
+    "hei_name": "MARTIN LUTHER CHRISTIAN UNIVERSITY",
+    "aishe_id": "U-0340",
+    "other_address": "Meghalaya , Shillong , 793006 , Dongktieh Block 1, Nongrah, Shillong-793006",
+    "state_name": "Meghalaya",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "D",
+    "edit_button": "&lt;a id=&quot;5782&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5775,
+    "hei_name": "UTTARANCHAL UNIVERSITY",
+    "aishe_id": "U-0750",
+    "other_address": "Uttarakhand , Dehradun , 248007 , Uttaranchal University,  Arcadia Grant,  PO-Chandanwari,  Premnagar",
+    "state_name": "Uttarakhand",
+    "iiqa_submitted_date": "2022-01-11",
+    "date_of_decleration": "2027-01-10 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5775&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5542,
+    "hei_name": "NATIONAL BRAIN RESEARCH CENTRE",
+    "aishe_id": "U-0170",
+    "other_address": "Haryana , Manesar , 122052 , NH -8, NAINWAL ROAD,  MANESAR  HR-122052",
+    "state_name": "Haryana",
+    "iiqa_submitted_date": "2021-12-14",
+    "date_of_decleration": "2026-12-13 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5542&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5760,
+    "hei_name": "SHREE SOMNATH SANSKRIT UNIVERSITY",
+    "aishe_id": "U-0152",
+    "other_address": "Gujarat , Veraval , 362266 , Shree Somnath Sanskrit University, Rajendra Bhuvan Road, Veraval, Dist.- Gir Somnath",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2021-09-20",
+    "date_of_decleration": "2026-09-19 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5736,
+    "hei_name": "KLE ACADEMY OF HIGHER EDUCATION AND RESEARCH",
+    "aishe_id": "U-0225",
+    "other_address": "Karnataka , Belagavi , 590010 , KLE Academy of Higher Education And Research JN Medical College Campus Nehru Nagar",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5736&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5731,
+    "hei_name": "SANGAM UNIVERSITY",
+    "aishe_id": "U-0693",
+    "other_address": "Rajasthan , BHILWARA , 311001 , NH-79, Bhilwara, Chittor By Pass, Chittor Road",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-11-03",
+    "date_of_decleration": "2026-11-02 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5731&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5466,
+    "hei_name": "ACADEMY OF MARITIME EDUCATION AND TRAINING (AMET) DEEMED TO BE UNIVERSITY",
+    "aishe_id": "U-0434",
+    "other_address": "Tamil Nadu , Chennai , 603112 , AMET Deemed to be University, 135 East Coast Road, Kanathur",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-09-13",
+    "date_of_decleration": "2026-09-12 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5466&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5727,
+    "hei_name": "RANI CHANNAMMA UNIVERSITY",
+    "aishe_id": "U-0602",
+    "other_address": "Karnataka , Belagavi , 591156 , Rani Channamma University,  Vidyasangama, Bhutaramanahatti NH - 04, Belagavi-591156",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5727&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5596,
+    "hei_name": "KAVIKULAGURU KALIDAS SANSKRIT UNIVERSITY",
+    "aishe_id": "U-0310",
+    "other_address": "Maharashtra , Ramtek , 441106 , Administrative Building, Sitalwadi, Mauda road",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-01-04",
+    "date_of_decleration": "2027-01-03 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5596&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5711,
+    "hei_name": "KUMAR BHASKAR VARMA SANSKRIT AND ANCIENT STUDIES UNIVERSITY",
+    "aishe_id": "U-0676",
+    "other_address": "Assam , Nalbari , 781337 , Vill Namati, P.O Hati Namati, Nalbari",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2022-02-15",
+    "date_of_decleration": "2027-02-14 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5711&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5712,
+    "hei_name": "DR K N MODI UNIVERSITY",
+    "aishe_id": "U-0393",
+    "other_address": "Rajasthan , Newai , 304021 , INS-1, RIICO Industrial Area  Phase-II, Newai, Tonk",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-09-28",
+    "date_of_decleration": "2026-09-27 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5712&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5583,
+    "hei_name": "KAZI NAZRUL UNIVERSITY",
+    "aishe_id": "U-0718",
+    "other_address": "West Bengal , Asansol , 713340 , Nazrul Road, Kalla Bypass More, P.O.- Kalla C.H., P.S.- Asansol (North), Asansol, Dist. - Paschim Bardhaman, West Bengal, Pin - 713340",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5583&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5332,
+    "hei_name": "SIKSHA &#039;O&#039; ANUSANDHAN",
+    "aishe_id": "U-0363",
+    "other_address": "Orissa , Bhubaneswar , 751030 , Siksha O Anusandhan, J 15, Khandagiri Square, Bhubaneswar",
+    "state_name": "Orissa",
+    "iiqa_submitted_date": "2022-05-10",
+    "date_of_decleration": "2029-05-09 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;5332&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5536,
+    "hei_name": "VINAYAKA MISSION&amp;#39;S RESEARCH FOUNDATION",
+    "aishe_id": "U-0492",
+    "other_address": "Tamil Nadu , SALEM , 636308 , SANKARI MAIN ROAD, ARIYANOOR",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-07-12",
+    "date_of_decleration": "2027-07-11 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5536&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5654,
+    "hei_name": "KRISHNA KANTA HANDIQUI STATE OPEN UNIVERSITY",
+    "aishe_id": "U-0054",
+    "other_address": "Assam , Guwahati , 781017 , Patgaon, Rani Gate, Rani",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2021-12-21",
+    "date_of_decleration": "2026-12-20 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5654&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5622,
+    "hei_name": "GURUKULA KANGRI (DEEMED TO BE UNIVERSITY)",
+    "aishe_id": "U-0556",
+    "other_address": "Uttarakhand , Haridwar , 249404 , P.O. Gurukul Kangri, Haridwar-249404",
+    "state_name": "Uttarakhand",
+    "iiqa_submitted_date": "2021-11-30",
+    "date_of_decleration": "2026-11-29 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5622&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5524,
+    "hei_name": "VIGNAN&amp;#39;S FOUNDATION FOR SCIENCE TECHNOLOGY AND RESEARCH",
+    "aishe_id": "U-0043",
+    "other_address": "Andhra Pradesh , Guntur , 522213 , Chebrolu Mandal, Vadlamudi",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2021-10-26",
+    "date_of_decleration": "2026-10-25 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5524&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2533,
+    "hei_name": "SRI SATHYA SAI INSTITUTE OF HIGHER LEARNING (DEEMED TO BE UNIVERSITY)",
+    "aishe_id": "U-0035",
+    "other_address": "Andhra Pradesh , Prasanthi Nilayam , 515134 , Sri Sathya Sai Institute of Higher Learning, (Deemed to be University), Vidyagiri, Prasanthi Nilayam-515134 Anantapuramu District",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2021-09-20",
+    "date_of_decleration": "2026-09-19 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;2533&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5169,
+    "hei_name": "BLDE (DEEMED TO BE UNIVERSITY)",
+    "aishe_id": "U-0214",
+    "other_address": "Karnataka , Vijayapura , 586103 , Smt. Bangaramma Sajjan Campus, B M Patil Road (Sholapur Road), Vijayapura-586103 Karnataka, India",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-11-16",
+    "date_of_decleration": "2026-11-15 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5169&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5592,
+    "hei_name": "SRI DEVARAJ URS ACADEMY OF HIGHER EDUCATION AND RESEARCH",
+    "aishe_id": "U-0241",
+    "other_address": "Karnataka , Kolar , 563103 , Post Box No 62, Tamaka,",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-07-05",
+    "date_of_decleration": "2027-07-04 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5592&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5451,
+    "hei_name": "KARPAGAM ACADEMY OF HIGHER EDUCATION",
+    "aishe_id": "U-0459",
+    "other_address": "Tamil Nadu , Coimbatore , 641021 , Pollachi Main Road, Eachanari Post",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-12-06",
+    "date_of_decleration": "2026-12-05 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5451&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5506,
+    "hei_name": "ANNAMALAI UNIVERSITY",
+    "aishe_id": "U-0443",
+    "other_address": "Tamil Nadu , ANNAMALAINAGAR CHIDAMBARAM , 608002 , Annamalai University Annamalainagar",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2022-06-21",
+    "date_of_decleration": "2027-06-20 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5364,
+    "hei_name": "IIS (DEEMED TO BE UNIVERSITY)",
+    "aishe_id": "U-0394",
+    "other_address": "Rajasthan , Jaipur , 302020 , Gurukul Marg, S.F.S., Mansarovar",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2022-03-22",
+    "date_of_decleration": "2027-03-21 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;5364&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5472,
+    "hei_name": "SREE SANKARACHARYA UNIVERSITY OF SANSKRIT",
+    "aishe_id": "U-0265",
+    "other_address": "Kerala , ERNAKULAM , 683574 , SREE SANKARACHARYA UNIVERSITY OF SANSKRIT KALADY, KALADY P.O, ERNAKULAM, KERALA-683574",
+    "state_name": "Kerala",
+    "iiqa_submitted_date": "2021-08-31",
+    "date_of_decleration": "2026-08-30 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;5472&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5455,
+    "hei_name": "JAWAHARLAL NEHRU ARCHITECTURE AND FINE ARTS UNIVERSITY",
+    "aishe_id": "U-0018",
+    "other_address": "Telangana , HYDERABAD , 500028 , JNAFA UNIVERSITY, MAHAVEER MARG, MASAB TANK",
+    "state_name": "Telangana",
+    "iiqa_submitted_date": "2021-12-06",
+    "date_of_decleration": "2026-12-05 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;5455&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5386,
+    "hei_name": "JECRC UNIVERSITY",
+    "aishe_id": "U-0741",
+    "other_address": "Rajasthan , Jaipur , 303905 , Plot No. IS-2036 to 2039,  Ramchandrapura,  Industrial Area, Vidhani, Sitapura Extn, Jaipur",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-11-22",
+    "date_of_decleration": "2026-11-21 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5386&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5382,
+    "hei_name": "VISVESVARAYA TECHNOLOGICAL UNIVERSITY",
+    "aishe_id": "U-0249",
+    "other_address": "Karnataka , Belagavi , 590018 , Visvesvaraya Technological University Jnana Sangama Machhe  Belagavi Karanataka 590018",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-03-29",
+    "date_of_decleration": "2027-03-28 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5382&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5242,
+    "hei_name": "RASHTRASANT TUKADOJI MAHARAJ NAGPUR UNIVERSITY",
+    "aishe_id": "U-0332",
+    "other_address": "Maharashtra , Nagpur , 440033 , Rashtrasant Tukadoji Maharaj Nagpur University,  Jamnalal Bajaj Administrative Premisis, Ambazari Bypass Road",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;5242&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5287,
+    "hei_name": "DESH BHAGAT UNIVERSITY",
+    "aishe_id": "U-0684",
+    "other_address": "Punjab , Mandi Gobindgarh , 147301 , Vill Saunti Amloh Road Mandi Gobindgarh Disst Fatehagarh Sahib Punjab",
+    "state_name": "Punjab",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5256,
+    "hei_name": "REVA UNIVERSITY",
+    "aishe_id": "U-0725",
+    "other_address": "Karnataka , Bengaluru , 560064 , Rukmini Knowlegde Park, Kattigenahalli, Yelahanka",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2022-01-18",
+    "date_of_decleration": "2027-01-17 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;5256&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5212,
+    "hei_name": "INVERTIS UNIVERSITY, BAREILLY, UTTAR PRADESH",
+    "aishe_id": "U-0520",
+    "other_address": "Uttar pradesh , Bareilly , 243123 , Invertis University, Invertis Village, Near Transport Nagar Bareilly - Lucknow National Highway - 24, Bareilly",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5212&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 5201,
+    "hei_name": "DR.B.R.AMBEDKAR UNIVERSITY, SRIKAKULAM",
+    "aishe_id": "U-0009",
+    "other_address": "Andhra Pradesh , SRIKAKULAM , 532410 , Dr.B.R.Ambedkar University, Srikakulam  Etcherla - 532 410 Srikakulam Andhra Pradesh",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2021-10-05",
+    "date_of_decleration": "2026-10-04 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;5201&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4089,
+    "hei_name": "HOMI BHABHA NATIONAL INSTITUTE",
+    "aishe_id": "U-0304",
+    "other_address": "Maharashtra , Mumbai , 400094 , Homi Bhabha National Institute, a deemed to be university, 2nd Floor, Training School Complex Anushaktinagar,  Mumbai 400094",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;4089&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4419,
+    "hei_name": "CHITKARA UNIVERSITY",
+    "aishe_id": "U-0373",
+    "other_address": "Punjab , Rajpura , 140401 , Chandigarh-Patiala National Highway (NH-07) Village- Jhansla, Tehsil- Rajpura Dist - Patiala",
+    "state_name": "Punjab",
+    "iiqa_submitted_date": "2021-09-07",
+    "date_of_decleration": "2026-09-06 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;4419&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4987,
+    "hei_name": "UNIVERSITY OF SCIENCE AND TECHNOLOGY, MEGHALAYA",
+    "aishe_id": "U-0639",
+    "other_address": "Meghalaya , Ri Bhoi , 793101 , Techno City, Kling Road, 9th Mile, Baridua, Dist- Ri-Bhoi",
+    "state_name": "Meghalaya",
+    "iiqa_submitted_date": "2021-11-03",
+    "date_of_decleration": "2026-11-02 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;4987&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4958,
+    "hei_name": "SAURASHTRA UNIVERSITY",
+    "aishe_id": "U-0151",
+    "other_address": "Gujarat , RAJKOT , 360005 , SAURASHTRA UNIVERSITY CAMPUS, UNIVERSITY ROAD, RAJKOT - 360005",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2021-02-23",
+    "date_of_decleration": "2026-02-22 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4958&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4476,
+    "hei_name": "ALIGARH MUSLIM UNIVERSITY",
+    "aishe_id": "U-0496",
+    "other_address": "Uttar pradesh , ALIGARH , 202002 , Aligarh Muslim University, University Road, Civil Lines,",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2022-05-10",
+    "date_of_decleration": "2027-05-09 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;4476&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4850,
+    "hei_name": "DR. D. Y. PATIL VIDYAPEETH, PUNE",
+    "aishe_id": "U-0301",
+    "other_address": "Maharashtra , Pune , 411018 , Dr. D. Y. Patil Vidyapeeth (Deemed to be University), Sant Tukaram Nagar, Pimpri, Pune",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-02-08",
+    "date_of_decleration": "2027-02-07 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4850&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4835,
+    "hei_name": "AMRITA VISHWA VIDYAPEETHAM",
+    "aishe_id": "U-0436",
+    "other_address": "Tamil Nadu , Ettimadai PO  Coimbatore , 641112 , Amrita Nagar PO Ettimadai",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-08-17",
+    "date_of_decleration": "2026-08-16 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4835&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4694,
+    "hei_name": "JAIN VISHVA BHARATI INSTITUTE",
+    "aishe_id": "U-0400",
+    "other_address": "Rajasthan , LADNUN , 341306 , JAIN VISHVA BHARATI INSTITUTE, LADNUN, DIST. NAGAUR",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-11-03",
+    "date_of_decleration": "2026-11-02 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;4694&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4770,
+    "hei_name": "TAMIL NADU PHYSICAL EDUCATION AND SPORTS UNIVERSITY",
+    "aishe_id": "U-0486",
+    "other_address": "Tamil Nadu , CHENNAI , 6000127 , VANDALUR- KELAMBAKKAM ROAD MELAKOTTAIYUR POST CHENNAI 600127 TAMIL NADU",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-08-17",
+    "date_of_decleration": "2026-08-16 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4764,
+    "hei_name": "VELLORE INSTITUTE OF TECHNOLOGY",
+    "aishe_id": "U-0490",
+    "other_address": "Tamil Nadu , Vellore , 632014 , Katpadi - Thiruvalam Road",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-08-31",
+    "date_of_decleration": "2026-08-30 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4764&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4639,
+    "hei_name": "ASSAM DON BOSCO UNIVERSITY",
+    "aishe_id": "U-0049",
+    "other_address": "Assam , Guwahati , 782402 , Tapesia Gardens, Kamarkuchi Village, Sonapur",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2021-11-30",
+    "date_of_decleration": "2026-11-29 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;4639&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4747,
+    "hei_name": "UNIVERSITY OF NORTH BENGAL",
+    "aishe_id": "U-0579",
+    "other_address": "West Bengal , Darjeeling , 734013 , Raja Rammohunpur, PO - North Bengal University",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2022-06-14",
+    "date_of_decleration": "2027-06-13 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;4747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4347,
+    "hei_name": "ICFAI UNIVERSITY TRIPURA",
+    "aishe_id": "U-494",
+    "other_address": "Tripura , Agartala , 799210 , Kamalghat, Sadar, West Tripura",
+    "state_name": "Tripura",
+    "iiqa_submitted_date": "2021-12-14",
+    "date_of_decleration": "2026-12-13 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4347&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4673,
+    "hei_name": "KALINGA UNIVERSITY",
+    "aishe_id": "U-0711",
+    "other_address": "Chhattisgarh , Raipur , 492101 , Kalinga University Village - Kotni, Near Mantralaya,  Naya Raipur",
+    "state_name": "Chhattisgarh",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;4673&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4439,
+    "hei_name": "MANGALORE UNIVERSITY",
+    "aishe_id": "U-0233",
+    "other_address": "Karnataka , Mangalore , 574199 , Administrative Building Mangalagangothri",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-02-15",
+    "date_of_decleration": "2026-02-14 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4439&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4464,
+    "hei_name": "VIDYASAGAR UNIVERSITY",
+    "aishe_id": "U-0588",
+    "other_address": "West Bengal , MIDNAPORE , 721102 , Vidyasagar University Dist. Paschim Medinipur",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-09-28",
+    "date_of_decleration": "2026-09-27 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;4464&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3573,
+    "hei_name": "MGM INSTITUTE OF HEALTH SCIENCES, NAVI MUMBAI",
+    "aishe_id": "U-0317",
+    "other_address": "Maharashtra , Navi Mumbai , 410209 , MGM Institute of Health Sciences, Sector 1, Kamothe",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2022-07-19",
+    "date_of_decleration": "2027-07-18 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;3573&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3773,
+    "hei_name": "TUMKUR UNIVERSITY",
+    "aishe_id": "U-0244",
+    "other_address": "Karnataka , TUMAKURU , 572103 , Tumkur Univeristy, B H Road,  Tumakuru",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-01-25",
+    "date_of_decleration": "2026-01-24 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;3773&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3787,
+    "hei_name": "SWAMI RAMANAND TEERTH MARATHWADA UNIVERSITY",
+    "aishe_id": "U-0328",
+    "other_address": "Maharashtra , Nanded , 431606 , Dnyanteerth, Vishnupuri",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-04-19",
+    "date_of_decleration": "2026-04-18 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;3787&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3434,
+    "hei_name": "UNIVERSITY OF MYSORE",
+    "aishe_id": "U-0235",
+    "other_address": "Karnataka , Mysuru , 570005 , University of Mysore, Crawford Hall, Mysuru 570005",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-09-20",
+    "date_of_decleration": "2026-09-19 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;3434&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4392,
+    "hei_name": "UNIVERSITY OF MUMBAI",
+    "aishe_id": "U-0318",
+    "other_address": "Maharashtra , Mumbai , 400032 , Mahatma Gandhi Road, University of Mumbai, Fort, Mumbai, 400032",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-08-31",
+    "date_of_decleration": "2026-08-30 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4392&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4365,
+    "hei_name": "NETAJI SUBHAS OPEN UNIVERSITY",
+    "aishe_id": "U-0578",
+    "other_address": "West Bengal , Kolkata , 700064 , DD-26, Sector-l, Salt lake City",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-04-08",
+    "date_of_decleration": "2026-04-07 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;4365&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4013,
+    "hei_name": "UNIVERSITY OF PETROLEUM AND ENERGY STUDIES",
+    "aishe_id": "U-0564",
+    "other_address": "Uttarakhand , Dehradun , 248007 , Energy Acres, P.O. Bidholi, via Prem Nagar, Dehradun",
+    "state_name": "Uttarakhand",
+    "iiqa_submitted_date": "2021-03-01",
+    "date_of_decleration": "2026-02-28 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;4013&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4270,
+    "hei_name": "RAJIV GANDHI UNIVERSITY OF KNOWLEDGE TECHNOLOGIES",
+    "aishe_id": "U-0869",
+    "other_address": "Telangana , BASAR , 504107 , Rajiv Gandhi University of Knowledge Technologies Basar, Basar (Village and Mandal), Nirmal District,",
+    "state_name": "Telangana",
+    "iiqa_submitted_date": "2021-11-03",
+    "date_of_decleration": "2026-11-02 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;4270&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3946,
+    "hei_name": "JAMIA MILLIA ISLAMIA",
+    "aishe_id": "U-0108",
+    "other_address": "Delhi , New Delhi , 110025 , Maulana Mohammad Ali Jauhar Marg, Jamia Nagar",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2021-12-14",
+    "date_of_decleration": "2026-12-13 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;3946&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4135,
+    "hei_name": "MADURAI KAMARAJ UNIVERSITY",
+    "aishe_id": "U-0463",
+    "other_address": "Tamil Nadu , Madurai , 625021 , Madurai Kamaraj University, Palkalai Nagar",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4039,
+    "hei_name": "DR. B. R. AMBEDKAR UNIVERSITY DELHI",
+    "aishe_id": "U-0097",
+    "other_address": "Delhi , DELHI , 110006 , Lothian Road, Kashmere Gate,",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2022-05-24",
+    "date_of_decleration": "2027-05-23 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;4039&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4287,
+    "hei_name": "B. S. ABDUR RAHMAN CRESCENT INSTITUTE OF SCIENCE AND TECHNOLOGY",
+    "aishe_id": "U-0445",
+    "other_address": "Tamil Nadu , CHENNAI , 600048 , Seethakathi Estate GST Road Vandalur Chennai - 600 048 Chengalpattu District Tamil Nadu",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-02-08",
+    "date_of_decleration": "2026-02-07 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;4287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4238,
+    "hei_name": "SHIVAJI UNIVERSITY",
+    "aishe_id": "U-0325",
+    "other_address": "Maharashtra , Kolhapur , 416004 , Shivaji University, Kolhapur - 416 004",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2021-03-31",
+    "date_of_decleration": "2026-03-30 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;4238&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4101,
+    "hei_name": "WEST BENGAL STATE UNIVERSITY (BARASAT, NORTH TWENTY FOUR PARGANAS)",
+    "aishe_id": "U-0590",
+    "other_address": "West Bengal , Kolkata , 700126 , Berunanpukuria P.O. Malikapur North 24-Parganas",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-02-23",
+    "date_of_decleration": "2026-02-22 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4101&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 4156,
+    "hei_name": "ASSAM UNIVERSITY",
+    "aishe_id": "U-0050",
+    "other_address": "Assam , Silchar , 788011 , Dorgakona, Dist-Cachar",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2021-09-20",
+    "date_of_decleration": "2026-09-19 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;4156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3926,
+    "hei_name": "AMITY UNIVERSITY HARYANA",
+    "aishe_id": "U-0155",
+    "other_address": "Haryana , Gurugram , 122413 , Amity University Haryana, Amity Education Valley, Panchgaon, Manesar, Gurugram -122413",
+    "state_name": "Haryana",
+    "iiqa_submitted_date": "2021-02-02",
+    "date_of_decleration": "2026-02-01 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;3926&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3994,
+    "hei_name": "SRI RAMACHANDRA INSTITUTE OF HIGHER EDUCATION AND RESEARCH (DEEMED TO BE UNIVERSITY U/S 3 OF THE UGC ACT 1956)",
+    "aishe_id": "U-0478",
+    "other_address": "Tamil Nadu , Chennai , 600116 , Sri Ramachandra Institute of Higher Education and Research (Deemed to be University),  No. 1, Ramachandra Nagar, Porur",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-01-25",
+    "date_of_decleration": "2026-01-24 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;3994&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3920,
+    "hei_name": "INDIRA GANDHI NATIONAL OPEN UNIVERSITY",
+    "aishe_id": "U-0104",
+    "other_address": "Delhi , New Delhi , 110068 , Indira Gandhi National Open University Maidan Garhi New Delhi",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2021-01-08",
+    "date_of_decleration": "2026-01-07 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;3920&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3925,
+    "hei_name": "TEAMLEASE SKILLS UNIVERSITY",
+    "aishe_id": "U-0781",
+    "other_address": "Gujarat , Vadodara , 390009 , ITC Building, ITI Campus, Tarsali",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2022-03-29",
+    "date_of_decleration": "2027-03-28 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3925&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3901,
+    "hei_name": "DR. RAM MANOHAR LOHIA AWADH UNIVERSITY, FAIZABAD",
+    "aishe_id": "U-0510",
+    "other_address": "Uttar pradesh , AYODHYA , 224001 , Dr. Rammanohar Lohia Avadh University, Hawai Patti, Allahabad Road, (Faizabad)-Ayodhya",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3901&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3884,
+    "hei_name": "THIRUVALLUVAR UNIVERSITY",
+    "aishe_id": "U-0488",
+    "other_address": "Tamil Nadu , Vellore , 632115 , THIRUVALLUVAR UNIVERSITY SERKKADU",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2021-01-08",
+    "date_of_decleration": "2026-01-07 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;3884&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3778,
+    "hei_name": "RAIGANJ UNIVERSITY",
+    "aishe_id": "U-0901",
+    "other_address": "West Bengal , RAIGANJ , 733134 , Raiganj University, Dist- North Dinajpur",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "D",
+    "edit_button": "&lt;a id=&quot;3778&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3746,
+    "hei_name": "MAHARAJA GANGA SINGH UNIVERSITY",
+    "aishe_id": "U-0406",
+    "other_address": "Rajasthan , Bikaner , 334004 , Maharaja Ganga SIngh University, NH15, Jaiselmer Road",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2021-03-31",
+    "date_of_decleration": "2026-03-30 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;3746&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2541,
+    "hei_name": "BANASTHALI VIDYAPITH",
+    "aishe_id": "U-0389",
+    "other_address": "Rajasthan , Banasthali Vidyapith , 304022 , P.O. Banasthali Vidyapith, Dist. Tonk, Rajasthan",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2020-03-11",
+    "date_of_decleration": "2025-03-10 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;2541&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3680,
+    "hei_name": "MANIPAL UNIVERSITY JAIPUR",
+    "aishe_id": "U-0749",
+    "other_address": "Rajasthan , Jaipur , 303007 , Dehmi Kalan Off Jaipur-Ajmer Express way Jaipur",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2020-02-14",
+    "date_of_decleration": "2025-02-13 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;3680&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3577,
+    "hei_name": "SIR PADAMPAT SINGHANIA UNIVERSITY",
+    "aishe_id": "U-0426",
+    "other_address": "Rajasthan , Bhatewar , 313601 , NH-76, Bhatewar, Tehsil - Vallabhnagar, District - Udaipur",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2020-03-11",
+    "date_of_decleration": "2025-03-10 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3577&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3566,
+    "hei_name": "THE ICFAI UNIVERSITY, DEHRADUN",
+    "aishe_id": "U-0561",
+    "other_address": "Uttarakhand , Dehradun , 248197 , Rajawala Road Central Hope Town Selaqui,  Dehradun",
+    "state_name": "Uttarakhand",
+    "iiqa_submitted_date": "2020-01-08",
+    "date_of_decleration": "2025-01-07 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;3566&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3508,
+    "hei_name": "NITTE (DEEMED TO BE UNIVERSITY)",
+    "aishe_id": "U-0239",
+    "other_address": "Karnataka , Mangaluru , 575018 , Sixth Floor, University Enclave, Medical Sciences Complex, Deralakatte",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2021-03-16",
+    "date_of_decleration": "2026-03-15 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;3508&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3500,
+    "hei_name": "KANNADA UNIVERSITY HAMPI",
+    "aishe_id": "U-0226",
+    "other_address": "Karnataka , Hospete , 583276 , Kannada University, Hampi Vidyaranya Hospete Taluk, Bellari District KARNATAKA Pin code  583276",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2020-01-08",
+    "date_of_decleration": "2025-01-07 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3500&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3356,
+    "hei_name": "BABA GHULAM SHAH BADSHAH UNIVERSITY",
+    "aishe_id": "U-0191",
+    "other_address": "Jammu And Kashmir , Rajouri , 185234 , Baba Ghulam Shah Badshah University, Dhanore, Rajouri",
+    "state_name": "Jammu And Kashmir",
+    "iiqa_submitted_date": "2020-01-08",
+    "date_of_decleration": "2025-01-07 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3356&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3260,
+    "hei_name": "MAHARAJA AGRASEN UNIVERSITY",
+    "aishe_id": "U-0671",
+    "other_address": "Himachal pradesh , Kalujhanda Barotiwala Baddi Distt Solan , 174103 , Atal Shiksha Kunj Kalujhanda Near Barotiwala Tehsil Baddi Distt. Solan",
+    "state_name": "Himachal pradesh",
+    "iiqa_submitted_date": "2019-10-18",
+    "date_of_decleration": "2024-10-17 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;3260&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 3144,
+    "hei_name": "VIJAYANAGARA SRI KRISHNADEVARAYA UNIVERSITY BALLARI",
+    "aishe_id": "U-0603",
+    "other_address": "Karnataka , Ballari , 583105 , Vijayanagara Sri Krishnadevaraya University Jnana sagara Campus, Vinayaka nagara, cantonment Ballari - 583105",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2019-11-15",
+    "date_of_decleration": "2024-11-14 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;3144&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2116,
+    "hei_name": "CHANDIGARH UNIVERSITY",
+    "aishe_id": "U-0747",
+    "other_address": "Punjab , Mohali , 140413 , NH-95,CHANDIGARH-LUDHIANA HIGHWAY GHARUAN, MOHALI PUNJAB-140413",
+    "state_name": "Punjab",
+    "iiqa_submitted_date": "2019-09-09",
+    "date_of_decleration": "2024-09-08 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;2116&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2916,
+    "hei_name": "DELHI TECHNOLOGICAL UNIVERSITY",
+    "aishe_id": "U-0098",
+    "other_address": "Delhi , Delhi , 110042 , Bawana Road Shahbad Daulatpur",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2019-11-26",
+    "date_of_decleration": "2024-11-25 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;2916&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2789,
+    "hei_name": "DEVI AHILYA VISHWAVIDYALAYA",
+    "aishe_id": "U-0270",
+    "other_address": "Madhya Pradesh , Indore , 452001 , Devi Ahilya Vishwavidyala, Nalanda Parisar, R N T Marg",
+    "state_name": "Madhya Pradesh",
+    "iiqa_submitted_date": "2019-11-26",
+    "date_of_decleration": "2024-11-25 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;2789&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2768,
+    "hei_name": "MIZORAM UNIVERSITY",
+    "aishe_id": "U-0345",
+    "other_address": "Mizoram , Aizawl , 796004 , Mizoram University (A Central University) Tanhril, Aizawl - 796004 Mizoram",
+    "state_name": "Mizoram",
+    "iiqa_submitted_date": "2019-05-20",
+    "date_of_decleration": "2024-05-19 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;2768&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2458,
+    "hei_name": "PATNA UNIVERSITY",
+    "aishe_id": "U-0074",
+    "other_address": "Bihar , Patna , 800005 , Ashok Rajpath, Near Patna College",
+    "state_name": "Bihar",
+    "iiqa_submitted_date": "2019-08-09",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;2458&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2520,
+    "hei_name": "IIHMR UNIVERSITY",
+    "aishe_id": "U-0851",
+    "other_address": "Rajasthan , Jaipur , 302029 , IIHMR University, 1 Prabhu Dayal Marg, Near Sanganer Airport, Jaipur",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2019-08-09",
+    "date_of_decleration": "2024-08-08 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;2520&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2432,
+    "hei_name": "BHARATHIDASAN UNIVERSITY",
+    "aishe_id": "U-0448",
+    "other_address": "Tamil Nadu , TIRUCHIRAPALLI , 620024 , Bharathidasan University, Palkalaiperur",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2019-04-01",
+    "date_of_decleration": "2024-03-31 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;2432&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2471,
+    "hei_name": "RAMAKRISHNA MISSION VIVEKANANDA EDUCATIONAL AND RESEARCH INSTITUTE",
+    "aishe_id": "U-0582",
+    "other_address": "West Bengal , Howrah , 711202 , Ramakrishna Mission Vivekananda Educational and Research Institute (RKMVERI), PO Belur Math, Dist Howrah 711202 West Bengal",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;2471&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2460,
+    "hei_name": "SHIV NADAR UNIVERSITY",
+    "aishe_id": "U-0642",
+    "other_address": "Uttar pradesh , DADRI GAUTAM BUDDHA NAGAR , 201314 , NH-91, TEHSIL-DADRI, GAUTAM BUDDHA NAGAR, UTTAR PRADESH",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2019-11-26",
+    "date_of_decleration": "2024-11-25 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;2460&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1990,
+    "hei_name": "PUNJAB ENGINEERING COLLEGE (DEEMED TO BE UNIVERSITY), CHANDIGARH",
+    "aishe_id": "U-0080",
+    "other_address": "Chandigarh , CHANDIGARH , 160012 , Punjab Engineering College (Deemed to be University) Sector 12 Chandigarh-160012",
+    "state_name": "Chandigarh",
+    "iiqa_submitted_date": "2019-09-09",
+    "date_of_decleration": "2024-09-08 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;1990&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2233,
+    "hei_name": "VELS INSTITUTE OF SCIENCE, TECHNOLOGY AND ADVANCED STUDIES(VISTAS)",
+    "aishe_id": "U-0491",
+    "other_address": "Tamil Nadu , CHENNAI , 600117 , Velan Nagar, P.V.Vaithiyalingam Road, Pallavaram, Chennai",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;2233&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2286,
+    "hei_name": "CENTRAL UNIVERSITY OF JHARKHAND",
+    "aishe_id": "U-0204",
+    "other_address": "Jharkhand , Ranchi , 835205 , CTI Campus, Ratu-Lohardaga Road, Brambe, Ranchi",
+    "state_name": "Jharkhand",
+    "iiqa_submitted_date": "2019-07-15",
+    "date_of_decleration": "2024-07-14 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;2286&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2349,
+    "hei_name": "DAYALBAGH EDUCATIONAL INSTITUTE",
+    "aishe_id": "U-0507",
+    "other_address": "Uttar pradesh , AGRA , 282005 , Dayalbagh Educational Institute (Deemed to be University), Dayalbagh",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2019-08-09",
+    "date_of_decleration": "2024-08-08 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;2349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1647,
+    "hei_name": "UNIVERSITY OF KASHMIR",
+    "aishe_id": "U-0196",
+    "other_address": "Jammu And Kashmir , Srinagar , 190006 , University of Kashmir Hazratbal, Srinagar, Jammu  and Kashmir",
+    "state_name": "Jammu And Kashmir",
+    "iiqa_submitted_date": "2019-05-20",
+    "date_of_decleration": "2024-05-19 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;1647&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1634,
+    "hei_name": "AVINASHILINGAM INSTITUTE FOR HOME SCIENCE AND HIGHER EDUCATION FOR WOMEN",
+    "aishe_id": "U-0444",
+    "other_address": "Tamil Nadu , Coimbatore , 641043 , Avinashilingam Institute for Home Science and Higher Education for Women Bharathi Park Road",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2019-03-04",
+    "date_of_decleration": "2024-03-03 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;1634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2179,
+    "hei_name": "UNIVERSITY OF ALLAHABAD",
+    "aishe_id": "U-0548",
+    "other_address": "Uttar pradesh , Allahabad , 211002 , Senate House Campus, University of Allahabad, Allahabad",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2019-04-01",
+    "date_of_decleration": "2024-03-31 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;2179&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2156,
+    "hei_name": "ASSAM DOWN TOWN UNIVERSITY",
+    "aishe_id": "U-0683",
+    "other_address": "Assam , GUWAHATI , 781026 , SANKAR MADHAB PATH, GANDHINAGAR, PANIKHAITI",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2019-03-04",
+    "date_of_decleration": "2024-03-03 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;2156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2159,
+    "hei_name": "DR. BABASAHEB AMBEDKAR MARATHWADA UNIVERSITY",
+    "aishe_id": "U-0298",
+    "other_address": "Maharashtra , Aurangabad , 431004 , Dr. Babasaheb Ambedkar Marathwada University, Jaisingapura, Near Soneri Mahal,",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;2159&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 2099,
+    "hei_name": "JAIN VISHVA BHARATI INSTITUTE",
+    "aishe_id": "U-0400",
+    "other_address": "Rajasthan , LADNUN , 341306 , JAIN VISHVA BHARATI INSTITUTE LADNUN, DIST. NAGAUR",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2019-05-01",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;2099&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1760,
+    "hei_name": "SIDHO KANHO BIRSHA UNIVERSITY",
+    "aishe_id": "U-0583",
+    "other_address": "West Bengal , Purulia , 723104 , P.O. Sainik School Ranchi Road,  Dist. Purulia",
+    "state_name": "West Bengal",
+    "iiqa_submitted_date": "2019-06-14",
+    "date_of_decleration": "2024-06-13 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;1760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1908,
+    "hei_name": "POTTI SREERAMULU TELUGU UNIVERSITY",
+    "aishe_id": "U-0029",
+    "other_address": "Telangana , HYDERABAD , 500004 , POTTI SREERAMULU TELUGU UNIVERSITY                                                                 PUBLIC GARDENS NAMPALLY HYDERABAD",
+    "state_name": "Telangana",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;1908&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1738,
+    "hei_name": "SHRI MATA VAISHNO DEVI UNIVERSITY",
+    "aishe_id": "U-0201",
+    "other_address": "Jammu And Kashmir , Kakryal District Reasi , 182320 , SMVDU Campus Kakryal Sub Post Office Katra District Reasi",
+    "state_name": "Jammu And Kashmir",
+    "iiqa_submitted_date": "2019-02-08",
+    "date_of_decleration": "2024-02-07 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;1738&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1838,
+    "hei_name": "THAPAR INSTITUTE OF ENGINEERING AND TECHNOLOGY UNIVERSITY",
+    "aishe_id": "U-0385",
+    "other_address": "Punjab , Patiala , 147004 , THAPAR TECHNOLOGY CAMPUS POST BOX 32  PATIALA PUNJAB , INDIA",
+    "state_name": "Punjab",
+    "iiqa_submitted_date": "2019-03-04",
+    "date_of_decleration": "2024-03-03 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;1838&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1937,
+    "hei_name": "MAHARSHI DAYANAND UNIVERSITY",
+    "aishe_id": "U-0167",
+    "other_address": "Haryana , Rohtak , 124001 , Maharshi Dayanand University, Rohtak",
+    "state_name": "Haryana",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;1937&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1817,
+    "hei_name": "DAKSHINA BHARAT HINDI PRACHAR SABHA",
+    "aishe_id": "U-0452",
+    "other_address": "Tamil Nadu , MADRAS , 600017 , Thanikachalam Road, T Nagar, Chennai",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2019-03-04",
+    "date_of_decleration": "2024-03-03 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;1817&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1770,
+    "hei_name": "UKA TARSADIA UNIVERSITY",
+    "aishe_id": "U-0668",
+    "other_address": "Gujarat , BARDOLI , 394350 , Maliba Campus, Gopal Vidyanagar, Bardoli-Mahuva Road, Taluka-Mahuva, Dist.- Surat-394350",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2019-03-28",
+    "date_of_decleration": "2024-03-27 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;1770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1326,
+    "hei_name": "ARUNACHAL UNIVERSITY OF STUDIES",
+    "aishe_id": "U-0740",
+    "other_address": "Arunachal Pradesh , NAMSAI , 792103 , ARUNACHAL UNIVERSITY OF STUDIES KNOWLEDGE CITY, NH-52 NAMSAI,  DISTRICT- NAMSAI ARUNACHAL PRADESH",
+    "state_name": "Arunachal Pradesh",
+    "iiqa_submitted_date": "2019-02-08",
+    "date_of_decleration": "2024-02-07 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;1326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1258,
+    "hei_name": "TAMIL UNIVERSITY",
+    "aishe_id": "U-0484",
+    "other_address": "Tamil Nadu , Thanjavur , 613010 , Vagaiyur, Trichy Road,",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;1258&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1016,
+    "hei_name": "PALAMURU UNIVERSITY",
+    "aishe_id": "U-0028",
+    "other_address": "Telangana , MAHABUBNAGAR , 509001 , PALAMURU UNIVERSITY BANDAMEEDIPALLI MAHABUBNAGAR PIN 509001",
+    "state_name": "Telangana",
+    "iiqa_submitted_date": "2018-11-30",
+    "date_of_decleration": "2023-11-29 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;1016&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1058,
+    "hei_name": "NATIONAL LAW SCHOOL OF INDIA UNIVERSITY",
+    "aishe_id": "U-0238",
+    "other_address": "Karnataka , Bangalore , 560072 , Nagarbhavi Bangalore",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2019-07-15",
+    "date_of_decleration": "2024-07-14 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;1058&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1095,
+    "hei_name": "JECRC UNIVERSITY",
+    "aishe_id": "U-0741",
+    "other_address": "Rajasthan , JAIPUR , 303905 , JECRC UNIVERSITY, Plot IS - 2036 TO IS 2039, Ramchandrapura Industrial Area, Vidhani, Sitapura Extension",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2020-01-08",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;1095&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1053,
+    "hei_name": "KONERU LAKSHMAIAH EDUCATION FOUNDATION",
+    "aishe_id": "U-0020",
+    "other_address": "Andhra Pradesh , VADDESWARAM , 522502 , GREEN FIELDS, VADDESWARAM,GUNTUR",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;1053&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 52,
+    "hei_name": "JSS ACADEMY OF HIGHER EDUCATION &amp; RESEARCH",
+    "aishe_id": "U-0222",
+    "other_address": "Karnataka , Mysuru , 570015 , Sri Shivarathreeshwara Nagar Mysuru",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2019-07-15",
+    "date_of_decleration": "2024-07-14 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;52&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 998,
+    "hei_name": "UNIVERSITY OF DELHI",
+    "aishe_id": "U-0120",
+    "other_address": "Delhi , Delhi , 110007 , University of Delhi, Delhi",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2018-11-30",
+    "date_of_decleration": "2023-11-29 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;998&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 843,
+    "hei_name": "MAHARAJA KRISHNAKUMARSINHJI BHAVNAGAR UNIVERSITY",
+    "aishe_id": "U-0124",
+    "other_address": "Gujarat , Bhavnagar , 634001 , Maharaja Krishnakumarsinhji Bhavnagar University Sardar Patel Campus Bhavnagar",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;843&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 1009,
+    "hei_name": "MEWAR UNIVERSITY",
+    "aishe_id": "U-0411",
+    "other_address": "Rajasthan , Chittorgarh , 312901 , Mewar University, NH-79, Gangrar, Chittorgarh",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;1009&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 202,
+    "hei_name": "TERI School of advanced Studies",
+    "aishe_id": "U-0119",
+    "other_address": "Delhi , New Delhi , 110070 , Plot No. 10, Institutional Area, Vasant Kunj, New Delhi",
+    "state_name": "Delhi",
+    "iiqa_submitted_date": "2019-05-01",
+    "date_of_decleration": "2024-04-30 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;202&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 546,
+    "hei_name": "NIMS UNIVERSITY RAJASTHAN, JAIPUR",
+    "aishe_id": "U-0415",
+    "other_address": "Rajasthan , Jaipur , 303121 , NH-11 C, Jaipur- Delhi Highway",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2019-02-08",
+    "date_of_decleration": "2024-02-07 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;546&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 947,
+    "hei_name": "RK UNIVERSITY",
+    "aishe_id": "U-0647",
+    "other_address": "Gujarat , Rajkot , 360020 , Rajkot-Bhavnagar Highway, Kasturbadham, Rajkot",
+    "state_name": "Gujarat",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;947&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 484,
+    "hei_name": "SANT GAHIRA GURU VISHWAVIDYALAYA, SARGUJA",
+    "aishe_id": "U-0095",
+    "other_address": "Chhattisgarh , AMBIKAPUR , 497001 , New Hospital Road , Darripara,Ambikapur(C.G.)",
+    "state_name": "Chhattisgarh",
+    "iiqa_submitted_date": "2019-02-08",
+    "date_of_decleration": "2024-02-07 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;484&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 769,
+    "hei_name": "SRM INSTITUTE OF SCIENCE AND TECHNOLOGY",
+    "aishe_id": "U-0473",
+    "other_address": "Tamil Nadu , Chennai , 603203 , Kattankulathur, Kancheepuram District,",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2023-08-15 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;769&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 655,
+    "hei_name": "AMITY UNIVERSITY",
+    "aishe_id": "U-0497",
+    "other_address": "Uttar pradesh , Noida , 201313 , Amity University Campus Sector - 125, Distt. Gautam Buddha Nagar, Noida",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "A+",
+    "edit_button": "&lt;a id=&quot;655&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 980,
+    "hei_name": "TILAK MAHARASHTRA VIDYAPEETH (DEEMED UNIVERSITY)",
+    "aishe_id": "U-0333",
+    "other_address": "Maharashtra , Pune , 411037 , Vidyapeeth Bhavan, Mukundnagar, Gultekdi",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;980&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 506,
+    "hei_name": "INDIRA GANDHI INSTITUTE OF DEVELOPMENT RESEARCH",
+    "aishe_id": "U-0307",
+    "other_address": "Maharashtra , Mumbai , 400065 , Gen. A. K. Vaidya Marg Goregaon East",
+    "state_name": "Maharashtra",
+    "iiqa_submitted_date": "2019-05-01",
+    "date_of_decleration": "2024-04-30 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 56,
+    "hei_name": "GAUHATI UNIVERSITY",
+    "aishe_id": "U-0052",
+    "other_address": "Assam , Guwahati , 781014 , Gopinath Bardoloi Nagar Guwahati 781 014 Assam",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;56&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 961,
+    "hei_name": "JAYOTI VIDYAPEETH WOMEN&amp;#39;S UNIVERSITY",
+    "aishe_id": "U-0404",
+    "other_address": "Rajasthan , JAIPUR , 303122 , VEDAANT GYAN VALLEY, VILLAGE- JHARNA, MAHLA JOBNER LINK ROAD, JAIPUR AJMER EXPRESS WAY, NH-8, JAIPUR",
+    "state_name": "Rajasthan",
+    "iiqa_submitted_date": "2018-11-30",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;961&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 607,
+    "hei_name": "GAUTAM BUDDHA UNIVERSITY",
+    "aishe_id": "U-0514",
+    "other_address": "Uttar pradesh , Greater Noida , 201310 , Gautam Buddha University Yamuna Express Way Greater Noida U.P.",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;607&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 677,
+    "hei_name": "RABINDRANATH TAGORE UNIVERSITY",
+    "aishe_id": "U-0656",
+    "other_address": "Madhya Pradesh , Raisen , 464993 , Bhopal-Chiklod Road, Near Bangrasia, Village-Mendua, Post- Bhojpur",
+    "state_name": "Madhya Pradesh",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;677&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 581,
+    "hei_name": "THIRUVALLUVAR UNIVERSITY",
+    "aishe_id": "U-0488",
+    "other_address": "Tamil Nadu , Vellore , 632115 , Thiruvalluvar University Serkkadu",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;581&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 675,
+    "hei_name": "MATS UNIVERSITY",
+    "aishe_id": "U-0091",
+    "other_address": "Chhattisgarh , RAIPUR , 493441 , AARANG KHARORA HIGHWAY, GULLU, AARANG, RAIPUR",
+    "state_name": "Chhattisgarh",
+    "iiqa_submitted_date": "2018-11-30",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B++",
+    "edit_button": "&lt;a id=&quot;675&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 739,
+    "hei_name": "JHARKHAND RAI UNIVERSITY",
+    "aishe_id": "U-0762",
+    "other_address": "Jharkhand , Ranchi , 835222 , Kamre, Ratu Road, Ranchi",
+    "state_name": "Jharkhand",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;739&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 803,
+    "hei_name": "DRAVIDIAN UNIVERSITY",
+    "aishe_id": "U-0010",
+    "other_address": "Andhra Pradesh , KUPPAM , 517426 , Dravidian University, Srinivasavanam, Kuppam,  Chittoor District, Andhra Pradesh,",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;803&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 750,
+    "hei_name": "INDIAN INSTITUTE OF SCIENCE",
+    "aishe_id": "U-0220",
+    "other_address": "Karnataka , Bangalore , 560012 , INDIAN INSTITUTE OF SCIENCE, C V RAMAN AVENUE, BANGALORE",
+    "state_name": "Karnataka",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "A++",
+    "edit_button": "&lt;a id=&quot;750&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 690,
+    "hei_name": "PONDICHERRY UNIVERSITY",
+    "aishe_id": "U-0369",
+    "other_address": "Puducherry , Puducherry , 605014 , R. VENKATARAMAN NAGAR, KAPAET",
+    "state_name": "Puducherry",
+    "iiqa_submitted_date": "2019-05-01",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;690&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 767,
+    "hei_name": "RAYALASEEMA UNIVERSITY",
+    "aishe_id": "U-0031",
+    "other_address": "Andhra Pradesh , KURNOOL , 518007 , NATIONAL HIGHWAY 40, NANDYAL ROAD, KURNOOL",
+    "state_name": "Andhra Pradesh",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2023-08-15 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;767&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 658,
+    "hei_name": "ICFAI UNIVERSITY TRIPURA",
+    "aishe_id": "U-494",
+    "other_address": "Tripura , Agartala , 799210 , AGARTALA SIMNA ROAD, PO KAMALGHAT, MOHANPUR, WEST TRIPURA",
+    "state_name": "Tripura",
+    "iiqa_submitted_date": "2018-11-30",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;658&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 568,
+    "hei_name": "SIKKIM MANIPAL UNIVERSITY",
+    "aishe_id": "U-0431",
+    "other_address": "Sikkim , Gangtok , 737102 , Fifth Mile, Tadong, Gangtok, East Sikkim",
+    "state_name": "Sikkim",
+    "iiqa_submitted_date": "2018-09-26",
+    "date_of_decleration": "2023-09-25 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;568&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 410,
+    "hei_name": "MAHATMA GANDHI KASHI VIDYAPITH",
+    "aishe_id": "U-0527",
+    "other_address": "Uttar pradesh , Varanasi , 221002 , Mahatma Gandhi Kashi Vidyapith,  Englishiya Line, Varanasi-221002",
+    "state_name": "Uttar pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;410&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 199,
+    "hei_name": "ASSAM DON BOSCO UNIVERSITY",
+    "aishe_id": "U-0049",
+    "other_address": "Assam , Guwahati , 782402 , Tapesia Gardens, Kamarkuchi Village, Sonapur",
+    "state_name": "Assam",
+    "iiqa_submitted_date": "2018-07-03",
+    "date_of_decleration": "2023-07-02 00:00:00",
+    "naac_grade": "B+",
+    "edit_button": "&lt;a id=&quot;199&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 326,
+    "hei_name": "MAHARISHI MAHESH YOGI VEDIC VISHWAVIDYALAYA",
+    "aishe_id": "U-0280",
+    "other_address": "Madhya Pradesh , DHEEMARKHEDA , 483332 , VILLAGE-KARAUNDI, POST OFFICE-MAHNER, TEHSIL-DHEEMARKHEDA, CITY-DHEEMARKHEDA, DISTRICT-KATNI",
+    "state_name": "Madhya Pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 288,
+    "hei_name": "UTTARAKHAND SANSKRIT UNIVERSITY",
+    "aishe_id": "U-0565",
+    "other_address": "Uttarakhand , HARIDWAR , 249402 , UTTARAKHAND SANSKRIT UNIVERSITY HARIDWAR-DELHI NATIONAL HIGHWAY-58 BAHADRABAD, HARIDWAR 249402",
+    "state_name": "Uttarakhand",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2023-08-15 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;288&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 135,
+    "hei_name": "MANONMANIAM SUNDARANAR UNIVERSITY",
+    "aishe_id": "U-0464",
+    "other_address": "Tamil Nadu , TIRUNELVELI , 627012 , MANONMANIAM SUNDARANAR UNIVERSITY, ABISHEKAPATTI, TIRUNELVELI",
+    "state_name": "Tamil Nadu",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2019-12-31 00:00:00",
+    "naac_grade": "A",
+    "edit_button": "&lt;a id=&quot;135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 36,
+    "hei_name": "ITM UNIVERSITY GWALIOR",
+    "aishe_id": "U-0648",
+    "other_address": "Madhya Pradesh , Gwalior , 474001 , Turari, NH-75, Jhansi Road, Gwalior, Madhya Pradesh",
+    "state_name": "Madhya Pradesh",
+    "iiqa_submitted_date": "2018-08-16",
+    "date_of_decleration": "2023-08-15 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;36&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 151,
+    "hei_name": "SIDO KANHU MURMU UNIVERSITY, DUMKA, JHARKHAND",
+    "aishe_id": "U-0210",
+    "other_address": "Jharkhand , Dumka , 814110 , Dighi, University Campus, Dumka",
+    "state_name": "Jharkhand",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "C",
+    "edit_button": "&lt;a id=&quot;151&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 128,
+    "hei_name": "PEOPLE&amp;#39;S UNIVERSITY",
+    "aishe_id": "U-0655",
+    "other_address": "Madhya Pradesh , Bhopal , 462037 , Peoples Campus, Bhanpur, Bhopal",
+    "state_name": "Madhya Pradesh",
+    "iiqa_submitted_date": "2018-11-02",
+    "date_of_decleration": "2023-11-01 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;128&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
+  },
+  {
+    "hei_assessment_id": 43,
+    "hei_name": "ETERNAL UNIVERSITY, BARU SAHIB",
+    "aishe_id": "U-0182",
+    "other_address": "Himachal pradesh , Rajgarh , 173101 , VPO - Baru Sahib, Teh. - Pachhad, Via - Rajgarh, Distt. Sirmour",
+    "state_name": "Himachal pradesh",
+    "iiqa_submitted_date": "2018-07-03",
+    "date_of_decleration": "2023-07-02 00:00:00",
+    "naac_grade": "B",
+    "edit_button": "&lt;a id=&quot;43&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "status": "5"
   }
 ]

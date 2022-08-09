@@ -3,10 +3,12 @@ const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
 
 exports.createRequest = catchAsync(async (req, res, next) => {
-    const { note } = req.body;
+    const { note, startDate, endDate } = req.body;
     const request = new Request({
         note,
-        instituteId: req.user.id
+        instituteId: req.user.id,
+        startDate, 
+        endDate
     })
     const addedRequest = await request.save()
     res.json({ success: true, message: "Request Added Successfully", request: addedRequest })

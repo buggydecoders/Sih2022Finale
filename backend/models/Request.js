@@ -5,6 +5,12 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
+    startDate:{
+        type:String,
+    },
+    endDate:{
+        type:String,
+    },
     notes: {
         type: String
     }

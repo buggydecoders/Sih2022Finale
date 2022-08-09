@@ -42,10 +42,17 @@ exports.createUser = catchAsync(async (req, res, next) => {
     }
     let isAishe = false
     let instituteName = ""
+    let state = ""
+    let street = ""
+    let city = ""
     for (let i = 0; i < aishe.length; i++) {
-        if (aishe[i].code === aisheCode) {
-            isAishe = true,
-            instituteName = aishe[i].instituteName
+        if (aishe[i].aishe_id === aisheCode) {
+            isAishe = true;
+            instituteName = aishe[i].hei_name
+            state = aishe[i].state_name
+            city = aishe[i].other_address.split(",")[1]
+            street = aishe[i].other_address.split(",").slice(2).toString()
+            naac = aishe[i].naac_grade
         }
     }
     if (!isAishe) return next(new AppError('Invalid Aishe Code Entered', 403))
@@ -55,7 +62,13 @@ exports.createUser = catchAsync(async (req, res, next) => {
         instituteName,
         email,
         aisheCode,
-        password: hashPass
+        password: hashPass,
+        naac,
+        address: {
+            street,
+            city,
+            state
+        }
     })
     const user = await newUser.save();
     res.status(201).json({ success: true, message: "Succesfully Created" });
