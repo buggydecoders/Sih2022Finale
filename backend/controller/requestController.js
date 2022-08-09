@@ -7,7 +7,7 @@ exports.createRequest = catchAsync(async (req, res, next) => {
     const request = new Request({
         note,
         instituteId: req.user.id,
-        startDate, 
+        startDate,
         endDate
     })
     const addedRequest = await request.save()
@@ -15,6 +15,13 @@ exports.createRequest = catchAsync(async (req, res, next) => {
 })
 
 exports.getRequest = catchAsync(async (req, res, next) => {
-    const requests = await Request.find();
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
+    const skipIndex = (page - 1) * limit;
+    const requests = await Request.find()
+        .limit(limit)
+        .skip(skipIndex)
+        .exec();
+        
     res.json({ success: true, requests })
 })
