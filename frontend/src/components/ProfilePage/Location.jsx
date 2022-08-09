@@ -29,6 +29,7 @@ function Location() {
       </div>
 
       <div className="py-10">
+        {/* eslint-disable-next-line */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.2656451339208!2d75.87759341496154!3d22.681152885127144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcc03e36712d%3A0xb6f3c2bf734a7c!2sIET%20DAVV!5e0!3m2!1sen!2sin!4v1659984500701!5m2!1sen!2sin"
           width="300"

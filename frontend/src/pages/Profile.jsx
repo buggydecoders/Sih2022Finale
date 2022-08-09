@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import AllResources from "../components/ProfilePage/AllResources";
 import Location from "../components/ProfilePage/Location";
 import OtherInformation from "../components/ProfilePage/OtherInformation";

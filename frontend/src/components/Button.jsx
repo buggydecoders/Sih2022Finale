@@ -7,6 +7,7 @@ const Button = ({children, variant,customClass, ...props}) => {
     break;
     case 'filled'  : extClass='border-[1px] bg-primary text-white';
     break;
+    default : extClass=''
    }
   return (
     <button {...props} className={cls('px-4 py-2 rounded-xl', extClass , {customClass : customClass})}>{children}</button>

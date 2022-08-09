@@ -22,7 +22,7 @@ const ResourceCard = () => {
     <div className='bg-white w-full px-6 py-4 rounded-md'>
         <div className='flex justify-between items-start'>
             <div className='flex items-start gap-4'>
-                <div className=''><img src={DummyResource} className='w-[150px]'/></div>
+                <div className=''><img alt='' src={DummyResource} className='w-[150px]'/></div>
                 <div className=''>
                     <div className='text-2xl font-bold text-gray-500'>3d Printer</div>
                     <div className='mt-2 text-gray-400'>Institute of Engineering & Technology, DAVV</div>

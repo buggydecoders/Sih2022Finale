@@ -2,12 +2,12 @@ import React from "react";
 import logo from "../assets/UGC_LOGO.png";
 import { AiOutlineHome, AiFillBell } from "react-icons/ai";
 import {Link} from 'react-router-dom'
-import {BiCheckDouble} from 'react-icons/bi'
-import {GrStatusCritical} from 'react-icons/gr'
+// import {BiCheckDouble} from 'react-icons/bi'
+// import {GrStatusCritical} from 'react-icons/gr'
 import {BsBagCheck} from 'react-icons/bs'
 import {RiAccountCircleLine} from 'react-icons/ri'
 import {BsCheck2All} from 'react-icons/bs';
-import Status from "../pages/Status";
+// import Status from "../pages/Status";
 import {MdOutlineGames} from 'react-icons/md';
 import { useLocation } from "react-router-dom";
 

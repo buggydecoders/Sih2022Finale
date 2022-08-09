@@ -5,7 +5,7 @@ const TableEntry = ()=>{
         <tr class="border-b">
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   <div className='flex items-center gap-2'>
-                    <img src={ResourceImg} className='w-[80px] rounded-xl'/>
+                    <img alt="" src={ResourceImg} className='w-[80px] rounded-xl'/>
                     <div className='text-black font-semibold'>Lathe Machine</div>
                   </div>
                 </td>
