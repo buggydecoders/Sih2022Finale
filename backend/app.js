@@ -11,15 +11,10 @@ const path = require('path');
 const hpp = require('hpp');
 const session = require('express-session')
 var cookieParser = require('cookie-parser')
-const authRoute = require('./routes/auth-route')
-//Import routes
-
-
 const globalErrorHandler = require('./middlewares/globalErrorHandler');
-
-
 const AppError = require('./utils/appError');
-
+const authRoute = require('./routes/auth-route')
+const reqRoute = require('./routes/request-route')
 // view engine setup
 
 // var whitelist = ['http://example1.com', 'http://example2.com']
@@ -82,6 +77,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/auth', authRoute)
+app.use('/api/request', reqRoute)
 
 
 // handling all (get,post,update,delete.....) unhandled routes
