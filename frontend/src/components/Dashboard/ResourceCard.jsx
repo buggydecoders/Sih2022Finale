@@ -3,13 +3,15 @@ import DummyResource from '../../assets/Resources/3dPrinter.png';
 import {BsClockHistory} from 'react-icons/bs';
 import {BiBadgeCheck} from 'react-icons/bi';
 import Button from '../Button';
+import { useState } from 'react';
 
 const SaveButton  = ()=>{
+    const [active,setActive] = useState(false);
     return (
-    <div className=' py-3 cursor-pointer relative rounded-md text-secondary bg-secondary group overflow-hidden bg-opacity-5'>
+    <div onClick={()=>setActive(prev=>!prev)} className={`${active?'bg-opacity-100':' bg-opacity-5'} py-3 cursor-pointer relative rounded-md text-secondary bg-secondary group overflow-hidden`}>
         <div className='w-full top-0 left-0 z-[0] h-[400px] absolute bg-secondary ease-in-out -translate-x-[500px] group-hover:translate-x-0 transition-all duration-500'></div>
-        <div className='w-fit px-3 flex rounded-md relative z-[10] gap-4 duration-150 ease-in-out items-center group-hover:text-white'>
-        Save for later <BiBadgeCheck/>
+        <div className={`w-fit px-3 flex rounded-md relative z-[10] ${active?'text-white':'group-hover:text-white'} gap-4 duration-150 ease-in-out items-center `}>
+        {active?'Saved':'Save for later'} <BiBadgeCheck/>
         </div>
     </div>
     )
