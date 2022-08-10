@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 
 function ResourceOverview({ resource }) {
+  let images = resource.images;
+  const [active, setActive] = useState(0);
+
   return (
     <div className="flex flex-col w-full my-4">
       <div className="flex w-full">
         <div className="w-1/2 flex items-center">
           <div className="grid grid-rows-5 items-center justify-center space-y-4 w-1/4">
-            {resource.images?.map((image, idx) => {
-              if (idx > 0) {
-                return <img className="h-20 w-20" src={image} alt="" />;
-              }
+            {images?.map((image, idx) => {
+              return (
+                <img
+                  className="h-20 w-20 cursor-pointer"
+                  src={image}
+                  alt=""
+                  onClick={() => {
+                    setActive(idx);
+                  }}
+                />
+              );
             })}
           </div>
 
           <div className="w-3/4 p-4">
-            <img className="w-full" src={resource.images[0]} alt="" />
+            <img className="w-full" src={images[active]} alt="" />
           </div>
         </div>
 

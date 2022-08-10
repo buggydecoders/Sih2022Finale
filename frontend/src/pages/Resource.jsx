@@ -4,7 +4,7 @@ import Breadcrum from "../components/Breadcrum";
 import ResourceOverview from "../components/ResourcePage/ResourceOverview";
 import Description from "../components/ResourcePage/Description";
 import SimilarResources from "../components/ResourcePage/SimilarResources";
-import ConditionOfUse from "../components/ResourcePage/ConditionOfUse";
+import Accordian from "../components/ResourcePage/Accordian";
 
 function Resource() {
   const resource = {
@@ -23,7 +23,6 @@ function Resource() {
       "https://xsgames.co/randomusers/avatar.php?g=pixel",
       "https://xsgames.co/randomusers/avatar.php?g=female",
       "https://xsgames.co/randomusers/avatar.php?g=male",
-      "https://xsgames.co/randomusers/avatar.php?g=pixel",
       "https://xsgames.co/randomusers/avatar.php?g=female",
       "https://xsgames.co/randomusers/avatar.php?g=male",
     ],
@@ -60,7 +59,10 @@ function Resource() {
         <ResourceOverview resource={resource}/>
         <Description description={resource.description} descriptionImage={resource.descriptionImage}/>
         <SimilarResources similar={resource.similar}/>
-        <ConditionOfUse/>
+        <div className="p-10">
+          <Accordian heading="Condition of Use" content={resource.conditionOfUse} _id="One"/>
+          <Accordian heading="Instructions" content={resource.instructions} _id="Two"/>
+        </div>
       </div>
     </Layout>
   );
