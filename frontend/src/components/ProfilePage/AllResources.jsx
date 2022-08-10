@@ -1,6 +1,6 @@
 import React from "react";
 // import Printer from "../../assets/Resources/3dPrinter.png"
-import ResourceCard from "./ResourceCard";
+import ResourceCard from "../ResourceCard";
 
 const resources = [
   {

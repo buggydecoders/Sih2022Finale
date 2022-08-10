@@ -3,9 +3,9 @@ import React from "react";
 function ResourceCard(props) {
   const { image, name, price, university } = props.data;
   return (
-    <div className="bg-white border border-black flex- flex-col px-4 py-2 m-5">
-      <img src={image} alt={name} className="" />
-      <div className="my-2">
+    <div className={props.draft?"bg-gray-300 opacity-40 border border-black flex- flex-col m-5":"bg-white border border-black flex- flex-col m-5"}>
+      <img src={image} alt={name} className="object-cover w-full h-40" />
+      <div className="my-2 px-4 py-2">
         <p className="text-black font-medium">{name}</p>
         <p className="text-gray-500 text-xs">{university}</p>
         <p className="text-primary font-semibold">

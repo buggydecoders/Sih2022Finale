@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import Layout from "../components/Layout";
-import Navigation from "../components/Status/Navigation";
+import Navigation from "../components/Navigation";
 import Search from "../components/Status/Search";
 import StatusTable from "../components/Status/StatusTable";
 
 const Status = () => {
+  const states = ['Sent', 'Recieved', 'Drafts', 'Cancelled']
+  const [selected, setSelected] = useState(states[0]);
   return (
     <Layout>
       <div className="px-16 py-10">
@@ -12,7 +14,7 @@ const Status = () => {
         <Search />
         <div className="grid mt-5 grid-cols-[6fr_1fr] gap-12">
             <StatusTable/>
-            <Navigation/>
+            <Navigation states={states} handleNavigation={setSelected} selected={selected}/>
         </div>
       </div>
     </Layout>
