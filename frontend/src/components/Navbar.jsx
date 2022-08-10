@@ -10,7 +10,7 @@ import { BsCheck2All } from "react-icons/bs";
 // import Status from "../pages/Status";
 import { MdOutlineGames } from "react-icons/md";
 import { useLocation } from "react-router-dom";
-import logo from "./UGCLogo";
+import logo from "../assets/UGC_LOGO.png";
 const NavbarLink = ({ text, icon, href }) => {
   const location = useLocation();
   const active = location.pathname === href;
