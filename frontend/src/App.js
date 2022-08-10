@@ -9,6 +9,7 @@ import SavedItems from "./pages/SavedItems";
 import Status from "./pages/Status";
 import Signup from "./pages/Signup";
 import Resources from "./pages/Resources";
+import Resource from "./pages/Resource";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/signup" element={<Signup />}></Route>
         <Route exact path="/resources" element={<Resources />}></Route>
+        <Route exact path="/resource" element={<Resource />}></Route>
       </Routes>
     </QueryClientProvider>
   );
