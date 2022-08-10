@@ -24,6 +24,9 @@ const UserSchema = new mongoose.Schema({
         }
     },
     contactPerson: {
+        image:{
+            type:String
+        },
         name: {
             type: String
         },

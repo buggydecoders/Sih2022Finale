@@ -5,14 +5,19 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
-    startDate:{
-        type:String,
+    startDate: {
+        type: String,
     },
-    endDate:{
-        type:String,
+    endDate: {
+        type: String,
     },
     notes: {
         type: String
+    },
+    reqType: {
+        type: String,
+        enum: ['prior', 'standard'],
+        default: 'standard'
     }
 }, {
     timestamps: true

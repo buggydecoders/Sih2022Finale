@@ -28,9 +28,17 @@ const ResourceSchema = new mongoose.Schema({
     instructions: {
         type: String
     },
+    active: {
+        type: Boolean,
+        default: true
+    },
+    vacancy: {
+        type: Boolean,
+        default: true
+    },
     instituteId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref:"User"
+        ref: "User"
     }
 }, {
     timestamps: true
