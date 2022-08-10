@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Navigation from "../components/Navigation";
+import Pagination from "../components/Pagination";
 import ResourcesList from "../components/Resources/ResourcesList";
 
 const resources = {
@@ -182,6 +183,7 @@ const Resources = () => {
           />
         </div>
       </div>
+      <Pagination />
     </Layout>
   );
 };
