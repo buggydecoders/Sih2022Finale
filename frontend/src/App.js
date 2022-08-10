@@ -9,6 +9,7 @@ import SavedItems from "./pages/SavedItems";
 import Status from "./pages/Status";
 import Signup from "./pages/Signup";
 import Requests from "./pages/Requests";
+import Inbox from "./pages/Inbox";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/signup" element={<Signup />}></Route>
         <Route exact path="/requests" element={<Requests />}></Route>
+        <Route exact path="/inbox" element={<Inbox />}></Route>
       </Routes>
     </QueryClientProvider>
   );
