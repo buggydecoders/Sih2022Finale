@@ -1,4 +1,3 @@
-const { urlencoded } = require('body-parser');
 const Resource = require('../models/Resource');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
