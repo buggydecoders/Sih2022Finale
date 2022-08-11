@@ -1,17 +1,18 @@
 import React from "react";
 import UGCLogo from "../UGCLogo";
 import { BiLockOpenAlt } from "react-icons/bi";
+import FormInputField from "../FormInputField";
 
 function SignupForm() {
   return (
-    <div className="flex flex-col px-8 w-7/12">
+    <div className="flex flex-col p-8 space-y-6 w-7/12">
       {/* Logo Section  */}
-      <div className="py-6">
+      <div className="">
         <UGCLogo />
       </div>
 
       {/* Login Heading Section  */}
-      <div className="py-4">
+      <div className="">
         <div className="text-3xl font-bold text-[#383838] flex space-x-1">
           <BiLockOpenAlt />
           <h1>Signup</h1>
@@ -22,75 +23,40 @@ function SignupForm() {
       </div>
 
       {/* Login Form  */}
-      <form className="flex flex-col w-3/4 py-8">
-        <div class=" relative my-1">
-          <label
-            for="required-email"
-            class="text-gray-700 font-semibold text-sm"
-          >
-            Institute Email
-            <span class="text-red-500 required-dot">*</span>
-          </label>
-          <input
-            type="text"
-            id="required-email"
-            class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#F3633E] focus:border-transparent"
-            name="email"
-            placeholder="institute@education.edu.in"
+      <form className="flex flex-col w-3/4 py-4">
+        <FormInputField
+          id="required-email"
+          name="email"
+          lable="Institute Email"
+          type="email"
+          placeholder="institute@education.edu.in"
+          required={true}
+        />
+        <FormInputField
+          id="aishe-code"
+          name="aishe"
+          lable="AISHE CODE"
+          type="text"
+          placeholder="U-2020"
+          required={true}
+        />
+        <div className="flex justify-between space-x-4">
+          <FormInputField
+            id="required-password"
+            name="password"
+            lable="Password"
+            type="password"
+            placeholder="Password"
+            required={true}
           />
-        </div>
-
-        <div class=" relative my-1">
-          <label
-            for="required-email"
-            class="text-gray-700 font-semibold text-sm"
-          >
-            AISHE CODE
-            <span class="text-red-500 required-dot">*</span>
-          </label>
-          <input
-            type="text"
-            id="required-email"
-            class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#F3633E] focus:border-transparent"
-            name="aishe"
-            placeholder="U-2020"
+          <FormInputField
+            id="confirm-password"
+            name="confirmPassword"
+            lable="Confirm Password"
+            type="password"
+            placeholder="Confirm Password"
+            required={true}
           />
-        </div>
-
-        <div className="flex justify-between">
-          <div class=" relative my-1 pr-2">
-            <label
-              for="required-password"
-              class="text-gray-700 font-semibold text-sm"
-            >
-              Password
-              <span class="text-red-500 required-dot">*</span>
-            </label>
-            <input
-              type="text"
-              id="required-password"
-              class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#F3633E] focus:border-transparent"
-              name="password"
-              placeholder="Password"
-            />
-          </div>
-
-          <div class=" relative my-1 pl-2">
-            <label
-              for="required-password"
-              class="text-gray-700 font-semibold text-sm"
-            >
-              Confirm Password
-              <span class="text-red-500 required-dot">*</span>
-            </label>
-            <input
-              type="text"
-              id="required-password"
-              class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#F3633E] focus:border-transparent"
-              name="confirmPassword"
-              placeholder="Password"
-            />
-          </div>
         </div>
 
         <div className="">
