@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import BasicInfoForm from '../components/Send-Request/BasicInfoForm'
 import Confirmation from '../components/Send-Request/Confirmation'
+import ExchangePage from '../components/Send-Request/ExchangePage'
 import Payment from '../components/Send-Request/Payment'
 import PaymentInfo from '../components/Send-Request/PaymentInfo'
 import Progress from '../components/Send-Request/Progress'
@@ -20,10 +21,11 @@ const SendRequest = () => {
                 {/* <BasicInfoForm/> */}
                 {/* <Confirmation/> */}
                 {/* <SignContract/> */}
-                <Payment/>
+                {/* <Payment/> */}
+                <ExchangePage/>
               </div>
-              {/* <ResourceCard/> */}
-              <PaymentInfo/>
+              <ResourceCard/>
+              {/* <PaymentInfo/> */}
             </div>
         </div>
     </Layout>
