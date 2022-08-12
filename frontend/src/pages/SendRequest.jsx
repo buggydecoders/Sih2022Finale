@@ -16,7 +16,7 @@ const SendRequest = () => {
             <div className='mt-2 text-gray-400'>Your resource is just a few clicks away. </div>
             <div className='mt-4'><Progress/></div>
             <div className='mt-8 grid grid-cols-[2.3fr_1fr] gap-5'>
-              <div className='py-3'>
+              <div className=''>
                 {/* <BasicInfoForm/> */}
                 {/* <Confirmation/> */}
                 {/* <SignContract/> */}
