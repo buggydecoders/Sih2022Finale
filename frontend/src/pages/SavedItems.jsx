@@ -4,7 +4,7 @@ import Search from "../components/Status/Search";
 import ResourceImg from "../assets/Resources/3dPrinter.png";
 import Pagination from "../components/Pagination";
 
-const ProductItem = () => {
+export const ProductItem = () => {
   return (
     <div className="px-3 py-3 border-[1px] border-gray-300 rounded-xl">
       <div className="">
