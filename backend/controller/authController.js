@@ -23,7 +23,9 @@ exports.loginUser = catchAsync(async (req, res, next) => {
     }
     success = true;
     const authToken = createToken(user.id)
-    res.cookie('auth', authToken)
+    res.cookie('auth', authToken, {
+        httpOnly: true,
+    })
     res.status(200).json({ success, user });
 })
 
@@ -83,7 +85,7 @@ exports.getUser = catchAsync(async (req, res, next) => {
     const user = await User.findById(req.user.id).select("-password")
     if (!user) {
         return next(
-            new AppError('User Not Found')
+            new AppError('User Not Found', 401)
         )
     }
     res.json({ success: true, user })
