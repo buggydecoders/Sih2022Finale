@@ -16,7 +16,7 @@ router
     .get(checkAuth, authController.logoutUser)
 
 router
-    .route("/update-user/:id")
+    .route("/update-user")
     .patch(checkAuth, authController.updateUser)
 
 router

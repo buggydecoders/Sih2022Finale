@@ -6,11 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFileLink } from "../../utils/generateImageLink";
 import {toast} from 'react-toastify';
 import { updateUser } from "../../store/auth/actions";
-function OrganizationDetails() {
-  const {user} = useSelector(state=>state.auth)
+function POCDetails() {
+  const {user,loading} = useSelector(state=>state.auth)
   const [logoFile,setLogoFile] = useState(null);
   const [uploadLoading,setUploadLoading] = useState(false);
-  const [logo,setLogo] = useState(user?.logo || DummyLogo)
+  const [logo,setLogo] = useState(user?.contactPerson?.image || DummyLogo)
   const handleFileChange =async (e)=>{
     if (e.target.files.length>0) {
       setLogoFile(e.target.files[0]);
@@ -24,17 +24,30 @@ function OrganizationDetails() {
     }
   }
 
+  const [form,setForm] = useState({
+    image : user?.contactPerson?.image || "",
+    name : user?.contactPerson?.name || "",
+    email : user?.contactPerson?.email || "",
+    position : user?.contactPerson?.position || "",
+    
+  });
   const dispatch = useDispatch();
-  const handleLogoChange = ()=>{
-    if (!logo) return toast('Select a valid logo file');
-    dispatch(updateUser({logo}, ()=>toast('Logo updated successfully'), (err)=>toast(err)));
+
+
+  const handleUpdateSubmit = (e)=>{
+    e.preventDefault();
+    dispatch(updateUser({contactPerson : {...form, image : logo}}, ()=>toast('POC Updated Successfully!'), (err)=>toast(err)));
+  }
+
+  const handleChange  = (e)=>{
+    setForm(prev=>({...prev,[e.target.name] : e.target.value}));
   }
   return (
     <div className="py-4 px-10 flex- flex-col space-y-14">
-      <h1 className="text-3xl font-semibold">Organization Detail</h1>
+      <h1 className="text-3xl font-semibold">POC Detail</h1>
       <div className="">
         <div className="flex flex-col space-y-4">
-          <h2 className="font-semibold text-xl">Edit Logo</h2>
+          <h2 className="font-semibold text-xl">Edit Profile Picture</h2>
           <div className="flex space-x-14 items-center ">
             <div className="relative">
             <input onChange={handleFileChange} type='file' className="absolute opacity-0 top-[50%] left-[50%] -translate-x-[30%] -translate-y-[50%]" />
@@ -46,41 +59,51 @@ function OrganizationDetails() {
             {uploadLoading&&<div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">Loading..</div>}
             </div>
             <div className="flex flex-col space-y-4">
-              <Button onClick={handleLogoChange} customClass={logoFile?'animate-bounce':''} variant="filled">Change Logo</Button>
-              <Button variant="outlined">Remove Logo</Button>
+              <Button variant="outlined">Remove Photo</Button>
             </div>
           </div>
         </div>
       </div>
 
-      <form className="flex flex-col">
+      <form onSubmit={handleUpdateSubmit} className="flex flex-col">
         <FormInputField
           id="required-email"
+          onChange={handleChange}
+          name="name"
+          lable="Full Name"
+          type="text"
+          placeholder="Your Full Name"
+          required={false}
+          value={form.name}
+        />
+        <FormInputField
+          id="required-password"
           name="email"
-          lable="Email"
+          lable="Enter Email"
+          onChange={handleChange}
           type="email"
-          placeholder="Your Email"
+          placeholder="POC Email"
+          value={form.email}
           required={false}
         />
         <FormInputField
           id="required-password"
-          name="password"
-          lable="Official Website"
-          type="password"
-          placeholder="Password"
+          name="position"
+          lable="POC Position"
+          type="text"
+          onChange={handleChange}
+          value={form.position}
+          placeholder="Position"
           required={false}
         />
-        <FormInputField
-          id="required-password"
-          name="password"
-          lable="Person Of Contact (POC)"
-          type="password"
-          placeholder="Password"
-          required={false}
-        />
+        <div className="flex  justify-center w-fit">
+        <Button type="submit" variant="filled">{loading?'Loading..':'Save Settings'}</Button>
+        </div>
       </form>
+      
+      
     </div>
   );
 }
 
-export default OrganizationDetails;
+export default POCDetails;

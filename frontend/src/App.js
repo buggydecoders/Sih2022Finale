@@ -17,10 +17,17 @@ import SendRequest from "./pages/SendRequest";
 import RecievedRequest from "./pages/RecievedRequest";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { checkAuth } from "./store/auth/actions";
 
 
 
 export default function App() {
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(checkAuth());
+  }, [])
   return (
     <>
       <Routes>

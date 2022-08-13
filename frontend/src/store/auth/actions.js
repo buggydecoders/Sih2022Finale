@@ -1,5 +1,5 @@
 import CONSTANTS from "./constants"
-import { editUserAPI, loginUserAPI, signupUserAPI } from "./services"
+import { editUserAPI, getUserAPI, loginUserAPI, signupUserAPI } from "./services"
 
 
 export const setAuthLoading = (state)=>{
@@ -12,6 +12,13 @@ export const setAuthLoading = (state)=>{
 export const setUser = (data)=>{
     return {
         type : CONSTANTS.SET_USER,
+        payload : data
+    }
+}
+
+export const setAuth = (data)=>{
+    return {
+        type : CONSTANTS.SET_AUTH,
         payload : data
     }
 }
@@ -50,7 +57,7 @@ export const updateUser = (data,callback,errorCallback)=>async(dispatch)=>{
     try {
         dispatch(setAuthLoading(true));
         const result = await editUserAPI(data);
-        dispatch(setUser(result.data.user));
+        dispatch(setUser(result.data.updatedUser));
         callback&&callback(result.data);
 
     }catch(err) {
@@ -61,3 +68,15 @@ export const updateUser = (data,callback,errorCallback)=>async(dispatch)=>{
     }
 }
 
+export const logoutUser = ()=>(dispatch)=>{
+    dispatch(setAuth({user : null, isLoggedin : false}));
+}
+
+export const checkAuth = ()=>async(dispatch)=>{
+    try {
+        const result = await getUserAPI();
+        dispatch(setAuth({user : result.data.user, isLoggedin : true}));
+    }catch(err) {
+         dispatch(logoutUser());
+    }
+}
