@@ -2,9 +2,12 @@ import React from "react";
 import { BiEdit } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import DAVV_LOGO from "../../assets/DAVV_LOGO.png";
-
+import {Avatar} from '@mui/material';
+import { useSelector } from "react-redux";
 function ProfileCard(props) {
   const navigate = useNavigate();
+  const {user} = useSelector(state=>state.auth);
+
   return (
     <div className="">
       <div className="flex justify-between items-center w-full">
@@ -16,9 +19,9 @@ function ProfileCard(props) {
 
       <img src={DAVV_LOGO} alt="" className="py-8" />
       <p className="text-lg font-medium text-center">
-        Institute of Engineering & Technology, DAVV
+        {user?.instituteName}
       </p>
-      <p className="text-sm text-center text-gray-500">Indore, India</p>
+      <p className="text-sm text-center text-gray-500">{user?.address?.city},{user?.address?.state}</p>
     </div>
   );
 }
