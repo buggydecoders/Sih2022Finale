@@ -1,14 +1,16 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 import DAVV_LOGO from "../../assets/DAVV_LOGO.png";
 
 function ProfileCard(props) {
+  const navigate = useNavigate();
   return (
     <div className="">
       <div className="flex justify-between items-center w-full">
         <h1 className="text-2xl font-semibold">Profile</h1>
         <span className="bg-white p-1 border border-1 text-gray-500 rounded cursor-pointer text-2xl">
-          <BiEdit />
+          <BiEdit  onClick={()=>navigate('/edit-profile')}/>
         </span>
       </div>
 
