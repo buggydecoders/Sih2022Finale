@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
+    logo: {
+        type: String
+    },
     instituteName: {
         type: String,
     },
@@ -24,8 +27,8 @@ const UserSchema = new mongoose.Schema({
         }
     },
     contactPerson: {
-        image:{
-            type:String
+        image: {
+            type: String
         },
         name: {
             type: String

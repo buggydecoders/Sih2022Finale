@@ -8,7 +8,7 @@ router
     .post(authController.loginUser)
 
 router
-    .route("/createUser")
+    .route("/create-user")
     .post(authController.createUser)
 
 router
@@ -16,23 +16,23 @@ router
     .get(checkAuth, authController.logoutUser)
 
 router
-    .route("/updateUser/:id")
+    .route("/update-user/:id")
     .patch(checkAuth, authController.updateUser)
 
 router
-    .route("/removeUser/:id")
+    .route("/remove-user/:id")
     .delete(checkAuth, restrictTo('admin'), authController.removeUser)
 
 router
-    .route("/getUser")
+    .route("/get-user")
     .get(checkAuth, authController.getUser)
 
 router
-    .route('/forgotPassword')
+    .route('/forgot-password')
     .post(authController.forgotPassword)
 
 router
-    .route('/resetPassword')
+    .route('/reset-password')
     .post(authController.resetPassword)
 
 module.exports = router
