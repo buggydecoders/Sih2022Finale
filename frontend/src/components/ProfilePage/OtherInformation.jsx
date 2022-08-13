@@ -1,7 +1,9 @@
 import React from "react";
 import {BiEdit} from 'react-icons/bi'
+import { useSelector } from "react-redux";
 
 function OtherInformation(props) {
+  const {user} = useSelector(state=>state.auth);
   const { naacRating, reputationPoints, universityType } = props.data;
   return (
     <div className="w-full p-4 rounded-2xl bg-lightGray my-10">
@@ -13,15 +15,15 @@ function OtherInformation(props) {
       <ul className="pt-4">
         <li>
           <b className="font-semibold text-sm pr-2">NAAC Rating:</b>
-          {naacRating}
+          {user?.naac}
         </li>
         <li>
           <b className="font-semibold text-sm pr-2">Reputation Points:</b>
-          {reputationPoints}
+          {user?.reputationPoints || 0}
         </li>
         <li>
           <b className="font-semibold text-sm pr-2">University Type:</b>
-          {universityType}
+          State
         </li>
       </ul>
     </div>
