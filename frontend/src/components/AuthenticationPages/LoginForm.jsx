@@ -1,6 +1,7 @@
 import React from "react";
 import UGCLogo from "../UGCLogo";
 import { BiLockOpenAlt } from "react-icons/bi";
+import FormInputField from "../FormInputField";
 
 function LoginForm() {
   return (
@@ -23,39 +24,8 @@ function LoginForm() {
 
       {/* Login Form  */}
       <form className="flex flex-col w-3/4 py-8">
-        <div class=" relative my-3">
-          <label
-            for="required-email"
-            class="text-gray-700 font-semibold text-sm"
-          >
-            Email
-            <span class="text-red-500 required-dot">*</span>
-          </label>
-          <input
-            type="text"
-            id="required-email"
-            class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            name="email"
-            placeholder="Your email"
-          />
-        </div>
-
-        <div class=" relative my-3">
-          <label
-            for="required-password"
-            class="text-gray-700 font-semibold text-sm"
-          >
-            Password
-            <span class="text-red-500 required-dot">*</span>
-          </label>
-          <input
-            type="password"
-            id="required-password"
-            class=" my-3 rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            name="password"
-            placeholder="Password"
-          />
-        </div>
+        <FormInputField id="required-email" name="email" lable="Email" type="email" placeholder="Your Email" required={true}/>
+        <FormInputField id="required-password" name="password" lable="Password" type="password" placeholder="Password" required={true}/>
 
         <div className="flex justify-between my-2">
           <label class="flex items-center space-x-3 mb-3">
