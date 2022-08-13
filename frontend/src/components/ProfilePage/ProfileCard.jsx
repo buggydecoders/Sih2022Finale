@@ -17,7 +17,7 @@ function ProfileCard(props) {
         </span>
       </div>
 
-      <img src={DAVV_LOGO} alt="" className="py-8" />
+      <img src={user?.logo?user.logo:DAVV_LOGO} alt="" className="py-8" />
       <p className="text-lg font-medium text-center">
         {user?.instituteName}
       </p>

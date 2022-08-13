@@ -2,8 +2,10 @@ import React from "react";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import VJ from "../../assets/POC/VJ.png"
+import { useSelector } from "react-redux";
 
 function POC() {
+  const {user} = useSelector(state=>state.auth);
   return (
     <div className="">
         
@@ -17,11 +19,11 @@ function POC() {
     </div>
     
     <div className="flex items-center">
-        <img src={VJ} alt="" className="w-24 h-24"/>
+        <img src={user?.contactPerson.image} alt="" className="w-24 h-24 rounded-full"/>
         <div className="flex flex-col pl-4">
-            <h3 className="text-lg font-medium">Dr. Vaibhav Jain</h3>
-            <p className="text-xs">Faculty of DBMS & DSA</p>
-            <p className="flex items-center text-xs space-x-2"><AiOutlineMail/> <span>vjain@ietdavv.edu.in</span></p>
+            <h3 className="text-lg font-medium">{user?.contactPerson?.name || 'Unset'}</h3>
+            <p className="text-xs">{user?.contactPerson?.position || 'Unset'}</p>
+            <p className="flex items-center text-xs space-x-2"><AiOutlineMail/> <span>{user?.contactPerson?.email || 'Unset'}</span></p>
         </div>
     </div>
             </div>

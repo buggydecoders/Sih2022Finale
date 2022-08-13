@@ -1,5 +1,6 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
+import { useSelector } from "react-redux";
 
 function Location() {
 
@@ -8,6 +9,7 @@ function Location() {
         city: "Indore, India",
         pincode: "452001"
     }
+    const {user} = useSelector(state=>state.auth);
 
   return (
     <div className="">
@@ -23,9 +25,9 @@ function Location() {
       </div>
 
       <div className="text-base">
-        <p><b>Street Address: </b>{info.streetAddress}</p>
-        <p><b>City: </b>{info.city}</p>
-        <p><b>Pincode: </b>{info.pincode}</p>
+        <p><b>Street Address: </b>{user.address.street || 'Not Found'}</p>
+        <p><b>City: </b>{user.address.city || 'Not found'}</p>
+        <p><b>Pincode: </b>{user?.address?.street?.split(',')[0] || 'Not Found'}</p>
       </div>
 
       <div className="py-10">
