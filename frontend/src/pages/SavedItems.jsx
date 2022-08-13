@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Search from "../components/Status/Search";
-import ResourceImg from "../assets/Resources/3dPrinter.png";
 import Pagination from "../components/Pagination";
+import ResourceItem from "../components/ResourceItem";
+import ResourceImg from '../assets/Resources/3dPrinter.png'
 
-const ProductItem = () => {
+export const ProductItem = () => {
   return (
     <div className="px-3 py-3 border-[1px] border-gray-300 rounded-xl">
       <div className="">
@@ -25,6 +26,7 @@ const ProductItem = () => {
   );
 };
 
+
 const SavedItems = () => {
   return (
     <Layout>
@@ -32,12 +34,12 @@ const SavedItems = () => {
         <div className="text-3xl font-[700] mb-6">Status</div>
         <Search />
         <div className="grid-cols-5 grid mt-12 gap-10">
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
+          <ResourceItem  />
+          <ResourceItem  />
+          <ResourceItem  />
+          <ResourceItem  />
+          <ResourceItem  />
+          <ResourceItem  />
         </div>
       </div>
       <Pagination/>

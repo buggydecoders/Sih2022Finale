@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineHome, AiFillBell } from "react-icons/ai";
 import { Link } from "react-router-dom";
 // import {BiCheckDouble} from 'react-icons/bi'
@@ -11,6 +11,7 @@ import { BsCheck2All } from "react-icons/bs";
 import { MdOutlineGames } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import logo from "../assets/UGC_LOGO.png";
+import NotificationDrawer from "./NotificationDrawer";
 const NavbarLink = ({ text, icon, href }) => {
   const location = useLocation();
   const active = location.pathname === href;
@@ -28,6 +29,8 @@ const NavbarLink = ({ text, icon, href }) => {
 };
 
 function Navbar() {
+  const [isOpen,setIsOpen] = useState(false);
+
   return (
     <div className="flex items-center justify-between px-6 py-3">
       <div className="flex items-center">
@@ -69,9 +72,11 @@ function Navbar() {
         />
       </ul>
 
-      <button className="rounded-full bg-lightGray p-4">
+      <button onClick={()=>setIsOpen(true)} className="rounded-full bg-lightGray p-4">
         <AiFillBell />
       </button>
+
+      <NotificationDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </div>
   );
 }

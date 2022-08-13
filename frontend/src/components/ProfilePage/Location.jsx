@@ -22,7 +22,7 @@ function Location() {
         </div>
       </div>
 
-      <div className="text-xs">
+      <div className="text-base">
         <p><b>Street Address: </b>{info.streetAddress}</p>
         <p><b>City: </b>{info.city}</p>
         <p><b>Pincode: </b>{info.pincode}</p>
