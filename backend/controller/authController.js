@@ -24,7 +24,7 @@ exports.loginUser = catchAsync(async (req, res, next) => {
     success = true;
     const authToken = createToken(user.id)
     res.cookie('auth', authToken)
-    res.status(200).json({ success, authToken });
+    res.status(200).json({ success, user });
 })
 
 exports.createUser = catchAsync(async (req, res, next) => {
@@ -71,7 +71,7 @@ exports.createUser = catchAsync(async (req, res, next) => {
         }
     })
     const user = await newUser.save();
-    res.status(201).json({ success: true, message: "Succesfully Created" });
+    res.status(201).json({ success: true, message: "Succesfully Created", user });
 })
 
 exports.logoutUser = catchAsync((req, res, next) => {
