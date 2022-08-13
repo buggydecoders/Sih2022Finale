@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Requests from "./pages/Requests";
 import Inbox from "./pages/Inbox";
 import SendRequest from "./pages/SendRequest";
+import RecievedRequest from "./pages/RecievedRequest";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ export default function App() {
         <Route exact path="/requests" element={<Requests />}></Route>
         <Route exact path="/inbox" element={<Inbox />}></Route>
         <Route exact path="/send-request" element={<SendRequest />}></Route>
+        <Route exact path="/recieved-request" element={<RecievedRequest />}></Route>
       </Routes>
     </QueryClientProvider>
   );
