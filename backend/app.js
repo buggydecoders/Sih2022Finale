@@ -31,6 +31,16 @@ const resRoute = require('./routes/resource-route')
 // app.use(cors(corsOptions))
 
 
+var allowCrossDomain = function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Methods', 'GET,PATCH,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Credentials', true);
+    next();
+}
+
+app.use(allowCrossDomain);
+
 app.use(express.json());
 app.use(cookieParser())
 app.use(session({
@@ -50,7 +60,7 @@ app.use(bodyParser.json());
 // }
 
 //  CORS
-app.use(cors());
+// app.use(cors());
 
 //  set limit request from same API in timePeroid from same ip
 const limiter = rateLimit({
