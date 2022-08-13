@@ -1,4 +1,5 @@
 const Resource = require('../models/Resource');
+const SavedItem = require('../models/SavedResource');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
 const Cloudinary = require('../utils/cloudinary')
@@ -34,4 +35,19 @@ exports.getResource = catchAsync(async (req, res, next) => {
         .exec();
 
     res.json({ success: true, resources })
+})
+
+exports.saveResource = catchAsync(async (req, res, next) => {
+    const resource = await Resource.findById(req.params.id)
+    const savedItem = await SavedItem.findOne({ user: req.user.id })
+    savedItem.resource.push(resource.id)
+    await savedItem.save()
+    res.json({ success: true, message: "Resource Saved Successfully" })
+})
+
+exports.removeSavedResource = catchAsync(async (req, res, next) => {
+    const savedItem = await SavedItem.findOne({ user: req.user.id })
+    savedItem.resource = savedItem.resource.filter(p => p != req.params.id)
+    await savedItem.save()
+    res.json({ success: true, message: "Resource Removed Successfully" })
 })
