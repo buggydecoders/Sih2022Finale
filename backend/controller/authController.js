@@ -107,7 +107,7 @@ exports.removeUser = catchAsync(async (req, res, next) => {
 })
 
 exports.updateUser = catchAsync(async (req, res, next) => {
-    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, { new: true })
     if (!updatedUser) {
         return next(
             new AppError('Invalid User Id Provided')

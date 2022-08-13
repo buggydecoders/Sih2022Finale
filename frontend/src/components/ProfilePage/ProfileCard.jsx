@@ -12,12 +12,12 @@ function ProfileCard(props) {
     <div className="">
       <div className="flex justify-between items-center w-full">
         <h1 className="text-2xl font-semibold">Profile</h1>
-        <span className="bg-white p-1 border border-1 text-gray-500 rounded cursor-pointer text-2xl">
+        <span className="bg-white p-1 border border-1  text-gray-500  cursor-pointer text-2xl">
           <BiEdit  onClick={()=>navigate('/edit-profile')}/>
         </span>
       </div>
 
-      <img src={DAVV_LOGO} alt="" className="py-8" />
+      <img src={user?.logo?user.logo:DAVV_LOGO} alt="" className="py-8 " />
       <p className="text-lg font-medium text-center">
         {user?.instituteName}
       </p>

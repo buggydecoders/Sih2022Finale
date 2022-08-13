@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
 import OrganizationDetails from "../components/EditProfile/OrganizationDetails";
 import Security from "../components/EditProfile/Security";
-
+import POCDetails from "../components/EditProfile/POCDetails"
 function EditProfile() {
   const active = "cursor-pointer bg-gray-100 px-3 py-1";
   const navItem = "cursor-pointer px-3 py-1";
@@ -53,6 +53,10 @@ function EditProfile() {
 
       case "Security":
         return <Security />
+        break;
+
+      case "POC Details":
+        return <POCDetails/>
         break;
 
       default:

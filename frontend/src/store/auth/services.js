@@ -15,3 +15,7 @@ export const editUserAPI = async(data)=>{
     return result;
 }
 
+export const getUserAPI = async()=>{
+    const result = await serverInstance.get('/auth/get-user');
+    return result;
+}
