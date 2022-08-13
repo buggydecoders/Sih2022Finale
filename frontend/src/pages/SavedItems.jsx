@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Search from "../components/Status/Search";
 import Pagination from "../components/Pagination";
 import ResourceItem from "../components/ResourceItem";
-
+import ResourceImg from '../assets/Resources/3dPrinter.png'
 
 export const ProductItem = () => {
   return (
