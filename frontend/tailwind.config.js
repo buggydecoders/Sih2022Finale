@@ -9,7 +9,9 @@ module.exports = {
         primary : '#EE786B',
         secondary : '#2F7889',
         lightGray: '#F8FAFC',
-
+      },
+      fontFamily : {
+        open : [ 'Nunito Sans', 'sans-serif']
       }
     },
   },

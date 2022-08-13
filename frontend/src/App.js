@@ -8,14 +8,13 @@ import Profile from "./pages/Profile";
 import SavedItems from "./pages/SavedItems";
 import Status from "./pages/Status";
 import Signup from "./pages/Signup";
-<<<<<<< HEAD
 import Resources from "./pages/Resources";
 import Resource from "./pages/Resource";
 import EditProfile from "./pages/EditProfile";
-=======
 import Requests from "./pages/Requests";
 import Inbox from "./pages/Inbox";
->>>>>>> inbox
+import SendRequest from "./pages/SendRequest";
+import RecievedRequest from "./pages/RecievedRequest";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +35,8 @@ export default function App() {
 
         <Route exact path="/requests" element={<Requests />}></Route>
         <Route exact path="/inbox" element={<Inbox />}></Route>
+        <Route exact path="/send-request" element={<SendRequest />}></Route>
+        <Route exact path="/recieved-request" element={<RecievedRequest />}></Route>
       </Routes>
     </QueryClientProvider>
   );
