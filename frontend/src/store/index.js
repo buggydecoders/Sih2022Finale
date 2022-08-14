@@ -6,11 +6,13 @@ import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import storage from 'redux-persist/lib/storage'
 import authReducer from "./auth/reducers";
+import MyResourceReducer from "./myresources/reducers";
 
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
-    auth : authReducer
+    auth : authReducer,
+    myResources : MyResourceReducer
 });
 // // Middleware: Redux Persist Config
 const persistConfig = {
