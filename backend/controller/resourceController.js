@@ -34,6 +34,21 @@ exports.getResource = catchAsync(async (req, res, next) => {
     res.json({ success: true, resources })
 })
 
+exports.getResourceDetails = catchAsync(async (req, res, next) => {
+    const resource = await Resource.findById(req.params.id)
+    res.json({ success: true, resource })
+})
+
+exports.updateResource = catchAsync(async (req, res, next) => {
+    const resource = await Resource.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    res.json({ success: true, resource })
+})
+
+exports.removeResource = catchAsync(async (req, res, next) => {
+    const resource = await Resource.findByIdAndRemove(req.params.id)
+    res.json({ success: true, resource })
+})
+
 exports.saveResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findById(req.params.id)
     const savedItem = await SavedItem.findOne({ user: req.user.id })
