@@ -28,6 +28,11 @@ const ResourceSchema = new mongoose.Schema({
     instructions: {
         type: String
     },
+    state: {
+        type: String,
+        enum: ['shared', 'available', 'draft'],
+        default: "available"
+    },
     isActive: {
         type: Boolean,
         default: true
