@@ -2,14 +2,11 @@ const Resource = require('../models/Resource');
 const SavedItem = require('../models/SavedResource');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
-const Cloudinary = require('../utils/cloudinary')
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, duration, category, brief, description, condition, instruction } = req.body;
-    const result = await Cloudinary.uploader.upload(req.file.path);
-    const url = result.secure_url;
+    const { name, price, duration, category, brief, description, condition, instruction, imageUrl } = req.body
     const newRes = new Resource({
-        imageUrl: url,
+        imageUrl,
         name,
         price,
         duration,

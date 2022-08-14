@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const ResourceSchema = new mongoose.Schema({
     imageUrl: {
-        type: String
+        type: [String]
     },
     name: {
         type: String
