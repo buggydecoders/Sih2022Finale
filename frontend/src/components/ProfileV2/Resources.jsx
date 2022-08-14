@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {MdIncompleteCircle, MdOutlineScience} from 'react-icons/md';
 import {FiPackage} from 'react-icons/fi';
+import AddResourceDrawer from '../Resource/AddResourceDrawer';
 
 const ResourceItem = ()=>{
-    return(<div className= 'p-3 rounded-md'>
+    const [isOpen,setIsOpen] = useState(false);
+    return(
+    <>
+    <div onClick={()=>setIsOpen(true)} className= 'p-3 rounded-md'>
         <div className='w-full rounded-md bg-white p-2 h-[210px]'>
             <img src=''/>
         </div>
@@ -12,7 +16,9 @@ const ResourceItem = ()=>{
         </div>
         <div className='text-gray-400 text-xs font-open mt-1'>13 July-14 July 2022</div>
         <div className='font-[600] font-open'>$120</div>
-    </div>)
+    </div>
+    <AddResourceDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
+    </>)
 }
 
 const CategoryType = ({title,icon,isSelected})=>{
