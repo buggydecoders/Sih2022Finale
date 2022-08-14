@@ -8,10 +8,10 @@ const ContactInfo = () => {
             <button className='border-b-primary border-b-[2px] text-primary'>Send Message</button>
         </div>
         <div className='mt-5 font-open space-y-5'>
-            <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
+            {/* <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
                 <span className='font-semibold text-gray-400'>Phone : </span>
                 <div>+91 7039900010</div>
-            </div>
+            </div> */}
             <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
                 <span className='font-semibold text-gray-400'>Email : </span>
                 <div>ietdaavv@edu.in</div>

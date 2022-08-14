@@ -19,3 +19,8 @@ export const getUserAPI = async()=>{
     const result = await serverInstance.get('/auth/get-user');
     return result;
 }
+
+export const logoutUserAPI = async()=>{
+    const result = await serverInstance.get('/auth/logout');
+    return result;
+}
