@@ -10,7 +10,10 @@ const ResourceSchema = new mongoose.Schema({
     price: {
         type: String
     },
-    duration: {
+    durationFrom: {
+        type: String
+    },
+    durationTo: {
         type: String
     },
     category: {
