@@ -17,8 +17,8 @@ exports.addResource = catchAsync(async (req, res, next) => {
         instruction,
         instituteId: req.user.id
     })
-    await newRes.save()
-    res.json({ success: true, message: "Resource Added Successfully" })
+    const resource = await newRes.save()
+    res.json({ success: true, message: "Resource Added Successfully", resource })
 })
 
 exports.getResource = catchAsync(async (req, res, next) => {
