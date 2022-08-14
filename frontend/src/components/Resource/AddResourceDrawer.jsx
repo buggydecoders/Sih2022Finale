@@ -5,7 +5,8 @@ import ToggleComponent from "../ToggleComponent";
 import { BsImage, BsImages } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { AddResource } from "../../store/myresources/actions";
-
+import { getFileLink } from "../../utils/generateImageLink";
+import {toast} from 'react-toastify';
 const Input = ({ label, required, area, note, cols, ...props }) => {
   return (
     <div className="font-open">
@@ -33,17 +34,17 @@ const Input = ({ label, required, area, note, cols, ...props }) => {
 };
 
 
-const UploadedFiles = ()=>{
-  const UploadedFile = ()=>{
+const UploadedFiles = ({images,handleRemoveImage})=>{
+  const UploadedFile = ({imgData})=>{
     return (
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="w-[70px] relative h-[50px] rounded-md bg-black">
+        <div className="flex items-center relative gap-3">
+          <div className="w-[70px] relative h-[50px] rounded-md" style={{background : `url(${imgData?.url}) center center/cover`}}>
             <div className="absolute -top-1 -right-1 bg-secondary rounded-full h-[15px] w-[15px]"></div>
           </div>
           <div className="text-sm font-open">
-            <div className="font-medium">final.jpg</div>
-            <div className="text-xs text-gray-400">128KB</div>
+            <div className="font-medium">{imgData?.name}</div>
+            <div className="text-xs text-gray-400">{imgData?.size}</div>
           </div>
         </div>
         <div className="text-red-600"><MdClear size={19}/></div>
@@ -53,9 +54,7 @@ const UploadedFiles = ()=>{
   
   return (
     <div className="space-y-3 mt-3">
-      <UploadedFile/>
-      <UploadedFile/>
-      <UploadedFile/>
+      {images.map((img,idx)=><UploadedFile imgData={img} key={idx}/>)}
     </div>
   )
 
@@ -82,12 +81,42 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
   })
 
   const handleChange = (e)=>setForm(prev=>({...form,[e.target.name] : e.target.value}));
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
+  const [uploadedFiles,setUploadedFiles] = useState([]);
+  const [uploadLoading,setUploadLoading] = useState(false);
 
   const handleSave = ()=>{
     dispatch(AddResource({...form,state : 'available'}));
   }
 
+  const handleMediaChange = (e)=>{
+    console.log(e.target.files);
+    if (e.target.files.length>0) {
+      setUploadedFiles(e.target.files);
+    }
+    else {
+      setUploadedFiles([]);
+    }
+  }
+
+  const handleAddImages = async()=>{
+    const imageUrls = [];
+    try{
+      setUploadLoading(true);
+      for(let i=0; i<uploadedFiles.length; ++i) {
+        let url = await getFileLink(uploadedFiles[i]);
+        imageUrls.push({url,name : uploadedFiles[i].name,size : uploadedFiles[i].size});
+      }
+    }catch(err) {
+      console.log(err);
+      toast(err?.response?.data?.message || 'Some images were not added please try again!');
+    }finally{
+      setForm(prev=>({...prev,images : [...prev.images,...imageUrls]}));
+      setUploadedFiles([]);
+      setUploadLoading(false);
+
+    }
+  }
   return (
     <Drawer open={isOpen} onClose={handleClose} anchor={"right"}>
       <div className="w-[50vw] p-4">
@@ -153,9 +182,17 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
             onChange={handleChange}
           />
           <div className="">
-            <div className="text-sm font-semibold font-open">Media</div>
-            <div className="mt-2 cursor-pointer space-y-1 w-full h-[90px] flex-col font-open border-dashed border-gray-300 border-[2px] rounded-xl flex items-center justify-center">
+            <div className="text-sm relative font-semibold font-open">Media</div>
+            <div className="mt-2 relative cursor-pointer space-y-1 w-full h-[90px] flex-col font-open border-dashed border-gray-300 border-[2px] rounded-xl flex items-center justify-center">
+              {uploadedFiles.length!==0?<>
+              <div>{uploadedFiles.length} Files Selected</div>
+              <div className="flex items-center gap-3">
+              <button disabled={uploadLoading} onClick={handleAddImages} className="px-3 py-1 border-primary border-[1px] text-primary rounded-md font-open">{uploadLoading?'Uploading..':'Add'}</button>
+              <button disabled={uploadLoading} onClick={()=>setUploadedFiles([])} className="px-3 py-1 text-white border-[1px] bg-primary rounded-md font-open">Remove</button>
+              </div>
+              </>:<>
               <BsImage />
+              <input type='file' onChange={handleMediaChange} multiple={true} className="absolute opacity-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"/>
               <div className="text-sm mt-2 text-gray-600">
                 Drop your images here or{" "}
                 <span className="text-primary">click to browse</span>
@@ -163,6 +200,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
               <div className=" text-xs text-gray-400">
                 1400x1200 recommeded, up to 2MB each.
               </div>
+              </>}
             </div>
             <div className="mt-1 font-open text-xs text-gray-400">
               Add upto 4 images to your resource. Used to represet your resource
@@ -171,7 +209,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
           </div>
           <div className="">
           <div className="text-sm font-semibold font-open">Uploads:</div>
-          <UploadedFiles/>
+          <UploadedFiles images={form.images} handleRemoveImage={()=>{}}/>
           </div>
         </div>
         <div className="mt-12 flex gap-5 items-center justify-between">
