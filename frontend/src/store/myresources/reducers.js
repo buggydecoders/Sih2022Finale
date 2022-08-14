@@ -3,9 +3,10 @@ const INITIAL_STATE = {
     list : [],
     page : 1,
     limit : 10,
-    type : '',
+    state : '',
     category : '',
-    loading : false
+    loading : false,
+    totalPages : 1
 }
 export default function MyResourceReducer(state=INITIAL_STATE, action){
     switch(action.type) {
