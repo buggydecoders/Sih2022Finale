@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const ResourceSchema = new mongoose.Schema({
     imageUrl: {
-        type: String
+        type: [String]
     },
     name: {
         type: String
@@ -28,11 +28,11 @@ const ResourceSchema = new mongoose.Schema({
     instructions: {
         type: String
     },
-    active: {
+    isActive: {
         type: Boolean,
         default: true
     },
-    vacancy: {
+    isVacant: {
         type: Boolean,
         default: true
     },
