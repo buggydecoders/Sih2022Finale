@@ -34,9 +34,9 @@ export default function App() {
       <Routes>
         {/* <Route exact path="/" element={<ProtectedRoute access="private" scope={"institute"} restricted={true} />}><Dashboard /></Route> */}
         <Route exact path="/profile" element={<ProtectedRoute access="private"  scope={"institute"} />} >
-        <Route exact path='/profile' element={<Profile />} /></Route>
-        <Route exact path="/profilev2" element={<ProtectedRoute access="private"  scope={"institute"} />} >
-        <Route exact path='/profilev2' element={<ProfileV2 />} /></Route>
+        <Route exact path='/profile' element={<ProfileV2 />} /></Route>
+        {/* <Route exact path="/profilev2" element={<ProtectedRoute access="private"  scope={"institute"} />} >
+        <Route exact path='/profilev2' element={<ProfileV2 />} /></Route> */}
         <Route
           exact
           path="/edit-profile"

@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 // import {GrStatusCritical} from 'react-icons/gr'
 import { BsBagCheck } from "react-icons/bs";
 import { RiAccountCircleLine } from "react-icons/ri";
-
+import {FiLogOut} from 'react-icons/fi';
 import { BsCheck2All } from "react-icons/bs";
 // import Status from "../pages/Status";
 import { MdOutlineGames } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import logo from "../assets/UGC_LOGO.png";
 import NotificationDrawer from "./NotificationDrawer";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../store/auth/actions";
 const NavbarLink = ({ text, icon, href }) => {
   const location = useLocation();
   const active = location.pathname === href;
@@ -30,6 +32,10 @@ const NavbarLink = ({ text, icon, href }) => {
 
 function Navbar() {
   const [isOpen,setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const handleLogout = ()=>{
+    dispatch(logoutUser());
+  }
 
   return (
     <div className="flex items-center justify-between px-6 py-3">
@@ -71,10 +77,10 @@ function Navbar() {
           icon={<RiAccountCircleLine size={20} />}
         />
       </ul>
-
-      <button onClick={()=>setIsOpen(true)} className="rounded-full bg-lightGray p-4">
-        <AiFillBell />
-      </button>
+      <div className="flex gap-3 items-center">
+      <button onClick={()=>setIsOpen(true)} className="rounded-full bg-lightGray p-4"> <AiFillBell /> </button>
+      <button onClick={handleLogout} className="rounded-full bg-lightGray p-4"> <FiLogOut /> </button>
+      </div>
 
       <NotificationDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </div>

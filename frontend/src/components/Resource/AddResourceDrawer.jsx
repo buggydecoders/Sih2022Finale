@@ -110,6 +110,10 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
             <Input label="Price" required={true} type="number" note="" />
             <Input label="per" type="number" note="Eg: Per/day, per/month" />
           </TwoFields>
+          <TwoFields>
+            <Input label="Available from" type="date" required={true}  note="" />
+            <Input label="Available to" type="date" note="Eg: Per/day, per/month" />
+          </TwoFields>
           <Input
             cols={7}
             note="These conditions will be followed by the institute"
