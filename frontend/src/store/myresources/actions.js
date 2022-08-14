@@ -45,7 +45,9 @@ export const fetchAllResources = (category,state,page,limit)=>async(dispatch,get
         list : fetchedData.resources,
         totalPages : fetchedData.totalPages,
         page : fetchedData.page,
-        limit : fetchedData.limit
+        limit : fetchedData.limit,
+        category : fetchedData.category,
+        state : fetchedData.state
     }));
     }catch(err) {
         console.log(err);

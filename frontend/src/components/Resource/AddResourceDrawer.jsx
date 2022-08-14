@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { MdClear } from "react-icons/md";
 import ToggleComponent from "../ToggleComponent";
 import { BsImage, BsImages } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { AddResource } from "../../store/myresources/actions";
 
 const Input = ({ label, required, area, note, cols, ...props }) => {
   return (
@@ -66,7 +68,7 @@ const TwoFields = ({ children }) => {
 const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
   const handleClose = () => setIsOpen(false);
   const [form,setForm] = useState({
-    isActive : false,
+    isActive : true,
     category : null,
     name : '',
     description : '',
@@ -78,6 +80,14 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
     instructions : '',
     state : 'draft'
   })
+
+  const handleChange = (e)=>setForm(prev=>({...form,[e.target.name] : e.target.value}));
+  const dispatch = useDispatch();
+
+  const handleSave = ()=>{
+    dispatch(AddResource({...form,state : 'available'}));
+  }
+
   return (
     <Drawer open={isOpen} onClose={handleClose} anchor={"right"}>
       <div className="w-[50vw] p-4">
@@ -96,6 +106,8 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
         <div className="mt-5 font-open">
           <select
             defaultValue="selectCategory"
+            name="category"
+            onChange={handleChange}
             className="w-full font-medium py-3 outline-none rounded-xl px-3 bg-gray-100"
           >
             <option disabled value="selectCategory" className="font-[600]">
@@ -111,21 +123,25 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
           <Input
             label="Resource Name"
             required={true}
+            onChange={handleChange}
+            name="name"
             note="Give your resource a short and clear name."
           />
           <Input
             label="Description"
             area={true}
             required={true}
+            onChange={handleChange}
+            name="description"
             note="Give your resource a short and clear description."
           />
           <TwoFields>
-            <Input label="Price" required={true} type="number" note="" />
+            <Input name="price" onChange={handleChange} label="Price" required={true} type="number" note="" />
             <Input label="per" type="number" note="Eg: Per/day, per/month" />
           </TwoFields>
           <TwoFields>
-            <Input label="Available from" type="date" required={true}  note="" />
-            <Input label="Available to" type="date" note="Eg: Per/day, per/month" />
+            <Input onChange={handleChange} name="durationFrom" label="Available from" type="date" required={true}  note="" />
+            <Input onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
           </TwoFields>
           <Input
             cols={7}
@@ -133,6 +149,8 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
             required={true}
             area={true}
             label="Conditions Of Use"
+            name="conditions"
+            onChange={handleChange}
           />
           <div className="">
             <div className="text-sm font-semibold font-open">Media</div>
@@ -157,7 +175,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
           </div>
         </div>
         <div className="mt-12 flex gap-5 items-center justify-between">
-          <button className="px-7 rounded-md text-white font-open font-semibold bg-primary py-2">Save</button>
+          <button className="px-7 rounded-md text-white font-open font-semibold bg-primary py-2" onClick={handleSave}>Save</button>
           <ToggleComponent label={'Is Active'}/>
         </div>
       </div>

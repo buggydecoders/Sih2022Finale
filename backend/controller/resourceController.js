@@ -23,7 +23,7 @@ exports.addResource = catchAsync(async (req, res, next) => {
 
 exports.getResource = catchAsync(async (req, res, next) => {
     let queryObject = {}
-    const {state,category} = req.query;
+    let {state,category} = req.query;
     
     if (state && state==='all') state = '';
     if (category && category==='all') category = '';
@@ -36,7 +36,7 @@ exports.getResource = catchAsync(async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 10;
 
     let totalDocuments = await Resource.countDocuments(queryObject)
-    let totalPages = totalDocuments / limit;
+    let totalPages = Math.ceil(totalDocuments / limit);
 
     const skipIndex = (page - 1) * limit;
     const resources = await Resource.find(queryObject)
@@ -44,7 +44,7 @@ exports.getResource = catchAsync(async (req, res, next) => {
         .skip(skipIndex)
         .exec();
 
-    res.json({ success: true, resources, totalPages, page, limit })
+    res.json({ success: true, resources, totalPages, page, limit,state : state || 'all', category : category || 'all'  })
 })
 
 exports.getResourceDetails = catchAsync(async (req, res, next) => {

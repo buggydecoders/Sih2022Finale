@@ -12,6 +12,8 @@ export default function MyResourceReducer(state=INITIAL_STATE, action){
     switch(action.type) {
         case CONSTANTS.SET_DATA : return {...state,...action.payload};
         case CONSTANTS.SET_LOADING : return {...state,loading : action.payload};
+        case CONSTANTS.ADD_RESOURCE : return {...state, list : [...state.list,action.payload]}
+        case CONSTANTS.DELETE_RESOURCE : return {...state,list : state.list.filter(r=>r._id!==action.payload)}
         default : return state;
 
     } 
