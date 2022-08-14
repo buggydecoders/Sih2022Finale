@@ -5,6 +5,7 @@ const { sendEmail } = require('../utils/sendEmail')
 const createToken = require('../utils/createToken')
 const bcrypt = require('bcrypt');
 const aishe = require('../utils/aishe.json')
+const SavedItem = require('../models/SavedResource')
 
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
@@ -73,6 +74,10 @@ exports.createUser = catchAsync(async (req, res, next) => {
         }
     })
     const user = await newUser.save();
+    const saveItem = new SavedItem({
+        user: user.id
+    })
+    await saveItem.save()
     res.status(201).json({ success: true, message: "Succesfully Created", user });
 })
 

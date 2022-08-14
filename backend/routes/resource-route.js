@@ -9,4 +9,9 @@ router
     .post(checkAuth, upload.single('image'), resourceController.addResource)
     .get(checkAuth, resourceController.getResource)
 
+router
+    .route('/save-resource/:id')
+    .post(checkAuth, resourceController.saveResource)
+    .delete(checkAuth, resourceController.removeSavedResource)
+
 module.exports = router;
