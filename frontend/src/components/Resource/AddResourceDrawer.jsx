@@ -86,7 +86,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
   const [uploadLoading,setUploadLoading] = useState(false);
 
   const handleSave = ()=>{
-    dispatch(AddResource({...form,state : 'available'}));
+    dispatch(AddResource({...form,state : 'available'}, handleClose));
   }
 
   const handleMediaChange = (e)=>{
