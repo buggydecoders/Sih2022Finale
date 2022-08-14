@@ -4,9 +4,9 @@ const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, duration, category, brief, description, condition, instruction, imageUrl } = req.body
+    const { name, price, duration, category, brief, description, condition, instruction, images } = req.body
     const newRes = new Resource({
-        imageUrl,
+        images,
         name,
         price,
         duration,
