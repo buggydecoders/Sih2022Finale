@@ -1,5 +1,5 @@
 import { Drawer } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { MdClear } from "react-icons/md";
 import ToggleComponent from "../ToggleComponent";
 import { BsImage, BsImages } from "react-icons/bs";
@@ -65,6 +65,19 @@ const TwoFields = ({ children }) => {
 
 const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
   const handleClose = () => setIsOpen(false);
+  const [form,setForm] = useState({
+    isActive : false,
+    category : null,
+    name : '',
+    description : '',
+    durationFrom : '',
+    durationTo : '',
+    images : [],
+    price : 0,
+    conditions : '',
+    instructions : '',
+    state : 'draft'
+  })
   return (
     <Drawer open={isOpen} onClose={handleClose} anchor={"right"}>
       <div className="w-[50vw] p-4">

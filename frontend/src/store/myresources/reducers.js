@@ -3,8 +3,8 @@ const INITIAL_STATE = {
     list : [],
     page : 1,
     limit : 10,
-    state : '',
-    category : '',
+    state : 'all',
+    category : 'all',
     loading : false,
     totalPages : 1
 }

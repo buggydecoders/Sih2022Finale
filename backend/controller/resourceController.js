@@ -23,6 +23,12 @@ exports.addResource = catchAsync(async (req, res, next) => {
 
 exports.getResource = catchAsync(async (req, res, next) => {
     let queryObject = {}
+    const {state,category} = req.query;
+    
+    if (state && state==='all') state = '';
+    if (category && category==='all') category = '';
+
+
     if (state) queryObject.state = req.query.state
     if (category) queryObject.category = req.query.category
 

@@ -38,7 +38,7 @@ const deleteResourceInStore = (resourceId)=>{
 export const fetchAllResources = (category,state,page,limit)=>async(dispatch,getState)=>{
     // const {myResources} = getState();
     try {
-        dispatch(setLoading(true));
+    dispatch(setLoading(true));
     const result = await fetchResourcesAPI(category,state,page,limit);
     let fetchedData = result.data;
     dispatch(setData({
