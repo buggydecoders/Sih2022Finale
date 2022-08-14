@@ -33,7 +33,10 @@ const CategoryType = ({title,icon,isSelected})=>{
 const Resources = () => {
   return (
     <div className=' p-5 px-5 rounded-xl'>
-        <div className='text-gray-600 text-2xl font-[600]'>Resources</div>
+        <div className='flex gap-6 items-center justify-between'>
+            <div className='text-gray-600 text-2xl font-[600]'>Resources</div>
+            <div className='text-primary font-open px-5 py-[2px] cursor-pointer flex items-center gap-3 rounded-md border-[1px] border-primary hover:text-white hover:bg-primary transition-all'>Add Resource</div>
+        </div>
         <div className='text-sm text-gray-400 mt-1'>Showing resources associated with Insitute of Engineering & Technology</div>
         <div className='mt-5 gap-5 flex justify-between items-center'>
             <div className='flex items-center gap-5'>
