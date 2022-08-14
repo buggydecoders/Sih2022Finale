@@ -1,9 +1,11 @@
 const mongoose = require('mongoose')
 
 const ResourceSchema = new mongoose.Schema({
-    imageUrl: {
-        type: [String]
-    },
+    images: [{
+        name: String,
+        url: String,
+        size: String
+    }],
     name: {
         type: String
     },
