@@ -6,21 +6,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAllResources } from "../../store/myresources/actions";
 import { Pagination } from "@mui/material";
 
-const ResourceItem = () => {
+const ResourceItem = ({data}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div onClick={() => setIsOpen(true)} className="p-3 rounded-md">
-        <div className="w-full rounded-md bg-white p-2 h-[210px]">
-          <img src="" />
+        <div className="w-full rounded-md bg-white p-2 h-[210px] relative">
+          <img src={data?.images[0]?.url || ""} className="w-full h-full absolute object-cover top-0 left-0 rounded-xl border-[1px]" />
         </div>
         <div className="mt-3 font-[500] font-open">
-          Printer with 3d Function
+          {data?.name}
         </div>
         <div className="text-gray-400 text-xs font-open mt-1">
-          13 July-14 July 2022
+         {data?.durationFrom || "NA"} - {data?.durationTo || "NA"}
         </div>
-        <div className="font-[600] font-open">$120</div>
+        <div className="font-[600] font-open">${data?.price}</div>
       </div>
       <AddResourceDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
