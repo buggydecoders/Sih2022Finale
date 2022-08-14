@@ -17,21 +17,28 @@ exports.addResource = catchAsync(async (req, res, next) => {
         instruction,
         instituteId: req.user.id
     })
-    await newRes.save()
-    res.json({ success: true, message: "Resource Added Successfully" })
+    const resource = await newRes.save()
+    res.json({ success: true, message: "Resource Added Successfully", resource })
 })
 
 exports.getResource = catchAsync(async (req, res, next) => {
-    const page = parseInt(req.query.page);
-    const limit = parseInt(req.query.limit);
-    const skipIndex = (page - 1) * limit;
+    let queryObject = {}
+    if (state) queryObject.state = req.query.state
+    if (category) queryObject.category = req.query.category
 
-    const resources = await Resource.find()
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalPages = totalDocuments / limit;
+
+    const skipIndex = (page - 1) * limit;
+    const resources = await Resource.find(queryObject)
         .limit(limit)
         .skip(skipIndex)
         .exec();
 
-    res.json({ success: true, resources })
+    res.json({ success: true, resources, totalPages, page, limit })
 })
 
 exports.getResourceDetails = catchAsync(async (req, res, next) => {
