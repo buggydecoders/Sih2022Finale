@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import UniversityLogo from '../../assets/DAVV_LOGO.png'
 import {BsThreeDotsVertical} from 'react-icons/bs';
 import {BiPhoneCall} from 'react-icons/bi';
 import {FiSend} from 'react-icons/fi';
 import SideProfile from './SideProfile';
+import { useSelector } from 'react-redux';
+import { MessageContext } from '../../contexts/MessageContext';
 
-const ProfileCard = ()=>{
+const ProfileCard = ({data})=>{
+
   return (
     <div className='py-3 px-5 shadow-lg flex justify-between rounded-xl items-center'>
       <div className='flex items-center gap-3'>
         <img src={UniversityLogo} className='w-[40px] h-[40px]'></img>
         <div className='text-base font-semibold'>
-          Insitute of Engineering, DAVV
+          {data?.instituteName}
           <div className='mt-0 text-xs font-[500] text-gray-400'>Active now</div>
           </div>
       </div>
@@ -47,10 +50,14 @@ const MessageCard = ({isSent})=>{
 }
 
 const ActiveConversation = () => {
+  const {activeRoom} = useSelector(state=>state.chatRoom);
+  const {reciever,messagesLoading} = useContext(MessageContext);
+  console.log(reciever)
+  if (messagesLoading) return <div>Loading..</div>
   return (
     <div className='px-5 py-6 grid grid-cols-[4fr_1.4fr] gap-5 border-[1px] border-opacity-5 rounded-md border-l-0 border-r-0'>
       <div>
-        <ProfileCard/>
+        <ProfileCard data={reciever}/>
         <div className='mt-6 h-[60vh] space-y-3 overflow-y-auto'>
           <MessageCard/>
           <MessageCard isSent={true}/>
@@ -60,7 +67,7 @@ const ActiveConversation = () => {
 
         </div>
       </div>
-     <SideProfile/>
+     <SideProfile data={reciever}/>
     </div>
   )
 }
