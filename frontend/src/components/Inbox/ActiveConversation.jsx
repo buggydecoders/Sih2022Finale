@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import UniversityLogo from '../../assets/DAVV_LOGO.png'
 import {BsThreeDotsVertical} from 'react-icons/bs';
 import {BiPhoneCall} from 'react-icons/bi';
@@ -26,24 +26,30 @@ const ProfileCard = ({data})=>{
   )
 }
 
-const MessageController = ()=>{
+const MessageController = ({sendMessage})=>{
+  const [text,setText] = useState('');
+  const handleSend = ()=>{
+    if (text.length>0) {
+      sendMessage(text);
+    }
+  }
   return (
     <div className='w-full bg-transparent flex items-center py-2 rounded-xl gap-3'>
       <div className='w-full'>
-      <input  className=' border-[1px] border-gray-300  w-full px-3 py-2 text-sm rounded-2xl outline-none' placeholder='Type your Message here!'/>
+      <input  value={text} onChange={(e)=>setText(e.target.value)} className=' border-[1px] border-gray-300  w-full px-3 py-2 text-sm rounded-2xl outline-none' placeholder='Type your Message here!'/>
       </div>
-      <div className='w-[40px] h-[40px] flex items-center rounded-full bg-secondary bg-opacity-10 justify-center'><FiSend/></div>
+      <div onClick={handleSend} className='w-[40px] h-[40px] flex items-center rounded-full bg-secondary bg-opacity-10 justify-center'><FiSend/></div>
 
     </div>
   )
 }
 
-const MessageCard = ({isSent})=>{
+const MessageCard = ({isSent,message})=>{
   return (
     <div className={`${!isSent?'justify-end':'justify-start'} flex w-full`}>
       <div className='py-2 px-3 bg-lightGray rounded-md max-w-[70%]'>
         <div className={`${isSent?'text-secondary':'text-primary'} font-[600] text-sm`}>Kunal Sangtiani</div>
-        <div className='font-[500] mt-2 text-xs text-gray-600'>Lorem, ipsum dolor sit amet  earum </div>
+        <div className='font-[500] mt-2 text-xs text-gray-600'>{message?.content} </div>
       </div>
     </div>
   )
@@ -51,7 +57,7 @@ const MessageCard = ({isSent})=>{
 
 const ActiveConversation = () => {
   const {activeRoom} = useSelector(state=>state.chatRoom);
-  const {reciever,messagesLoading} = useContext(MessageContext);
+  const {reciever,messagesLoading,messages,sendMessage} = useContext(MessageContext);
   console.log(reciever)
   if (messagesLoading) return <div>Loading..</div>
   return (
@@ -59,11 +65,10 @@ const ActiveConversation = () => {
       <div>
         <ProfileCard data={reciever}/>
         <div className='mt-6 h-[60vh] space-y-3 overflow-y-auto'>
-          <MessageCard/>
-          <MessageCard isSent={true}/>
+          {messages.length>0?messages.map(m=><MessageCard message={m}/>):<div></div>}
         </div>
         <div className='mt-5 space-y-4'>
-          <MessageController/>
+          <MessageController sendMessage={sendMessage}/>
 
         </div>
       </div>
