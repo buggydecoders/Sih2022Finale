@@ -83,9 +83,7 @@ def vectorize(narr):
 def recommend_search(instituteId,title):
     resDF = recommendation_foundation()
     resDF = generateTag(resDF)
-    # # instituteId = ObjectId(instituteId)
     institute = institutes.find_one({"_id": ObjectId(instituteId)})
-    print(institute)
     institute = pd.DataFrame(institute)
     city = institute['address']['city']
     street = institute['address']['street']
