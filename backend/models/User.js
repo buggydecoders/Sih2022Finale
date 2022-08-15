@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
     logo: {
-        type: String
+        type: String,
+        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597236/Placeholder-1100_9623f00f-8faa-4ff1-83ae-a74c00cc0808_480x480_urgk3z.webp"
     },
     instituteName: {
         type: String,
@@ -37,7 +38,8 @@ const UserSchema = new mongoose.Schema({
     },
     contactPerson: {
         image: {
-            type: String
+            type: String,
+            default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597439/images_fywghz.png"
         },
         name: {
             type: String
