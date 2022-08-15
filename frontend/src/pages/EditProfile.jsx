@@ -5,15 +5,24 @@ import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
 import OrganizationDetails from "../components/EditProfile/OrganizationDetails";
 import Security from "../components/EditProfile/Security";
+import slugify  from 'slugify';
 import POCDetails from "../components/EditProfile/POCDetails"
+import useQueryParams from "../hooks/useQueryParams";
+import {useNavigate} from 'react-router-dom'
+
+
+const slugifyValue = (value)=>slugify(value,'-').toLowerCase();
+
 function EditProfile() {
   const active = "cursor-pointer bg-gray-100 px-3 py-1";
   const navItem = "cursor-pointer px-3 py-1";
+  const query = useQueryParams();
+  console.log(query);
   const tabGroups = [
     { name: "Organization", tabs: ["Organization Details", "Contact Person Details"] },
     { name: "Profile", tabs: ["Security", "Additional Settings"] },
   ];
-  const [activeTab, setActiveTab] = useState(tabGroups[0].tabs[0]);
+  const [activeTab, setActiveTab] = useState(query('tab') || slugifyValue(tabGroups[0].tabs[0]));
 
   const TabsGroup = ({ name, tabs }) => {
     return (
@@ -24,19 +33,21 @@ function EditProfile() {
         </div>
         <ul className="flex flex-col space-y-2 py-4 ml-6 font-medium">
           {tabs?.map((tab, idx) => {
-            return <Tab name={tab} index={idx} />;
+            return <Tab name={tab} value={slugifyValue(tab)} index={idx} />;
           })}
         </ul>
       </div>
     );
   };
 
-  const Tab = ({ name, index }) => {
+  const Tab = ({ name, index,value }) => {
+    const navigate = useNavigate();
     return (
       <li
-        className={activeTab === name ? active : navItem}
+        className={activeTab === value ? active : navItem}
         onClick={() => {
-          setActiveTab(name);
+          navigate(`/edit-profile?tab=${value}`)
+          setActiveTab(value);
         }}
         key={index}
       >
@@ -46,14 +57,16 @@ function EditProfile() {
   };
 
   const returnComponent = (active) => {
-    switch (active) {
-      case "Organization Details":
+    let slugified = slugify(active, '-');
+    slugified = slugified.toLowerCase();
+    switch (slugify(active, '-').toLowerCase()) {
+      case "organization-details":
         return <OrganizationDetails />
 
-      case "Security":
+      case "security":
         return <Security />
 
-      case "Contact Person Details":
+      case "contact-person-details":
         return <POCDetails/>
 
       default:

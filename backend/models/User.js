@@ -44,6 +44,9 @@ const UserSchema = new mongoose.Schema({
         },
         position: {
             type: String
+        },
+        phone : {
+            type : String
         }
     },
     resource: {

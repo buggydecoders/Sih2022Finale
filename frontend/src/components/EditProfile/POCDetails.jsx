@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFileLink } from "../../utils/generateImageLink";
 import {toast} from 'react-toastify';
 import { updateUser } from "../../store/auth/actions";
+import Input, { TwoFields } from "../Input";
 function POCDetails() {
   const {user,loading} = useSelector(state=>state.auth)
   const [logoFile,setLogoFile] = useState(null);
@@ -29,6 +30,7 @@ function POCDetails() {
     name : user?.contactPerson?.name || "",
     email : user?.contactPerson?.email || "",
     position : user?.contactPerson?.position || "",
+    phone : user?.contactPerson?.phone || ""
     
   });
   const dispatch = useDispatch();
@@ -43,61 +45,41 @@ function POCDetails() {
     setForm(prev=>({...prev,[e.target.name] : e.target.value}));
   }
   return (
-    <div className="py-4 px-10 flex- flex-col space-y-14">
-      <h1 className="text-3xl font-semibold">POC Detail</h1>
-      <div className="">
+    <div className="py-4 px-10 flex- flex-col">
+      <h1 className="text-2xl font-semibold">Contact Person Details</h1>
+      <div className="mt-8">
         <div className="flex flex-col space-y-4">
-          <h2 className="font-semibold text-xl">Edit Profile Picture</h2>
-          <div className="flex space-x-14 items-center ">
+          <div className="flex space-x-9 items-center ">
             <div className="relative">
-            <input onChange={handleFileChange} type='file' className="absolute opacity-0 top-[50%] left-[50%] -translate-x-[30%] -translate-y-[50%]" />
+            <input onChange={handleFileChange} type='file' className="absolute opacity-0 w-[80px] overflow-hidden top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]" />
             <img
               src={logo}
-              className="rounded-full w-40 h-40"
+              className="rounded-full w-[110px] h-[110px]"
               alt=""
             />
             {uploadLoading&&<div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">Loading..</div>}
             </div>
-            <div className="flex flex-col space-y-4">
-              <Button variant="outlined">Remove Photo</Button>
+            <div className="flex space-x-4">
+              <button className="text-sm bg-primary text-white py-1 px-3 rounded-md">
+                Update Picture
+              </button>
+              <button className="text-sm border-primary border-[1px] text-primary py-1 px-3 rounded-md">
+                Remove Picture
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <form onSubmit={handleUpdateSubmit} className="flex flex-col">
-        <FormInputField
-          id="required-email"
-          onChange={handleChange}
-          name="name"
-          lable="Full Name"
-          type="text"
-          placeholder="Your Full Name"
-          required={false}
-          value={form.name}
-        />
-        <FormInputField
-          id="required-password"
-          name="email"
-          lable="Enter Email"
-          onChange={handleChange}
-          type="email"
-          placeholder="POC Email"
-          value={form.email}
-          required={false}
-        />
-        <FormInputField
-          id="required-password"
-          name="position"
-          lable="POC Position"
-          type="text"
-          onChange={handleChange}
-          value={form.position}
-          placeholder="Position"
-          required={false}
-        />
+      <form onSubmit={handleUpdateSubmit} className="flex flex-col mt-12 space-y-6">
+        <Input value={form.name} name="name" onChange={handleChange} label='Full Name' required={true}/>
+        <TwoFields>
+        <Input value={form.email} name="email" onChange={handleChange} label='Email' note="This email will be used to contact POC" required={true}/>
+        <Input value={form.phone} name="phone" onChange={handleChange} label='Phone' note="This phone will be used to contact POC" required={true}/>
+        </TwoFields>
+        <Input value={form.position} name="position" placeholder='Faculty of ....' label='Position/Designation' note="Enter designation of the contact person" required={true}/>
         <div className="flex  justify-center w-fit">
-        <Button type="submit" variant="filled">{loading?'Loading..':'Save Settings'}</Button>
+        <Button disabled={loading}  type="submit" variant="filled">{loading?'Loading..':'Save Settings'}</Button>
         </div>
       </form>
       

@@ -7,21 +7,21 @@ const POCDetails = ({data}) => {
     <div className="flex items-center justify-between mt-5 gap-5">
       <div className="flex items-center gap-5">
         <div className="">
-          <img src={POC} className="w-[130px] rounded-full" alt="" />
+          <img src={data?.image} className="w-[120px] h-[120px] rounded-full" alt="" />
         </div>
         <div>
           <div className="font-[500] text-xl trakcin text-gray-600">
-            Vaibhav Jain
+            {data?.name}
           </div>
           <div className="text-sm text-gray-400">Faculty of DBMS</div>
         </div>
       </div>
       <div className="flex gap-6 items-start">
         <div className=" text-gray-500 border-b-primary border-b-[1px]">
-          vjain@gmail.com
+          {data?.email}
         </div>
         <div className=" text-gray-500 border-b-primary border-b-[1px]">
-          +91 7049930190
+          {data?.phone || 'Unset'}
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@ const ContactInfo = () => {
         <div className="text-lg font-semibold text-gray-600">
           Person of Contact
         </div>
-        {user?.contactPerson?.name?<POCDetails data={user?.contactPerson?.name}/>:<div className="border-b-[1px] mt-4 text-red-500">
+        {user?.contactPerson?.name?<POCDetails data={user?.contactPerson}/>:<div className="border-b-[1px] mt-4 text-red-500">
         Contact Person not assigned <span className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Assign now</span>
         </div>}
       </div>

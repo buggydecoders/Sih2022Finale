@@ -30,6 +30,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
+    "slugify": "^1.6.5",
     "ui": "^0.2.4",
     "validator": "^13.7.0",
     "web-vitals": "^2.1.4"
