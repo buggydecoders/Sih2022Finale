@@ -21,6 +21,7 @@ keywords = {
     "angry": -4,
     "hot": -4,
     "hotter": -4,
+    "fine":4,
     "not up to mark": -4
 }
 
@@ -37,8 +38,9 @@ def getCleanText(text):
 def getSAScore(sentence):
     sentence = getCleanText(sentence)
     sentiments.lexicon.update(keywords)
-    score=sentiments.polarity_scores(sentence)['compound']
-    return score
+    score=sentiments.polarity_scores(sentence)['pos']
+    score2=sentiments.polarity_scores(sentence)['neu']
+    return (score+0.9*score2)*100
 
 
 @sa.route("/",methods=['post'])

@@ -6,6 +6,7 @@ const createToken = require('../utils/createToken')
 const bcrypt = require('bcrypt');
 const aishe = require('../utils/aishe.json')
 const SavedItem = require('../models/SavedResource')
+const updateReputationPoint = require('../utils/reputation')
 
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
@@ -74,11 +75,12 @@ exports.createUser = catchAsync(async (req, res, next) => {
         }
     })
     const user = await newUser.save();
+    const updatedUser = await updateReputationPoint(user.id, "")
     const saveItem = new SavedItem({
         user: user.id
     })
     await saveItem.save()
-    res.status(201).json({ success: true, message: "Succesfully Created", user });
+    res.status(201).json({ success: true, message: "Succesfully Created", user: updatedUser });
 })
 
 exports.logoutUser = catchAsync((req, res, next) => {

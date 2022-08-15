@@ -1,7 +1,8 @@
 const Resource = require('../models/Resource');
 const SavedItem = require('../models/SavedResource');
 const AppError = require('../utils/appError')
-const catchAsync = require('../utils/catchAsync')
+const catchAsync = require('../utils/catchAsync');
+const updateReputationPoint = require('../utils/reputation');
 
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name, price, duration, category, brief, description, condition, instruction, images } = req.body
@@ -23,10 +24,10 @@ exports.addResource = catchAsync(async (req, res, next) => {
 
 exports.getResource = catchAsync(async (req, res, next) => {
     let queryObject = {}
-    let {state,category} = req.query;
-    
-    if (state && state==='all') state = '';
-    if (category && category==='all') category = '';
+    let { state, category } = req.query;
+
+    if (state && state === 'all') state = '';
+    if (category && category === 'all') category = '';
 
 
     if (state) queryObject.state = req.query.state
@@ -44,7 +45,7 @@ exports.getResource = catchAsync(async (req, res, next) => {
         .skip(skipIndex)
         .exec();
 
-    res.json({ success: true, resources, totalPages, page, limit,state : state || 'all', category : category || 'all'  })
+    res.json({ success: true, resources, totalPages, page, limit, state: state || 'all', category: category || 'all' })
 })
 
 exports.getResourceDetails = catchAsync(async (req, res, next) => {
@@ -54,7 +55,7 @@ exports.getResourceDetails = catchAsync(async (req, res, next) => {
 
 exports.updateResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    res.json({ success: true, updatedResource : resource })
+    res.json({ success: true, updatedResource: resource })
 })
 
 exports.removeResource = catchAsync(async (req, res, next) => {
@@ -75,4 +76,10 @@ exports.removeSavedResource = catchAsync(async (req, res, next) => {
     savedItem.resource = savedItem.resource.filter(p => p != req.params.id)
     await savedItem.save()
     res.json({ success: true, message: "Resource Removed Successfully" })
+})
+
+exports.getFeedback = catchAsync(async (req, res, next) => {
+    const { feedback } = req.body;
+    const updatedData = await updateReputationPoint(req.user.id, feedback)
+    res.json({ updatedData })
 })
