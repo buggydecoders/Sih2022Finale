@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
     logo: {
         type: String,
-        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597236/Placeholder-1100_9623f00f-8faa-4ff1-83ae-a74c00cc0808_480x480_urgk3z.webp"
+        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597704/_company-frontend_scmp_images_themes_katy_ghosts_company_ghost_company_200x200_v1_fa0fnj.png"
     },
     instituteName: {
         type: String,
