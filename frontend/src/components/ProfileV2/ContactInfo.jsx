@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import POC from '../../assets/POC/VJ.png';
 const ContactInfo = () => {
+    const {user} = useSelector(state=>state.auth)
   return (
     <div className='p-5 font-open'>
         <div className=' flex justify-between'>
@@ -14,7 +16,7 @@ const ContactInfo = () => {
             </div> */}
             <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
                 <span className='font-semibold text-gray-400'>Email : </span>
-                <div>ietdaavv@edu.in</div>
+                <div>{user?.email}</div>
             </div>
             <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
                 <span className='font-semibold text-gray-400'>Website : </span>

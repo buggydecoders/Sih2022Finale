@@ -54,7 +54,7 @@ exports.getResourceDetails = catchAsync(async (req, res, next) => {
 
 exports.updateResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    res.json({ success: true, resource })
+    res.json({ success: true, updatedResource : resource })
 })
 
 exports.removeResource = catchAsync(async (req, res, next) => {

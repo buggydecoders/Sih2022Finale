@@ -1,4 +1,4 @@
-import { addResourceAPI, fetchResourcesAPI } from "./services";
+import { addResourceAPI, deleteResourceAPI, fetchResourcesAPI, updateResourceAPI } from "./services";
 import CONSTANTS from './constants';
 import {toast} from 'react-toastify'
 const setData = (data)=>{
@@ -75,5 +75,36 @@ export const AddResource = (data,successCallback)=>async(dispatch)=>{
     }finally{
         dispatch(setLoading(false));
 
+    }
+}
+
+export const editResource = (data,successCallback)=>async(dispatch)=>{
+    try {
+        dispatch(setLoading('SAVE'));
+        const result = await updateResourceAPI(data._id,data);
+        console.log(result);
+        dispatch(editResourceInStore(result.data.updatedResource));
+        toast(`${result.data.updatedResource.name} updated successfully!`);
+        console.log(result.data.updatedResource)
+        successCallback&&successCallback(result.data.updatedResource);
+    }catch(err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+    }finally{
+        dispatch(setLoading(false));
+    }
+}
+
+export const deleteResource = (resourceId,successCallback)=>async(dispatch)=>{
+    try {
+        dispatch(setLoading(true));
+        const result = await deleteResourceAPI(resourceId);
+        dispatch(deleteResourceInStore(resourceId))
+        toast(`Resource deleted Successfully!`)
+    }catch(err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+    }finally{
+        dispatch(setLoading(false));
     }
 }

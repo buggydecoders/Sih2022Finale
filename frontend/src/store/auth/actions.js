@@ -80,13 +80,13 @@ export const logoutUser = (isNotification=true) => async (dispatch) => {
   try {
     dispatch(setAuthLoading(true));
     await logoutUserAPI();
-    dispatch(setAuth({ user: null, isLoggedin: false }));
     isNotification&&toast("Logged out successfully");
   } catch (err) {
     console.log(err);
     isNotification&&toast(err?.response?.data?.message || "Something went wrong!");
   } finally {
     dispatch(setAuthLoading(false));
+    dispatch(setAuth({ user: null, isLoggedin: false }));
   }
 };
 

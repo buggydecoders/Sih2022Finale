@@ -1,5 +1,6 @@
 import React from "react";
 import { GrTransaction } from "react-icons/gr";
+import { useSelector } from "react-redux";
 const InfoCard = ({ count, title, text, icon }) => {
   return (
     <div className="bg-white font-open hover:shadow-2xl rounded-xl p-6 w-72 h-36 cursor-pointer flex items-center justify-between hover:bg-primary hover:text-white group transition">
@@ -29,6 +30,8 @@ const TitleInfo = ({title,value}) => {
 };
 
 const SideBarInformation = () => {
+  const {user} = useSelector(state=>state.auth)
+
   return (
     <div>
       <div className="space-y-3">

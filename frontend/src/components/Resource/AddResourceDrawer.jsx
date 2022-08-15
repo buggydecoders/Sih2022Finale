@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import { MdClear } from "react-icons/md";
 import ToggleComponent from "../ToggleComponent";
 import { BsImage, BsImages } from "react-icons/bs";
-import { useDispatch } from "react-redux";
-import { AddResource } from "../../store/myresources/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { AddResource, editResource } from "../../store/myresources/actions";
 import { getFileLink } from "../../utils/generateImageLink";
+import Switch from '@mui/material/Switch';
 import {toast} from 'react-toastify';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
 const Input = ({ label, required, area, note, cols, ...props }) => {
   return (
     <div className="font-open">
@@ -64,28 +67,33 @@ const TwoFields = ({ children }) => {
   return <div className="grid grid-cols-2 gap-4">{children}</div>;
 };
 
-const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
-  const handleClose = () => setIsOpen(false);
-  const [form,setForm] = useState({
-    isActive : true,
-    category : null,
-    name : '',
-    description : '',
-    durationFrom : '',
-    durationTo : '',
-    images : [],
-    price : 0,
-    conditions : '',
-    instructions : '',
-    state : 'draft'
-  })
+const INITIAL_FORM_STATE={
+  isActive : true,
+  category : null,
+  name : '',
+  description : '',
+  durationFrom : '',
+  durationTo : '',
+  images : [],
+  price : 0,
+  conditions : '',
+  instructions : '',
+  state : 'draft',
+  isVacant : false
+}
 
+const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
+  const handleClose = () => setIsOpen(false);
+  const [form,setForm] = useState(data || INITIAL_FORM_STATE);
+  const {loading} = useSelector(state=>state.myResources);
   const handleChange = (e)=>setForm(prev=>({...form,[e.target.name] : e.target.value}));
   const dispatch = useDispatch(); 
-  const [uploadedFiles,setUploadedFiles] = useState([]);
+  const [uploadedFiles,setUploadedFiles] = useState(data?.images || []);
   const [uploadLoading,setUploadLoading] = useState(false);
 
   const handleSave = ()=>{
+    if (isEdit) return dispatch(editResource({...form,state : 'available'}, handleClose));
+
     dispatch(AddResource({...form,state : 'available'}, handleClose));
   }
 
@@ -121,20 +129,21 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
     <Drawer open={isOpen} onClose={handleClose} anchor={"right"}>
       <div className="w-[50vw] p-4">
         <div className="flex justify-between font-open items-center">
-          <div className="text-lg font-semibold">Add Resource</div>
+          <div className="text-lg font-semibold">{isEdit?'Edit Resource':'Add Product'}</div>
           <div className="" onClick={handleClose}>
             <MdClear size={20} />
           </div>
         </div>
         <div className="text-sm text-gray-400 font-open">
-          Add Resource to share it with the world!
+          {isEdit?`Edit resource with id ${data._id}`:'Add Resource to share it with the world!'}
         </div>
         <div className="flex gap-5 font-open mt-8">
-          <ToggleComponent label="Is Active" />
+        <FormControlLabel control={<Switch defaultChecked checked={form.isActive} onChange={(e)=>setForm(prev=>({...prev,isActive : e.target.checked}))} />} label="Is Active" />
+        <FormControlLabel control={<Switch defaultChecked checked={form.isVacant} onChange={(e)=>setForm(prev=>({...prev,isVacant : e.target.checked}))} />} label="Is Vacant" />
         </div>
         <div className="mt-5 font-open">
           <select
-            defaultValue="selectCategory"
+            defaultValue={form.category || "selectCategory"}
             name="category"
             onChange={handleChange}
             className="w-full font-medium py-3 outline-none rounded-xl px-3 bg-gray-100"
@@ -153,6 +162,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
             label="Resource Name"
             required={true}
             onChange={handleChange}
+            value={form?.name}
             name="name"
             note="Give your resource a short and clear name."
           />
@@ -162,23 +172,36 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
             required={true}
             onChange={handleChange}
             name="description"
+            value={form?.description}
             note="Give your resource a short and clear description."
           />
           <TwoFields>
-            <Input name="price" onChange={handleChange} label="Price" required={true} type="number" note="" />
+            <Input value={form.price} name="price" onChange={handleChange} label="Price" required={true} type="number" note="" />
             <Input label="per" type="number" note="Eg: Per/day, per/month" />
           </TwoFields>
           <TwoFields>
-            <Input onChange={handleChange} name="durationFrom" label="Available from" type="date" required={true}  note="" />
-            <Input onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
+            <Input value={form.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date" required={true}  note="" />
+            <Input value={form.durationTo} onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
           </TwoFields>
           <Input
             cols={7}
+            value={form.conditions}
             note="These conditions will be followed by the institute"
             required={true}
             area={true}
             label="Conditions Of Use"
             name="conditions"
+            onChange={handleChange}
+          />
+          <Input
+            cols={7}
+            value={form.instructions}
+            note="Instructions involved to run the product"
+            required={true}
+            area={true}
+            label="Instructions of Use"
+            name="instructions"
+           
             onChange={handleChange}
           />
           <div className="">
@@ -213,8 +236,8 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, productData }) => {
           </div>
         </div>
         <div className="mt-12 flex gap-5 items-center justify-between">
-          <button className="px-7 rounded-md text-white font-open font-semibold bg-primary py-2" onClick={handleSave}>Save</button>
-          <ToggleComponent label={'Is Active'}/>
+          <button disabled={loading==='SAVE'} className="px-7 disabled:opacity-40 rounded-md text-white font-open font-semibold bg-primary py-2" onClick={handleSave}>{loading==='SAVE'?'Loading..':'Save'}</button>
+         
         </div>
       </div>
     </Drawer>

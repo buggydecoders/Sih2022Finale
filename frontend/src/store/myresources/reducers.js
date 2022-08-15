@@ -14,6 +14,10 @@ export default function MyResourceReducer(state=INITIAL_STATE, action){
         case CONSTANTS.SET_LOADING : return {...state,loading : action.payload};
         case CONSTANTS.ADD_RESOURCE : return {...state, list : [...state.list,action.payload]}
         case CONSTANTS.DELETE_RESOURCE : return {...state,list : state.list.filter(r=>r._id!==action.payload)}
+        case CONSTANTS.EDIT_RESOURCE : return {...state,list : [...state.list.map(r=>{
+            if (r._id===action.payload._id) return action.payload;
+            return r;
+        })]}
         default : return state;
 
     } 

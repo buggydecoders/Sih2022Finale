@@ -22,7 +22,7 @@ const ResourceItem = ({data}) => {
         </div>
         <div className="font-[600] font-open">${data?.price}</div>
       </div>
-      <AddResourceDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
+      <AddResourceDrawer data={data} isEdit={true} isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 };
