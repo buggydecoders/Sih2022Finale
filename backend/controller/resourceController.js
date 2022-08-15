@@ -23,7 +23,7 @@ exports.addResource = catchAsync(async (req, res, next) => {
 })
 
 exports.getResource = catchAsync(async (req, res, next) => {
-    let queryObject = {}
+    let queryObject = { instituteId: req.user.id }
     let { state, category } = req.query;
 
     if (state && state === 'all') state = '';
