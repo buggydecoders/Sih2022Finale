@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import MessageContextProvider from "../contexts/MessageContext";
 import useQueryParams from "../hooks/useQueryParams";
 import { fetchAndSetActiveRoom, fetchRooms } from "../store/chatRoom/actions";
-
+import {BsChatRightDots} from 'react-icons/bs';
 const Inbox = () => {
   const query = useQueryParams();
   const dispatch = useDispatch();
@@ -31,8 +31,9 @@ const Inbox = () => {
             <AllMessages />
           </div>
           <div className="">
-            {false?<ActiveConversation />:<div className="w-full h-full flex items-center justify-center text-gray-700 font-open">
-              Select Chat That will be displayed here
+            {false?<ActiveConversation />:<div className="w-full h-full flex items-center text-center flex-col gap-5 justify-center text-gray-700 font-open">
+              <BsChatRightDots size={30}/>
+              <span className="text-primary">Select Chat from sidebar that will be <br/>displayed here!</span>
             </div>}
           </div>
         </div>
