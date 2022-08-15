@@ -10,8 +10,8 @@ function EditProfile() {
   const active = "cursor-pointer bg-gray-100 px-3 py-1";
   const navItem = "cursor-pointer px-3 py-1";
   const tabGroups = [
-    { name: "Organization", tabs: ["Organization Details", "Security"] },
-    { name: "Organization", tabs: ["Some Other", "POC Details"] },
+    { name: "Organization", tabs: ["Organization Details", "Contact Person Details"] },
+    { name: "Profile", tabs: ["Security", "Additional Settings"] },
   ];
   const [activeTab, setActiveTab] = useState(tabGroups[0].tabs[0]);
 
@@ -49,24 +49,20 @@ function EditProfile() {
     switch (active) {
       case "Organization Details":
         return <OrganizationDetails />
-        break;
 
       case "Security":
         return <Security />
-        break;
 
-      case "POC Details":
+      case "Contact Person Details":
         return <POCDetails/>
-        break;
 
       default:
-        break;
     }
   };
 
   return (
     <Layout>
-      <div className="flex w-full">
+      <div className="flex w-full font-open">
         <div className="flex flex-col p-4 w-1/4 border-r-2 min-h-screen">
           <Link
             to="/profile"
