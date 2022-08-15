@@ -48,8 +48,8 @@ const SideBarInformation = () => {
           icon={<GrTransaction size={22} />}
         />
         <div className="mt-12 font-open">
-            <TitleInfo title='NAAC Rating' value='A++'/>
-            <TitleInfo title='Reputation Points' value='4.5'/>
+            <TitleInfo title='NAAC Rating' value={user.naac}/>
+            <TitleInfo title='Reputation Points' value={user.reputationPoints || 'Unset'}/>
         </div>
         <div className="mt-6 font-open">
         <div className="font-[500] text-gray-500">Location</div>

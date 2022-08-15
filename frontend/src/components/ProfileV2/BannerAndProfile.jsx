@@ -1,12 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import UNI_LOGO from '../../assets/DAVV_LOGO.png';
+import {useNavigate} from 'react-router-dom'
 
 const BannerAndProfile = () => {
   const {user} = useSelector(state=>state.auth)
+  const navigate = useNavigate();
   return (
     <div className=''>
-        <div className='w-full h-[30vh] bg-gray-200 rounded-md' style={{background : `url(https://wallpaperaccess.com/full/1209458.jpg) center center/cover`}}></div>
+        <div className='w-full h-[30vh] bg-gray-200 rounded-md relative ' style={{background : `url(https://wallpaperaccess.com/full/1209458.jpg) center center/cover`}}>
+          <div onClick={()=>navigate('/edit-profile')} className='border-[1px] border-primary text-primary w-fit -bottom-2 translate-y-[100%] px-5 rounded-xl hover:bg-primary hover:text-white duration-300 transition-all ease-in-out cursor-pointer right-0 absolute'>Edit Profile</div>
+        </div>
         <div className='flex justify-between items-center'>
             <div className='flex gap-5 items-center relative -top-[40px] px-3'>
                 <img src={UNI_LOGO} className='w-[170px] object-cover border-[5px] border-white rounded-full'/>

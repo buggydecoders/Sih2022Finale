@@ -88,7 +88,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
   const {loading} = useSelector(state=>state.myResources);
   const handleChange = (e)=>setForm(prev=>({...form,[e.target.name] : e.target.value}));
   const dispatch = useDispatch(); 
-  const [uploadedFiles,setUploadedFiles] = useState(data?.images || []);
+  const [uploadedFiles,setUploadedFiles] = useState([]);
   const [uploadLoading,setUploadLoading] = useState(false);
 
   const handleSave = ()=>{
@@ -122,7 +122,6 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
       setForm(prev=>({...prev,images : [...prev.images,...imageUrls]}));
       setUploadedFiles([]);
       setUploadLoading(false);
-
     }
   }
   return (
