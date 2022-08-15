@@ -21,8 +21,6 @@ module.exports = function Socket(io) {
     const id = socket.handshake.query.id;
     socket.join(id);
     console.log("SOMEONE JOINED " + id);
-
-
     socket.on(
       "send-message",
       ({ recipients, type, content, createdAt, roomId, sender }) => {
@@ -40,5 +38,7 @@ module.exports = function Socket(io) {
         });
       }
     );
+
+    // socket.on("disconn")
   });
 };
