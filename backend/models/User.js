@@ -7,6 +7,12 @@ const UserSchema = new mongoose.Schema({
     instituteName: {
         type: String,
     },
+    website: {
+        type: String
+    },
+    socialLinks: {
+        type: Object
+    },
     password: {
         type: String
     },
