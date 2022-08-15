@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import UniversityLogo from '../../assets/DAVV_LOGO.png';
+import { MessageContext } from "../../contexts/MessageContext";
 
 const MessageTab = ({ title, active, setActive,id }) => {
   const isActive = id===active;
@@ -23,14 +24,18 @@ const MessageTabs = () => {
 };
 
 
-const MessageCard = ()=>{
+const MessageCard = ({data})=>{
+  const {user} = useSelector(state=>state.auth);
+  console.log(data);
+  let cardUserData = data?.users[0]._id===user._id?data?.users[1]:data?.users[0];
+  console.log(cardUserData);
   return (
     <div className="border-b-[1px] border-black border-opacity-10 px-1 py-5">
       <div className="flex gap-3 items-center">
-        <img src={UniversityLogo} alt="" className="w-[50px] h-[50px]" />
+        <img src={data?.logo || UniversityLogo} alt="" className="w-[50px] h-[50px]" />
         <div className=" text-sm w-full">
           <div className="flex items-center justify-between w-full">
-            <div className="font-semibold text-sm ">Insitute...</div>
+            <div className="font-semibold text-sm ">{cardUserData.instituteName?.slice(0,12)}...</div>
             <div className="text-xs font-[500]  text-gray-500">2 hours ago</div>
           </div>
           <div className="mt-1 flex items-center justify-between">
@@ -46,9 +51,13 @@ const MessageCard = ()=>{
 
 const AllMessages = () => {
   const {rooms} = useSelector(state=>state.chatRoom);
-  console.log(rooms);
+
+  const {reciever} = useContext(MessageContext);
+  console.log(reciever);
+
+  console.log(rooms, "ROOMS");
   return (
-    <div className="bg-lightGray w-full px-5 py-6 rounded-r-md  ">
+    <div className="bg-lightGray min-h-[90vh] w-full px-5 py-6 rounded-r-md  ">
       <div className="flex items-center justify-between">
         <div className="font-bold flex items-center gap-2 text-xl">
           Messages{" "}
@@ -64,7 +73,7 @@ const AllMessages = () => {
         <MessageTabs/>
       </div>
       <div className="mt-2 space-y-3">
-        {/* {rooms?.map(r=><MessageCard/>)} */}
+        {rooms?.length>0&&rooms.map(r=><MessageCard data={r}/>)}
       </div>
     </div>
   );

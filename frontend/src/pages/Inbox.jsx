@@ -6,19 +6,23 @@ import Layout from "../components/Layout";
 import MessageContextProvider from "../contexts/MessageContext";
 import useQueryParams from "../hooks/useQueryParams";
 import { fetchAndSetActiveRoom, fetchRooms } from "../store/chatRoom/actions";
-
+import {BsChatRightDots} from 'react-icons/bs';
 const Inbox = () => {
   const query = useQueryParams();
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.chatRoom);
-  // useEffect(() => {
-  //   dispatch(fetchRooms());
-  //   let userId = query("chat");
-  //   if (userId) {
-  //   dispatch(fetchAndSetActiveRoom(userId));
-  //   }
-  // }, []);
+  const { loading,rooms,activeRoom } = useSelector((state) => state.chatRoom);
+  console.log(activeRoom);
+  // console.log(rooms, 'ROOMS');
+  useEffect(() => {
+    dispatch(fetchRooms());
+    let userId = query("chat");
+    console.log(userId,'userId');
+    if (userId) {
+    dispatch(fetchAndSetActiveRoom(userId));
+    }
+  }, []);
   if (loading) return <div>Loading..</div>;
+  console.log(activeRoom, 'ACTIVE ROOM')
   return (
     <Layout>
       <MessageContextProvider>
@@ -27,7 +31,10 @@ const Inbox = () => {
             <AllMessages />
           </div>
           <div className="">
-            <ActiveConversation />
+            {false?<ActiveConversation />:<div className="w-full h-full flex items-center text-center flex-col gap-5 justify-center text-gray-700 font-open">
+              <BsChatRightDots size={30}/>
+              <span className="text-primary">Select Chat from sidebar that will be <br/>displayed here!</span>
+            </div>}
           </div>
         </div>
       </MessageContextProvider>

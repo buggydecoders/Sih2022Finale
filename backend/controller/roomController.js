@@ -11,7 +11,7 @@ exports.fetchRoom = catchAsync(async (req, res, next) => {
     if (!user1 || !user2) return next(new AppError("Please give two valid users", 400));
     const isUsers = await User.find({_id : {"$in" : [user1,user2]}});
     if (isUsers.length<2) return next(new AppError("Users were not found!", 404))
-    const isRoom = await Room.findOne({users : {"$in" : [user1,user2]}});
+    const isRoom = await Room.findOne({users : {"$in" : [user1,user2]}}).populate('users').populate('lastMessage');
     if (isRoom) return res.json({
         status : true,
         isNew : false,
