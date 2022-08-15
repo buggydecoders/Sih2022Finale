@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import UniversityLogo from '../../assets/DAVV_LOGO.png'
-;
+import { useSelector } from "react-redux";
+import UniversityLogo from '../../assets/DAVV_LOGO.png';
+
 const MessageTab = ({ title, active, setActive,id }) => {
   const isActive = id===active;
   return (
@@ -44,6 +45,8 @@ const MessageCard = ()=>{
 }
 
 const AllMessages = () => {
+  const {rooms} = useSelector(state=>state.chatRoom);
+  console.log(rooms);
   return (
     <div className="bg-lightGray w-full px-5 py-6 rounded-r-md  ">
       <div className="flex items-center justify-between">
@@ -61,12 +64,7 @@ const AllMessages = () => {
         <MessageTabs/>
       </div>
       <div className="mt-2 space-y-3">
-        <MessageCard/>
-        <MessageCard/>
-        <MessageCard/>
-        <MessageCard/>
-        <MessageCard/>
-        <MessageCard/>
+        {/* {rooms?.map(r=><MessageCard/>)} */}
       </div>
     </div>
   );

@@ -16,6 +16,10 @@ const messageSchema = new Schema({
         type : String,
         required : [true,'Enter a valid message']
     },
+    room : {
+        type : String,
+        ref : 'Room'
+    },
     type : {
         type : String,
         enum : ['text','image'],

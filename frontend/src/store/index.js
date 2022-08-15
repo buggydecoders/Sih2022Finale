@@ -7,12 +7,14 @@ import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import storage from 'redux-persist/lib/storage'
 import authReducer from "./auth/reducers";
 import MyResourceReducer from "./myresources/reducers";
+import chatRoomReducer from "./chatRoom/reducers";
 
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
     auth : authReducer,
-    myResources : MyResourceReducer
+    myResources : MyResourceReducer,
+    chatRoom : chatRoomReducer
 });
 // // Middleware: Redux Persist Config
 const persistConfig = {
