@@ -16,7 +16,6 @@ const AppError = require('./utils/appError');
 const authRoute = require('./routes/auth-route')
 const reqRoute = require('./routes/request-route')
 const resRoute = require('./routes/resource-route')
-const chatRoomRoute = require('./routes/chatRoom-route')
 // view engine setup
 
 // var whitelist = ['http://example1.com', 'http://example2.com']
@@ -31,26 +30,19 @@ const chatRoomRoute = require('./routes/chatRoom-route')
 // }
 // app.use(cors(corsOptions))
 
-const allowedOrigins =   [
-    'http://localhost:3000',
-    'http://localhost:5000',
-]
-const corsOptions = {
-    origin : (origin,callback)=>{
-        if (allowedOrigins.indexOf(origin)!=-1 || !origin) {
-            callback(null,true);
-        }
-        else {
-            callback(new Error('Not Allowed by CORS'));
-        }
-    },
-    optionsSuccessStatus : 200,
-    credentials : true
+var allowCrossDomain = function (req, res, next) {
+    let allowedOrigins = ["http://localhost:3000", "http://localhost:5000"]
+    origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.header('Access-Control-Allow-Origin', origin);
+    }
+    res.header('Access-Control-Allow-Methods', 'GET,PATCH,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Credentials', true);
+    next();
 }
 
-
-// app.use(cors());
-// app.use(allowCrossDomain);
+app.use(allowCrossDomain);
 
 app.use(express.json());
 app.use(cookieParser())
@@ -101,7 +93,6 @@ app.use((req, res, next) => {
 app.use('/api/auth', authRoute)
 app.use('/api/request', reqRoute)
 app.use('/api/resource', resRoute)
-app.use('/api/chat-room',chatRoomRoute);
 
 
 // handling all (get,post,update,delete.....) unhandled routes

@@ -19,7 +19,8 @@ export default function MessageContextProvider({children}) {
     const dispatch = useDispatch();
     useEffect(()=>{
         const newSocket = io('http://localhost:5000', {
-          query : {id : user._id}
+          query : {id : user._id},
+          transports:['websocket']
         })
         setSocket(newSocket);
         newSocket.on('receive-message', (result)=>{
