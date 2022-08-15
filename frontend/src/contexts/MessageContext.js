@@ -33,7 +33,7 @@ export default function MessageContextProvider({children}) {
         let fetchData = async()=>{
             try {
             setLoading(true);
-            const result = await serverInstance.post(`/chat-room/${activeRoom._id}`);
+            const result = await serverInstance.get(`/chat-room/${activeRoom._id}`);
             setMessages(result.data.messages);
             }catch(err) {
                 console.log(err);
@@ -44,10 +44,10 @@ export default function MessageContextProvider({children}) {
             }
 
         }
-        // if (activeRoom) {
-        // fetchData();
-        // setReciever(activeRoom.users[0]._id===user._id?activeRoom.users[1]:activeRoom.users[0]);
-        // }
+        if (Object.keys(activeRoom).length>0) {
+        fetchData();
+        setReciever(activeRoom.users[0]._id===user._id?activeRoom.users[1]:activeRoom.users[0]);
+        }
       }, [activeRoom]);
 
       const sendMessage = (content,type='text')=>{

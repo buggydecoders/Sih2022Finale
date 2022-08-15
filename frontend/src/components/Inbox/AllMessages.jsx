@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import UniversityLogo from '../../assets/DAVV_LOGO.png';
 import { MessageContext } from "../../contexts/MessageContext";
+import { setActiveRoom } from "../../store/chatRoom/actions";
 
 const MessageTab = ({ title, active, setActive,id }) => {
   const isActive = id===active;
@@ -26,11 +27,19 @@ const MessageTabs = () => {
 
 const MessageCard = ({data})=>{
   const {user} = useSelector(state=>state.auth);
+  const {activeRoom} = useSelector(state=>state.chatRoom);
+  console.log(activeRoom, 'Active Room from message');
   console.log(data);
+  const isActive = data._id===activeRoom._id;
   let cardUserData = data?.users[0]._id===user._id?data?.users[1]:data?.users[0];
   console.log(cardUserData);
+  const dispatch = useDispatch();
+  const handleSelectActive = ()=>{
+    dispatch(setActiveRoom(data));
+  }
   return (
-    <div className="border-b-[1px] border-black border-opacity-10 px-1 py-5">
+    <div onClick={handleSelectActive} className={`${isActive?'':''} border-b-[1px] cursor-pointer relative border-black border-opacity-10 px-1 py-5`}>
+      {isActive&&<div className="w-[5px] h-[85%] bg-primary absolute top-[50%] -translate-y-[50%] -left-2"></div>}
       <div className="flex gap-3 items-center">
         <img src={data?.logo || UniversityLogo} alt="" className="w-[50px] h-[50px]" />
         <div className=" text-sm w-full">

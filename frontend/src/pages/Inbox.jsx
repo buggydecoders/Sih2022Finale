@@ -31,7 +31,7 @@ const Inbox = () => {
             <AllMessages />
           </div>
           <div className="">
-            {false?<ActiveConversation />:<div className="w-full h-full flex items-center text-center flex-col gap-5 justify-center text-gray-700 font-open">
+            {Object.keys(activeRoom).length>0?<ActiveConversation />:<div className="w-full h-full flex items-center text-center flex-col gap-5 justify-center text-gray-700 font-open">
               <BsChatRightDots size={30}/>
               <span className="text-primary">Select Chat from sidebar that will be <br/>displayed here!</span>
             </div>}
