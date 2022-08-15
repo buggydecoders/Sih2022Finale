@@ -8,7 +8,29 @@ import { toast } from "react-toastify";
 import { updateUser } from "../../store/auth/actions";
 import Input, { TwoFields } from "../Input";
 function OrganizationDetails() {
-  const { user } = useSelector((state) => state.auth);
+  const { user,loading } = useSelector((state) => state.auth);
+
+  const [form,setForm] = useState({
+    instituteName : user?.instituteName || '',
+    email : user?.email || '',
+    phone : user?.phone || '',
+    website : user?.website || '',
+    socialLinks : user?.socialLinks || {
+      instagram : '',
+      facebook : '',
+      linkedin : ''
+    },
+    address : user?.address || {
+      pincode : '',
+      state : '',
+      city : '',
+      street : ''
+    }
+  })
+
+
+
+
   const [logoFile, setLogoFile] = useState(null);
   const [uploadLoading, setUploadLoading] = useState(false);
   const [logo, setLogo] = useState(user?.logo || DummyLogo);
@@ -35,6 +57,18 @@ function OrganizationDetails() {
       )
     );
   };
+  const handleChange = (e,parent)=>{
+    if (!parent) return setForm(prev=>({...prev,[e.target.name] : e.target.value}));
+    return setForm(prev=>({
+      ...prev, [parent] : {
+        ...prev[parent], [e.target.name] : e.target.value
+      } 
+    }))
+  }
+  const handleSaveSubmit = (e)=>{
+    e.preventDefault();
+    dispatch(updateUser(form));
+  }
   return (
     <div className="py-4 px-10 flex flex-col font-open">
       <h1 className="text-2xl font-semibold">Organization Detail</h1>
@@ -59,7 +93,7 @@ function OrganizationDetails() {
               )}
             </div>
             <div className="flex space-x-4">
-              <button className="text-sm bg-primary text-white py-1 px-3 rounded-md">
+              <button onClick={handleLogoChange} className="text-sm bg-primary text-white py-1 px-3 rounded-md">
                 Update Logo
               </button>
               <button className="text-sm border-primary border-[1px] text-primary py-1 px-3 rounded-md">
@@ -70,43 +104,71 @@ function OrganizationDetails() {
         </div>
       </div>
 
-      <form className="flex flex-col mt-12 space-y-6">
+      <form onSubmit={handleSaveSubmit} className="flex flex-col mt-12 space-y-6">
       
         <Input
           paddingY={"max"}
           label="Institute Name"
           disabled={true}
+          value={form.instituteName}
           note="Insitute Name represents your university on portal"
         />
         <TwoFields>
         <Input
           paddingY={"max"}
           label="Email"
+          onChange={handleChange}
+          name="email"
+          value={form.email}
           note="Add official email of your institute for other institutes to contact you."
         />
         <Input
           paddingY={"max"}
           label="Phone"
+          onChange={handleChange}
+          name="phone"
+          disabled={true}
+          placeholder='Cannot set right now'
+          value={form.phone}
           note="Add official phone of your institute for other institutes to contact you."
         />
         </TwoFields>
         <Input
           paddingY={"max"}
           label="Website"
+          name="website"
+          onChange={handleChange}
+          value={form.website}
           placeholder="http://website-domain.com"
           note="Add your college's official website"
         />
         <div className="mt-6">
+          <div className="font-[400] mb-6 text-gray-500 text-lg py-3 border-b-[1px]">Location</div>
+          <div className="space-y-6">
+            <Input onChange={(e)=>handleChange(e,'address')} name="street" value={form?.address?.street || ''} label='Street Address'/>
+            <TwoFields>
+                <TwoFields>
+                  <Input onChange={(e)=>handleChange(e,'address')} name="city" value={form?.address?.city || ''} paddingY='max' label='City'/>
+                  <Input onChange={(e)=>handleChange(e,'address')} name="pincode" value={form?.address?.pincode || ''} paddingY='max' label='Pincode'/>
+                </TwoFields>
+                <Input  onChange={(e)=>handleChange(e,'address')} name="state" value={form?.address?.state} paddingY='max' label='State'/>
+            </TwoFields>
+          </div>
+        </div>
+        <div className="mt-6">
           <div className="font-[400] mb-6 text-gray-500 text-lg py-3 border-b-[1px]">Social Media Links</div>
           <TwoFields>
             <TwoFields>
-            <Input placeholder='Instagram username' label='Instagram'/>
-            <Input placeholder='facebook username' label='Facebook'/>
+            <Input  onChange={(e)=>handleChange(e,'socialLinks')} name="instagram" value={form.socialLinks.instagram || ''} placeholder='Instagram username' label='Instagram'/>
+            <Input onChange={(e)=>handleChange(e,'socialLinks')} name="facebook" value={form.socialLinks.facebook || ''} placeholder='facebook username' label='Facebook'/>
             </TwoFields>
             <TwoFields>
-            <Input placeholder='Linkedin Id' label='Linkedin'/>
+            <Input onChange={(e)=>handleChange(e,'socialLinks')} name="linkedin" value={form.socialLinks.linkedin || ''} placeholder='Linkedin Id' label='Linkedin'/>
             </TwoFields>
           </TwoFields>
+        </div>
+        <div className="pt-8">
+          <Button disabled={loading==='UPDATE'} type="submit" variant={'filled'}>{loading==='UPDATE'?'Loading...':'Save Changes'}</Button>
         </div>
       </form>
     </div>

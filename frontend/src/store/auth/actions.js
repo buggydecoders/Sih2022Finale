@@ -63,12 +63,14 @@ export const loginUser =
 export const updateUser =
   (data, callback, errorCallback) => async (dispatch) => {
     try {
-      dispatch(setAuthLoading(true));
+      dispatch(setAuthLoading('UPDATE'));
       const result = await editUserAPI(data);
       dispatch(setUser(result.data.updatedUser));
+      toast('Profile updated successfully!')
       callback && callback(result.data);
     } catch (err) {
       console.log(err);
+      toast(err?.response?.data?.message || "Something went wrong!")
       errorCallback &&
         errorCallback(err?.response?.data?.message || "Something went wrong!");
     } finally {
