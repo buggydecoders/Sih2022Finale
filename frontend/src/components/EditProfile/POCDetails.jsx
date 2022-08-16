@@ -9,8 +9,6 @@ import { updateUser } from "../../store/auth/actions";
 import Input, { TwoFields } from "../Input";
 function POCDetails() {
   const { user, loading } = useSelector((state) => state.auth);
-  const [logoFile, setLogoFile] = useState(null);
-  const [signatureFile, setSignatureFile] = useState(null);
   const [uploadLoading, setUploadLoading] = useState(false);
   const [logo, setLogo] = useState(user?.contactPerson?.image || DummyLogo);
   const [signature, setSignature] = useState(
@@ -19,25 +17,23 @@ function POCDetails() {
 
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
-      setLogoFile(e.target.files[0]);
       setUploadLoading(true);
       let link = await getFileLink(e.target.files[0]);
       setUploadLoading(false);
       setLogo(link);
     } else {
-      setLogoFile(null);
+      setLogo(null);
     }
   };
 
   const handleSignatureChange = async (e) => {
     if (e.target.files.length > 0) {
-      setSignatureFile(e.target.files[0]);
       setUploadLoading(true);
       let link = await getFileLink(e.target.files[0]);
       setUploadLoading(false);
       setSignature(link);
     } else {
-      setSignatureFile(null);
+      setSignature(null);
     }
   };
 
@@ -139,23 +135,15 @@ function POCDetails() {
             required={true}
             onChange={handleChange}
           />
-
-          <div className="flex items-center space-x-4">
-            <Input
-              name="signature"
-              placeholder="Upload your Signature"
-              label="Signature"
-              onChange={handleSignatureChange}
-              type="file"
-              note="Upload Signature of the contact person"
-              required={true}
-            />
-            <img
-              src={signature}
-              className="rounded-full w-[110px] h-[110px]"
-              alt=""
-            />
-          </div>
+          <Input
+            name="signature"
+            placeholder="Upload your Signature"
+            label="Signature"
+            onChange={handleSignatureChange}
+            type="file"
+            note="Upload Signature of the contact person"
+            required={true}
+          />
         </TwoFields>
         <div className="flex  justify-center w-fit">
           <Button disabled={loading} type="submit" variant="filled">

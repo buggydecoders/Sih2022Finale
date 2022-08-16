@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import POC from "../../assets/POC/VJ.png";
 
 const POCDetails = ({data}) => {
@@ -16,7 +17,7 @@ const POCDetails = ({data}) => {
           <div className="text-sm text-gray-400">Faculty of DBMS</div>
         </div>
       </div>
-      <div className="flex gap-6 items-start">
+      <div className="flex gap-3 flex-col items-start">
         <div className=" text-gray-500 border-b-primary border-b-[1px]">
           {data?.email}
         </div>
@@ -51,7 +52,7 @@ const ContactInfo = () => {
         </div>
         <div className="py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300">
           <span className="font-semibold text-gray-400">Website : </span>
-          <div>{user?.website || <span>Not updated <span className="text-sm font-semibold underline">Upade Now</span></span>}</div>
+          <div>{user?.website || <span>Not updated <Link to="/edit-profile" className="text-sm font-semibold underline cursor-pointer">Upade Now</Link></span>}</div>
         </div>
       </div>
       <div className="mt-8">
