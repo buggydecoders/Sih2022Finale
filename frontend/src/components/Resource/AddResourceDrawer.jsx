@@ -148,7 +148,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
           />
           <TwoFields>
             <Input value={form.price} name="price" onChange={handleChange} label="Price" required={true} type="number" note="" />
-            <Input label="per" type="number" note="Eg: Per/day, per/month" />
+            <Input label="per" type="number" onChange={handleChange} note="Eg: Per/day, per/month" />
           </TwoFields>
           <TwoFields>
             <Input value={form.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date" required={true}  note="" />

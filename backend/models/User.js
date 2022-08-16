@@ -52,6 +52,9 @@ const UserSchema = new mongoose.Schema({
         },
         phone : {
             type : String
+        },
+        signature:{
+            type: String
         }
     },
     resource: {

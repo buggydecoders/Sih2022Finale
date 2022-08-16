@@ -7,13 +7,14 @@ const axios = require('axios')
 const FormData = require('form-data')
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, duration, category, brief, description, condition, instruction, images } = req.body
+    const { name, price, duration, category, brief, description,per, condition, instruction, images } = req.body
     const newRes = new Resource({
         images,
         name,
         price,
         duration,
         category,
+        per,
         brief,
         description,
         condition,
