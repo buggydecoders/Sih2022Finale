@@ -54,9 +54,9 @@ const SideBarInformation = () => {
         <div className="mt-6 font-open">
         <div className="font-[500] text-gray-500">Location</div>
         <div className="mt-4 space-y-1">
-            <div><span className="font-[300] text-sm text-gray-600">Street : </span>32/5 Kushi aprtment</div>
-            <div><span className="font-[300] text-sm text-gray-600">City,State : </span>Indore, MP</div>
-            <div><span className="font-[300] text-sm text-gray-600">Pincode : </span>452001</div>
+            <div><span className="font-[300] text-sm text-gray-600">Street : </span>{user?.address?.street}</div>
+            <div><span className="font-[300] text-sm text-gray-600">City,State : </span>{user?.address?.city}, {user?.address?.state}</div>
+            <div><span className="font-[300] text-sm text-gray-600">Pincode : </span>{user?.address?.pincode}</div>
         </div>
         <div className="py-10">
         {/* eslint-disable-next-line */}

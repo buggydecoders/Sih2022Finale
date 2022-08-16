@@ -44,7 +44,7 @@ const MessageCard = ({data})=>{
         <img src={data?.logo || UniversityLogo} alt="" className="w-[50px] h-[50px]" />
         <div className=" text-sm w-full">
           <div className="flex items-center justify-between w-full">
-            <div className="font-semibold text-sm ">{cardUserData.instituteName?.slice(0,12)}...</div>
+            <div className="font-semibold text-sm ">{cardUserData?.instituteName?.slice(0,12)}...</div>
             <div className="text-xs font-[500]  text-gray-500">2 hours ago</div>
           </div>
           <div className="mt-1 flex items-center justify-between">

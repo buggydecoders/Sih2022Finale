@@ -13,7 +13,7 @@ const BannerAndProfile = () => {
         </div>
         <div className='flex justify-between items-center'>
             <div className='flex gap-5 items-center relative -top-[40px] px-3'>
-                <img src={UNI_LOGO} className='w-[170px] object-cover border-[5px] border-white rounded-full'/>
+                <img src={user?.logo} className='w-[170px] object-cover border-[5px] border-white rounded-full'/>
                 <div className=''>
                     <div className='font-[700] text-xl'>{user?.instituteName}</div>
                     <div className='text-sm text-gray-400'>{user?.address?.city} , {user?.address?.state}</div>
