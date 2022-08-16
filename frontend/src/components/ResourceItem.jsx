@@ -17,11 +17,11 @@ const ResourceItem = ({ data }) => {
           className="absolute top-0 right-0 text-2xl cursor-pointer"
           onClick={() => handleDelete()}
         />
-        <img src={images[0]?.url} className="w-[130px]" alt={images[0]?.name} />
+        {images?<img src={images[0].url} className="w-[130px]" alt={images[0].name} />:<img src={ResourceImg} className="w-[130px]" alt="Dummy"/>}
       </div>
       <div className="font-[500] mt-7">{name}</div>
       <div className="text-sm text-gray-500 font-[500] mt-1">
-        {instituteId.instituteName}
+        {instituteId?.instituteName}
       </div>
       <div className="text-primary font-bold mt-2 text-lg">
         {price}

@@ -35,7 +35,7 @@ const SavedItems = () => {
     dispatch(fetchSavedResources())
   }, []);
 
-  const savedResources = useSelector(state=>state.resources.savedItems)
+  const savedResources = useSelector(state=>state?.resources?.savedItems)
   return (
     <Layout>
       <div className="px-16 py-10">
