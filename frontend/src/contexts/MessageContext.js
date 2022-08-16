@@ -24,9 +24,13 @@ export default function MessageContextProvider({children}) {
         })
         setSocket(newSocket);
         newSocket.on('receive-message', (result)=>{
-          setMessages((list)=>[result,...list,])
+          console.log('recieved!');
+          // alert('recieved!!');
+          console.log(result);
+          setMessages((list)=>[...list,result])
         })
         return ()=>newSocket.close();
+        
       }, [user])
 
       useEffect(()=>{

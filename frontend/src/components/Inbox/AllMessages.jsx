@@ -41,7 +41,7 @@ const MessageCard = ({data})=>{
     <div onClick={handleSelectActive} className={`${isActive?'':''} border-b-[1px] cursor-pointer relative border-black border-opacity-10 px-1 py-5`}>
       {isActive&&<div className="w-[5px] h-[85%] bg-primary absolute top-[50%] -translate-y-[50%] -left-2"></div>}
       <div className="flex gap-3 items-center">
-        <img src={data?.logo || UniversityLogo} alt="" className="w-[50px] h-[50px]" />
+        <img src={cardUserData?.logo} alt="" className="w-[50px] rounded-full h-[50px]" />
         <div className=" text-sm w-full">
           <div className="flex items-center justify-between w-full">
             <div className="font-semibold text-sm ">{cardUserData?.instituteName?.slice(0,12)}...</div>
@@ -82,7 +82,8 @@ const AllMessages = () => {
         <MessageTabs/>
       </div>
       <div className="mt-2 space-y-3">
-        {rooms?.length>0&&rooms.map(r=><MessageCard data={r}/>)}
+        {(!rooms || rooms?.length===0)&&<div className="py-20 text-center w-full font-open text-gray-500 font-[500]">No Chats Found</div>}
+        {rooms?.length>0&&rooms.filter(r=>r.lastMessage!==null).map(r=><MessageCard data={r}/>)}
       </div>
     </div>
   );

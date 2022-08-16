@@ -12,7 +12,7 @@ const ProfileCard = ({data})=>{
   return (
     <div className='py-3 px-5 shadow-lg flex justify-between rounded-xl items-center'>
       <div className='flex items-center gap-3'>
-        <img src={UniversityLogo} className='w-[40px] h-[40px]'></img>
+        <img src={data?.logo} className='w-[45px] rounded-full h-[45px]'></img>
         <div className='text-base font-semibold'>
           {data?.instituteName}
           <div className='mt-0 text-xs font-[500] text-gray-400'>Active now</div>
