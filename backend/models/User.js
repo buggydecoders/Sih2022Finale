@@ -77,7 +77,11 @@ const UserSchema = new mongoose.Schema({
     resetToken: {
         type: String,
         default: ""
-    }
+    },
+    savedItems : [{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'Resource'
+    }]
 }, {
     timestamps: true
 })

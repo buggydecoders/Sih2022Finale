@@ -1,38 +1,33 @@
-const router = require('express').Router()
-const checkAuth = require('../middlewares/checkAuth');
-const restrictTo = require('../middlewares/restrictTo');
-const resourceController = require('../controller/resourceController');
+const router = require("express").Router();
+const checkAuth = require("../middlewares/checkAuth");
+const restrictTo = require("../middlewares/restrictTo");
+const resourceController = require("../controller/resourceController");
 
 router
-    .route('/')
-    .post(checkAuth, resourceController.addResource)
-    .get(checkAuth, resourceController.getMyResource)
+  .route("/")
+  .post(checkAuth, resourceController.addResource)
+  .get(checkAuth, resourceController.getMyResource);
+
 
 router
-    .route('/save-resource')
-    .get(checkAuth, resourceController.getSavedItems)
+  .route("/dashboard")
+  .get(checkAuth, resourceController.recommendedResources);
+
+router.route("/search").post(checkAuth, resourceController.searchResource);
+
+router.route("/feedback").post(checkAuth, resourceController.getFeedback);
 
 router
-    .route('/dashboard')
-    .get(checkAuth, resourceController.recommendedResources)
+  .route("/:id")
+  .get(checkAuth, resourceController.getResourceDetails)
+  .patch(checkAuth, resourceController.updateResource)
+  .delete(checkAuth, resourceController.removeResource);
 
 router
-    .route('/search')
-    .post(checkAuth, resourceController.searchResource)
+  .route("/save/:id")
+  .post(checkAuth, resourceController.addSavedItem)
+  .delete(checkAuth,resourceController.deleteSavedItem);
 
-router
-    .route('/:id')
-    .get(checkAuth, resourceController.getResourceDetails)
-    .patch(checkAuth, resourceController.updateResource)
-    .delete(checkAuth, resourceController.removeResource)
 
-router
-    .route('/feedback')
-    .post(checkAuth, resourceController.getFeedback)
-
-router
-    .route('/save-resource/:id')
-    .post(checkAuth, resourceController.saveResource)
-    .delete(checkAuth, resourceController.removeSavedResource)
 
 module.exports = router;
