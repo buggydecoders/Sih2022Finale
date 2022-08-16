@@ -4,7 +4,7 @@ import POCImg from '../../assets/POC/VJ.png';
 const SideProfile = ({data}) => {
   return (
     <div className='bg-lightGray py-5 px-3 rounded-xl shadow-sm flex flex-col '>
-    <img src={UniversityLogo} className='w-[120px] mx-auto'/>
+    <img src={data?.logo} className='w-[120px] mx-auto rounded-full'/>
     <div className='mt-3 font-semibold text-center'>
       {data?.instituteName}
     </div>

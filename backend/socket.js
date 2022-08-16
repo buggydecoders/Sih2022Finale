@@ -12,7 +12,7 @@ module.exports = function Socket(io) {
       room: roomId,
     });
     const savedInstance = await createdMessage.save();
-    const updatedRoom  = Room.findByIdAndUpdate(roomId,{lastMessage : savedInstance._id});
+    const updatedRoom  = await Room.findByIdAndUpdate(roomId,{lastMessage : savedInstance._id});
 
     return savedInstance;
   };
@@ -24,20 +24,33 @@ module.exports = function Socket(io) {
     socket.on(
       "send-message",
       ({ recipients, type, content, createdAt, roomId, sender }) => {
-
-        createMessage(sender, recipients[0], type, content, roomId);
+        console.log(recipients);
         //sending message to recipients
         recipients.forEach((recipient) => {
-          socket.broadcast.to(recipient).emit("receive-message", {
-            sender: id,
+          socket.broadcast.to(recipient._id).emit("receive-message", {
+            from : sender,
+            to : recipient,
             type,
-            roomId,
+            room : roomId,
             content,
             createdAt,
           });
         });
+        createMessage(sender._id, recipients[0]._id, type, content, roomId);
       }
     );
+
+    socket.on('send-notification', ({ recipients, sender, type, roomId})=>{
+      console.log('Got notification', recipients,sender,type,roomId);
+      recipients.forEach((recipient) => {
+        socket.broadcast.to(recipient).emit("recieve-notification", {
+          sender : sender,
+          reciever : recipient,
+          type,
+          roomId,
+        });
+      });
+    })
 
     // socket.on("disconn")
   });

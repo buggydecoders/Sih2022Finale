@@ -1,15 +1,15 @@
 import { createContext, useEffect, useState } from "react"
-import io from 'socket.io-client';
 import {useDispatch, useSelector} from 'react-redux';
 import { serverInstance } from "../utils/serverInstance";
 import { toast } from "react-toastify";
 import moment from 'moment';
 import { setRoomsLastMessage } from "../store/chatRoom/actions";
+import useSocket from "../hooks/useSocket";
 export const MessageContext = createContext(null);
 
 export default function MessageContextProvider({children}) {
     const {user} = useSelector(state=>state.auth); 
-    const [socket,setSocket] = useState(null);
+    // const [socket,setSocket] = useState(null);
     const {activeRoom} = useSelector(state=>state.chatRoom);
     console.log(activeRoom)
     const [loading,setLoading] = useState(false);
@@ -17,17 +17,21 @@ export default function MessageContextProvider({children}) {
     const [error,setError] =useState('');
     const [reciever,setReciever] = useState(null);
     const dispatch = useDispatch();
+    const {socket} = useSocket();
     useEffect(()=>{
-        const newSocket = io('http://localhost:5000', {
-          query : {id : user._id},
-          transports:['websocket']
+      if (socket) {
+        socket.on('receive-message', (result)=>{
+          console.log('recieved!');
+          // alert('recieved!!');
+          // console.log(result);
+          // let message = 
+          dispatch(setRoomsLastMessage(result.room, result));
+          setMessages((list)=>[...list,result]);
         })
-        setSocket(newSocket);
-        newSocket.on('receive-message', (result)=>{
-          setMessages((list)=>[result,...list,])
-        })
-        return ()=>newSocket.close();
-      }, [user])
+      }
+    
+        
+      }, [user,socket])
 
       useEffect(()=>{
         let fetchData = async()=>{
@@ -49,11 +53,13 @@ export default function MessageContextProvider({children}) {
         setReciever(activeRoom.users[0]._id===user._id?activeRoom.users[1]:activeRoom.users[0]);
         }
       }, [activeRoom]);
-
+      
       const sendMessage = (content,type='text')=>{
-        let dataToSend = {recipients : [reciever._id],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user._id};
-        let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()).format('DD-MM-YYYY'), room : activeRoom._id }
+        let dataToSend = {recipients : [reciever],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user};
+        let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()), room : activeRoom._id }
         socket.emit('send-message', dataToSend);
+        console.log(lastMessage, 'SENT MESSAGE');
+        setMessages((list)=>[...list,lastMessage]);
         dispatch(setRoomsLastMessage(activeRoom._id,lastMessage));
       }
       
