@@ -74,14 +74,13 @@ exports.saveResource = catchAsync(async (req, res, next) => {
     res.json({ success: true, message: "Resource Saved Successfully" })
 })
 exports.getSavedItems = catchAsync(async (req, res, next) => {
-    // const savedItem = await SavedItem.find({ user: req.user.id }).populate('resource')
     const savedItem = await SavedItem.findOne({ user: req.user.id })
         .populate({
             path: 'resource',
             populate: { path: 'instituteId' }
         })
         .exec()
-    res.json({ success: true, savedItem, message: "Resource Saved Successfully" })
+    res.json({ success: true, savedItem })
 })
 
 exports.removeSavedResource = catchAsync(async (req, res, next) => {
