@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ActiveConversation from "../components/Inbox/ActiveConversation";
 import AllMessages from "../components/Inbox/AllMessages";
@@ -8,24 +8,32 @@ import useQueryParams from "../hooks/useQueryParams";
 import { fetchAndSetActiveRoom, fetchRooms } from "../store/chatRoom/actions";
 import {BsChatRightDots} from 'react-icons/bs';
 import InboxLoading from "../components/Inbox/InboxLoading";
+import { VideoChatContext, VideoChatContextProvider } from "../components/VideoChat/VideoChatContext";
 const Inbox = () => {
   const query = useQueryParams();
   const dispatch = useDispatch();
   const { loading,rooms,activeRoom } = useSelector((state) => state.chatRoom);
+  const {createVideoCall} = useContext(VideoChatContext);
+  const {user} = useSelector(state=>state.auth);
   // console.log(activeRoom);
   // console.log(rooms, 'ROOMS');
   useEffect(() => {
     dispatch(fetchRooms());
     let userId = query("chat");
     console.log(userId,'userId');
+    let call = query('call');
     if (userId) {
     dispatch(fetchAndSetActiveRoom(userId));
+    if (call) {
+      createVideoCall(call,user.instituteName,user._id);
+    }
     }
   }, []);
   if (loading) return <InboxLoading/>;
   // console.log(activeRoom, 'ACTIVE ROOM')
   return (
     <Layout>
+    
       <MessageContextProvider>
         <div className="grid grid-cols-[1.2fr_4fr]">
           <div className="">
@@ -39,8 +47,11 @@ const Inbox = () => {
           </div>
         </div>
       </MessageContextProvider>
+  
     </Layout>
   );
 };
 
-export default Inbox;
+const InboxWrapped = ()=><VideoChatContextProvider><Inbox/></VideoChatContextProvider>
+
+export default InboxWrapped;

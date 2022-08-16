@@ -1,0 +1,56 @@
+.min-controller {
+    display: flex;
+    align-items: center;
+
+    padding-right: 0;
+    border: 1px solid black;
+    border-radius: 12px;
+    position: relative;
+    gap: 0.5rem;
+
+    &-title {
+        font-weight: 500;
+        display: flex;
+        gap: 8px;
+        padding: 0 1rem;
+        cursor: pointer;
+        align-items: center;
+        margin-right: 1rem;
+    }
+    &-sign {
+        width: 17px;
+        animation: blink 2s infinite alternate-reverse ;
+        height: 17px;
+        background-color: red;
+        border-radius: 50%;   
+    }
+
+    &-control-item {
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+            color: #5F5F5F;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    &-control-leave {
+        padding: 1rem 1.5rem;
+        background-color: red;
+        height: 100%;
+        border-radius: 12px;
+        color: white;
+        &:hover {
+            background-color: rgba(255, 0, 0, 0.844);
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}

@@ -31,15 +31,26 @@ module.exports = function Socket(io) {
             from : sender,
             to : recipient,
             type,
-            roomId,
+            room : roomId,
             content,
             createdAt,
           });
         });
         createMessage(sender._id, recipients[0]._id, type, content, roomId);
-
       }
     );
+
+    socket.on('send-notification', ({ recipients, sender, type, roomId})=>{
+      console.log('Got notification', recipients,sender,type,roomId);
+      recipients.forEach((recipient) => {
+        socket.broadcast.to(recipient).emit("recieve-notification", {
+          sender : sender,
+          reciever : recipient,
+          type,
+          roomId,
+        });
+      });
+    })
 
     // socket.on("disconn")
   });
