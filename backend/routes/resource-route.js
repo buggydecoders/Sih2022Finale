@@ -28,6 +28,7 @@ router
 
 router
     .route('/save-resource/:id')
+    .get(checkAuth,resourceController.getSavedItems)
     .post(checkAuth, resourceController.saveResource)
     .delete(checkAuth, resourceController.removeSavedResource)
 
