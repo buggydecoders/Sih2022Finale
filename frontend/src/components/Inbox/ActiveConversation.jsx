@@ -19,7 +19,9 @@ const ProfileCard = ({ data }) => {
   const {user} = useSelector(state=>state.auth);
   const handleCall = async()=>{
     await createVideoCall(activeRoom._id,user.instituteName,user._id);
+    if (activeRoom._id) {
     sendCallNotification(reciever._id,activeRoom._id);
+    }
   }
   return (
     <div className="py-3 px-5 shadow-lg flex justify-between rounded-xl items-center">
