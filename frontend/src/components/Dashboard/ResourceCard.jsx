@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DummyResource from "../../assets/Resources/3dPrinter.png";
 import { BsClockHistory } from "react-icons/bs";
 import { BiBadgeCheck } from "react-icons/bi";
 import Button from "../Button";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { saveForLater } from "../../store/resources/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { addSavedItem, deleteSavedItem } from "../../store/resources/actions";
 
-const SaveButton = (id) => {
+const SaveButton = ({resourceId}) => {
+  const {savedItems} = useSelector(state=>state.resources); 
   const [active, setActive] = useState(false);
   const dispatch = useDispatch();
 
+
+  useEffect(()=>{
+    let isActive = savedItems.map(s=>s._id).includes(resourceId)
+    setActive(isActive);
+  }, [savedItems])
+  
+
   const handleSaveForLater = () => {
-    setActive((prev) => !prev);
-    dispatch(saveForLater(id));
+    if (active) {
+      dispatch(deleteSavedItem(resourceId, ()=>setActive(false)));
+    }else {
+      dispatch(addSavedItem(resourceId, ()=>setActive(true)));
+    }
   };
 
   return (
@@ -36,6 +47,8 @@ const SaveButton = (id) => {
 };
 
 const ResourceCard = ({ data }) => {
+  const {savedItems} = useSelector(state=>state.resources); 
+console.log(savedItems, 'SAVED_ITEMS'); 
   const {
     _id,
     category,
@@ -59,7 +72,7 @@ const ResourceCard = ({ data }) => {
       <div className="flex justify-between items-start">
         <div className="flex items-start gap-4">
           <div className="">
-            <img alt="" src={images[0].url} className="w-[150px]"/>
+            <img alt="" src={images[0].url} className="w-[150px] h-[150px] rounded-lg"/>
           </div>
           <div className="">
             <div className="text-2xl font-bold text-gray-500">{name}</div>
@@ -78,7 +91,7 @@ const ResourceCard = ({ data }) => {
         </div>
 
         <div className="shrink-0">
-          <SaveButton id={_id} />
+          <SaveButton resourceId={_id} />
         </div>
       </div>
       <div className="mt-3 text-sm text-gray-400">{description}</div>

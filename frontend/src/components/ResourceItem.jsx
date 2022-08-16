@@ -8,7 +8,7 @@ const ResourceItem = ({ data }) => {
   const dispatch = useDispatch();
   
   const handleDelete = () => {
-    dispatch(deleteSavedResource(_id));
+    // dispatch(deleteSavedResource(_id));
   };
   return (
     <div className="px-3 py-3 border-[1px] border-gray-300 rounded-xl">

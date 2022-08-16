@@ -1,4 +1,4 @@
-import { addResourceAPI, dashboardResourcesAPI, deleteResourceAPI, deleteSavedResourcesAPI, fetchResourcesAPI, saveForLaterAPI, updateResourceAPI } from "./services";
+import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchResourcesAPI, updateResourceAPI } from "./services";
 import CONSTANTS from './constants';
 import {toast} from 'react-toastify'
 import { fetchSavedResourcesAPI } from "./services";
@@ -9,12 +9,7 @@ const setData = (data)=>{
     }
 }
 
-const deleteSavedItem = (id)=>{
-    return {
-        type : CONSTANTS.DELETE_SAVED_ITEM,
-        payload : id
-    }
-}
+
 
 const setLoading = (state)=>{
     return {
@@ -31,20 +26,7 @@ const saveResourceInStore = (data)=>{
 }
 
 
-export const saveForLater = (resourceId,successCallback)=>async(dispatch)=>{
-    try {
-        dispatch(setLoading(true));
-        const result = await saveForLaterAPI(resourceId);
-        console.log(result)
-        dispatch(saveResourceInStore(result.data))
-        toast(`Resource saved for later!`)
-    }catch(err) {
-        console.log(err);
-        toast(err?.response?.data?.message || 'Something went wrong!');
-    }finally{
-        dispatch(setLoading(false));
-    }
-}
+
 
 export const fetchDashboardResources = (category,state,page,limit)=>async(dispatch,getState)=>{
     // const {myResources} = getState();
@@ -69,35 +51,54 @@ export const fetchDashboardResources = (category,state,page,limit)=>async(dispat
     }
 }
 
-export const fetchSavedResources = (category,state,page,limit)=>async(dispatch,getState)=>{
-    // const {myResources} = getState();
-    try {
-    dispatch(setLoading(true));
-    const result = await fetchSavedResourcesAPI(category,state,page,limit);
-    let fetchedData = result.data;
-    dispatch(setData({
-        savedItems: fetchedData.savedItem.resource
-    }));
-    }catch(err) {
-        console.log(err);
-        toast(err?.response?.data?.message || 'Something went wrong!');
 
-    }finally {
+export const setSavedItems = (data)=>{
+    return {
+        type : CONSTANTS.SET_SAVED_ITEM,
+        payload : data
+    }
+}
+
+export const addSavedItemInStore = (data)=>{
+    return {
+        type : CONSTANTS.ADD_SAVED_ITEM,
+        payload : data
+    }
+}
+export const deleteSavedItemInStore = (data)=>{
+    return {
+        type : CONSTANTS.DELETE_SAVED_ITEM,
+        payload : data
+    }
+}
+export const addSavedItem = (id,callback)=>async(dispatch,getState)=>{
+    try {
+        dispatch(setLoading('SAVE-ITEM'))
+        const result = await addSavedItemAPI(id);
+        if (result.data.status) {
+        dispatch(addSavedItemInStore(result.data.resource));
+        callback&&callback();
+        }
+    }catch(err){
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong');
+    }finally{
         dispatch(setLoading(false));
     }
 }
 
-export const deleteSavedResource = (id)=>async(dispatch,getState)=>{
-    // const {myResources} = getState();
+export const deleteSavedItem = (id,callback)=>async(dispatch,getState)=>{
     try {
-    dispatch(setLoading(true));
-        await deleteSavedResourcesAPI(id);
-        dispatch(deleteSavedItem(id))
-    }catch(err) {
+        dispatch(setLoading('SAVE-ITEM'))
+        const result = await deleteSavedItemAPI(id);
+        if (result.data.status) {
+        dispatch(deleteSavedItemInStore(id));
+        callback&&callback();
+        }
+    }catch(err){
         console.log(err);
-        toast(err?.response?.data?.message || 'Something went wrong!');
-
-    }finally {
+        toast(err?.response?.data?.message || 'Something went wrong');
+    }finally{
         dispatch(setLoading(false));
     }
 }

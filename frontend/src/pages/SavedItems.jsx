@@ -5,7 +5,6 @@ import Pagination from "../components/Pagination";
 import ResourceItem from "../components/ResourceItem";
 import ResourceImg from '../assets/Resources/3dPrinter.png'
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSavedResources } from "../store/resources/actions";
 
 export const ProductItem = () => {
   return (
@@ -32,7 +31,7 @@ export const ProductItem = () => {
 const SavedItems = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchSavedResources())
+    // dispatch(fetchSavedResources())
   }, []);
 
   const savedResources = useSelector(state=>state?.resources?.savedItems)
