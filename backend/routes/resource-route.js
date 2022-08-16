@@ -6,7 +6,7 @@ const resourceController = require('../controller/resourceController');
 router
     .route('/')
     .post(checkAuth, resourceController.addResource)
-    .get(checkAuth, resourceController.getResource)
+    .get(checkAuth, resourceController.getMyResource)
 
 router
     .route('/:id')

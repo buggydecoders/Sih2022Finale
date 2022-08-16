@@ -55,7 +55,8 @@ exports.createUser = catchAsync(async (req, res, next) => {
             instituteName = aishe[i].hei_name
             state = aishe[i].state_name
             city = aishe[i].other_address.split(",")[1]
-            street = aishe[i].other_address.split(",").slice(2).toString()
+            street = aishe[i].other_address.split(",").slice(3).toString()
+            pincode = aishe[i].other_address.split(",")[2]
             naac = aishe[i].naac_grade
         }
     }
@@ -71,6 +72,7 @@ exports.createUser = catchAsync(async (req, res, next) => {
         address: {
             street,
             city,
+            pincode,
             state
         }
     })

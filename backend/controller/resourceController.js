@@ -3,6 +3,8 @@ const SavedItem = require('../models/SavedResource');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync');
 const updateReputationPoint = require('../utils/reputation');
+const axios = require('axios')
+const FormData = require('form-data')
 
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name, price, duration, category, brief, description, condition, instruction, images } = req.body
@@ -22,7 +24,7 @@ exports.addResource = catchAsync(async (req, res, next) => {
     res.json({ success: true, message: "Resource Added Successfully", resource })
 })
 
-exports.getResource = catchAsync(async (req, res, next) => {
+exports.getMyResource = catchAsync(async (req, res, next) => {
     let queryObject = { instituteId: req.user.id }
     let { state, category } = req.query;
 
@@ -80,6 +82,22 @@ exports.removeSavedResource = catchAsync(async (req, res, next) => {
 
 exports.getFeedback = catchAsync(async (req, res, next) => {
     const { feedback } = req.body;
-    const updatedData = await updateReputationPoint(req.user.id, feedback)
+    const updatedData = await updateReputationPoint('62f7fc219bbed4c82874f4a4', feedback)
     res.json({ updatedData })
+})
+
+exports.recommendedResources = catchAsync(async (req, res, next) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    let bodyFormData = new FormData()
+    bodyFormData.append('id', req.user.id)
+    let result = await axios({
+        method: "post",
+        url: "http://127.0.0.1:5001/recommendation",
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data" },
+    })
+    console.log(result.data)
+    res.end()
 })
