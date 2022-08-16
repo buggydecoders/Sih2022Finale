@@ -22,9 +22,9 @@ const Inbox = () => {
     let userId = query("chat");
     console.log(userId,'userId');
     let call = query('call');
-    if (userId) {
+    if (userId !== undefined) {
     dispatch(fetchAndSetActiveRoom(userId));
-    if (call) {
+    if (call !== undefined) {
       createVideoCall(call,user.instituteName,user._id);
     }
     }
