@@ -13,6 +13,10 @@ router
     .get(checkAuth, resourceController.recommendedResources)
 
 router
+    .route('/search')
+    .post(checkAuth, resourceController.searchResource)
+
+router
     .route('/:id')
     .get(checkAuth, resourceController.getResourceDetails)
     .patch(checkAuth, resourceController.updateResource)
