@@ -75,7 +75,7 @@ exports.saveResource = catchAsync(async (req, res, next) => {
 })
 exports.getSavedItems = catchAsync(async (req, res, next) => {
     // const savedItem = await SavedItem.find({ user: req.user.id }).populate('resource')
-    const savedItem = await SavedItem.find(query)
+    const savedItem = await SavedItem.findOne({ user: req.user.id })
         .populate({
             path: 'resource',
             populate: { path: 'instituteId' }
