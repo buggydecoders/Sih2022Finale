@@ -11,7 +11,7 @@ const updateReputationPoint = require('../utils/reputation')
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).populate("savedItems");
     if (!user) {
         return next(
             new AppError('User Not Exists', 404)
@@ -100,7 +100,7 @@ exports.logoutUser = catchAsync((req, res, next) => {
 })
 
 exports.getUser = catchAsync(async (req, res, next) => {
-    const user = await User.findById(req.user.id).select("-password")
+    const user = await User.findById(req.user.id).select("-password").populate("savedItems");
     if (!user) {
         return next(
             new AppError('User Not Found', 401)

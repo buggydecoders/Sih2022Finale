@@ -7,6 +7,7 @@ import {
   signupUserAPI,
 } from "./services";
 import { toast } from "react-toastify";
+import { setSavedItems } from "../resources/actions";
 
 export const setAuthLoading = (state) => {
   return {
@@ -50,6 +51,7 @@ export const loginUser =
       dispatch(setAuthLoading(true));
       const result = await loginUserAPI(data);
       dispatch(setUser(result.data.user));
+      dispatch(setSavedItems(result.data.user.savedItems || []))
       callback && callback(result.data);
     } catch (err) {
       console.log(err);
@@ -96,6 +98,7 @@ export const checkAuth = () => async (dispatch) => {
   try {
     const result = await getUserAPI();
     dispatch(setAuth({ user: result.data.user, isLoggedin: true }));
+    dispatch(setSavedItems(result.data.user.savedItems || []))
   } catch (err) {
     dispatch(logoutUser(false));
   }

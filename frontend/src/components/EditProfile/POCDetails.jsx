@@ -9,33 +9,31 @@ import { updateUser } from "../../store/auth/actions";
 import Input, { TwoFields } from "../Input";
 function POCDetails() {
   const { user, loading } = useSelector((state) => state.auth);
-  const [logoFile, setLogoFile] = useState(null);
-  const [signatureFile, setSignatureFile] = useState(null);
   const [uploadLoading, setUploadLoading] = useState(false);
   const [logo, setLogo] = useState(user?.contactPerson?.image || DummyLogo);
-  const [signature, setSignature] = useState(null);
+  const [signature, setSignature] = useState(
+    user?.contactPerson?.signature || DummyLogo
+  );
 
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
-      setLogoFile(e.target.files[0]);
       setUploadLoading(true);
       let link = await getFileLink(e.target.files[0]);
       setUploadLoading(false);
       setLogo(link);
     } else {
-      setLogoFile(null);
+      setLogo(null);
     }
   };
 
   const handleSignatureChange = async (e) => {
     if (e.target.files.length > 0) {
-      setSignatureFile(e.target.files[0]);
       setUploadLoading(true);
       let link = await getFileLink(e.target.files[0]);
       setUploadLoading(false);
       setSignature(link);
     } else {
-      setSignatureFile(null);
+      setSignature(null);
     }
   };
 
@@ -143,7 +141,7 @@ function POCDetails() {
             label="Signature"
             onChange={handleSignatureChange}
             type="file"
-            note="Enter designation of the contact person"
+            note="Upload Signature of the contact person"
             required={true}
           />
         </TwoFields>

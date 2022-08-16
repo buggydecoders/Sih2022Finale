@@ -4,7 +4,8 @@ const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync');
 const updateReputationPoint = require('../utils/reputation');
 const axios = require('axios')
-const FormData = require('form-data')
+const FormData = require('form-data');
+const User = require('../models/User');
 
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name, price, duration, category, brief, description, per, condition, instruction, images } = req.body
@@ -69,34 +70,59 @@ exports.removeResource = catchAsync(async (req, res, next) => {
 exports.saveResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findById(req.params.id)
     const savedItem = await SavedItem.findOne({ user: req.user.id })
-    if (!savedItem.resource.includes(resource.id)) {
-        savedItem.resource.push(resource.id)
-        await savedItem.save()
-    }
+    savedItem.resource.push(resource.id)
+    await savedItem.save()
     res.json({ success: true, message: "Resource Saved Successfully" })
 })
 
-exports.getSavedItems = catchAsync(async (req, res, next) => {
-    const savedItem = await SavedItem.findOne({ user: req.user.id })
-        .populate({
-            path: 'resource',
-            populate: { path: 'instituteId' }
+exports.addSavedItem = catchAsync(async(req,res,next)=>{
+    const {id} = req.params;
+    const foundUser =await  User.findById(req.user.id).populate('savedItems');
+    let foundResource = await Resource.findById(id);
+    if (!foundResource) return next(new AppError(`Resource with id ${id} was not found`, 404));
+    let savedItemIds = [];
+    if (foundUser.savedItems) {
+    savedItemIds = foundUser.savedItems.map(item=>item.id);
+    }
+    if (savedItemIds.includes(id)) {
+        return res.json({
+            status : false,
+            resource : foundResource,
         })
-        .exec()
-    res.json({ success: true, savedItem })
+    }
+    foundUser.savedItems.push(foundResource);
+    let updatedUser = await foundUser.save();
+    res.json({
+        resource : foundResource,
+        status : true,
+       
+    })
 })
 
-exports.removeSavedResource = catchAsync(async (req, res, next) => {
-    const savedItem = await SavedItem.findOne({ user: req.user.id })
-    savedItem.resource = savedItem.resource.filter(p => p != req.params.id)
-    await savedItem.save()
-    res.json({ success: true, message: "Resource Removed Successfully" })
-})
+exports.deleteSavedItem = catchAsync(async(req,res,next)=>{
+    const {id} = req.params;
+    // console.log(id);
+    const foundUser = await User.findById(req.user.id).populate('savedItems');
+    let foundResource = await Resource.findById(id);
+    if (!foundResource) return next(new AppError('Something went wrong!', 404));
+    let savedItemIds = [];
+    if (foundUser.savedItems) {
+    savedItemIds = foundUser.savedItems.map(item=>item.id);
+    }
+    if (!savedItemIds.includes(id)) {
+        return res.json({
+            status : false,
+            resource : foundResource,
+        })
+    }
+    foundUser.savedItems = foundUser.savedItems.filter(s=>s.id!==id);
+    // console.log(foundUser.savedItems[0].id);
+    let updatedUser = await foundUser.save();
+    res.json({
+        resource : foundResource,
+        status : true,
 
-exports.getFeedback = catchAsync(async (req, res, next) => {
-    const { feedback } = req.body;
-    const updatedData = await updateReputationPoint('62f7fc219bbed4c82874f4a4', feedback)
-    res.json({ updatedData })
+    })
 })
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
@@ -171,3 +197,5 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     resources = resources.slice(startIndex, endIndex)
     res.json({ success: true, resources, totalPages, page, limit })
 })
+
+

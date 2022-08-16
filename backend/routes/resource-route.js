@@ -1,35 +1,33 @@
-const router = require('express').Router()
-const checkAuth = require('../middlewares/checkAuth');
-const restrictTo = require('../middlewares/restrictTo');
-const resourceController = require('../controller/resourceController');
+const router = require("express").Router();
+const checkAuth = require("../middlewares/checkAuth");
+const restrictTo = require("../middlewares/restrictTo");
+const resourceController = require("../controller/resourceController");
 
 router
-    .route('/')
-    .post(checkAuth, resourceController.addResource)
-    .get(checkAuth, resourceController.getMyResource)
+  .route("/")
+  .post(checkAuth, resourceController.addResource)
+  .get(checkAuth, resourceController.getMyResource);
+
 
 router
-    .route('/dashboard')
-    .get(checkAuth, resourceController.recommendedResources)
+  .route("/dashboard")
+  .get(checkAuth, resourceController.recommendedResources);
+
+router.route("/search").post(checkAuth, resourceController.searchResource);
+
+router.route("/feedback").post(checkAuth, resourceController.getFeedback);
 
 router
-    .route('/search')
-    .post(checkAuth, resourceController.searchResource)
+  .route("/:id")
+  .get(checkAuth, resourceController.getResourceDetails)
+  .patch(checkAuth, resourceController.updateResource)
+  .delete(checkAuth, resourceController.removeResource);
 
 router
-    .route('/:id')
-    .get(checkAuth, resourceController.getResourceDetails)
-    .patch(checkAuth, resourceController.updateResource)
-    .delete(checkAuth, resourceController.removeResource)
+  .route("/save/:id")
+  .post(checkAuth, resourceController.addSavedItem)
+  .delete(checkAuth,resourceController.deleteSavedItem);
 
-router
-    .route('/feedback')
-    .post(checkAuth, resourceController.getFeedback)
 
-router
-    .route('/save-resource/:id')
-    .get(checkAuth,resourceController.getSavedItems)
-    .post(checkAuth, resourceController.saveResource)
-    .delete(checkAuth, resourceController.removeSavedResource)
 
 module.exports = router;

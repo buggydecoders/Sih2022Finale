@@ -15,7 +15,6 @@ const ProfileV2 = () => {
         <Resources/>
         </div>
         <SideBarInformation/>
-        
     </div>
     </Layout>
   )
