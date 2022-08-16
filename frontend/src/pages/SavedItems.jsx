@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from "../components/Layout";
 import Search from "../components/Status/Search";
 import Pagination from "../components/Pagination";
 import ResourceItem from "../components/ResourceItem";
 import ResourceImg from '../assets/Resources/3dPrinter.png'
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSavedResources } from "../store/resources/actions";
 
 export const ProductItem = () => {
   return (
@@ -28,18 +30,23 @@ export const ProductItem = () => {
 
 
 const SavedItems = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchSavedResources())
+  }, []);
+
+  const savedResources = useSelector(state=>state.resources.savedItems)
   return (
     <Layout>
       <div className="px-16 py-10">
-        <div className="text-3xl font-[700] mb-6">Status</div>
+        <div className="text-3xl font-[700] mb-6">Saved Items</div>
         <Search />
         <div className="grid-cols-5 grid mt-12 gap-10">
-          <ResourceItem  />
-          <ResourceItem  />
-          <ResourceItem  />
-          <ResourceItem  />
-          <ResourceItem  />
-          <ResourceItem  />
+          {
+            savedResources?.map((savedItem)=>{
+              return <ResourceItem data={savedItem}/>
+            })
+          }
         </div>
       </div>
       <Pagination/>

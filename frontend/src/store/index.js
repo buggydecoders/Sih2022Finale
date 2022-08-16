@@ -8,12 +8,14 @@ import storage from 'redux-persist/lib/storage'
 import authReducer from "./auth/reducers";
 import MyResourceReducer from "./myresources/reducers";
 import chatRoomReducer from "./chatRoom/reducers";
+import ResourcesReducer from "./resources/reducers";
 
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
     auth : authReducer,
     myResources : MyResourceReducer,
+    resources: ResourcesReducer,
     chatRoom : chatRoomReducer
 });
 // // Middleware: Redux Persist Config

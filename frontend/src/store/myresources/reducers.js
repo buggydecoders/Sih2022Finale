@@ -19,7 +19,6 @@ export default function MyResourceReducer(state=INITIAL_STATE, action){
             return r;
         })]}
         default : return state;
-
     } 
 }
 

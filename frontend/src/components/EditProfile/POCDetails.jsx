@@ -13,7 +13,9 @@ function POCDetails() {
   const [signatureFile, setSignatureFile] = useState(null);
   const [uploadLoading, setUploadLoading] = useState(false);
   const [logo, setLogo] = useState(user?.contactPerson?.image || DummyLogo);
-  const [signature, setSignature] = useState(null);
+  const [signature, setSignature] = useState(
+    user?.contactPerson?.signature || DummyLogo
+  );
 
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
@@ -137,15 +139,23 @@ function POCDetails() {
             required={true}
             onChange={handleChange}
           />
-          <Input
-            name="signature"
-            placeholder="Upload your Signature"
-            label="Signature"
-            onChange={handleSignatureChange}
-            type="file"
-            note="Enter designation of the contact person"
-            required={true}
-          />
+
+          <div className="flex items-center space-x-4">
+            <Input
+              name="signature"
+              placeholder="Upload your Signature"
+              label="Signature"
+              onChange={handleSignatureChange}
+              type="file"
+              note="Upload Signature of the contact person"
+              required={true}
+            />
+            <img
+              src={signature}
+              className="rounded-full w-[110px] h-[110px]"
+              alt=""
+            />
+          </div>
         </TwoFields>
         <div className="flex  justify-center w-fit">
           <Button disabled={loading} type="submit" variant="filled">

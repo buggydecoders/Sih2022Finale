@@ -65,7 +65,6 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
 
   const handleSave = ()=>{
     if (isEdit) return dispatch(editResource({...form,state : 'available'}, handleClose));
-
     dispatch(AddResource({...form,state : 'available'}, handleClose));
   }
 

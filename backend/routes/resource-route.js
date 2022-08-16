@@ -9,6 +9,10 @@ router
     .get(checkAuth, resourceController.getMyResource)
 
 router
+    .route('/save-resource')
+    .get(checkAuth, resourceController.getSavedItems)
+
+router
     .route('/dashboard')
     .get(checkAuth, resourceController.recommendedResources)
 
@@ -28,7 +32,6 @@ router
 
 router
     .route('/save-resource/:id')
-    .get(checkAuth,resourceController.getSavedItems)
     .post(checkAuth, resourceController.saveResource)
     .delete(checkAuth, resourceController.removeSavedResource)
 
