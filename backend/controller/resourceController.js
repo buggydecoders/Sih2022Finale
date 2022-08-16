@@ -7,7 +7,7 @@ const axios = require('axios')
 const FormData = require('form-data')
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, duration, category, brief, description,per, condition, instruction, images } = req.body
+    const { name, price, duration, category, brief, description, per, condition, instruction, images } = req.body
     const newRes = new Resource({
         images,
         name,
@@ -88,25 +88,40 @@ exports.getFeedback = catchAsync(async (req, res, next) => {
 })
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
+    // let queryObject = {}
+    // const page = parseInt(req.query.page) || 1;
+    // const limit = parseInt(req.query.limit) || 10;
+
+    // let bodyFormData = new FormData()
+    // bodyFormData.append('id', req.user.id)
+    // let { data } = await axios({
+    //     method: "post",
+    //     url: "http://127.0.0.1:5001/recommendation",
+    //     data: bodyFormData,
+    //     headers: { "Content-Type": "multipart/form-data" },
+    // })
+    // console.log(data[0].$oid)
+    // let resources = []
+    // for (let i = 0; i < data.length; i++) {
+    //     queryObject.id = data[i].$oid
+    //     const resource = await Resource.findOne(queryObject).populate('instituteId')
+    //     if (resource && resource.instituteId.id != req.user.id) resources.append(resource)
+    // }
+    // let startIndex = (page - 1) * limit;
+    // let endIndex = startIndex + limit;
+    // let totalDocuments = resources.length
+    // let totalPages = Math.ceil(totalDocuments / limit);
+    // resources = resources.slice(startIndex, endIndex)
+    // res.json({ success: true, resources, totalPages, page, limit })
+
+
+    //TESTING DATA
     let queryObject = {}
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
-
-    let bodyFormData = new FormData()
-    bodyFormData.append('id', req.user.id)
-    let { data } = await axios({
-        method: "post",
-        url: "http://127.0.0.1:5001/recommendation",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
-    })
-    console.log(data[0].$oid)
+    const resource = await Resource.find(queryObject).populate('instituteId')
     let resources = []
-    for (let i = 0; i < data.length; i++) {
-        queryObject.id = data[i].$oid
-        const resource = await Resource.findOne(queryObject).populate('instituteId')
-        if (resource && resource.instituteId.id != req.user.id) resources.append(resource)
-    }
+    resources = resource.filter(p => p.instituteId.id != req.user.id)
     let startIndex = (page - 1) * limit;
     let endIndex = startIndex + limit;
     let totalDocuments = resources.length
