@@ -9,6 +9,10 @@ router
     .get(checkAuth, resourceController.getMyResource)
 
 router
+    .route('/dashboard')
+    .get(resourceController.recommendedResources)
+    
+router
     .route('/:id')
     .get(checkAuth, resourceController.getResourceDetails)
     .patch(checkAuth, resourceController.updateResource)
