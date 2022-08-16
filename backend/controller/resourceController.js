@@ -87,8 +87,8 @@ exports.getSavedItems = catchAsync(async (req, res, next) => {
 exports.removeSavedResource = catchAsync(async (req, res, next) => {
     const savedItem = await SavedItem.findOne({ user: req.user.id })
     savedItem.resource = savedItem.resource.filter(p => p != req.params.id)
-    const updatedItems = await savedItem.save()
-    res.json({ success: true, message: "Resource Removed Successfully", updatedItems })
+    await savedItem.save()
+    res.json({ success: true, message: "Resource Removed Successfully" })
 })
 
 exports.getFeedback = catchAsync(async (req, res, next) => {
