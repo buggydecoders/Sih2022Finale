@@ -93,7 +93,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 10;
 
     let bodyFormData = new FormData()
-    bodyFormData.append('id', '62f412426fc0348badda5ac3')
+    bodyFormData.append('id', req.user.id)
     let { data } = await axios({
         method: "post",
         url: "http://127.0.0.1:5001/recommendation",

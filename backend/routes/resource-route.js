@@ -10,8 +10,8 @@ router
 
 router
     .route('/dashboard')
-    .get(resourceController.recommendedResources)
-    
+    .get(checkAuth, resourceController.recommendedResources)
+
 router
     .route('/:id')
     .get(checkAuth, resourceController.getResourceDetails)
