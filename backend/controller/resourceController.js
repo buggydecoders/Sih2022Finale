@@ -69,8 +69,10 @@ exports.removeResource = catchAsync(async (req, res, next) => {
 exports.saveResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findById(req.params.id)
     const savedItem = await SavedItem.findOne({ user: req.user.id })
-    savedItem.resource.push(resource.id)
-    await savedItem.save()
+    if (!savedItem.resource.includes(resource.id)) {
+        savedItem.resource.push(resource.id)
+        await savedItem.save()
+    }
     res.json({ success: true, message: "Resource Saved Successfully" })
 })
 
