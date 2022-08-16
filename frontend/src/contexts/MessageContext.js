@@ -1,15 +1,15 @@
 import { createContext, useEffect, useState } from "react"
-import io from 'socket.io-client';
 import {useDispatch, useSelector} from 'react-redux';
 import { serverInstance } from "../utils/serverInstance";
 import { toast } from "react-toastify";
 import moment from 'moment';
 import { setRoomsLastMessage } from "../store/chatRoom/actions";
+import useSocket from "../hooks/useSocket";
 export const MessageContext = createContext(null);
 
 export default function MessageContextProvider({children}) {
     const {user} = useSelector(state=>state.auth); 
-    const [socket,setSocket] = useState(null);
+    // const [socket,setSocket] = useState(null);
     const {activeRoom} = useSelector(state=>state.chatRoom);
     console.log(activeRoom)
     const [loading,setLoading] = useState(false);
@@ -17,22 +17,21 @@ export default function MessageContextProvider({children}) {
     const [error,setError] =useState('');
     const [reciever,setReciever] = useState(null);
     const dispatch = useDispatch();
+    const {socket} = useSocket();
     useEffect(()=>{
-        const newSocket = io('http://localhost:5000', {
-          query : {id : user._id},
-          transports:['websocket']
-        })
-        setSocket(newSocket);
-        newSocket.on('receive-message', (result)=>{
+      if (socket) {
+        socket.on('receive-message', (result)=>{
           console.log('recieved!');
           // alert('recieved!!');
           // console.log(result);
           // let message = 
-          setMessages((list)=>[...list,result])
+          dispatch(setRoomsLastMessage(result.room, result));
+          setMessages((list)=>[...list,result]);
         })
-        return ()=>newSocket.close();
+      }
+    
         
-      }, [user])
+      }, [user,socket])
 
       useEffect(()=>{
         let fetchData = async()=>{
