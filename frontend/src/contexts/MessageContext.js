@@ -52,7 +52,7 @@ export default function MessageContextProvider({children}) {
 
       const sendMessage = (content,type='text')=>{
         let dataToSend = {recipients : [reciever._id],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user._id};
-        let lastMessage = {from : user._id,to : reciever._id,type,content,createdAt : moment(new Date()).format('DD-MM-YYYY'), room : activeRoom._id }
+        let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()).format('DD-MM-YYYY'), room : activeRoom._id }
         socket.emit('send-message', dataToSend);
         dispatch(setRoomsLastMessage(activeRoom._id,lastMessage));
       }

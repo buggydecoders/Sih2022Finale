@@ -48,7 +48,7 @@ const MessageCard = ({data})=>{
             <div className="text-xs font-[500]  text-gray-500">2 hours ago</div>
           </div>
           <div className="mt-1 flex items-center justify-between">
-            <div className="text-xs font-[500]">hey up for that deal??</div>
+            <div className="text-xs font-[500]">{data?.lastMessage?.content || ''}</div>
             <div className="h-[17px] w-[17px] text-white  bg-primary flex items-center justify-center text-xs rounded-full">1</div>
           </div>
         </div>

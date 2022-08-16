@@ -4,6 +4,8 @@ const catchAsync = require('../utils/catchAsync');
 const User =require('../models/User');
 const Message = require('../models/Message');
 
+// const get
+
 
 
 exports.fetchRoom = catchAsync(async (req, res, next) => {
@@ -11,7 +13,13 @@ exports.fetchRoom = catchAsync(async (req, res, next) => {
     if (!user1 || !user2) return next(new AppError("Please give two valid users", 400));
     const isUsers = await User.find({_id : {"$in" : [user1,user2]}});
     if (isUsers.length<2) return next(new AppError("Users were not found!", 404))
-    const isRoom = await Room.findOne({users : {"$in" : [user1,user2]}}).populate('users').populate('lastMessage');
+    let isRoom = await Room.find({users : {"$in" : [user1]}}).populate('users').populate('lastMessage');
+    isRoom = isRoom.filter(r=>{
+        if (r.users[0].id===user2 || r.users[1].id===user2) return r;
+    })
+    if (isRoom.length===0) isRoom = false;
+    else isRoom = isRoom[0];
+
     if (isRoom) return res.json({
         status : true,
         isNew : false,
