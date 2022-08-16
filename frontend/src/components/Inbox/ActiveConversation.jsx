@@ -63,8 +63,8 @@ const ActiveConversation = () => {
   const {activeRoom} = useSelector(state=>state.chatRoom);
   const {user} = useSelector(state=>state.auth);
   const {reciever,messagesLoading,messages,sendMessage} = useContext(MessageContext);
-  console.log(messages);
-  console.log(reciever);
+  // console.log(messages);
+  // console.log(reciever);
   const messageContainerRef = useRef();
   useEffect(()=>{
     if (messageContainerRef.current) {

@@ -26,7 +26,8 @@ export default function MessageContextProvider({children}) {
         newSocket.on('receive-message', (result)=>{
           console.log('recieved!');
           // alert('recieved!!');
-          console.log(result);
+          // console.log(result);
+          // let message = 
           setMessages((list)=>[...list,result])
         })
         return ()=>newSocket.close();
@@ -55,9 +56,11 @@ export default function MessageContextProvider({children}) {
       }, [activeRoom]);
       
       const sendMessage = (content,type='text')=>{
-        let dataToSend = {recipients : [reciever._id],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user._id};
-        let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()).format('DD-MM-YYYY'), room : activeRoom._id }
+        let dataToSend = {recipients : [reciever],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user};
+        let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()), room : activeRoom._id }
         socket.emit('send-message', dataToSend);
+        console.log(lastMessage, 'SENT MESSAGE');
+        setMessages((list)=>[...list,lastMessage]);
         dispatch(setRoomsLastMessage(activeRoom._id,lastMessage));
       }
       

@@ -28,11 +28,11 @@ const MessageTabs = () => {
 const MessageCard = ({data})=>{
   const {user} = useSelector(state=>state.auth);
   const {activeRoom} = useSelector(state=>state.chatRoom);
-  console.log(activeRoom, 'Active Room from message');
-  console.log(data);
+  // console.log(activeRoom, 'Active Room from message');
+  // console.log(data);
   const isActive = data._id===activeRoom._id;
   let cardUserData = data?.users[0]._id===user._id?data?.users[1]:data?.users[0];
-  console.log(cardUserData);
+  // console.log(cardUserData);
   const dispatch = useDispatch();
   const handleSelectActive = ()=>{
     dispatch(setActiveRoom(data));
@@ -62,9 +62,9 @@ const AllMessages = () => {
   const {rooms} = useSelector(state=>state.chatRoom);
 
   const {reciever} = useContext(MessageContext);
-  console.log(reciever);
+  // console.log(reciever);
 
-  console.log(rooms, "ROOMS");
+  // console.log(rooms, "ROOMS");
   return (
     <div className="bg-lightGray min-h-[90vh] w-full px-5 py-6 rounded-r-md  ">
       <div className="flex items-center justify-between">

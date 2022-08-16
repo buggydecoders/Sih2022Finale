@@ -11,7 +11,7 @@ const Inbox = () => {
   const query = useQueryParams();
   const dispatch = useDispatch();
   const { loading,rooms,activeRoom } = useSelector((state) => state.chatRoom);
-  console.log(activeRoom);
+  // console.log(activeRoom);
   // console.log(rooms, 'ROOMS');
   useEffect(() => {
     dispatch(fetchRooms());
@@ -22,7 +22,7 @@ const Inbox = () => {
     }
   }, []);
   if (loading) return <div>Loading..</div>;
-  console.log(activeRoom, 'ACTIVE ROOM')
+  // console.log(activeRoom, 'ACTIVE ROOM')
   return (
     <Layout>
       <MessageContextProvider>
