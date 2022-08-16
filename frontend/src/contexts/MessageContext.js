@@ -53,7 +53,7 @@ export default function MessageContextProvider({children}) {
         setReciever(activeRoom.users[0]._id===user._id?activeRoom.users[1]:activeRoom.users[0]);
         }
       }, [activeRoom]);
-
+      
       const sendMessage = (content,type='text')=>{
         let dataToSend = {recipients : [reciever._id],type,content,createdAt : new Date(),roomId : activeRoom._id,sender : user._id};
         let lastMessage = {from : user,to : reciever,type,content,createdAt : moment(new Date()).format('DD-MM-YYYY'), room : activeRoom._id }
