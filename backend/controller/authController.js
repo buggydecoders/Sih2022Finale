@@ -34,9 +34,15 @@ exports.loginUser = catchAsync(async (req, res, next) => {
 exports.createUser = catchAsync(async (req, res, next) => {
     const { email, password, aisheCode } = req.body;
     const checkMail = await User.find({ email })
+    const checkAishe = await User.find({ aisheCode })
     if (checkMail.length != 0) {
         return next(
             new AppError('Email Already Exists', 400)
+        )
+    }
+    if (checkAishe.length != 0) {
+        return next(
+            new AppError('Aishe Code Already Exists', 400)
         )
     }
     if (!(email && password)) {
