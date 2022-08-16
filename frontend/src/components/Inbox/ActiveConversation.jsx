@@ -53,7 +53,7 @@ const MessageCard = ({isSent,message})=>{
     <div className={`${isSent?'justify-end':'justify-start'} flex w-full`}>
       <div className='py-2 px-3 bg-lightGray rounded-md max-w-[70%]'>
         <div className={`${!isSent?'text-secondary':'text-primary'} border-b-[1px] font-open font-[500] text-xs`}>{message?.from?.instituteName} · <span className='text-gray-500 font-[500] ml-2'>{moment(message?.createdAt).format('HH:MM')}</span></div>
-        <div className='font-[500] mt-2 text-xs text-gray-600 '>{message?.content} </div>
+        <div className='font-[500] mt-2 text-xs text-gray-600 break-words'>{message?.content} </div>
       </div>
     </div>
   )
@@ -78,7 +78,7 @@ const ActiveConversation = () => {
     <div className='px-5 py-6 grid grid-cols-[4fr_1.4fr] gap-5 border-[1px] border-opacity-5 rounded-md border-l-0 border-r-0'>
      {messagesLoading?<div>Loading</div>:<div>
         <ProfileCard data={reciever}/>
-        <div ref={messageContainerRef} className='mt-6 h-[60vh] space-y-3 overflow-y-auto'>
+        <div ref={messageContainerRef} className='mt-6 pb-3 h-[60vh] space-y-3 overflow-y-auto overflow-x-hidden'>
           {messages.length>0?messages.map(m=><MessageCard isSent={m?.from?._id===user._id} message={m}/>):<div></div>}
         </div>
         <div className='mt-5 space-y-4'>

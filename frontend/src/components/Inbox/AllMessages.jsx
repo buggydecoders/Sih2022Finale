@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useContext } from "react";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -27,7 +28,7 @@ const MessageTabs = () => {
 
 const MessageCard = ({data})=>{
   const {user} = useSelector(state=>state.auth);
-  const {activeRoom} = useSelector(state=>state.chatRoom);
+  const {activeRoom,lastMessage} = useSelector(state=>state.chatRoom);
   // console.log(activeRoom, 'Active Room from message');
   // console.log(data);
   const isActive = data._id===activeRoom._id;
@@ -35,8 +36,13 @@ const MessageCard = ({data})=>{
   // console.log(cardUserData);
   const dispatch = useDispatch();
   const handleSelectActive = ()=>{
+    if (!isActive) {
     dispatch(setActiveRoom(data));
+    }
   }
+  let currentLastMessage = isActive?lastMessage:data?.lastMessage;
+  let updatedLastMessage = isActive?lastMessage?.content:data?.lastMessage?.content || '';
+  if (updatedLastMessage?.length>17) updatedLastMessage =  updatedLastMessage?.slice(0,17)  + '..'
   return (
     <div onClick={handleSelectActive} className={`${isActive?'':''} border-b-[1px] cursor-pointer relative border-black border-opacity-10 px-1 py-5`}>
       {isActive&&<div className="w-[5px] h-[85%] bg-primary absolute top-[50%] -translate-y-[50%] -left-2"></div>}
@@ -45,10 +51,10 @@ const MessageCard = ({data})=>{
         <div className=" text-sm w-full">
           <div className="flex items-center justify-between w-full">
             <div className="font-semibold text-sm ">{cardUserData?.instituteName?.slice(0,12)}...</div>
-            <div className="text-xs font-[500]  text-gray-500">2 hours ago</div>
+            <div className="text-xs font-[500]  text-gray-500">{moment(currentLastMessage.createdAt).diff(moment(),'minutes')*-1} min ago</div>
           </div>
           <div className="mt-1 flex items-center justify-between">
-            <div className="text-xs font-[500]">{data?.lastMessage?.content || ''}</div>
+            <div className="text-xs font-[500]">{updatedLastMessage}</div>
             <div className="h-[17px] w-[17px] text-white  bg-primary flex items-center justify-center text-xs rounded-full">1</div>
           </div>
         </div>
