@@ -7,8 +7,6 @@ import SideProfile from './SideProfile';
 import { useSelector } from 'react-redux';
 import { MessageContext } from '../../contexts/MessageContext';
 import moment from 'moment';
-import gsap from 'gsap';
-import ScrollToPlugin from 'gsap/dist/ScrollToPlugin';
 
 const ProfileCard = ({data})=>{
 

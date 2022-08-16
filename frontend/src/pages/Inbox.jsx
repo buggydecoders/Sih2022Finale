@@ -7,6 +7,7 @@ import MessageContextProvider from "../contexts/MessageContext";
 import useQueryParams from "../hooks/useQueryParams";
 import { fetchAndSetActiveRoom, fetchRooms } from "../store/chatRoom/actions";
 import {BsChatRightDots} from 'react-icons/bs';
+import InboxLoading from "../components/Inbox/InboxLoading";
 const Inbox = () => {
   const query = useQueryParams();
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Inbox = () => {
     dispatch(fetchAndSetActiveRoom(userId));
     }
   }, []);
-  if (loading) return <div>Loading..</div>;
+  if (loading) return <InboxLoading/>;
   // console.log(activeRoom, 'ACTIVE ROOM')
   return (
     <Layout>
