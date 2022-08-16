@@ -49,6 +49,7 @@ exports.createUser = catchAsync(async (req, res, next) => {
     let state = ""
     let street = ""
     let city = ""
+    let pincode = ''
     for (let i = 0; i < aishe.length; i++) {
         if (aishe[i].aishe_id === aisheCode) {
             isAishe = true;
