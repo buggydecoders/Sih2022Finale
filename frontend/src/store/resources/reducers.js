@@ -4,7 +4,6 @@ const INITIAL_STATE = {
     page : 1,
     savedItems : [],
     limit : 10,
-    state : 'all',
     category : 'all',
     loading : false,
     totalPages : 1

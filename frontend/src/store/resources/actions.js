@@ -1,4 +1,4 @@
-import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchResourcesAPI, updateResourceAPI } from "./services";
+import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchDashboardResourcesAPI,  fetchResourcesAPI, updateResourceAPI } from "./services";
 import CONSTANTS from './constants';
 import {toast} from 'react-toastify'
 import { fetchSavedResourcesAPI } from "./services";
@@ -28,25 +28,21 @@ const saveResourceInStore = (data)=>{
 
 
 
-export const fetchDashboardResources = (category,state,page,limit)=>async(dispatch,getState)=>{
-    // const {myResources} = getState();
+export const fetchDashboardResources = (page,limit)=>async(dispatch,getState)=>{
     try {
-    dispatch(setLoading(true));
-    const result = await dashboardResourcesAPI(category,state,page,limit);
-    let fetchedData = result.data;
-    dispatch(setData({
-        list : fetchedData.resources,
-        totalPages : fetchedData.totalPages,
-        page : fetchedData.page,
-        limit : fetchedData.limit,
-        category : fetchedData.category,
-        state : fetchedData.state
-    }));
+        dispatch(setLoading("FETCH"));
+        const result = await fetchDashboardResourcesAPI(page,limit)
+        let fetchedData = result.data;
+        dispatch(setData({
+            list : fetchedData.resources,
+            page : fetchedData.page,
+            limit : fetchedData.limit,
+            totalPages : fetchedData.totalPages
+        }));
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
-
-    }finally {
+    }finally{
         dispatch(setLoading(false));
     }
 }
@@ -73,7 +69,7 @@ export const deleteSavedItemInStore = (data)=>{
 }
 export const addSavedItem = (id,callback)=>async(dispatch,getState)=>{
     try {
-        dispatch(setLoading('SAVE-ITEM'))
+        dispatch(setLoading(`SAVE-${id}`))
         const result = await addSavedItemAPI(id);
         if (result.data.status) {
         dispatch(addSavedItemInStore(result.data.resource));
@@ -89,7 +85,7 @@ export const addSavedItem = (id,callback)=>async(dispatch,getState)=>{
 
 export const deleteSavedItem = (id,callback)=>async(dispatch,getState)=>{
     try {
-        dispatch(setLoading('SAVE-ITEM'))
+        dispatch(setLoading(`SAVE-${id}`))
         const result = await deleteSavedItemAPI(id);
         if (result.data.status) {
         dispatch(deleteSavedItemInStore(id));

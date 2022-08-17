@@ -9,7 +9,7 @@ import { addSavedItem, deleteSavedItem } from "../../store/resources/actions";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 
 const SaveButton = ({resourceId}) => {
-  const {savedItems} = useSelector(state=>state.resources); 
+  const {savedItems,loading} = useSelector(state=>state.resources); 
   const [active, setActive] = useState(false);
   const dispatch = useDispatch();
 
@@ -41,67 +41,48 @@ const SaveButton = ({resourceId}) => {
           active ? "text-white" : "group-hover:text-white"
         } gap-4 duration-150 ease-in-out items-center `}
       >
-        {active ? "Saved" : "Save for later"} <BiBadgeCheck />
+        {loading===`SAVE-${resourceId}`?'Loading..':active ? "Saved" : "Save for later"} <BiBadgeCheck />
       </div>
     </div>
   );
 };
 
 const ResourceCard = ({ data }) => {
-  const {savedItems} = useSelector(state=>state.resources); 
-console.log(savedItems, 'SAVED_ITEMS'); 
-  const {
-    _id,
-    category,
-    conditions,
-    createdAt,
-    description,
-    images,
-    instituteId,
-    isActive,
-    isVacant,
-    name,
-    price,
-    state,
-    updatedAt,
-    durationFrom,
-    durationTo,
-  } = data;
-
+ 
   return (
     <div className="bg-white w-full px-6 py-4 rounded-md">
       <div className="flex justify-between items-start">
         <div className="flex items-start gap-4">
           <div className="">
-            <img alt="" src={images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-[150px] h-[150px] rounded-lg"/>
+            <img alt="" src={data?.images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-[150px] h-[150px] rounded-lg"/>
           </div>
           <div className="">
-            <div className="text-2xl font-bold text-gray-500">{name}</div>
+            <div className="text-2xl font-bold text-gray-500">{data?.name || 'Not Found'}</div>
             <div className="mt-2 text-gray-400">
-              {instituteId.instituteName}
+              {data?.instituteId.instituteName || 'Not Found'}
             </div>
             <div className="mt-3 flex gap-10">
               <div className="flex gap-2 items-center text-sm">
-                <BsClockHistory /> {durationFrom}
+                <BsClockHistory /> {data?.durationFrom || "N/A"}
               </div>
               <div className="flex gap-2 items-center text-sm">
-                <BsClockHistory /> {durationTo}
+                <BsClockHistory /> {data?.durationTo || "N/A"}
               </div>
             </div>
           </div>
         </div>
 
         <div className="shrink-0">
-          <SaveButton resourceId={_id} />
+          <SaveButton resourceId={data._id} />
         </div>
       </div>
-      <div className="mt-3 text-sm text-gray-400">{description}</div>
+      <div className="mt-3 text-sm text-gray-400">{data?.description || "N/A"}</div>
       <hr className="my-3" />
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-6 text-lg">
           <div className="font-[500]">
             <span className="mr-1 text-secondary">₹</span>
-            {price}
+            {data?.price || "N/A"}
             <span className="ml-2 text-sm text-gray-400">/Day</span>
           </div>
           <div className="flex gap-1"></div>
