@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSavedItem, deleteSavedItem } from "../../store/resources/actions";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
-
+import {useNavigate} from 'react-router-dom'
 const SaveButton = ({resourceId}) => {
   const {savedItems,loading} = useSelector(state=>state.resources); 
   const [active, setActive] = useState(false);
@@ -48,6 +48,7 @@ const SaveButton = ({resourceId}) => {
 };
 
 const ResourceCard = ({ data }) => {
+  const navigate = useNavigate();
  
   return (
     <div className="bg-white w-full px-6 py-4 rounded-md">
@@ -88,8 +89,8 @@ const ResourceCard = ({ data }) => {
           <div className="flex gap-1"></div>
         </div>
         <div className="flex items-center gap-3">
-          <Button variant="outlined">Send Enquiry</Button>
-          <Button variant="filled">Send Enquiry</Button>
+          <Button variant="outlined"  onClick={()=>navigate(`/inbox?chat=${data.instituteId._id}`)}  >Send Enquiry</Button>
+          <Button variant="filled">Send Request</Button>
         </div>
       </div>
     </div>
