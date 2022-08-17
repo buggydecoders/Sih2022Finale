@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import Layout from "../components/Layout";
-import Navigation from "../components/Navigation";
-import Search from "../components/Status/Search";
-import StatusTable from "../components/Status/StatusTable";
+import Layout from "../../components/Layout";
+import Navigation from "../../components/Navigation";
+import Search from "../../components/Status/Search";
+import StatusTable from "../../components/Status/StatusTable";
 
 const Status = () => {
   const states = ['Sent', 'Recieved', 'Drafts', 'Cancelled']
