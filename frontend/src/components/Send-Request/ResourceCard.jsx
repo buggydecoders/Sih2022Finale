@@ -1,11 +1,12 @@
 import React from 'react'
 import ResourceImg from '../../assets/Resources/3dPrinter.png';
 import {BsChevronDown} from 'react-icons/bs';
+import { RESOURCE_FALLBACK_IMG } from '../../utils/fallbackImages';
 const ResourceCard = () => {
   return (
     <div className='w-full bg-white px-3 py-4 rounded-xl'>
         <div className='w-full flex gap-2 p-2 rounded-xl border-[1px] border-gray-300'>
-            <img src={ResourceImg} className='w-[100px] h-fit rounded-xl'/>
+            <img src={ResourceImg || RESOURCE_FALLBACK_IMG} className='w-[100px] h-fit rounded-xl'/>
             <div className=''>
                 <div className='font-bold text-base mt-1'>3D Printer Model Generation with ok</div>
                 <div className='text-xs text-primary  font-[600]'>Insitute of Enginering, DAVV</div>

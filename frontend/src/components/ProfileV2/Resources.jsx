@@ -5,6 +5,7 @@ import AddResourceDrawer from "../Resource/AddResourceDrawer";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllResources } from "../../store/myresources/actions";
 import { Pagination } from "@mui/material";
+import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 
 const ResourceItem = ({data}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const ResourceItem = ({data}) => {
     <>
       <div onClick={() => setIsOpen(true)} className="p-3 rounded-md">
         <div className="w-full rounded-md bg-white p-2 h-[210px] relative">
-          <img src={data?.images[0]?.url || ""} className="w-full h-full absolute object-cover top-0 left-0 rounded-xl border-[1px]" />
+          <img src={data?.images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-full h-full absolute object-cover top-0 left-0 rounded-xl border-[1px]" />
         </div>
         <div className="mt-3 font-[500] font-open">
           {data?.name}

@@ -6,6 +6,7 @@ import Button from "../Button";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSavedItem, deleteSavedItem } from "../../store/resources/actions";
+import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 
 const SaveButton = ({resourceId}) => {
   const {savedItems} = useSelector(state=>state.resources); 
@@ -72,7 +73,7 @@ console.log(savedItems, 'SAVED_ITEMS');
       <div className="flex justify-between items-start">
         <div className="flex items-start gap-4">
           <div className="">
-            <img alt="" src={images[0]?.url} className="w-[150px] h-[150px] rounded-lg"/>
+            <img alt="" src={images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-[150px] h-[150px] rounded-lg"/>
           </div>
           <div className="">
             <div className="text-2xl font-bold text-gray-500">{name}</div>

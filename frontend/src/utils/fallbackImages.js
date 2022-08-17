@@ -1,0 +1,1 @@
+export const RESOURCE_FALLBACK_IMG='https://res.cloudinary.com/unesco-admin/image/upload/v1660719679/325-3256246_fa-fa-product-icon-transparent-cartoons-fa-fa_qlti2r.jpg'

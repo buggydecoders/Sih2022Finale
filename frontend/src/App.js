@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
-import Profile from "./pages/Profile";
+
 import 'react-toastify/dist/ReactToastify.css';
 import SavedItems from "./pages/SavedItems";
 import Status from "./pages/Status";
