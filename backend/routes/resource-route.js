@@ -15,7 +15,7 @@ router
 
 router.route("/search").post(checkAuth, resourceController.searchResource);
 
-router.route("/feedback").post(checkAuth, resourceController.getFeedback);
+// router.route("/feedback").post(checkAuth, resourceController.getFeedback);
 
 router
   .route("/:id")

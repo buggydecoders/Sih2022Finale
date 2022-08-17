@@ -67,22 +67,19 @@ exports.removeResource = catchAsync(async (req, res, next) => {
     res.json({ success: true, resource })
 })
 
-exports.saveResource = catchAsync(async (req, res, next) => {
-    const resource = await Resource.findById(req.params.id)
-    const savedItem = await SavedItem.findOne({ user: req.user.id })
-    savedItem.resource.push(resource.id)
-    await savedItem.save()
-    res.json({ success: true, message: "Resource Saved Successfully" })
-})
+
+
 
 exports.addSavedItem = catchAsync(async(req,res,next)=>{
     const {id} = req.params;
     const foundUser =await  User.findById(req.user.id).populate('savedItems');
+    console.log(foundUser);
     let foundResource = await Resource.findById(id);
     if (!foundResource) return next(new AppError(`Resource with id ${id} was not found`, 404));
     let savedItemIds = [];
     if (foundUser.savedItems) {
     savedItemIds = foundUser.savedItems.map(item=>item.id);
+    console.log(savedItemIds)
     }
     if (savedItemIds.includes(id)) {
         return res.json({
