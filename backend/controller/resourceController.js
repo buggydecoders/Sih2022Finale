@@ -8,12 +8,13 @@ const FormData = require('form-data');
 const User = require('../models/User');
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, duration, category, brief, description, per, condition, instruction, images } = req.body
+    const { name, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
     const newRes = new Resource({
         images,
         name,
         price,
-        duration,
+        durationFrom,
+        durationTo,
         category,
         per,
         brief,
@@ -70,54 +71,54 @@ exports.removeResource = catchAsync(async (req, res, next) => {
 
 
 
-exports.addSavedItem = catchAsync(async(req,res,next)=>{
-    const {id} = req.params;
-    const foundUser =await  User.findById(req.user.id).populate('savedItems');
+exports.addSavedItem = catchAsync(async (req, res, next) => {
+    const { id } = req.params;
+    const foundUser = await User.findById(req.user.id).populate('savedItems');
     console.log(foundUser);
     let foundResource = await Resource.findById(id);
     if (!foundResource) return next(new AppError(`Resource with id ${id} was not found`, 404));
     let savedItemIds = [];
     if (foundUser.savedItems) {
-    savedItemIds = foundUser.savedItems.map(item=>item.id);
-    console.log(savedItemIds)
+        savedItemIds = foundUser.savedItems.map(item => item.id);
+        console.log(savedItemIds)
     }
     if (savedItemIds.includes(id)) {
         return res.json({
-            status : false,
-            resource : foundResource,
+            status: false,
+            resource: foundResource,
         })
     }
     foundUser.savedItems.push(foundResource);
     let updatedUser = await foundUser.save();
     res.json({
-        resource : foundResource,
-        status : true,
-       
+        resource: foundResource,
+        status: true,
+
     })
 })
 
-exports.deleteSavedItem = catchAsync(async(req,res,next)=>{
-    const {id} = req.params;
+exports.deleteSavedItem = catchAsync(async (req, res, next) => {
+    const { id } = req.params;
     // console.log(id);
     const foundUser = await User.findById(req.user.id).populate('savedItems');
     let foundResource = await Resource.findById(id);
     if (!foundResource) return next(new AppError('Something went wrong!', 404));
     let savedItemIds = [];
     if (foundUser.savedItems) {
-    savedItemIds = foundUser.savedItems.map(item=>item.id);
+        savedItemIds = foundUser.savedItems.map(item => item.id);
     }
     if (!savedItemIds.includes(id)) {
         return res.json({
-            status : false,
-            resource : foundResource,
+            status: false,
+            resource: foundResource,
         })
     }
-    foundUser.savedItems = foundUser.savedItems.filter(s=>s.id!==id);
+    foundUser.savedItems = foundUser.savedItems.filter(s => s.id !== id);
     // console.log(foundUser.savedItems[0].id);
     let updatedUser = await foundUser.save();
     res.json({
-        resource : foundResource,
-        status : true,
+        resource: foundResource,
+        status: true,
 
     })
 })
