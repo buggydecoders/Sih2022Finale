@@ -1,6 +1,5 @@
 import ResourceImg from "../assets/Resources/3dPrinter.png";
 import { MdDelete } from "react-icons/md";
-import { deleteSavedResource } from "../store/resources/actions";
 import { useDispatch } from "react-redux";
 
 const ResourceItem = ({ data }) => {
@@ -17,7 +16,7 @@ const ResourceItem = ({ data }) => {
           className="absolute top-0 right-0 text-2xl cursor-pointer"
           onClick={() => handleDelete()}
         />
-        {images?<img src={images[0].url} className="w-[130px]" alt={images[0].name} />:<img src={ResourceImg} className="w-[130px]" alt="Dummy"/>}
+        {images?<img src={images[0].url} className="w-full object-cover h-40" alt={images[0].name} />:<img src={ResourceImg} className="w-full object-cover h-40" alt="Dummy"/>}
       </div>
       <div className="font-[500] mt-7">{name}</div>
       <div className="text-sm text-gray-500 font-[500] mt-1">
