@@ -1,19 +1,20 @@
 import ResourceImg from "../assets/Resources/3dPrinter.png";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { deleteSavedItem } from "../store/resources/actions";
 
 const ResourceItem = ({ data }) => {
   const { name, images, price, instituteId, _id } = data;
   const dispatch = useDispatch();
   
   const handleDelete = () => {
-    // dispatch(deleteSavedResource(_id));
+    dispatch(deleteSavedItem(_id));
   };
   return (
     <div className="px-3 py-3 border-[1px] border-gray-300 rounded-xl">
       <div className="relative">
         <MdDelete
-          className="absolute top-0 right-0 text-2xl cursor-pointer"
+          className="absolute top-1 right-1 text-2xl cursor-pointer bg-white rounded-full p-1"
           onClick={() => handleDelete()}
         />
         {images?<img src={images[0].url} className="w-full object-cover h-40" alt={images[0].name} />:<img src={ResourceImg} className="w-full object-cover h-40" alt="Dummy"/>}
