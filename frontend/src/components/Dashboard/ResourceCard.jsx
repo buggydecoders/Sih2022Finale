@@ -90,7 +90,7 @@ const ResourceCard = ({ data }) => {
         </div>
         <div className="flex items-center gap-3">
           <Button variant="outlined"  onClick={()=>navigate(`/inbox?chat=${data.instituteId._id}`)}  >Send Enquiry</Button>
-          <Button variant="filled">Send Request</Button>
+          <Button variant="filled" onClick={()=>navigate(`/send-request/${data._id}`)}>Send Request</Button>
         </div>
       </div>
     </div>

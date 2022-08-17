@@ -127,12 +127,12 @@ export default function App() {
         </Route>
         <Route
           exact
-          path="/send-request"
+          path="/send-request/:id"
           element={
             <ProtectedRoute access="private"  scope={"institute"} />
           }
         >
-          <Route exact path='/send-request' element={<SendRequest />} />
+          <Route exact path='/send-request/:id' element={<SendRequest />} />
         </Route>
         <Route
           exact
