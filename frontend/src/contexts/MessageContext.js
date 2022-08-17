@@ -1,10 +1,11 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 import {useDispatch, useSelector} from 'react-redux';
 import { serverInstance } from "../utils/serverInstance";
 import { toast } from "react-toastify";
 import moment from 'moment';
 import { setRoomsLastMessage } from "../store/chatRoom/actions";
 import useSocket from "../hooks/useSocket";
+import SocketContextProvider, { SocketContext } from "./SocketContext";
 export const MessageContext = createContext(null);
 
 export default function MessageContextProvider({children}) {
@@ -17,7 +18,7 @@ export default function MessageContextProvider({children}) {
     const [error,setError] =useState('');
     const [reciever,setReciever] = useState(null);
     const dispatch = useDispatch();
-    const {socket} = useSocket();
+    const {socket} = useContext(SocketContext);
     useEffect(()=>{
       if (socket) {
         socket.on('receive-message', (result)=>{

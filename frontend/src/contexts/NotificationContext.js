@@ -1,14 +1,15 @@
-import { createContext, useEffect } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useSocket from "../hooks/useSocket";
+import { SocketContext } from "./SocketContext";
 
 export const NotificationContext = createContext(null);
 
 
 const NotificationContextProvider = ({children})=>{
-    const {socket} = useSocket();
+    const {socket} = useContext(SocketContext);
     const {user} = useSelector(state=>state.auth);
     const sendCallNotification = (userId,roomId)=>{
         console.log(`SENDING CALL NOTIFICATION ON ${userId} ${roomId}`);

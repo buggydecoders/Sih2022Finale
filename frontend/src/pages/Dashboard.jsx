@@ -14,7 +14,7 @@ const Dashboard = () => {
       <div className="bg-lightGray py-10">
         <div className="grid grid-cols-[1fr_2.8fr_1fr] gap-5 px-10">
           <div className="space-y-6">
-            <CollegeProfileCard />
+            <CollegeProfileCard/>
             <CardCollection title="Shared Resources" />
             <CardCollection title="Listed Resources" />
             <CardCollection title="Enquries" />
