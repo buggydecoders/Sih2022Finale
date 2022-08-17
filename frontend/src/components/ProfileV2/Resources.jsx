@@ -21,7 +21,7 @@ const ResourceItem = ({data}) => {
         <div className="text-gray-400 text-xs font-open mt-1">
          {data?.durationFrom || "NA"} - {data?.durationTo || "NA"}
         </div>
-        <div className="font-[600] font-open">${data?.price}</div>
+        <div className="font-[600] font-open">₹{data?.price}</div>
       </div>
       <AddResourceDrawer data={data} isEdit={true} isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
