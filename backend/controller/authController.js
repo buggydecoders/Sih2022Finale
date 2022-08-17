@@ -11,7 +11,7 @@ const updateReputationPoint = require('../utils/reputation')
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).populate("savedItems");
     if (!user) {
         return next(
             new AppError('User Not Exists', 404)
@@ -34,9 +34,15 @@ exports.loginUser = catchAsync(async (req, res, next) => {
 exports.createUser = catchAsync(async (req, res, next) => {
     const { email, password, aisheCode } = req.body;
     const checkMail = await User.find({ email })
+    const checkAishe = await User.find({ aisheCode })
     if (checkMail.length != 0) {
         return next(
             new AppError('Email Already Exists', 400)
+        )
+    }
+    if (checkAishe.length != 0) {
+        return next(
+            new AppError('Aishe Code Already Exists', 400)
         )
     }
     if (!(email && password)) {
@@ -49,13 +55,16 @@ exports.createUser = catchAsync(async (req, res, next) => {
     let state = ""
     let street = ""
     let city = ""
+    let pincode = ''
     for (let i = 0; i < aishe.length; i++) {
         if (aishe[i].aishe_id === aisheCode) {
             isAishe = true;
             instituteName = aishe[i].hei_name
             state = aishe[i].state_name
             city = aishe[i].other_address.split(",")[1]
-            street = aishe[i].other_address.split(",").slice(2).toString()
+            street = aishe[i].other_address.split(",").slice(3).toString()
+            console.log(aishe[i].other_address.split(",")[2])
+            pincode = aishe[i].other_address.split(",")[2]
             naac = aishe[i].naac_grade
         }
     }
@@ -71,9 +80,11 @@ exports.createUser = catchAsync(async (req, res, next) => {
         address: {
             street,
             city,
+            pincode,
             state
         }
     })
+    console.log(newUser)
     const user = await newUser.save();
     const updatedUser = await updateReputationPoint(user.id, "")
     const saveItem = new SavedItem({
@@ -89,7 +100,7 @@ exports.logoutUser = catchAsync((req, res, next) => {
 })
 
 exports.getUser = catchAsync(async (req, res, next) => {
-    const user = await User.findById(req.user.id).select("-password")
+    const user = await User.findById(req.user.id).select("-password").populate("savedItems");
     if (!user) {
         return next(
             new AppError('User Not Found', 401)

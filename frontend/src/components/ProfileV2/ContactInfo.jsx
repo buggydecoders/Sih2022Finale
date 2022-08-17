@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import POC from "../../assets/POC/VJ.png";
 
 const POCDetails = ({data}) => {
@@ -16,13 +17,13 @@ const POCDetails = ({data}) => {
           <div className="text-sm text-gray-400">Faculty of DBMS</div>
         </div>
       </div>
-      <div className="flex gap-6 items-start">
-        <div className=" text-gray-500 border-b-primary border-b-[1px]">
+      <div className="flex gap-3 flex-col items-start">
+        <a  href={`mailto:${data?.email}`} className=" text-gray-500 border-b-primary border-b-[1px]">
           {data?.email}
-        </div>
-        <div className=" text-gray-500 border-b-primary border-b-[1px]">
+        </a>
+        <a  href={`tel:${data?.phone}`} className=" text-gray-500 border-b-primary border-b-[1px]">
           {data?.phone || 'Unset'}
-        </div>
+        </a>
       </div>
     </div>
   );
@@ -36,9 +37,9 @@ const ContactInfo = () => {
         <div className="text-gray-600 text-2xl font-[600]">
           Contact Information
         </div>
-        <button className="border-b-primary border-b-[2px] text-primary">
+        <Link to="/inbox" className="border-b-primary border-b-[2px] text-primary">
           Send Message
-        </button>
+        </Link>
       </div>
       <div className="mt-5 font-open space-y-5">
         {/* <div className='py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300'>
@@ -47,11 +48,11 @@ const ContactInfo = () => {
             </div> */}
         <div className="py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300">
           <span className="font-semibold text-gray-400">Email : </span>
-          <div>{user?.email}</div>
+          <a href={`mailto:${user?.email}`}>{user?.email}</a>
         </div>
         <div className="py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300">
           <span className="font-semibold text-gray-400">Website : </span>
-          <div>{user?.website || <span>Not updated <span className="text-sm font-semibold underline">Upade Now</span></span>}</div>
+          <div>{user?.website?<a href={user?.website}>{user?.website}</a>:<div>Not updated <Link to="/edit-profile" className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Add now</Link></div>}</div>
         </div>
       </div>
       <div className="mt-8">
@@ -59,7 +60,7 @@ const ContactInfo = () => {
           Person of Contact
         </div>
         {user?.contactPerson?.name?<POCDetails data={user?.contactPerson}/>:<div className="border-b-[1px] mt-4 text-red-500">
-        Contact Person not assigned <span className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Assign now</span>
+        Contact Person not assigned <Link to="/edit-profile?tab=contact-person-details" className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Assign now</Link>
         </div>}
       </div>
     </div>

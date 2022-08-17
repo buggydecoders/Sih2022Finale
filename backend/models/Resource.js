@@ -3,7 +3,10 @@ const mongoose = require('mongoose')
 const ResourceSchema = new mongoose.Schema({
     images: [{
         name: String,
-        url: String,
+        url: {
+            type: String,
+            default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660719679/325-3256246_fa-fa-product-icon-transparent-cartoons-fa-fa_qlti2r.jpg"
+        },
         size: String
     }],
     name: {
@@ -17,6 +20,9 @@ const ResourceSchema = new mongoose.Schema({
     },
     durationTo: {
         type: String
+    },
+    per:{
+        type:String
     },
     category: {
         type: String

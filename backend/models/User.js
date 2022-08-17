@@ -3,7 +3,11 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
     logo: {
         type: String,
-        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597704/_company-frontend_scmp_images_themes_katy_ghosts_company_ghost_company_200x200_v1_fa0fnj.png"
+        default: "https://res.cloudinary.com/unesco-admin/image/upload/v1660597704/_company-frontend_scmp_images_themes_katy_ghosts_company_ghost_company_200x200_v1_fa0fnj.png"
+    },
+    banner: {
+        type: String,
+        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp"
     },
     instituteName: {
         type: String,
@@ -32,14 +36,14 @@ const UserSchema = new mongoose.Schema({
         state: {
             type: String
         },
-        pincode : {
-            type : String
+        pincode: {
+            type: String
         }
     },
     contactPerson: {
         image: {
             type: String,
-            default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660597439/images_fywghz.png"
+            default: "https://res.cloudinary.com/unesco-admin/image/upload/v1660597439/images_fywghz.png"
         },
         name: {
             type: String
@@ -50,8 +54,11 @@ const UserSchema = new mongoose.Schema({
         position: {
             type: String
         },
-        phone : {
-            type : String
+        phone: {
+            type: String
+        },
+        signature: {
+            type: String
         }
     },
     resource: {
@@ -74,7 +81,11 @@ const UserSchema = new mongoose.Schema({
     resetToken: {
         type: String,
         default: ""
-    }
+    },
+    savedItems: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Resource'
+    }]
 }, {
     timestamps: true
 })

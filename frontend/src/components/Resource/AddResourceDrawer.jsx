@@ -63,9 +63,17 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
   const [uploadedFiles,setUploadedFiles] = useState([]);
   const [uploadLoading,setUploadLoading] = useState(false);
 
-  const handleSave = ()=>{
-    if (isEdit) return dispatch(editResource({...form,state : 'available'}, handleClose));
+  const handleSave = (e)=>{
+    e.preventDefault();
+    if (!form.category) return toast('Select a valid category');
+    if (!form.name) return toast('Name is missing');
+    if (!form.description) return toast('Description is missing');
+    if (!form.price) return toast('Price is missing');
 
+    if (form.images.length===0)return  toast('Add atleast one image')
+
+
+    if (isEdit) return dispatch(editResource({...form,state : 'available'}, handleClose));
     dispatch(AddResource({...form,state : 'available'}, handleClose));
   }
 
@@ -112,11 +120,13 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
         <FormControlLabel control={<Switch defaultChecked checked={form.isActive} onChange={(e)=>setForm(prev=>({...prev,isActive : e.target.checked}))} />} label="Is Active" />
         <FormControlLabel control={<Switch defaultChecked checked={form.isVacant} onChange={(e)=>setForm(prev=>({...prev,isVacant : e.target.checked}))} />} label="Is Vacant" />
         </div>
+        <form onSubmit={handleSave}>
         <div className="mt-5 font-open">
           <select
             defaultValue={form.category || "selectCategory"}
             name="category"
             onChange={handleChange}
+            required={true}
             className="w-full font-medium py-3 outline-none rounded-xl px-3 bg-gray-100"
           >
             <option disabled value="selectCategory" className="font-[600]">
@@ -133,6 +143,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
             label="Resource Name"
             required={true}
             onChange={handleChange}
+            
             value={form?.name}
             name="name"
             note="Give your resource a short and clear name."
@@ -147,18 +158,18 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
             note="Give your resource a short and clear description."
           />
           <TwoFields>
-            <Input value={form.price} name="price" onChange={handleChange} label="Price" required={true} type="number" note="" />
-            <Input label="per" type="number" note="Eg: Per/day, per/month" />
+            <Input required={true} value={form.price} name="price" onChange={handleChange} label="Price" type="number" note="" />
+            <Input required={true} label="per" type="number" onChange={handleChange} note="Eg: Per/day, per/month" />
           </TwoFields>
           <TwoFields>
-            <Input value={form.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date" required={true}  note="" />
-            <Input value={form.durationTo} onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
+            <Input required={true} value={form.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date"  note="" />
+            <Input required={true} value={form.durationTo} onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
           </TwoFields>
           <Input
             cols={7}
             value={form.conditions}
             note="These conditions will be followed by the institute"
-            required={true}
+        
             area={true}
             label="Conditions Of Use"
             name="conditions"
@@ -168,7 +179,6 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
             cols={7}
             value={form.instructions}
             note="Instructions involved to run the product"
-            required={true}
             area={true}
             label="Instructions of Use"
             name="instructions"
@@ -207,9 +217,10 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
           </div>
         </div>
         <div className="mt-12 flex gap-5 items-center justify-between">
-          <button disabled={loading==='SAVE'} className="px-7 disabled:opacity-40 rounded-md text-white font-open font-semibold bg-primary py-2" onClick={handleSave}>{loading==='SAVE'?'Loading..':'Save'}</button>
+          <button type="submit" disabled={loading==='SAVE'} className="px-7 disabled:opacity-40 rounded-md text-white font-open font-semibold bg-primary py-2" >{loading==='SAVE'?'Loading..':'Save'}</button>
          
         </div>
+        </form>
       </div>
     </Drawer>
   );

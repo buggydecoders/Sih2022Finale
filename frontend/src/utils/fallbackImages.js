@@ -1,0 +1,2 @@
+export const RESOURCE_FALLBACK_IMG='https://res.cloudinary.com/unesco-admin/image/upload/v1660720928/product-placeholder_jlxzxk.png'
+export const BANNER_FALLBACK_IMG='https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp'

@@ -9,17 +9,20 @@ import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import Store from "./store";
 import { Provider } from "react-redux";
+import SocketContextProvider from "./contexts/SocketContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  
   <Provider store={Store().store}>
     <PersistGate loading={null} persistor={Store().persistor}>
-      <React.StrictMode>
+    <SocketContextProvider>
         <BrowserRouter>
         <App />
         </BrowserRouter>
-      </React.StrictMode>
+        </SocketContextProvider>
+
     </PersistGate>
   </Provider>
 );

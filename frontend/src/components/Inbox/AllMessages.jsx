@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useContext } from "react";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -27,28 +28,33 @@ const MessageTabs = () => {
 
 const MessageCard = ({data})=>{
   const {user} = useSelector(state=>state.auth);
-  const {activeRoom} = useSelector(state=>state.chatRoom);
-  console.log(activeRoom, 'Active Room from message');
-  console.log(data);
+  const {activeRoom,lastMessage} = useSelector(state=>state.chatRoom);
+  // console.log(activeRoom, 'Active Room from message');
+  // console.log(data);
   const isActive = data._id===activeRoom._id;
   let cardUserData = data?.users[0]._id===user._id?data?.users[1]:data?.users[0];
-  console.log(cardUserData);
+  // console.log(cardUserData);
   const dispatch = useDispatch();
   const handleSelectActive = ()=>{
+    if (!isActive) {
     dispatch(setActiveRoom(data));
+    }
   }
+  let currentLastMessage = isActive?lastMessage:data?.lastMessage;
+  let updatedLastMessage = isActive?lastMessage?.content:data?.lastMessage?.content || '';
+  if (updatedLastMessage?.length>17) updatedLastMessage =  updatedLastMessage?.slice(0,17)  + '..'
   return (
     <div onClick={handleSelectActive} className={`${isActive?'':''} border-b-[1px] cursor-pointer relative border-black border-opacity-10 px-1 py-5`}>
       {isActive&&<div className="w-[5px] h-[85%] bg-primary absolute top-[50%] -translate-y-[50%] -left-2"></div>}
       <div className="flex gap-3 items-center">
-        <img src={data?.logo || UniversityLogo} alt="" className="w-[50px] h-[50px]" />
+        <img src={cardUserData?.logo} alt="" className="w-[50px] rounded-full h-[50px]" />
         <div className=" text-sm w-full">
           <div className="flex items-center justify-between w-full">
-            <div className="font-semibold text-sm ">{cardUserData.instituteName?.slice(0,12)}...</div>
-            <div className="text-xs font-[500]  text-gray-500">2 hours ago</div>
+            <div className="font-semibold text-sm ">{cardUserData?.instituteName?.slice(0,12)}...</div>
+            <div className="text-xs font-[500]  text-gray-500">{moment(currentLastMessage.createdAt).diff(moment(),'minutes')*-1} min ago</div>
           </div>
           <div className="mt-1 flex items-center justify-between">
-            <div className="text-xs font-[500]">{data?.lastMessage?.content || ''}</div>
+            <div className="text-xs font-[500]">{updatedLastMessage}</div>
             <div className="h-[17px] w-[17px] text-white  bg-primary flex items-center justify-center text-xs rounded-full">1</div>
           </div>
         </div>
@@ -62,9 +68,9 @@ const AllMessages = () => {
   const {rooms} = useSelector(state=>state.chatRoom);
 
   const {reciever} = useContext(MessageContext);
-  console.log(reciever);
+  // console.log(reciever);
 
-  console.log(rooms, "ROOMS");
+  // console.log(rooms, "ROOMS");
   return (
     <div className="bg-lightGray min-h-[90vh] w-full px-5 py-6 rounded-r-md  ">
       <div className="flex items-center justify-between">
@@ -82,7 +88,8 @@ const AllMessages = () => {
         <MessageTabs/>
       </div>
       <div className="mt-2 space-y-3">
-        {rooms?.length>0&&rooms.map(r=><MessageCard data={r}/>)}
+        {(!rooms || rooms?.length===0)&&<div className="py-20 text-center w-full font-open text-gray-500 font-[500]">No Chats Found</div>}
+        {rooms?.length>0&&rooms.filter(r=>r.lastMessage!==null).map(r=><MessageCard data={r}/>)}
       </div>
     </div>
   );
