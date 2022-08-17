@@ -4,8 +4,8 @@ const restrictTo = require('../middlewares/restrictTo');
 const requestController = require('../controller/requestController')
 
 router
-    .route('/')
-    .post(checkAuth, requestController.createRequest)
+    .route('/:id')
     .get(checkAuth, requestController.getRequest)
+    .post(checkAuth, requestController.createRequest)
 
 module.exports = router;
