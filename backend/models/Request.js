@@ -19,7 +19,7 @@ const RequestSchema = new mongoose.Schema({
     endDate: {
         type: String,
     },
-    notes: {
+    note: {
         type: String
     },
     reqType: {
