@@ -14,10 +14,10 @@ const FilterResources = () => {
             <div className='text-secondary underline text-sm cursor-pointer'>Clear all</div>
         </div>
         <CardCollection action='clear all' title={'Location'}>
-          {locations.map(l=><FilterCheckbox title={l}/>)}
+          {locations.map((l,idx)=><FilterCheckbox title={l} idx={idx}/>)}
         </CardCollection>
         <CardCollection action='clear all' title={'University'}>
-        {Universities.map(l=><FilterCheckbox title={l}/>)}
+        {Universities.map((l,idx)=><FilterCheckbox title={l} idx={idx}/>)}
 
         </CardCollection>
         <CardCollection action='clear all' title={'Budget'}>

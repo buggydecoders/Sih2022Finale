@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterCheckbox = ({ title, data, setData }) => {
+const FilterCheckbox = ({ title, data, setData, idx }) => {
   const handleChange = (e) => {
     let checked = e.target.checked;
     console.log(data, title, checked)
@@ -13,7 +13,7 @@ const FilterCheckbox = ({ title, data, setData }) => {
         );
   };
   return (
-    <div className="flex  gap-3 items-center">
+    <div className="flex  gap-3 items-center" key={idx}>
       <div className="">
         <input
           type="checkbox"
