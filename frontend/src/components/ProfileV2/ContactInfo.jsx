@@ -14,7 +14,7 @@ const POCDetails = ({data}) => {
           <div className="font-[500] text-xl trakcin text-gray-600">
             {data?.name}
           </div>
-          <div className="text-sm text-gray-400">Faculty of DBMS</div>
+          <div className="text-sm text-gray-400">{data?.position}</div>
         </div>
       </div>
       <div className="flex gap-3 flex-col items-start">
