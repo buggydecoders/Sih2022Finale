@@ -9,7 +9,7 @@ const BannerAndProfile = () => {
   const navigate = useNavigate();
   return (
     <div className=''>
-      <div className='w-full h-[30vh] bg-gray-200 rounded-md relative ' style={{ background: `url(${data.banner ? data.banner : 'https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp'}) center center/cover` }}>
+      <div className='w-full h-[30vh] bg-gray-200 rounded-md relative ' style={{ background: `url(${user.banner ? user.banner : 'https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp'}) center center/cover` }}>
         <div onClick={() => navigate('/edit-profile')} className='border-[1px] border-primary text-primary w-fit -bottom-2 translate-y-[100%] px-5 rounded-xl hover:bg-primary hover:text-white duration-300 transition-all ease-in-out cursor-pointer right-0 absolute'>Edit Profile</div>
       </div>
       <div className='flex justify-between items-center'>
