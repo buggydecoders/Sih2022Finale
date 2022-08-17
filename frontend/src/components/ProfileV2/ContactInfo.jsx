@@ -52,7 +52,7 @@ const ContactInfo = () => {
         </div>
         <div className="py-2 flex items-center gap-5 border-b-[1px] border-b-gray-300">
           <span className="font-semibold text-gray-400">Website : </span>
-          <div>{<a href={user?.website} target="_blank">{user?.website}</a> || <span>Not updated <Link to="/edit-profile" className="text-sm font-semibold underline cursor-pointer">Upade Now</Link></span>}</div>
+          <div>{user?.website?<a href={user?.website}>{user?.website}</a>:<div>Not updated <Link to="/edit-profile" className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Add now</Link></div>}</div>
         </div>
       </div>
       <div className="mt-8">
@@ -60,7 +60,7 @@ const ContactInfo = () => {
           Person of Contact
         </div>
         {user?.contactPerson?.name?<POCDetails data={user?.contactPerson}/>:<div className="border-b-[1px] mt-4 text-red-500">
-        Contact Person not assigned <Link to="/edit-profile" className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Assign now</Link>
+        Contact Person not assigned <Link to="/edit-profile?tab=contact-person-details" className="text-black ml-2 underline cursor-pointer font-semibold text-sm">Assign now</Link>
         </div>}
       </div>
     </div>
