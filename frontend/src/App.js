@@ -20,6 +20,8 @@ import { useEffect } from "react";
 import { checkAuth } from "./store/auth/actions";
 import ProfileV2 from "./pages/ProfileV2";
 import NotFound from "./pages/404";
+import RequestStatus from "./pages/Status/RequestStatus";
+import StatusV2 from "./pages/Status/StatusV2";
 
 
 
@@ -63,7 +65,17 @@ export default function App() {
           }
           
         >
-          <Route exact path='/status' element={<Status />} />
+          <Route exact path='/status' element={<StatusV2 />} />
+        </Route>
+        <Route
+          exact
+          path="/status/:id"
+          element={
+            <ProtectedRoute access="private"  scope={"institute"} />
+          }
+          
+        >
+          <Route exact path='/status/:id' element={<RequestStatus />} />
         </Route>
         <Route
           exact

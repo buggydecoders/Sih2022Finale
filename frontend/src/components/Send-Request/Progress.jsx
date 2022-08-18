@@ -21,8 +21,7 @@ const Progress = () => {
   return (
     <div>
         <div className='flex justify-between items-center relative z-[100] top-[10px]'>
-            <Step title="Basic Info." side="start" state='done'/>
-            <Step title="Confirmation" side="center" state='done'/>
+            <Step title="Confirmation" side="start" state='done'/>
             <Step title="Sign Contract" side="center" state='active'/>
             <Step title="Payment" side="center" state='inactive'/>
             <Step title="Exchange duration" side="end" state='inactive'/>

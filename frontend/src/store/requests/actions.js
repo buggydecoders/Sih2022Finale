@@ -59,15 +59,17 @@ export const checkRequestExists = (id,existCallback, notExistsCallBack)=>async(d
 
 
 
-export const fetchSingleRequest = (id)=>async(dispatch,getState)=>{
+export const fetchSingleRequest = (id,successCallback,errorCallback)=>async(dispatch,getState)=>{
     try {
-        dispatch(setLoading(true));
+        dispatch(setLoading('FETCH_SINGLE_REQ'));
         const result = await fetchRequestAPI(id);
         let request = result.data.request;
         dispatch(setRequest(request));
+        successCallback&&successCallback(result.data);
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
+        errorCallback&&errorCallback(err);
     }finally{
         dispatch(setLoading(false));
     }

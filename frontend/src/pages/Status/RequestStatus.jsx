@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Layout from '../../components/Layout'
 import BasicInfoForm from '../../components/Send-Request/BasicInfoForm'
 import Confirmation from '../../components/Send-Request/Confirmation'
@@ -8,28 +9,53 @@ import PaymentInfo from '../../components/Send-Request/PaymentInfo'
 import Progress from '../../components/Send-Request/Progress'
 import ResourceCard from '../../components/Send-Request/ResourceCard'
 import SignContract from '../../components/Send-Request/SignContract'
+import { fetchSingleRequest } from '../../store/requests/actions'
+import {useParams, useNavigate} from 'react-router-dom'
+import {toast} from 'react-toastify';
+const RequestStatus = () => {
+  const {loading,activeRequest : requestData} = useSelector(state=>state.requests)
+  const dispatch = useDispatch();
+  const {id : requestId} = useParams();
+  const navigate = useNavigate();
+  useEffect(()=>{
+    const errorCallback = ()=>{
+      navigate('/not-found')
+    }
+    dispatch(fetchSingleRequest(requestId, null,errorCallback));
+  }, [])
+  console.log(requestData)
 
-const SendRequest = () => {
+
+  const renderComponent = ()=>{
+    switch(requestData.status) {
+      case 'pending' : return <Confirmation data={requestData}/>
+      case 'cancelled' : return <Confirmation data={requestData}/>
+      case 'accepeted' : return <SignContract data={requestData}/>
+      case 'signed' : return <Payment data={requestData}/>
+      case 'approved' : return <ExchangePage data={requestData}/>
+    }
+  }
+
+
+
+
+
   return (
     <Layout >
-        <div className='py-16 px-10 bg-lightGray'>
-            <div className='text-4xl font-bold'>Send Request</div>
+       {loading?<div>Loading...</div>:<div className='py-16 px-10 bg-lightGray'>
+            <div className='text-4xl font-bold'>Request Status</div>
             <div className='mt-2 text-gray-400'>Your resource is just a few clicks away. </div>
             <div className='mt-4'><Progress/></div>
             <div className='mt-8 grid grid-cols-[2.3fr_1fr] gap-5'>
               <div className=''>
-                {/* <BasicInfoForm/> */}
-                {/* <Confirmation/> */}
-                {/* <SignContract/> */}
-                {/* <Payment/> */}
-                <ExchangePage/>
+               {(requestData.status==='pending' || requestData.status==='cancelled')&&<Confirmation data={requestData}/>}
               </div>
-              <ResourceCard/>
+              <ResourceCard data={{...requestData.resource,instituteId :requestData.lendingInstitute }} institute={requestData.lendingInstitute}/>
               {/* <PaymentInfo/> */}
             </div>
-        </div>
+        </div>}
     </Layout>
   )
 }
 
-export default SendRequest
+export default RequestStatus

@@ -22,7 +22,6 @@ root.render(
         <App />
         </BrowserRouter>
         </SocketContextProvider>
-
     </PersistGate>
   </Provider>
 );
