@@ -104,8 +104,6 @@ app.all('*', (req, res, next) => {
     );
 });
 
-
-
 // error handling middleware
 app.use(globalErrorHandler);
 
