@@ -6,7 +6,7 @@ const Pagination = () => {
 
     }
   return (
-    <div className='py-6 mt-8 px-10 bg-lightGray flex justify-between items-center'>
+    <div className='py-6 px-10 bg-lightGray flex justify-between items-center'>
         <div className='font-[600] text-gray-400'>1-7 out of 63</div>
         <div className='flex items-center gap-3'>
             <div className='font-[600]'>Requests per page</div>
