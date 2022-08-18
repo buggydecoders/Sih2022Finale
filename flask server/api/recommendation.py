@@ -23,11 +23,11 @@ cv = CountVectorizer(max_features=5000,stop_words='english')
 
 recommendation = Blueprint('recommendation', __name__)
 
-CONNECTION_STRING = "mongodb://prathamrasal:pratham@movies-shard-00-00.3vhge.mongodb.net:27017,movies-shard-00-01.3vhge.mongodb.net:27017,movies-shard-00-02.3vhge.mongodb.net:27017/sihdb?ssl=true&replicaSet=atlas-13vdfc-shard-0&authSource=admin&retryWrites=true&w=majority"
+CONNECTION_STRING = "mongodb://prathamrasal:pratham@ac-tihbzys-shard-00-00.kjaebfo.mongodb.net:27017,ac-tihbzys-shard-00-01.kjaebfo.mongodb.net:27017,ac-tihbzys-shard-00-02.kjaebfo.mongodb.net:27017/?ssl=true&replicaSet=atlas-101g8j-shard-0&authSource=admin&retryWrites=true&w=majority"
 client = MongoClient(CONNECTION_STRING)
-db = client['sihdb']
+db = client['sih_db']
 resources = db['resources']
-institutes =db['institutes']
+institutes =db['users']
 
 def getCleanText(text):
     text = str(text)
@@ -48,29 +48,33 @@ def recommendation_foundation():
     resInfo=resources.find()
     resInfo= list(resInfo)
     resDF = pd.DataFrame(resInfo)
+    resDF =resDF[['_id','name','price','category','instituteId','description']]
     insInfo=institutes.find()
     insInfo= list(insInfo)
     insDF = pd.DataFrame(insInfo)
     street = []
     state = []
     city = []
+    pincode = []
     for i in range(len(insDF)): 
-        street.append(insDF.iloc[i]['address']['street'])
-        city.append(insDF.iloc[i]['address']['city'])
-        state.append(insDF.iloc[i]['address']['state'])
+        street.append(insDF.iloc[i].address['street'])
+        city.append(insDF.iloc[i].address['city'])
+        state.append(insDF.iloc[i].address['state'])
+        pincode.append(insDF.iloc[i].address['pincode'])
     insDF['street'] = street
     insDF['city'] = city
     insDF['state'] = state
-    insDF = insDF[['_id','instituteName','aisheCode','naac','street','city','state']]
-    resDF = pd.merge(resDF,insDF,left_on="lendingInstitute", right_on = "_id", how="inner")
-    resDF = resDF[['_id_x','title','description','cost','city','street','state','naac']]
+    insDF['pincode'] = pincode 
+    insDF = insDF[['_id','instituteName','aisheCode','naac','street','city','state','pincode']]
+    resDF = pd.merge(resDF,insDF,left_on="instituteId", right_on = "_id", how="inner")
+    resDF = resDF[['_id_x','name','category','description','price','city','street','state','pincode','naac']]
     resDF.dropna(inplace=True)
     # resDF['description'] = resDF['description'].apply(getCleanText)
     resDF['tags'] = ''
     return resDF
 
 def generateTag(resDF):
-    resDF['tags'] = resDF['title'] + " " + resDF['description']+ " "  + resDF['cost']+ " " + resDF['city']+ " " +resDF['street']+ " " +resDF['state']+ " " +resDF['naac']
+    resDF['tags'] = resDF['name'] + " " + resDF['description']+ " "  + resDF['price']+ " "  + resDF['category']+ " " + resDF['city']+ " " +resDF['street']+ " " +resDF['state']+ " " +resDF['naac']
     resDF['tags'] = resDF['tags'].apply(lambda x: x.lower())
     return resDF
 
@@ -80,23 +84,25 @@ def vectorize(narr):
     similarity = cosine_similarity(vector)
     return similarity    
 
-def recommend_search(instituteId,title):
+def recommend_search(instituteId,name):
     resDF = recommendation_foundation()
     resDF = generateTag(resDF)
     institute = institutes.find_one({"_id": ObjectId(instituteId)})
-    institute = pd.DataFrame(institute)
     city = institute['address']['city']
     street = institute['address']['street']
     state = institute['address']['state']
-    naac = institute['naac'][0]
-    tags = title + city + street +state + naac
+    pincode = institute['address']['pincode']
+    naac = institute['naac']
+    tags = name+ city + street +state +pincode+ naac
     myDict = {
-         "title":title,
+         "name":name,
+         "category":" ",
          "description":" ", 
-         "cost":" ", 
+         "price":" ", 
          "city": city,
          "street":street,
          "state":state,
+         "pincode":pincode,
          "naac": naac,
          "tags": tags.lower()
     }
@@ -106,38 +112,41 @@ def recommend_search(instituteId,title):
     recommended_list = sorted(list(enumerate(vector[-1])),reverse=True,key= lambda x:x[1])
     recList = []
     for i in recommended_list[1:]:
-        recList.append(resDF.iloc[i[0]]._id_x)
+        recList.append(resDF.iloc[i[0]]['_id_x'])
     return recList
 
 def dashboard(instituteId):
     resDF = recommendation_foundation()
     resDF = generateTag(resDF)
     institute = institutes.find_one({"_id": ObjectId(instituteId)})
-    institute = pd.DataFrame(institute)
     city = institute['address']['city']
     street = institute['address']['street']
     state = institute['address']['state']
-    naac = institute['naac'][0]
-    tags = city +" "+ street +" "+state +" "+ naac
+    pincode = institute['address']['pincode']
+    naac = institute['naac']
+    tags = city + street +state +pincode+ naac
     myDict = {
-         "title":" ",
+         "name":" ",
+         "category":" ",
          "description":" ", 
-         "cost":" ", 
+         "price":" ", 
          "city": city,
          "street":street,
          "state":state,
+         "pincode":pincode,
          "naac": naac,
          "tags": tags.lower()
     }
+    print(myDict)
     newDF = resDF.append(myDict,ignore_index = True)
     newarr = newDF['tags'].values
     vector = vectorize(newarr)
     recommended_list = sorted(list(enumerate(vector[-1])),reverse=True,key= lambda x:x[1])
     recList = []
     for i in recommended_list[1:]:
-        recList.append(resDF.iloc[i[0]]._id_x)
+        recList.append(resDF.iloc[i[0]]['_id_x'])
     return recList
-
+    
 def parse_json(data):
     return json.loads(json_util.dumps(data))
 
