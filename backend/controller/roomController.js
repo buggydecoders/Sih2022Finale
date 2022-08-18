@@ -50,7 +50,7 @@ exports.fetchRooms = catchAsync(async(req,res,next)=>{
 
 exports.fetchMessagesByRoom = catchAsync(async (req, res, next) => {
     const {id} = req.params;
-    console.log(id);
+    // console.log(id);
     const messages = await Message.find({room : id}).populate('from').populate('to');
     res.json({
         status : true,

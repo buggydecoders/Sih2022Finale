@@ -63,7 +63,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
             state = aishe[i].state_name
             city = aishe[i].other_address.split(",")[1]
             street = aishe[i].other_address.split(",").slice(3).toString()
-            console.log(aishe[i].other_address.split(",")[2])
             pincode = aishe[i].other_address.split(",")[2]
             naac = aishe[i].naac_grade
         }
@@ -84,7 +83,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
             state
         }
     })
-    console.log(newUser)
     const user = await newUser.save();
     const updatedUser = await updateReputationPoint(user.id, "")
     const saveItem = new SavedItem({
