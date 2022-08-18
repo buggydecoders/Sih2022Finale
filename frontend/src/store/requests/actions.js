@@ -40,7 +40,7 @@ export const setIsExists = (state)=>{
 
 export const checkRequestExists = (id,existCallback, notExistsCallBack)=>async(dispatch,getState)=>{
     try {
-        dispatch(setLoading(true));
+        dispatch(setLoading('CHECK_REQ'));
         const result = await checkExistsAPI(id);
         let fetchedData = result.data;
         dispatch(setIsExists(fetchedData.status));
@@ -73,15 +73,17 @@ export const fetchSingleRequest = (id)=>async(dispatch,getState)=>{
     }
 }
 
-export const sendRequest = (data)=>async(dispatch)=>{
+export const sendRequest = (data,successCallback,errorCallback)=>async(dispatch)=>{
     try {
         dispatch(setLoading(true));
         const result = await createRequestAPI(data);
         let request = result.data.request;
         dispatch(addRequest(request));
+        successCallback&&successCallback(result.data);
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
+        errorCallback&&errorCallback()
     }finally{
         dispatch(setLoading(false));
     }

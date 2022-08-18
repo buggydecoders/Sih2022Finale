@@ -19,6 +19,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { checkAuth } from "./store/auth/actions";
 import ProfileV2 from "./pages/ProfileV2";
+import NotFound from "./pages/404";
 
 
 
@@ -143,7 +144,9 @@ export default function App() {
         >
           <Route exact path='/recieved-request' element={<RecievedRequest />} />
         </Route>
-    
+
+        {/* Extra Routes */}
+        <Route exact path="/not-found" element={<NotFound/>}></Route>
       </Routes>
       <ToastContainer position="top-right"/>
       </>

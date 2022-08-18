@@ -6,6 +6,7 @@ const requestController = require('../controller/requestController')
 router
     .route('/')
     .get(checkAuth, requestController.getAllRequest)
+    .post(checkAuth, requestController.createRequest)
 
 router
     .route('/recieved')
@@ -14,7 +15,6 @@ router
 router
     .route('/:id')
     .get(checkAuth, requestController.getRequest)
-    .post(checkAuth, requestController.createRequest)
     .patch(checkAuth, requestController.updateRequest)
 
 router.route('/exists/:id').get(checkAuth,requestController.requestExists);

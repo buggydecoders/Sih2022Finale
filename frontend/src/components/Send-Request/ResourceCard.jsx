@@ -2,18 +2,18 @@ import React from 'react'
 import ResourceImg from '../../assets/Resources/3dPrinter.png';
 import {BsChevronDown} from 'react-icons/bs';
 import { RESOURCE_FALLBACK_IMG } from '../../utils/fallbackImages';
-const ResourceCard = () => {
+const ResourceCard = ({data}) => {
   return (
     <div className='w-full bg-white px-3 py-4 rounded-xl'>
         <div className='w-full flex gap-2 p-2 rounded-xl border-[1px] border-gray-300'>
-            <img src={ResourceImg || RESOURCE_FALLBACK_IMG} className='w-[100px] h-fit rounded-xl'/>
+            <img src={RESOURCE_FALLBACK_IMG} className='w-[100px] h-fit rounded-xl'/>
             <div className=''>
-                <div className='font-bold text-base mt-1'>3D Printer Model Generation with ok</div>
-                <div className='text-xs text-primary  font-[600]'>Insitute of Enginering, DAVV</div>
+                <div className='font-bold text-base mt-1'>{data?.name}</div>
+                <div className='text-xs text-primary  font-[600]'>{data?.instituteId?.instituteName}</div>
                 <div className='mt-3 text-sm'>
                     <div className='font-open'>
                         <div className='text-gray-600 text-xs'>Available duration</div>
-                        <div className='font-semibold mt-1 text-xs text-black'>14 July 2022 | 16 July 2022</div>
+                        <div className='font-semibold mt-1 text-xs text-black'>{data?.durationFrom} | {data?.durationTo}</div>
                     </div>
                 </div>
             </div>

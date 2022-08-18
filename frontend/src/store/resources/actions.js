@@ -48,14 +48,16 @@ export const fetchDashboardResources = (page,limit)=>async(dispatch,getState)=>{
     }
 }
 
-export const fetchSingleResource = (id)=>async(dispatch)=>{
+export const fetchSingleResource = (id,successCallback,errorCallback)=>async(dispatch)=>{
     try {
         dispatch(setLoading("FETCH-RESOURCE"));
         const result = await fetchSingleResourceAPI(id);
         let fetchedData = result.data.resource;
         dispatch(setResource(fetchedData));
+        successCallback&&successCallback(fetchedData);
     }catch(err) {
         console.log(err);
+        errorCallback&&errorCallback(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
     }finally{
         dispatch(setLoading(false));

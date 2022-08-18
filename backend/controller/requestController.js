@@ -1,20 +1,29 @@
 const Request = require('../models/Request');
+const Resource = require('../models/Resource');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
 
 exports.createRequest = catchAsync(async (req, res, next) => {
-    const { lendingInstitute, aspirantInstitute, endDate, startDate, notes, reqType, status } = req.body;
-    const checkReq = await Request.findOne({ resource: req.params.id, aspirantInstitute: req.user.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
-    if (checkReq) {
-        return next(
-            new AppError('Request Already Exists.', 403)
-        )
-    }
-    const request = new Request({
-        lendingInstitute, aspirantInstitute, endDate, startDate, notes, reqType, status
-    })
-    const addedRequest = await request.save()
-    res.json({ success: true, message: "Request Added Successfully", request: addedRequest })
+   const {resourceId,startDate,endDate,note} = req.body;
+   const foundResource = await Resource.findById(resourceId).populate('instituteId');
+   if (!foundResource) return next(new AppError(`Resource with id ${resourceId} was not found!`, 404));
+   const isRequest = await Request.findOne({aspirantInstitute : req.user.id, isActive : true,resource : resourceId});
+   if (isRequest) return next(new AppError(`You already have a request ongoing for the same resource`, 406));
+   let newRequest = new Request({
+    resource : resourceId,
+    aspirantInstitute : req.user.id,
+    lendingInstitute : foundResource.instituteId._id,
+    startDate,
+    endDate,
+    note
+   })
+   newRequest = await newRequest.save();
+
+   res.json({
+    status : true,
+    message : `Request for resource ${resourceId} has been created successfully!`,
+    request : newRequest
+   })
 })
 
 exports.requestExists = catchAsync(async (req, res, next) => {
