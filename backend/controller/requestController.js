@@ -1,6 +1,9 @@
 const Request = require('../models/Request');
+const User = require('../models/User');
 const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
+const axios = require('axios')
+const FormData = require('form-data');
 
 exports.createRequest = catchAsync(async (req, res, next) => {
     const { lendingInstitute, aspirantInstitute, endDate, startDate, notes, reqType, status } = req.body;
@@ -51,4 +54,20 @@ exports.getRecievedRequest = catchAsync(async (req, res, next) => {
     }
     const requests = await Request.find(queryObject)
     res.json({ success: true, requests })
-}) 
+})
+
+exports.checkSignature = catchAsync(async (req, res, next) => {
+    const { signature } = req.body;
+    const user = await User.findById(req.user.id)
+    const verifiedSignature = user.contactPerson.signature
+    let bodyFormData = new FormData()
+    bodyFormData.append('image1', verifiedSignature)
+    bodyFormData.append('image2', signature)
+    let { data } = await axios({
+        method: "post",
+        url: "https://flask-sih.herokuapp.com/verify-signature",
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data" },
+    })
+    res.json({ isVerified: data })
+})
