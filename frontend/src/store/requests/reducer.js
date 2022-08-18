@@ -3,7 +3,8 @@ const INITIAL_STATE = {
     activeRequest : {},
     requests : [],
     loading : false,
-    recievedRequests : []
+    recievedRequests : [],
+    isExists : false  
 }
 
 
@@ -13,5 +14,7 @@ export default function RequestReducer(state=INITIAL_STATE,action) {
         case CONSTANTS.SET_REQUEST : return {...state,activeRequest : action.payload};
         case CONSTANTS.ADD_REQUEST : return {...state,requests : [...state.requests, action.payload]};
         case CONSTANTS.SET_LOADING : return {...state,loading : action.payload}
+        case CONSTANTS.SET_IS_EXISTS : return {...state,isExists : action.payload}
+        default : return state;
     }
 }

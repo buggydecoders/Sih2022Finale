@@ -54,7 +54,7 @@ exports.getMyResource = catchAsync(async (req, res, next) => {
 })
 
 exports.getResourceDetails = catchAsync(async (req, res, next) => {
-    const resource = await Resource.findById(req.params.id)
+    const resource = await Resource.findById(req.params.id).populate('instituteId');
     res.json({ success: true, resource })
 })
 
@@ -67,6 +67,8 @@ exports.removeResource = catchAsync(async (req, res, next) => {
     const resource = await Resource.findByIdAndRemove(req.params.id)
     res.json({ success: true, resource })
 })
+
+
 
 
 

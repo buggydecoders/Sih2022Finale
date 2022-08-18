@@ -10,19 +10,10 @@ const ResourceCard = () => {
             <div className=''>
                 <div className='font-bold text-base mt-1'>3D Printer Model Generation with ok</div>
                 <div className='text-xs text-primary  font-[600]'>Insitute of Enginering, DAVV</div>
-
-                <div className='mt-3 text-sm grid grid-cols-4'>
-                    <div className=''>
-                        <div className='text-gray-600'>Feature 1</div>
-                        <div className='font-semibold text-black'>Sol</div>
-                    </div>
-                    <div className=''>
-                        <div className='text-gray-600'>Feature 1</div>
-                        <div className='font-semibold text-black'>Sol</div>
-                    </div>
-                    <div className=''>
-                        <div className='text-gray-600'>Feature 1</div>
-                        <div className='font-semibold text-black'>Sol</div>
+                <div className='mt-3 text-sm'>
+                    <div className='font-open'>
+                        <div className='text-gray-600 text-xs'>Available duration</div>
+                        <div className='font-semibold mt-1 text-xs text-black'>14 July 2022 | 16 July 2022</div>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,9 @@ const BasicInfoForm = () => {
     });
     const handleChange = (e)=>setForm(prev=>({...prev,[e.target.name]  :e.target.value}));
     const {loading} = useSelector(state=>state.requests);
+    const handleSubmit = ()=>{
+
+    }
   return (
     <form onSubmit={handleSubmit} className='px-8'>
         <div className='font-semibold text-2xl'>Duration</div>

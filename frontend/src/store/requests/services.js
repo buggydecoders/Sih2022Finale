@@ -15,3 +15,7 @@ export const createRequestAPI = async(data)=>{
     return result;
 }
 
+export const checkExistsAPI = async(id)=>{
+    const result = await serverInstance.get(`/request/exists/${id}`);
+    return result;
+}

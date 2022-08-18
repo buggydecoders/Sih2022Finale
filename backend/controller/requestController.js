@@ -17,12 +17,25 @@ exports.createRequest = catchAsync(async (req, res, next) => {
     res.json({ success: true, message: "Request Added Successfully", request: addedRequest })
 })
 
+exports.requestExists = catchAsync(async (req, res, next) => {
+    const foundReq = await Request.findOne({resource : req.params.id,aspirantInstitute : req.user.id, isActive : true});
+    if (foundReq) {
+        return res.json({
+            status : true,message : 'Request exists',  request : foundReq
+        })
+    }
+    else return res.json({
+        status : false, message : "Request doesn't exists"
+    })
+});
+
+
 exports.getRequest = catchAsync(async (req, res, next) => {
     const checkReq = await Request.findOne({ id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (checkReq) {
         return res.json({ state: true, message: "Request exist Already", request: checkReq })
     }
-    return res.json({ state: false, message: "Request Does not exists." })
+    return next(new AppError(`Request with id ${req.params.id} doesnt exists!`, 404))
 })
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {

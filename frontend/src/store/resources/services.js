@@ -20,3 +20,8 @@ export const deleteSavedItemAPI = async(id)=>{
     const result = await serverInstance.delete(`/resource/save/${id}`);
     return result;
 }
+
+export const fetchSingleResourceAPI = async(id)=>{
+    const result = await serverInstance.get(`/resource/${id}`);
+    return result;
+}

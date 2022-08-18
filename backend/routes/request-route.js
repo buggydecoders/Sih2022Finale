@@ -17,4 +17,6 @@ router
     .post(checkAuth, requestController.createRequest)
     .patch(checkAuth, requestController.updateRequest)
 
+router.route('/exists/:id').get(checkAuth,requestController.requestExists);
+
 module.exports = router;

@@ -1,4 +1,4 @@
-import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchDashboardResourcesAPI,  fetchResourcesAPI, updateResourceAPI } from "./services";
+import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchDashboardResourcesAPI,  fetchResourcesAPI, fetchSingleResourceAPI, updateResourceAPI } from "./services";
 import CONSTANTS from './constants';
 import {toast} from 'react-toastify'
 import { fetchSavedResourcesAPI } from "./services";
@@ -18,10 +18,11 @@ const setLoading = (state)=>{
     }
 }
 
-const saveResourceInStore = (data)=>{
+
+export const setResource = (data)=>{
     return {
-        type : CONSTANTS.SAVE_RESOURCE_FOR_LATER,
-        payload :data
+        type : CONSTANTS.SET_RESOURCE,
+        payload : data
     }
 }
 
@@ -47,6 +48,19 @@ export const fetchDashboardResources = (page,limit)=>async(dispatch,getState)=>{
     }
 }
 
+export const fetchSingleResource = (id)=>async(dispatch)=>{
+    try {
+        dispatch(setLoading("FETCH-RESOURCE"));
+        const result = await fetchSingleResourceAPI(id);
+        let fetchedData = result.data.resource;
+        dispatch(setResource(fetchedData));
+    }catch(err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+    }finally{
+        dispatch(setLoading(false));
+    }
+}
 
 export const setSavedItems = (data)=>{
     return {

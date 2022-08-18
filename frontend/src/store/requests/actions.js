@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 import CONSTANTS from './constants';
-import { createRequestAPI, fetchAllRequestsAPI, fetchRequestAPI } from './services';
+import { checkExistsAPI, createRequestAPI, fetchAllRequestsAPI, fetchRequestAPI } from './services';
 
 export const setLoading = (state)=>{
     return {
@@ -30,13 +30,25 @@ export const addRequest = (data)=>{
     }
 }
 
+export const setIsExists = (state)=>{
+    return {
+        type : CONSTANTS.SET_IS_EXISTS,
+        payload : state
+    }
+}
 
-export const fetchRequests = (data)=>async(dispatch,getState)=>{
+
+export const checkRequestExists = (id,existCallback, notExistsCallBack)=>async(dispatch,getState)=>{
     try {
         dispatch(setLoading(true));
-        const result = await fetchAllRequestsAPI();
-        let requests = result.data.requests;
-        dispatch(setRequests(requests));
+        const result = await checkExistsAPI(id);
+        let fetchedData = result.data;
+        dispatch(setIsExists(fetchedData.status));
+        if (fetchedData.status) {
+        existCallback&&existCallback(fetchedData);
+        }else {
+            notExistsCallBack&&notExistsCallBack();
+        }
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
@@ -44,6 +56,7 @@ export const fetchRequests = (data)=>async(dispatch,getState)=>{
         dispatch(setLoading(false));
     }
 }
+
 
 
 export const fetchSingleRequest = (id)=>async(dispatch,getState)=>{

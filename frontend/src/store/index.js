@@ -9,6 +9,7 @@ import authReducer from "./auth/reducers";
 import MyResourceReducer from "./myresources/reducers";
 import chatRoomReducer from "./chatRoom/reducers";
 import ResourcesReducer from "./resources/reducers";
+import RequestReducer from "./requests/reducer";
 
 
 const rootReducer = combineReducers({
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
     auth : authReducer,
     myResources : MyResourceReducer,
     resources: ResourcesReducer,
-    chatRoom : chatRoomReducer
+    chatRoom : chatRoomReducer,
+    requests : RequestReducer
 });
 // // Middleware: Redux Persist Config
 const persistConfig = {
