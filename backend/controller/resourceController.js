@@ -114,7 +114,6 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
         })
     }
     foundUser.savedItems = foundUser.savedItems.filter(s => s.id !== id);
-    // console.log(foundUser.savedItems[0].id);
     let updatedUser = await foundUser.save();
     res.json({
         resource: foundResource,
@@ -132,7 +131,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     bodyFormData.append('id', req.user.id)
     let { data } = await axios({
         method: "post",
-        url: "http://127.0.0.1:5001/recommendation",
+        url: "https://sih-flask-server.herokuapp.com/recommendation",
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
     })
@@ -180,7 +179,7 @@ exports.searchResource = catchAsync(async (req, res, next) => {
 
     let { data } = await axios({
         method: "post",
-        url: "http://127.0.0.1:5001/recommendation/search",
+        url: "https://sih-flask-server.herokuapp.com/recommendation/search",
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
     })
