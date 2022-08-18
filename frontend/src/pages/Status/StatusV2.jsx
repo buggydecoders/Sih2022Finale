@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import { MdSearch } from "react-icons/md";
 import Logo from "../../assets/DAVV_LOGO.png";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
+import {IoIosArrowForward} from 'react-icons/io';
+import ManageRequestDrawer from "../../components/ManageRequest/ManageRequestDrawer";
 const StatusV2 = () => {
   const Tab = ({ title, selected, setSelected, count, id }) => {
     return (
@@ -18,30 +20,46 @@ const StatusV2 = () => {
   };
 
   const RequestCard = () => {
+    const [isOpen,setIsOpen] =useState(false);
     return (
-      <tr class=" border-b-[1px]  dark:border-gray-100">
+      <>
+      <tr onClick={()=>setIsOpen(true)} class="border-b-[1px] hover:bg-lightGray transition-all duration-300 cursor-pointer  dark:border-gray-100">
         <th
           scope="row"
           class="py-5 px-6 font-medium text-gray-900 whitespace-nowrap "
         >
-         <div className="flex"></div>
+          
+          <div className="flex gap-2 items-center">
+            <img src={Logo} className='w-[40px] h-[40px] rounded-full'/>
+            <div className="">Institute of Engineering & Technology, DAVV</div>
+          </div>
         </th>
         <th
           scope="row"
           class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
         >
-          Apple MacBook Pro 17"
+          <div className="flex gap-2 items-center">
+            <img src={RESOURCE_FALLBACK_IMG} className='w-[40px] h-[40px] rounded-xl'/>
+            <div className="font-open ">Meths Lab</div>
+          </div>
         </th>
-        <td class="py-4 px-6">Sliver</td>
-        <td class="py-4 px-6">Laptop</td>
-        <td class="py-4 px-6">$2999</td>
+        <td class="py-4 px-6 font-open">
+        13 July 2022 - 14 July 2022
+        </td>
+        <td class="py-4 px-6">
+          <div className="font-open text-green-500 font-[700] underline rounded-xl px-3 py-1">Done</div>
+        </td>
+        <td class="py-4 px-3 font-open">13 July 2022</td>
+        <td class="py-4 px-3 text-gray-700 font-open"><IoIosArrowForward size={28}/></td>
       </tr>
+      <ManageRequestDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
+      </>
     );
   };
 
   return (
     <Layout>
-      <div className="bg-lightGray py-10 p-16">
+      <div className="bg-lightGray py-10 p-16 font-open">
         <div className="">
           <div className="font-[700] text-3xl">Request Status</div>
           <div className="text-base mt-2 font-open text-gray-700">
@@ -92,8 +110,12 @@ const StatusV2 = () => {
                     Requested Date
                   </th>
                 </tr>
+                <tr></tr>
               </thead>
               <tbody>
+                <RequestCard/>
+                <RequestCard/>
+                <RequestCard/>
                 <RequestCard/>
               </tbody>
             </table>
