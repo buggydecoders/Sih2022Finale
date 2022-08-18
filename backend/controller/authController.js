@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const aishe = require('../utils/aishe.json')
 const SavedItem = require('../models/SavedResource')
 const updateReputationPoint = require('../utils/reputation')
+var slugify = require('slugify')
 
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
@@ -73,6 +74,14 @@ exports.createUser = catchAsync(async (req, res, next) => {
     const newUser = new User({
         instituteName,
         email,
+        username: slugify(instituteName, {
+            replacement: '-',
+            remove: undefined,
+            lower: true,
+            strict: true,
+            locale: 'vi',
+            trim: true
+        }),
         aisheCode,
         password: hashPass,
         naac,
@@ -156,3 +165,19 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     await user.save();
     res.json({ success: true, message: "Password Changed Succesfully" })
 })
+
+// exports.usernameScript = catchAsync(async (req, res, next) => {
+//     const user = await User.find();
+//     for (let i = 0; i < user.length; i++) {
+// user[i].username = slugify(user[i].instituteName, {
+//     replacement: '-',
+//     remove: undefined,
+//     lower: true,
+//     strict: true,
+//     locale: 'vi',
+//     trim: true
+})
+//         await user[i].save()
+//     }
+//     res.json({ success: true })
+// })

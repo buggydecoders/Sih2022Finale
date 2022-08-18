@@ -7,10 +7,13 @@ const UserSchema = new mongoose.Schema({
     },
     banner: {
         type: String,
-        default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp"
+        default: "https://res.cloudinary.com/unesco-admin/image/upload/v1660722255/banner-placeholder_nyqa5j.webp"
     },
     instituteName: {
         type: String,
+    },
+    username: {
+        type: String
     },
     website: {
         type: String
