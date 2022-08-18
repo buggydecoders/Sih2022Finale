@@ -131,7 +131,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     bodyFormData.append('id', req.user.id)
     let { data } = await axios({
         method: "post",
-        url: "https://sih-flask-server.herokuapp.com/recommendation",
+        url: "https://flask-sih.herokuapp.com/recommendation",
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
     })
@@ -179,7 +179,7 @@ exports.searchResource = catchAsync(async (req, res, next) => {
 
     let { data } = await axios({
         method: "post",
-        url: "https://sih-flask-server.herokuapp.com/recommendation/search",
+        url: "https://flask-sih.herokuapp.com/recommendation/search",
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
     })
