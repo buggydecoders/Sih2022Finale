@@ -2,7 +2,16 @@ import React from 'react'
 import InputField from "../InputField";
 import Logo from "../../assets/DAVV_LOGO.png";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
-const AcceptAndReview = () => {
+import moment from 'moment';
+import {useDispatch,useSelector} from 'react-redux'
+import { editRequest } from '../../store/requests/actions';
+const AcceptAndReview = ({data}) => {
+  const dispatch = useDispatch();
+  const {loading} = useSelector(state=>state.requests);
+  const changeStatus = (status)=>{
+    dispatch(editRequest(data._id,{status}));
+  }
+  
   return (
     <>
     <div className="mt-8">
@@ -14,8 +23,8 @@ const AcceptAndReview = () => {
             className="w-[80px] h-[80px] rounded-md"
           />
           <div className="font-open">
-            <div className="font-[600]">Meth Lab filled with Meth</div>
-            <div className="text-sm text-gray-500">14 July-15 July</div>
+            <div className="font-[600]">{data?.resource?.name}</div>
+            <div className="text-sm text-gray-500">on : {moment(data?.createdAt).format('DD MMMM YYYY')}</div>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -30,9 +39,9 @@ const AcceptAndReview = () => {
           <img src={Logo} className="w-[80px] h-[80px] " />
           <div>
             <div className="font-[600]">
-              Insitute of Engineering & Technology, DAVV
+              {data?.aspirantInstitute?.instituteName}
             </div>
-            <div className="text-sm text-gray-600">Indore, India</div>
+            <div className="text-sm text-gray-600">{data?.aspirantInstitute?.address?.city}, {data?.aspirantInstitute?.address?.state}</div>
           </div>
         </div>
         <div className="flex gap-4">
@@ -46,11 +55,11 @@ const AcceptAndReview = () => {
       </div>
     </div>
     <div className="mt-7">
-        <InputField area={true} disabled={true} label="Note"/>
+        <InputField value={data?.note} area={true} disabled={true} label="Note"/>
     </div>
     <div className="mt-6 flex gap-6 justify-end items-center">
-        <button className="px-5 py-2 border-[1px] border-primary text-primary rounded-md">Reject</button>
-        <button className="px-5 py-2 bg-primary text-white rounded-md">Accept</button>
+        <button className="px-5 py-2 border-[1px] border-primary text-primary rounded-md" onClick={()=>changeStatus('rejected')}>Reject</button>
+        <button className="px-5 py-2 bg-primary text-white rounded-md" onClick={()=>changeStatus('accepted')}>Accept</button>
     </div>
   </>
   )
