@@ -26,7 +26,7 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 10;
     let skipIndex = (page - 1) * limit;
 
-    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalDocuments = await Requirements.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
 
     const requirement = await Requirements.find(queryObject)
