@@ -5,10 +5,6 @@ import { fetchRequierements } from '../../store/requirements/actions';
 
 const RequestsList = () => {
     const [selected,setSelected] = useState(1);
-    const dispatch = useDispatch()
-    useEffect(() => {
-      dispatch(fetchRequierements("myrequest"))
-    }, []);
     const {requirements, loading} = useSelector(state => state.requirements)
     console.log(requirements, loading)
   return (

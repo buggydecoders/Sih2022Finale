@@ -1,7 +1,7 @@
 import { serverInstance } from "../../utils/serverInstance"
 
 export const addRequirementAPI = async(data)=>{
-    const result = await serverInstance.post('/requirement', {data});
+    const result = await serverInstance.post('/requirement', data);
     return result;
 }
 

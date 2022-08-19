@@ -7,14 +7,21 @@ const FilterItem = ({title,selected,setSelected})=>{
     )
 }
 
+const [type, setType] = useState("");
+
+const dispatch = useDispatch()
+useEffect(() => {
+  dispatch(fetchRequierements(type))
+}, []);
+
 const FilterBar = () => {
     const [selected,setSelected] = useState('Best Matches');
   return (
     <div className='w-full'>
         <div className='bg-white grid grid-cols-3  items-center shadow-md cursor-pointer'>
-            <FilterItem selected={selected} setSelected={setSelected} title='Best Matches'/>
-            <FilterItem selected={selected} setSelected={setSelected} title='Featured'/>
-            <FilterItem selected={selected} setSelected={setSelected} title='My Requests'/>
+            <FilterItem selected={selected} setSelected={setSelected} title='Best Matches' onClick={setType("")}/>
+            <FilterItem selected={selected} setSelected={setSelected} title='Featured' onClick={setType("featured")}/>
+            <FilterItem selected={selected} setSelected={setSelected} title='My Requests' onClick={setType("myrequest")}/>
         </div>
     </div>
   )

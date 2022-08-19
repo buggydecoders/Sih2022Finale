@@ -18,14 +18,14 @@ exports.createRequirement = catchAsync(async (req, res, next) => {
 
 exports.getRequirements = catchAsync(async (req, res, next) => {
     const { type, isFeatured } = req.query;
-    let queryObject = {}
+        let queryObject = {}
     if (type) queryObject.type = type
     if (isFeatured) queryObject.isFeatured = isFeatured
 
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     let skipIndex = (page - 1) * limit;
-
+    console.log(queryObject)
     let totalDocuments = await Requirements.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
 
