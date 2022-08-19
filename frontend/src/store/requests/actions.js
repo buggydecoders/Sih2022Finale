@@ -58,6 +58,10 @@ export const checkRequestExists = (id,existCallback, notExistsCallBack)=>async(d
 }
 
 
+export const fetchRequests = (type,page,limit,status,isActive)=>{
+    
+}
+
 
 export const fetchSingleRequest = (id,successCallback,errorCallback)=>async(dispatch,getState)=>{
     try {

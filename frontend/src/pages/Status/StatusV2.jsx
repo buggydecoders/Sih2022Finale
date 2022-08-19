@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { MdSearch } from "react-icons/md";
 import Logo from "../../assets/DAVV_LOGO.png";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 import {IoIosArrowForward} from 'react-icons/io';
 import ManageRequestDrawer from "../../components/ManageRequest/ManageRequestDrawer";
+import useQueryParams from "../../hooks/useQueryParams";
 const StatusV2 = () => {
   const Tab = ({ title, selected, setSelected, count, id }) => {
+    const isSelected = id==selected;
     return (
       <div
         className={`${
-          selected ? "bg-primary text-white" : "text-gray-700"
-        } px-5 py-3 text-sm rounded-3xl bg-gray-100 hover:bg-primary transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
+          isSelected ? "bg-primary text-white" : "text-gray-700 bg-gray-100"
+        } px-5 py-3 text-sm rounded-3xl  hover:bg-primary transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
       >
         <div className="font-[600]">{title}</div>
         <div className="font-[500]">{count}</div>
@@ -56,6 +58,11 @@ const StatusV2 = () => {
       </>
     );
   };
+  const query = useQueryParams();
+  const [tab,setTab] = useState(query('tab') || 1);
+  useEffect(()=>{
+
+  }, [])
 
   return (
     <Layout>
@@ -69,10 +76,10 @@ const StatusV2 = () => {
         <div className="mt-7 bg-white rounded-sm p-6">
           <div className="justify-between flex items-center">
             <div className="flex gap-3 items-center">
-              <Tab title="Recieved" count={1} />
-              <Tab title="Sent" count={13} />
-              <Tab title="Rejected" count={20} />
-              <Tab title="Cancelled" count={0} />
+              <Tab title="Recieved" count={1} id={1} selected={tab} setSelected={setTab} />
+              <Tab title="Sent" count={13} id={2} selected={tab} setSelected={setTab}/>
+              <Tab title="Rejected" count={20} id={3} selected={tab} setSelected={setTab} />
+              <Tab title="Cancelled" count={0} id={4} selected={tab} setSelected={setTab}/>
             </div>
             <div className="font-open">
               <select className="outline-none">
