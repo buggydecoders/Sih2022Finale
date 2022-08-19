@@ -4,9 +4,6 @@ const catchAsync = require('../utils/catchAsync');
 const User =require('../models/User');
 const Message = require('../models/Message');
 
-// const get
-
-
 
 exports.fetchRoom = catchAsync(async (req, res, next) => {
     let {user1,user2} = req.body;
@@ -50,7 +47,7 @@ exports.fetchRooms = catchAsync(async(req,res,next)=>{
 
 exports.fetchMessagesByRoom = catchAsync(async (req, res, next) => {
     const {id} = req.params;
-    console.log(id);
+    // console.log(id);
     const messages = await Message.find({room : id}).populate('from').populate('to');
     res.json({
         status : true,

@@ -10,7 +10,11 @@ router
 
 router
     .route('/recieved')
-    .get(checkAuth,requestController.getRecievedRequest)
+    .get(checkAuth, requestController.getRecievedRequest)
+
+router
+    .route('/verify-signature')
+    .post(checkAuth, requestController.checkSignature)
 
 router
     .route('/:id')

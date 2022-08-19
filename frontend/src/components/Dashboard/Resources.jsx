@@ -4,6 +4,7 @@ import { fetchDashboardResources } from "../../store/resources/actions";
 import InboxLoading from "../Inbox/InboxLoading";
 import ResourceCard from "./ResourceCard";
 import { Pagination } from "@mui/material";
+import Loading from "../Loading";
 
 const Resources = () => {
   const { list, loading,page,totalPages,limit } = useSelector((state) => state.resources);
@@ -16,7 +17,7 @@ const Resources = () => {
   }
 
   const searchLoading = useSelector(state => state.resources.loading)
-  if (loading==='FETCH' || searchLoading==="SEARCH-RESOURCE") return <div>Loading...</div>
+  if (loading==='FETCH' || searchLoading==="SEARCH-RESOURCE") return <Loading/>
 
   
   return (

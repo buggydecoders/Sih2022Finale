@@ -9,14 +9,15 @@ import InboxLoading from "../components/Inbox/InboxLoading";
 import Layout from "../components/Layout";
 import { BsClockHistory } from "react-icons/bs";
 import { BiBadgeCheck } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const { loading, list } = useSelector((state) => state.myResources);
-  console.log(list)
+  const navigate = useNavigate()
 
   const Card = ({ data }) => {
     return (
-      <div className="flex space-x-2 p-2 shadow-sm justify-center items-center rounded-xl">
+      <div onClick={()=>navigate(`/resource/${data?._id}`)} className="flex space-x-2 p-2 shadow-sm justify-center items-center cursor-pointer rounded-xl">
         <img src={data?.images[0].url} className="rounded-full w-10 h-10 object-cover" alt="" />
         <div className="flex flex-col">
           <p className="text-sm font-semibold">{data?.name.substr(0,20)} {data?.name.length < 20? "" : "..."}</p>

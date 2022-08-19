@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const aishe = require('../utils/aishe.json')
 const SavedItem = require('../models/SavedResource')
 const updateReputationPoint = require('../utils/reputation')
+var slugify = require('slugify')
 
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
@@ -63,7 +64,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
             state = aishe[i].state_name
             city = aishe[i].other_address.split(",")[1]
             street = aishe[i].other_address.split(",").slice(3).toString()
-            console.log(aishe[i].other_address.split(",")[2])
             pincode = aishe[i].other_address.split(",")[2]
             naac = aishe[i].naac_grade
         }
@@ -74,6 +74,14 @@ exports.createUser = catchAsync(async (req, res, next) => {
     const newUser = new User({
         instituteName,
         email,
+        username: slugify(instituteName, {
+            replacement: '-',
+            remove: undefined,
+            lower: true,
+            strict: true,
+            locale: 'vi',
+            trim: true
+        }),
         aisheCode,
         password: hashPass,
         naac,
@@ -84,7 +92,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
             state
         }
     })
-    console.log(newUser)
     const user = await newUser.save();
     const updatedUser = await updateReputationPoint(user.id, "")
     const saveItem = new SavedItem({
@@ -158,3 +165,19 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     await user.save();
     res.json({ success: true, message: "Password Changed Succesfully" })
 })
+
+// exports.usernameScript = catchAsync(async (req, res, next) => {
+//     const user = await User.find();
+//     for (let i = 0; i < user.length; i++) {
+// user[i].username = slugify(user[i].instituteName, {
+//     replacement: '-',
+//     remove: undefined,
+//     lower: true,
+//     strict: true,
+//     locale: 'vi',
+//     trim: true
+// })
+//         await user[i].save()
+//     }
+//     res.json({ success: true })
+// })

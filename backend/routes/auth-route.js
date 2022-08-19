@@ -7,6 +7,10 @@ router
     .route("/login")
     .post(authController.loginUser)
 
+// router
+//     .route("/script")
+//     .get(authController.usernameScript)
+
 router
     .route("/create-user")
     .post(authController.createUser)

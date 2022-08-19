@@ -9,6 +9,7 @@ import Accordian from "../components/ResourcePage/Accordian";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleResource } from "../store/resources/actions";
 import { useParams } from "react-router-dom";
+import Loading from "../components/Loading";
 
 function Resource() {
   const { id } = useParams();
@@ -21,10 +22,8 @@ function Resource() {
     (state) => state.resources
   );
 
-  console.log(loading)
-
   if(loading==="FETCH-RESOURCE") return(
-    <div className="">dwa</div>
+    <Loading/>
   );
 
   return (

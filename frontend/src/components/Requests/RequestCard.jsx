@@ -9,8 +9,9 @@ const Tag = ({title})=>{
     )
 }
 
-const RequestCard = ({id,selected,setSelected}) => {
+const RequestCard = ({data, id,selected,setSelected}) => {
     const isSelected = id===selected;
+    console.log(data)
   return (
     <div onClick={()=>setSelected(id)} className={`${isSelected?'shadow-xl scale-[1.03] -translate-x-[10px]':'hover:shadow-xl hover:scale-[1.03] hover:-translate-x-[10px]'} bg-white rounded-md w-full py-5 shadow-sm  transition-all cursor-pointer px-4`}>
         <div className='flex items-center gap-2'>
