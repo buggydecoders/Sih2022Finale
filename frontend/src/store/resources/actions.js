@@ -1,4 +1,4 @@
-import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchDashboardResourcesAPI,  fetchResourcesAPI, fetchSingleResourceAPI, updateResourceAPI } from "./services";
+import { addResourceAPI, addSavedItemAPI, dashboardResourcesAPI, deleteResourceAPI,  deleteSavedItemAPI,  fetchDashboardResourcesAPI,  fetchResourcesAPI, fetchSingleResourceAPI, searchResourceAPI, updateResourceAPI } from "./services";
 import CONSTANTS from './constants';
 import {toast} from 'react-toastify'
 import { fetchSavedResourcesAPI } from "./services";
@@ -9,8 +9,6 @@ const setData = (data)=>{
     }
 }
 
-
-
 const setLoading = (state)=>{
     return {
         type : CONSTANTS.SET_LOADING,
@@ -18,10 +16,16 @@ const setLoading = (state)=>{
     }
 }
 
-
 export const setResource = (data)=>{
     return {
         type : CONSTANTS.SET_RESOURCE,
+        payload : data
+    }
+}
+
+export const setSearchReslts = (data)=>{
+    return {
+        type : CONSTANTS.SEARCH_RESOURCE,
         payload : data
     }
 }
@@ -110,6 +114,21 @@ export const deleteSavedItem = (id,callback)=>async(dispatch,getState)=>{
     }catch(err){
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong');
+    }finally{
+        dispatch(setLoading(false));
+    }
+}
+
+export const searchResource = (name,successCallback,errorCallback)=>async(dispatch)=>{
+    try {
+        dispatch(setLoading("SEARCH-RESOURCE"));
+        const result = await searchResourceAPI(name);
+        dispatch(setSearchReslts(result.data.resources));
+        successCallback&&successCallback();
+    }catch(err) {
+        console.log(err);
+        errorCallback&&errorCallback(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
     }finally{
         dispatch(setLoading(false));
     }

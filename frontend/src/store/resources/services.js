@@ -25,3 +25,8 @@ export const fetchSingleResourceAPI = async(id)=>{
     const result = await serverInstance.get(`/resource/${id}`);
     return result;
 }
+
+export const searchResourceAPI = async(name)=>{
+    const result = await serverInstance.post(`/resource/search`, {name});
+    return result;
+}

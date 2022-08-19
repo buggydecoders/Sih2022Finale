@@ -19,22 +19,22 @@ const StatusV2 = () => {
 
   const RequestCard = () => {
     return (
-      <tr class=" border-b-[1px]  dark:border-gray-100">
+      <tr className=" border-b-[1px]  dark:border-gray-100">
         <th
           scope="row"
-          class="py-5 px-6 font-medium text-gray-900 whitespace-nowrap "
+          className="py-5 px-6 font-medium text-gray-900 whitespace-nowrap "
         >
          <div className="flex"></div>
         </th>
         <th
           scope="row"
-          class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
+          className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap "
         >
           Apple MacBook Pro 17"
         </th>
-        <td class="py-4 px-6">Sliver</td>
-        <td class="py-4 px-6">Laptop</td>
-        <td class="py-4 px-6">$2999</td>
+        <td className="py-4 px-6">Sliver</td>
+        <td className="py-4 px-6">Laptop</td>
+        <td className="py-4 px-6">$2999</td>
       </tr>
     );
   };
@@ -73,22 +73,22 @@ const StatusV2 = () => {
           </div>
 
           <div className="mt-7 overflow-x-auto w-full">
-            <table class="w-full text-left text-black">
-              <thead class=" text-gray-700 ">
+            <table className="w-full text-left text-black">
+              <thead className=" text-gray-700 ">
                 <tr className="border-b-[1px] ">
-                  <th scope="col" class="py-4 pb-4 px-6">
+                  <th scope="col" className="py-4 pb-4 px-6">
                     Institute
                   </th>
-                  <th scope="col" class="py-4 pb-4 px-6">
+                  <th scope="col" className="py-4 pb-4 px-6">
                     Resource
                   </th>
-                  <th scope="col" class="py-4 pb-4 px-6">
+                  <th scope="col" className="py-4 pb-4 px-6">
                     Duration
                   </th>
-                  <th scope="col" class="py-4 pb-4 px-6">
+                  <th scope="col" className="py-4 pb-4 px-6">
                     Status
                   </th>
-                  <th scope="col" class="py-4 pb-4 px-6">
+                  <th scope="col" className="py-4 pb-4 px-6">
                     Requested Date
                   </th>
                 </tr>

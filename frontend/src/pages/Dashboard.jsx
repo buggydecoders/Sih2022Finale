@@ -7,16 +7,48 @@ import Resources from "../components/Dashboard/Resources";
 import Search from "../components/Dashboard/Search";
 import InboxLoading from "../components/Inbox/InboxLoading";
 import Layout from "../components/Layout";
+import { BsClockHistory } from "react-icons/bs";
+import { BiBadgeCheck } from "react-icons/bi";
 
 const Dashboard = () => {
+  const { loading, list } = useSelector((state) => state.myResources);
+  console.log(list)
+
+  const Card = ({ data }) => {
+    return (
+      <div className="flex space-x-2 p-2 shadow-sm justify-center items-center rounded-xl">
+        <img src={data?.images[0].url} className="rounded-full w-10 h-10 object-cover" alt="" />
+        <div className="flex flex-col">
+          <p className="text-sm font-semibold">{data?.name.substr(0,20)} {data?.name.length < 20? "" : "..."}</p>
+          <div className="flex gap-2">
+            <div className="flex gap-2 items-center text-xs">
+              <BsClockHistory /> {data?.durationFrom || "N/A"}
+            </div>
+            <div className="flex gap-2 items-center text-xs">
+              <BsClockHistory /> {data?.durationTo || "N/A"}
+            </div>
+          </div>
+          <p className="text-xs">Price: <span>{data?.price}</span></p>
+        </div>
+      </div>
+    )
+  }
   return (
     <Layout>
       <div className="bg-lightGray py-10">
         <div className="grid grid-cols-[1fr_2.8fr_1fr] gap-5 px-10">
           <div className="space-y-6">
-            <CollegeProfileCard/>
+            <CollegeProfileCard />
             <CardCollection title="Shared Resources" />
-            <CardCollection title="Listed Resources" />
+            <CardCollection title="Listed Resources">
+              <div className="space-y-2">
+                {
+                  list?.splice(7).map((item, idx) => {
+                    return <Card data={item} />
+                  })
+                }
+              </div>
+            </CardCollection>
             <CardCollection title="Enquries" />
           </div>
           <div className="space-y-5">

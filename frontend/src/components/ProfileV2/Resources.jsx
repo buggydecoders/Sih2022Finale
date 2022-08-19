@@ -3,23 +3,34 @@ import { MdIncompleteCircle, MdOutlineScience } from "react-icons/md";
 import { FiPackage } from "react-icons/fi";
 import AddResourceDrawer from "../Resource/AddResourceDrawer";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllResources } from "../../store/myresources/actions";
+import { deleteResource, fetchAllResources } from "../../store/myresources/actions";
 import { Pagination } from "@mui/material";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
+import { MdDelete } from "react-icons/md";
+import { TbRobot } from "react-icons/tb";
 
-const ResourceItem = ({data}) => {
+const ResourceItem = ({ data }) => {
+  const dispatch = useDispatch()
   const [isOpen, setIsOpen] = useState(false);
+  const handleDelete = () => {
+    dispatch(deleteResource(data._id));
+  };
+
   return (
     <>
       <div onClick={() => setIsOpen(true)} className="p-3 rounded-md">
         <div className="w-full rounded-md bg-white p-2 h-[210px] relative">
+          <MdDelete
+            className="absolute z-10 top-2 right-2 text-2xl cursor-pointer bg-white rounded-full p-1"
+            onClick={() => handleDelete()}
+          />
           <img src={data?.images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-full h-full absolute object-cover top-0 left-0 rounded-xl border-[1px]" />
         </div>
         <div className="mt-3 font-[500] font-open">
           {data?.name}
         </div>
         <div className="text-gray-400 text-xs font-open mt-1">
-         {data?.durationFrom || "NA"} - {data?.durationTo || "NA"}
+          {data?.durationFrom || "NA"} - {data?.durationTo || "NA"}
         </div>
         <div className="font-[600] font-open">₹{data?.price}</div>
       </div>
@@ -39,9 +50,8 @@ const CategoryType = ({
   return (
     <div
       onClick={() => setCategoryState(value)}
-      className={`${
-        isSelected ? "text-white bg-gray-600" : "text-gray-500"
-      } p-1 font-open px-5 hover:bg-gray-600 cursor-pointer hover:text-white transition-all duration-500   border-[1px] border-gray-400 rounded-md flex gap-5 items-center`}
+      className={`${isSelected ? "text-white bg-gray-600" : "text-gray-500"
+        } p-1 font-open px-5 hover:bg-gray-600 cursor-pointer hover:text-white transition-all duration-500   border-[1px] border-gray-400 rounded-md flex gap-5 items-center`}
     >
       <div>{title}</div>
       {icon}
@@ -52,8 +62,8 @@ const CategoryType = ({
 const Resources = () => {
   const { loading, list, page, limit, state, category, totalPages } =
     useSelector((state) => state.myResources);
-//   console.log(loading, list, page, limit, state, category, totalPages);
-console.log('CATEGORY_STATE',category)
+  //   console.log(loading, list, page, limit, state, category, totalPages);
+  console.log('CATEGORY_STATE', category)
   const [firstRender, setFirstRender] = useState(false);
   const dispatch = useDispatch();
   const [addSidebar, setAddSidebar] = useState(false);
@@ -68,7 +78,7 @@ console.log('CATEGORY_STATE',category)
 
   const handleCategoryChange = (value) => {
     console.log(value);
-    dispatch(fetchAllResources(value, state, value, limit));
+    dispatch(fetchAllResources(state, value, limit));
   };
 
   return (
@@ -108,6 +118,13 @@ console.log('CATEGORY_STATE',category)
             value="productDesign"
             title="Product Design"
             icon={<FiPackage />}
+          />
+          <CategoryType
+            categoryState={category}
+            setCategoryState={handleCategoryChange}
+            value="virtual"
+            title="Virtual"
+            icon={<TbRobot />}
           />
         </div>
         <select

@@ -1,7 +1,6 @@
 import React from "react";
 
 function Accordian(props) {
-  console.log(props)
   return (
       <div className="accordion">
         <div className="accordion-item bg-white border-b-2 border-gray-200">

@@ -4,8 +4,8 @@ const ResourcesConstants = {
     SET_SAVED_ITEM : 'SET_SAVED_ITEMS',
     DELETE_SAVED_ITEM : 'DELETE_SAVED_ITEMS',
     ADD_SAVED_ITEM : 'ADD_SAVED_ITEMS',
-    SET_RESOURCE : 'SET_RESOURCE' 
-
+    SET_RESOURCE : 'SET_RESOURCE',
+    SEARCH_RESOURCE : 'SEARCH_RESOURCE' 
 }
 
 export default ResourcesConstants;

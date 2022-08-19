@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addSavedItem, deleteSavedItem } from "../../store/resources/actions";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 import {useNavigate} from 'react-router-dom'
+
 const SaveButton = ({resourceId}) => {
   const {savedItems,loading} = useSelector(state=>state.resources); 
   const [active, setActive] = useState(false);
@@ -53,7 +54,7 @@ const ResourceCard = ({ data }) => {
   return (
     <div className="bg-white w-full px-6 py-4 rounded-md">
       <div className="flex justify-between items-start">
-        <div className="flex items-start gap-4">
+        <div onClick={()=>navigate(`/resource/${data?._id}`)} className="flex items-start gap-4 cursor-pointer">
           <div className="">
             <img alt="" src={data?.images[0]?.url || RESOURCE_FALLBACK_IMG} className="w-[150px] h-[150px] rounded-lg"/>
           </div>

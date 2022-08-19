@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineHome, AiFillBell } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 // import {BiCheckDouble} from 'react-icons/bi'
 // import {GrStatusCritical} from 'react-icons/gr'
 import { BsBagCheck } from "react-icons/bs";
@@ -14,6 +14,7 @@ import logo from "../assets/UGC_LOGO.png";
 import NotificationDrawer from "./NotificationDrawer";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../store/auth/actions";
+import {TbMessageCircle2} from "react-icons/tb"
 const NavbarLink = ({ text, icon, href }) => {
   const location = useLocation();
   const active = location.pathname === href;
@@ -30,7 +31,9 @@ const NavbarLink = ({ text, icon, href }) => {
   );
 };
 
+
 function Navbar() {
+  const navigate = useNavigate()
   const [isOpen,setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const handleLogout = ()=>{
@@ -79,6 +82,7 @@ function Navbar() {
       </ul>
       <div className="flex gap-3 items-center">
       <button onClick={()=>setIsOpen(true)} className="rounded-full bg-lightGray p-4"> <AiFillBell /> </button>
+      <button onClick={()=>navigate("/inbox")} className="rounded-full bg-lightGray p-4"> <TbMessageCircle2/> </button>
       <button onClick={handleLogout} className="rounded-full bg-lightGray p-4"> <FiLogOut /> </button>
       </div>
 

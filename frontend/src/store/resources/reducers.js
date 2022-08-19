@@ -17,6 +17,7 @@ export default function ResourcesReducer(state=INITIAL_STATE, action){
         case CONSTANTS.DELETE_SAVED_ITEM : return {...state, savedItems : state.savedItems.filter(r=>r._id!=action.payload)}
         case CONSTANTS.SET_SAVED_ITEM : return {...state,savedItems : action.payload}
         case CONSTANTS.SET_RESOURCE : return {...state, resource: action.payload}
+        case CONSTANTS.SEARCH_RESOURCE : return {...state, list : action.payload}
         default : return state;
     } 
 }

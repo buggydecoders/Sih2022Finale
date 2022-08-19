@@ -68,7 +68,7 @@ app.use(bodyParser.json());
 
 //  set limit request from same API in timePeroid from same ip
 const limiter = rateLimit({
-    max: 1000, //   max number of limits
+    max: 15000, //   max number of limits
     windowMs: 60 * 60 * 1000, // hour
     message: ' Too many req from this IP , please Try  again in an Hour ! ',
 });

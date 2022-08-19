@@ -10,6 +10,7 @@ const ResourceItem = ({ data }) => {
   const handleDelete = () => {
     dispatch(deleteSavedItem(_id));
   };
+  
   return (
     <div className="px-3 py-3 border-[1px] border-gray-300 rounded-xl">
       <div className="relative">

@@ -31,8 +31,6 @@ const TitleInfo = ({title,value}) => {
 
 const SideBarInformation = () => {
   const {user} = useSelector(state=>state.auth)
-  console.log(user);
-
   return (
     <div>
       <div className="space-y-3">

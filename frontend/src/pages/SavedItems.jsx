@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import Search from "../components/Status/Search";
 import Pagination from "../components/Pagination";
@@ -34,7 +34,7 @@ const SavedItems = () => {
     // dispatch(fetchSavedResources())
   }, []);
 
-  const savedResources = useSelector(state=>state?.resources?.savedItems)
+  const savedResources = useSelector(state => state?.resources?.savedItems)
   return (
     <Layout>
       <div className="px-16 py-10">
@@ -42,13 +42,13 @@ const SavedItems = () => {
         <Search />
         <div className="grid-cols-5 grid mt-12 gap-10">
           {
-            savedResources?.map((savedItem)=>{
-              return <ResourceItem data={savedItem}/>
+            savedResources?.map((savedItem) => {
+              return <ResourceItem data={savedItem} />
             })
           }
         </div>
       </div>
-      <Pagination/>
+      <Pagination />
     </Layout>
   );
 };

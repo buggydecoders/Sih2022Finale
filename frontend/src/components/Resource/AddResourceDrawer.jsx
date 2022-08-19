@@ -73,8 +73,13 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
     if (form.images.length===0)return  toast('Add atleast one image')
 
 
-    if (isEdit) return dispatch(editResource({...form,state : 'available'}, handleClose));
-    dispatch(AddResource({...form,state : 'available'}, handleClose));
+    const sucessCallback = ()=>{
+      handleClose()
+      setForm(INITIAL_FORM_STATE)
+    }
+    if (isEdit) return dispatch(editResource({...form,state : 'available'}, sucessCallback()));
+
+    dispatch(AddResource({...form,state : 'available'}, sucessCallback()));
   }
 
   const handleMediaChange = (e)=>{
@@ -135,6 +140,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
             <option value="research">Research</option>
             <option value="physical">Physical</option>
             <option value="productDesign">Product Design</option>
+            <option value="virtual">Virtual</option>
           </select>
         </div>
 

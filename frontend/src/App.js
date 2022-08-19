@@ -112,12 +112,12 @@ export default function App() {
         </Route>
         <Route
           exact
-          path="/resource"
+          path="/resource/:id"
           element={
             <ProtectedRoute access="private"  scope={"institute"} />
           }
         >
-         <Route exact path='/resource' element={<Resource />} />
+         <Route exact path='/resource/:id' element={<Resource />} />
         </Route>
 
         <Route

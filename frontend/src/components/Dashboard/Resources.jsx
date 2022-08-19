@@ -15,7 +15,8 @@ const Resources = () => {
     dispatch(fetchDashboardResources(value,limit));
   }
 
-  if (loading==='FETCH') return <div>Loading...</div>
+  const searchLoading = useSelector(state => state.resources.loading)
+  if (loading==='FETCH' || searchLoading==="SEARCH-RESOURCE") return <div>Loading...</div>
 
   
   return (
