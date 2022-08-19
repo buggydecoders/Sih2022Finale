@@ -80,7 +80,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
 
 
 exports.updateRequest = catchAsync(async (req, res, next) => {
-    const request = await Request.findOne({ id: req.params.id, lendingInstitute: req.user.id })
+    const request = await Request.findOne({ id: req.params.id, lendingInstitute: req.user.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (!request) {
         return next(
             new AppError(`Resource with ${id} not found or you are not allowed to update the request.`, 404)
@@ -94,6 +94,6 @@ exports.getRecievedRequest = catchAsync(async (req, res, next) => {
     let queryObject = {
         lendingInstitute: req.user.id
     }
-    const requests = await Request.find(queryObject)
+    const requests = await Request.find(queryObject).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     res.json({ success: true, requests })
 }) 
