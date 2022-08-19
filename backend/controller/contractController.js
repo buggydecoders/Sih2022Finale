@@ -33,7 +33,7 @@ exports.getAllContract = catchAsync(async (req, res, next) => {
 })
 
 exports.getContract = catchAsync(async (req, res, next) => {
-    const contract = await Contracts.findById(req.params.id)
+    const contract = await Contracts.findById(req.params.id).populate('createdBy')
     if (!contract) {
         return next(
             new AppError(`No Contract Found with id ${id}`, 404)
