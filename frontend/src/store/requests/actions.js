@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 import CONSTANTS from './constants';
-import { checkExistsAPI, createRequestAPI, fetchAllRequestsAPI, fetchRequestAPI } from './services';
+import { checkExistsAPI, createRequestAPI, fetchAllRequestsAPI, fetchRequestAPI, updateRequestAPI } from './services';
 
 export const setLoading = (state)=>{
     return {
@@ -23,6 +23,13 @@ export const setRequest = (data)=>{
     }
 }
 
+export const editRequestInStore = (id,data)=>{
+    return {
+        type : CONSTANTS.EDIT_REQUEST,
+        payload : {id,data}
+    }
+}
+
 export const addRequest = (data)=>{
     return {
         type : CONSTANTS.ADD_REQUEST,
@@ -34,6 +41,13 @@ export const setIsExists = (state)=>{
     return {
         type : CONSTANTS.SET_IS_EXISTS,
         payload : state
+    }
+}
+
+export const setData = (data)=>{
+    return {
+        type : CONSTANTS.SET_DATA,
+        payload : data
     }
 }
 
@@ -58,8 +72,19 @@ export const checkRequestExists = (id,existCallback, notExistsCallBack)=>async(d
 }
 
 
-export const fetchRequests = (type,page,limit,status,isActive)=>{
-    
+export const fetchRequests = (type,page,limit,status,isActive)=>async(dispatch)=>{
+    try {
+        dispatch(setLoading('FETCH_REQUESTS'));
+        const result = await fetchAllRequestsAPI(type,page,limit,status,isActive);
+        console.log(result);
+        dispatch(setData(result.data));
+    }catch(err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+        dispatch(setData({requests : []}));
+    }finally{
+        dispatch(setLoading(false));
+    }
 }
 
 
@@ -70,6 +95,21 @@ export const fetchSingleRequest = (id,successCallback,errorCallback)=>async(disp
         let request = result.data.request;
         dispatch(setRequest(request));
         successCallback&&successCallback(result.data);
+    }catch(err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+        errorCallback&&errorCallback(err);
+    }finally{
+        dispatch(setLoading(false));
+    }
+}
+
+export const editRequest = (id,data,successCallback,errorCallback)=>async(dispatch,getState)=>{
+    try{
+        dispatch(setLoading('EDIT_REQ'));
+        const result = await updateRequestAPI(id,data);
+        dispatch(editRequestInStore(id,result.data.updatedRequest));
+        successCallback&&successCallback(result.data.updatedRequest);
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
