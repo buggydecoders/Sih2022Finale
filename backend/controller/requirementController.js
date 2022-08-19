@@ -44,12 +44,13 @@ exports.getRequirement = catchAsync(async (req, res, next) => {
 })
 
 exports.updateRequirement = catchAsync(async (req, res, next) => {
-    const requirement = await Requirements.findByIdAndUpdate(req.params.id)
+    const requirement = await Requirements.findByIdAndUpdate(req.params.id, req.body, { new: true })
     res.json({ success: true, requirement })
 })
 
 exports.deleteRequirement = catchAsync(async (req, res, next) => {
-
+    const requirement = await Requirements.findByIdAndRemove(req.params.id)
+    res.json({ success: true, requirement })
 })
 
 exports.fulfillRequirement = catchAsync(async (req, res, next) => {
