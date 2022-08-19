@@ -1,11 +1,12 @@
 import { Drawer } from "@mui/material";
 import React from "react";
 import { MdClear } from "react-icons/md";
-import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
+
+import AcceptAndReview from "./AcceptAndReview";
 import AddContract from "./AddContract";
 import ProcessRequest from "./ProcessRequest";
 
-const ManageRequestDrawer = ({ isOpen, setIsOpen }) => {
+const ManageRequestDrawer = ({data, isOpen, setIsOpen }) => {
   const handleClose = () => setIsOpen(false);
 
   
@@ -22,8 +23,8 @@ const ManageRequestDrawer = ({ isOpen, setIsOpen }) => {
           </div>
           <MdClear size={24} />
         </div>
-        {/* <AddContract/> */}
-        <ProcessRequest/>
+        {data?.status==='pending'&&<AcceptAndReview/>}
+        {/* <ProcessRequest/> */}
 
       </div>
     </Drawer>

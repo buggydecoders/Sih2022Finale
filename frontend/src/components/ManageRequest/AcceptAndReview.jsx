@@ -1,7 +1,7 @@
 import React from 'react'
 import InputField from "../InputField";
 import Logo from "../../assets/DAVV_LOGO.png";
-
+import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
 const AcceptAndReview = () => {
   return (
     <>

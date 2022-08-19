@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server",
+    "dev": "npx nodemon server",
     "pro": "SET NODE_ENV=production& nodemon server.js",
     "prod": "pm2 start server.js",
     "dev:dblocal": "nodemon server dblocal",

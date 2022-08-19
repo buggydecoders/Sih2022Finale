@@ -5,7 +5,8 @@ const requestConstants = {
     ADD_REQUEST : 'ADD_REQUEST',
     DELETE_REQUEST : 'DELETE_REQUEST',
     EDIT_REQUEST  : 'EDIT_REQUEST',
-    SET_IS_EXISTS : 'SET_IS_EXISTS'
+    SET_IS_EXISTS : 'SET_IS_EXISTS',
+    SET_DATA : "SET_DATA"
  
 }
 export default requestConstants;
