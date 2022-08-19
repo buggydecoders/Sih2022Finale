@@ -10,6 +10,7 @@ exports.createRequirement = catchAsync(async (req, res, next) => {
         budget,
         durationFrom,
         durationTo,
+        aspirantInstitute: req.user.id,
         isFeatured
     })
     const addedRequirement = await newRequirement.save()
@@ -17,10 +18,10 @@ exports.createRequirement = catchAsync(async (req, res, next) => {
 })
 
 exports.getRequirements = catchAsync(async (req, res, next) => {
-    const { type, isFeatured } = req.query;
+    const { type } = req.query;
     let queryObject = {}
-    if (type) queryObject.type = type
-    if (isFeatured) queryObject.isFeatured = isFeatured
+    if (type === 'myrequest') queryObject.aspirantInstitute = req.user.id
+    if (type === 'featured') queryObject.isFeatured = true
 
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
