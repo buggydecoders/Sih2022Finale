@@ -2,9 +2,9 @@ import { toast } from 'react-toastify';
 import CONSTANTS from './constants';
 import { addRequirementAPI, fetchRequirementAPI} from './services';
 
-export const setRequierement = (state)=>{
+export const setRequirement = (state)=>{
     return {
-        type : CONSTANTS.SET_REQUIEREMENTS,
+        type : CONSTANTS.SET_REQUIREMENTS,
         payload : state
     }
 }
@@ -16,9 +16,10 @@ export const setLoading = (state)=>{
     }
 }
 
-export const addRequierement = (data)=>{
+export const addRequirement = (data)=>{
+    console.log(data)
     return {
-        type : CONSTANTS.ADD_REQUIEREMENTS,
+        type : CONSTANTS.ADD_REQUIREMENTS,
         payload : data
     }
 }
@@ -27,8 +28,8 @@ export const sendRequierement = (data,successCallback,errorCallback)=>async(disp
     try {
         dispatch(setLoading(true));
         const result = await addRequirementAPI(data);
-        let requierement = result.data.request;
-        dispatch(addRequierement(requierement));
+        let {requirement }= result.data;
+        dispatch(addRequirement(requirement));
         successCallback&&successCallback(result.data);
     }catch(err) {
         console.log(err);
@@ -43,10 +44,10 @@ export const fetchRequierements = (type,successCallback,errorCallback)=>async(di
     try {
         dispatch(setLoading(true));
         const result = await fetchRequirementAPI(type);
-        console.log(result)
-        // let {requierement} = result.data;
-        // dispatch(setRequierement(requierement));
-        // successCallback&&successCallback(result.data);
+        let {requierement} = result.data;
+        console.log(requierement)
+        dispatch(setRequirement(requierement));
+        successCallback&&successCallback(result.data);
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
