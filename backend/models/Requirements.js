@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const RequirementSchema = mongoose.Schema({
+const RequirementSchema = new mongoose.Schema({
     aspirantInstitute: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
@@ -31,5 +31,5 @@ const RequirementSchema = mongoose.Schema({
     timestamps: true
 })
 
-const Requirement = new mongoose.model("Requirement", RequirementSchema)
+const Requirement = mongoose.model("Requirement", RequirementSchema)
 module.exports = Requirement

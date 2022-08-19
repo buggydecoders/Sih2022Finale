@@ -21,7 +21,7 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
     let queryObject = {}
     if (type) queryObject.type = type
     if (isFeatured) queryObject.isFeatured = isFeatured
-    
+
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     let skipIndex = (page - 1) * limit;
@@ -35,4 +35,23 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
         .exec();
 
     res.json({ success: true, requirement, totalPages, page, limit })
+})
+
+
+exports.getRequirement = catchAsync(async (req, res, next) => {
+    const requirement = await Requirements.findById(req.params.id)
+    res.json({ success: true, requirement })
+})
+
+exports.updateRequirement = catchAsync(async (req, res, next) => {
+    const requirement = await Requirements.findByIdAndUpdate(req.params.id)
+    res.json({ success: true, requirement })
+})
+
+exports.deleteRequirement = catchAsync(async (req, res, next) => {
+
+})
+
+exports.fulfillRequirement = catchAsync(async (req, res, next) => {
+
 })
