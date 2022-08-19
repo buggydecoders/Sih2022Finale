@@ -31,6 +31,7 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
     let totalPages = Math.ceil(totalDocuments / limit);
 
     const requirement = await Requirements.find(queryObject)
+        .populate('aspirantInstitute')
         .limit(limit)
         .skip(skipIndex)
         .exec();
@@ -40,17 +41,20 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
 
 
 exports.getRequirement = catchAsync(async (req, res, next) => {
-    const requirement = await Requirements.findById(req.params.id)
+    const requirement = await Requirements.findById(req.params.id).populate('aspirantInstitute')
+
     res.json({ success: true, requirement })
 })
 
 exports.updateRequirement = catchAsync(async (req, res, next) => {
-    const requirement = await Requirements.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const requirement = await Requirements.findByIdAndUpdate(req.params.id, req.body, { new: true }).populate('aspirantInstitute')
+
     res.json({ success: true, requirement })
 })
 
 exports.deleteRequirement = catchAsync(async (req, res, next) => {
-    const requirement = await Requirements.findByIdAndRemove(req.params.id)
+    const requirement = await Requirements.findByIdAndRemove(req.params.id).populate('aspirantInstitute')
+
     res.json({ success: true, requirement })
 })
 
