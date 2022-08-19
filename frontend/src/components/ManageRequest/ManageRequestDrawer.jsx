@@ -22,7 +22,9 @@ const ManageRequestDrawer = ({data, isOpen, setIsOpen }) => {
           <MdClear size={24} />
         </div>
         {data?.status==='pending'&&<AcceptAndReview data={data}/>}
-        {/* <ProcessRequest/> */}
+        {data?.status==='accepted'&&<AddContract data={data}/>}
+        {data?.status==='await'&&<ProcessRequest data={data}/>}
+        {data?.status==='confirmed'&&<ProcessRequest data={data}/>}
       </div>
     </Drawer>
   );

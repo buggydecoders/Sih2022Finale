@@ -38,7 +38,7 @@ const ContractCard = ({ selected, setSelected, id }) => {
   );
 };
 
-const AddContract = () => {
+const AddContract = ({data}) => {
   const [selected, setSelected] = useState(null);
 
   return (
