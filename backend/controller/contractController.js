@@ -1,5 +1,6 @@
 const Contracts = require('../models/Contract')
 const catchAsync = require('../utils/catchAsync')
+const AppError = require('../utils/appError')
 
 exports.addContract = catchAsync(async (req, res, next) => {
     const { title, terms, validTill } = req.body
@@ -13,8 +14,50 @@ exports.addContract = catchAsync(async (req, res, next) => {
     res.json({ success: true, contract: addedContract })
 })
 
-exports.getContract = catchAsync(async (req, res, next) => {
+exports.getAllContract = catchAsync(async (req, res, next) => {
     let queryObject = { createdBy: req.user.id }
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    let totalDocuments = await Request.countDocuments(queryObject)
+    let totalPages = Math.ceil(totalDocuments / limit);
+    let skipIndex = (page - 1) * limit;
+
     const contracts = await Contracts.find(queryObject)
-    res.json({ success: true, contracts })
+        .populate('createdBy')
+        .limit(limit)
+        .skip(skipIndex)
+        .exec();
+
+    res.json({ success: true, contracts, totalPages, page, limit })
+})
+
+exports.getContract = catchAsync(async (req, res, next) => {
+    const contract = await Contracts.findById(req.params.id)
+    if (!contract) {
+        return next(
+            new AppError(`No Contract Found with id ${id}`, 404)
+        )
+    }
+    res.json({ success: true, contract })
+})
+
+exports.updateContract = catchAsync(async (req, res, next) => {
+    const contract = await Contracts.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    if (!contract) {
+        return next(
+            new AppError(`No Contract Found with id ${id}`, 404)
+        )
+    }
+    res.json({ success: true, contract })
+})
+
+exports.deleteContract = catchAsync(async (req, res, next) => {
+    const contract = await Contracts.findByIdAndRemove(req.params.id)
+    if (!contract) {
+        return next(
+            new AppError(`No Contract Found with id ${id}`, 404)
+        )
+    }
+    res.json({ success: true, contract })
 })
