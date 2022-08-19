@@ -9,8 +9,6 @@ import ProcessRequest from "./ProcessRequest";
 const ManageRequestDrawer = ({data, isOpen, setIsOpen }) => {
   const handleClose = () => setIsOpen(false);
 
-  
-
   return (
     <Drawer open={isOpen} onClose={handleClose} anchor="right">
       <div className="w-[60vw] max-w-[850px] p-6 px-7">
@@ -23,9 +21,8 @@ const ManageRequestDrawer = ({data, isOpen, setIsOpen }) => {
           </div>
           <MdClear size={24} />
         </div>
-        {data?.status==='pending'&&<AcceptAndReview/>}
+        {data?.status==='pending'&&<AcceptAndReview data={data}/>}
         {/* <ProcessRequest/> */}
-
       </div>
     </Drawer>
   );
