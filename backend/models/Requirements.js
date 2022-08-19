@@ -1,13 +1,21 @@
 const mongoose = require('mongoose')
 
 const RequirementSchema = mongoose.Schema({
-    resource: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Resource"
-    },
     aspirantInstitute: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
+    },
+    name: {
+        type: String,
+    },
+    type: {
+        type: String,
+    },
+    description: {
+        type: String
+    },
+    budget: {
+        type: String
     },
     durationFrom: {
         type: String
@@ -24,3 +32,4 @@ const RequirementSchema = mongoose.Schema({
 })
 
 const Requirement = new mongoose.model("Requirement", RequirementSchema)
+module.exports = Requirement

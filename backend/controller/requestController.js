@@ -45,6 +45,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
 
     let totalDocuments = await Resource.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
+    let skipIndex = (page - 1) * limit;
 
     const requests = await Request.find(queryObject)
         .populate('aspirantInstitute')
