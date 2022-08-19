@@ -30,11 +30,30 @@ exports.getRequest = catchAsync(async (req, res, next) => {
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {
     let queryObject = { aspirantInstitute: req.user.id }
-    const { isActive, status } = req.query;
+    const { isActive, status, type } = req.query;
     if (isActive) queryObject.isActive = isActive
     if (status) queryObject.status = status
-    const requests = await Request.find(queryObject).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
-    res.json({ success: true, requests })
+
+    if (state==='recieved'){
+        queryObject.lendingInstitute = req.user.id
+    }
+    if (state==='sent'){
+        queryObject.aspirantInstitute = req.user.id
+    }
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalPages = Math.ceil(totalDocuments / limit);
+
+    const requests = await Request.find(queryObject)
+        .populate('aspirantInstitute')
+        .populate('lendingInstitute')
+        .populate('resource')
+        .limit(limit)
+        .skip(skipIndex)
+        .exec();
+    res.json({ success: true, requests, totalPages, page, limit })
 })
 
 exports.updateRequest = catchAsync(async (req, res, next) => {

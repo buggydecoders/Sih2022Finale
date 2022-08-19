@@ -4,9 +4,6 @@ const catchAsync = require('../utils/catchAsync');
 const User =require('../models/User');
 const Message = require('../models/Message');
 
-// const get
-
-
 
 exports.fetchRoom = catchAsync(async (req, res, next) => {
     let {user1,user2} = req.body;
