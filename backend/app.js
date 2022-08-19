@@ -17,6 +17,7 @@ const authRoute = require('./routes/auth-route')
 const reqRoute = require('./routes/request-route')
 const resRoute = require('./routes/resource-route');
 const chatRoomRouter = require('./routes/chatRoom-route');
+const contractRoute = require('./routes/contract-route')
 // view engine setup
 
 // var whitelist = ['http://example1.com', 'http://example2.com']
@@ -95,6 +96,8 @@ app.use('/api/auth', authRoute)
 app.use('/api/request', reqRoute)
 app.use('/api/resource', resRoute)
 app.use('/api/chat-room', chatRoomRouter);
+app.use('/api/contract', contractRoute);
+
 
 
 // handling all (get,post,update,delete.....) unhandled routes
