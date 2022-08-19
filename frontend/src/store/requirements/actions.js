@@ -44,9 +44,8 @@ export const fetchRequierements = (type,successCallback,errorCallback)=>async(di
     try {
         dispatch(setLoading(true));
         const result = await fetchRequirementAPI(type);
-        let {requierement} = result.data;
-        console.log(requierement)
-        dispatch(setRequirement(requierement));
+        let {requirement} = result.data;
+        dispatch(setRequirement(requirement));
         successCallback&&successCallback(result.data);
     }catch(err) {
         console.log(err);
