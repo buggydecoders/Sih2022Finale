@@ -33,10 +33,15 @@ const Tab = ({ title, selected, setSelected, count, id }) => {
 
 const RequestCard = ({ data, tab }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleResourceClick = ()=>{
+    if (tab==='sent') return navigate(`/status/${data._id}`);
+    else setIsOpen(true);
+  }
   return (
     <>
       <tr
-        onClick={() => setIsOpen(true)}
+        onClick={handleResourceClick}
         class="border-b-[1px] hover:bg-lightGray transition-all duration-300 cursor-pointer  dark:border-gray-100"
       >
         <th
