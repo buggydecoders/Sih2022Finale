@@ -33,7 +33,8 @@ exports.getAllContract = catchAsync(async (req, res, next) => {
 })
 
 exports.getContract = catchAsync(async (req, res, next) => {
-    const contract = await Contracts.findById(req.params.id)
+    const contract = await Contracts.findById(req.params.id).populate('createdBy')
+
     if (!contract) {
         return next(
             new AppError(`No Contract Found with id ${id}`, 404)
@@ -43,7 +44,7 @@ exports.getContract = catchAsync(async (req, res, next) => {
 })
 
 exports.updateContract = catchAsync(async (req, res, next) => {
-    const contract = await Contracts.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const contract = await Contracts.findByIdAndUpdate(req.params.id, req.body, { new: true }).populate('createdBy')
     if (!contract) {
         return next(
             new AppError(`No Contract Found with id ${id}`, 404)
@@ -53,7 +54,7 @@ exports.updateContract = catchAsync(async (req, res, next) => {
 })
 
 exports.deleteContract = catchAsync(async (req, res, next) => {
-    const contract = await Contracts.findByIdAndRemove(req.params.id)
+    const contract = await Contracts.findByIdAndRemove(req.params.id).populate('createdBy')
     if (!contract) {
         return next(
             new AppError(`No Contract Found with id ${id}`, 404)
