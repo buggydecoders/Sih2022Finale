@@ -5,7 +5,13 @@ const requirementController = require('../controller/requirementController')
 
 router
     .route('/')
-    .get(checkAuth, requirementController.getRequirements)
+    .get(checkAuth, requirementController.getAllRequirements)
     .post(checkAuth, requirementController.createRequirement)
+
+router
+    .route('/:id')
+    .get(checkAuth, requirementController.getRequirement)
+    .patch(checkAuth, requirementController.updateRequirement)
+    .delete(checkAuth, requirementController.deleteRequirement)
 
 module.exports = router

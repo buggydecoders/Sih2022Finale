@@ -16,12 +16,12 @@ exports.createRequirement = catchAsync(async (req, res, next) => {
     res.json({ success: true, requirement: addedRequirement })
 })
 
-exports.getRequirements = catchAsync(async (req, res, next) => {
+exports.getAllRequirements = catchAsync(async (req, res, next) => {
     const { type, isFeatured } = req.query;
     let queryObject = {}
     if (type) queryObject.type = type
     if (isFeatured) queryObject.isFeatured = isFeatured
-    
+
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     let skipIndex = (page - 1) * limit;
@@ -35,4 +35,20 @@ exports.getRequirements = catchAsync(async (req, res, next) => {
         .exec();
 
     res.json({ success: true, requirement, totalPages, page, limit })
+})
+
+exports.getRequirement = catchAsync(async (req, res, next) => {
+
+})
+
+exports.updateRequirement = catchAsync(async (req, res, next) => {
+
+})
+
+exports.deleteRequirement = catchAsync(async (req, res, next) => {
+
+})
+
+exports.fulfillRequirement = catchAsync(async (req, res, next) => {
+
 })

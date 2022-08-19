@@ -43,7 +43,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
-    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalDocuments = await Request.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
 
