@@ -176,7 +176,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 //     strict: true,
 //     locale: 'vi',
 //     trim: true
-})
+// })
 //         await user[i].save()
 //     }
 //     res.json({ success: true })
