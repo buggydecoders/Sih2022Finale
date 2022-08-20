@@ -20,7 +20,7 @@ const ResourceCard = ({data}) => {
         </div>
         <div className='mt-6 relative'>
             <div className='text-lg font-semibold'>Description</div>
-            <div className='text-gray-400 text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse reprehenderit culpa, soluta itaque illo, repudiandae odio debitis iure commodi incidunt excepturi ea expedita accusamus aperiam tenetur nostrum, necessitatibus numquam totam! Delectus, perferendis modi laudantium unde obcaecati quibusdam quo mollitia distinctio. Aut atque minus debitis aperiam assumenda? Numquam praesentium, animi fuga modi exercitationem minima. Et nisi tempore voluptatem magni soluta.</div>
+            <div className='text-gray-400 text-xs'>{data?.description}</div>
             <div className='h-[70px] w-full bottom-0  left-0 bg-[#ffffff85] from-[#ffffff3c] via-[#ffffff3c] bg-gradient-to-t absolute'></div>
         </div>
         <div className='mt-5 flex justify-center text-sm'>

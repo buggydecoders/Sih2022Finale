@@ -19,7 +19,7 @@ const PaymentOption = ()=>{
     </div>
   )
 }
-const Payment = () => {
+const Payment = ({data}) => {
   return (
     <div>
         <div className='py-3 bg-white px-5 rounded-xl'>
@@ -29,8 +29,8 @@ const Payment = () => {
               <div className='flex  gap-5 items-center'>
                 <img src={ResourceImg} className='w-[130px]'/>
                 <div>
-                  <div className='text-lg font-semibold text-black'>3d Printer Resource</div>
-                  <div className='text-sm font-[600] text-gray-600'>Institute of Engineering & Tech. DAVV</div>
+                  <div className='text-lg font-semibold text-black'>{data?.resource?.name}</div>
+                  <div className='text-sm font-[600] text-gray-600'>{data?.lendingInstitute?.address?.street}, {data?.lendingInstitute?.address?.city}, {data?.lendingInstitute?.address?.state}</div>
                 </div>
               </div>
               <div className='w-fit bg-gray-200 text-gray-800 px-4 py-2 font-[600] rounded-md text-sm'>Change details</div>

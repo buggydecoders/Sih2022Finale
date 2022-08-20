@@ -105,6 +105,7 @@ export const fetchSingleRequest = (id,successCallback,errorCallback)=>async(disp
 }
 //id , {status : 'confimred'}
 export const editRequest = (id,data,successCallback,errorCallback)=>async(dispatch,getState)=>{
+    console.log(id, data)
     try{
         dispatch(setLoading('EDIT_REQ'));
         const result = await updateRequestAPI(id,data);

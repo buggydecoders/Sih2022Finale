@@ -1,7 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import { BsPatchCheck } from "react-icons/bs";
+import { editRequest } from "../../store/requests/actions";
+import { verifySignatureAPI } from "../../store/requests/services";
+import { getFileLink } from "../../utils/generateImageLink";
 
-const SignContract = () => {
+const SignContract = ({ data }) => {
+
+  const [uploadLoading, setUploadLoading] = useState(false);
+  const [signature, setSignature] = useState("");
+
+  const handleFileChange = async (e) => {
+    if (e.target.files.length > 0) {
+      setUploadLoading(true);
+      let link = await getFileLink(e.target.files[0]);
+      console.log(link)
+      setUploadLoading(false);
+      setSignature(link);
+    } else {
+      setSignature(null);
+    }
+  };
+
+  const handleSubmit = async () => {
+    const res = await verifySignatureAPI(signature)
+    const confirmation = res.data.isVerified;
+    console.log(confirmation)
+    confirmation? editRequest(data._id, {status: "signed"}) : console.log("failed")
+  }
+
   return (
     <div>
       <div className="border-[1px] bg-green-500 bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
@@ -22,55 +48,18 @@ const SignContract = () => {
           Please read before confirming & upload a digital signature.
         </div>
         <div className="h-[50vh] border-[1px] p-3 text-sm mt-6 overflow-y-auto border-gray-200 rounded-md w-full">
-          <p className="font-[600] mb-3">Terms Basic</p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          placeat asperiores recusandae tempore, dolorem quam error maiores
-          ullam laborum dolore!
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-          sapiente. Libero aut quis doloribus ducimus qui, voluptatibus
-          perferendis, id ad commodi laborum eius, perspiciatis rerum veniam
-          quasi maxime aperiam itaque?
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
-          rerum explicabo magni vel enim obcaecati tempore aperiam sed
-          consequuntur fugiat quam quaerat ex laudantium atque exercitationem
-          saepe beatae non porro voluptatum architecto blanditiis, repudiandae
-          ipsa! Dicta facilis animi incidunt.
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
-          rerum explicabo magni vel enim obcaecati tempore aperiam sed
-          consequuntur fugiat quam quaerat ex laudantium atque exercitationem
-          saepe beatae non porro voluptatum architecto blanditiis, repudiandae
-          ipsa! Dicta facilis animi incidunt.
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
-          rerum explicabo magni vel enim obcaecati tempore aperiam sed
-          consequuntur fugiat quam quaerat ex laudantium atque exercitationem
-          saepe beatae non porro voluptatum architecto blanditiis, repudiandae
-          ipsa! Dicta facilis animi incidunt.
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
-          rerum explicabo magni vel enim obcaecati tempore aperiam sed
-          consequuntur fugiat quam quaerat ex laudantium atque exercitationem
-          saepe beatae non porro voluptatum architecto blanditiis, repudiandae
-          ipsa! Dicta facilis animi incidunt.
-          <br /> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eum
-          rerum explicabo magni vel enim obcaecati tempore aperiam sed
-          consequuntur fugiat quam quaerat ex laudantium atque exercitationem
-          saepe beatae non porro voluptatum architecto blanditiis, repudiandae
-          ipsa! Dicta facilis animi incidunt.
+          <p className="font-[600] mb-3">{data.contract.title}</p>
+          {data.contract.terms}
         </div>
         <div className="mt-5 flex justify-between items-center">
 
-        <div className="flex items-center gap-3 relative">
-            <input type="file" className="absolute top-0 left-0 opacity-0"/>
-            <div className="border-primary border-[1px] rounded-md text-primary px-3 py-1 text-sm font-[600]">Choose File</div>
+          <div className="flex items-center gap-3 relative">
+            <input onChange={handleFileChange} type="file" className="absolute top-0 left-0 opacity-0" />
+            <div className="border-primary border-[1px] rounded-md text-primary px-3 py-1 text-sm font-[600] cursor-pointer">Choose File</div>
             <div className="text-sm font-[500] text-gray-500">Select a clear signature picture.</div>
-        </div>
+          </div>
 
-        <button className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer">Continue to Payment</button>
+          <button className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>Continue to Payment</button>
 
         </div>
       </div>

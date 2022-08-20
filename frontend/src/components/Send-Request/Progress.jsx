@@ -1,36 +1,52 @@
 import React from 'react'
-import {BiDetail} from 'react-icons/bi';
+import { BiDetail } from 'react-icons/bi';
 import cls from 'classnames';
-const Step = ({title,side,state})=>{
 
-    
-    
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import Typography from '@mui/material/Typography';
+
+const steps = ['Confirmation', 'Sign Contract', 'Payment', 'Exchange duration'];
+const isStepFailed = (step) => {
+    return step === 1;
+};
+
+const getStatus = (status) => {
+    switch (status) {
+        case 'pending': return 1
+        case 'await-sign': return 2
+        case 'signed': return 3
+        case 'approved': return 4
+    }
+}
+
+const Progress = ({ status, cancelled }) => {
     return (
-        <div className={`items-${side || 'end'}  flex flex-col gap-1`}>
-            <div className={cls('flex items-center gap-2 font-[600] text-sm ', {'opacity-40 text-gray-400' : state==='inactive'}, {'text-blue-500' : state==='active' || state==='done'})}>
-                <BiDetail/> {title}
-            </div>
-            <div className={cls('mt-2', {'rounded-full flex items-center justify-center border-[2px] border-blue-500 w-[20px] h-[20px] animate-pulse' : state==='active'})}>
-                <div className={cls('w-[15px] h-[15px] bg-blue-500 rounded-full', {'bg-gray-300' : state==='inactive'})}></div>
+        <div>
+            <div className='flex items-center relative w-full z-[100] top-[10px]'>
+                <Stepper className='w-1/2' activeStep={getStatus(status)} alternativeLabel>
+                    {steps.map((label, idx) => {
+                        const labelProps = {};
+                        if (isStepFailed(idx)) {
+                            labelProps.optional = (
+                                <Typography variant="caption" color="error">
+                                    Alert message
+                                </Typography>
+                            );
+
+                            labelProps.error = true;
+                        }
+
+                        <Step className='items-start' key={idx}>
+                            <StepLabel className='w-full'>{label}</StepLabel>
+                        </Step>
+                    })}
+                </Stepper>
             </div>
         </div>
     )
 }
 
-const Progress = () => {
-  return (
-    <div>
-        <div className='flex justify-between items-center relative z-[100] top-[10px]'>
-            <Step title="Confirmation" side="start" state='done'/>
-            <Step title="Sign Contract" side="center" state='active'/>
-            <Step title="Payment" side="center" state='inactive'/>
-            <Step title="Exchange duration" side="end" state='inactive'/>
-        </div>
-        <div className='w-full relative h-[2px] bg-gray-300 z-[1]'>
-            <div className='h-full w-[49%] bg-blue-500 absolute'></div>
-        </div>
-    </div>
-  )
-}
-
 export default Progress
+

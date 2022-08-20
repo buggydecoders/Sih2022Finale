@@ -54,15 +54,15 @@ const RequestCard = ({ data, tab }) => {
             <img
               src={
                 tab === "recieved"
-                  ? data?.aspirantInstitute.logo
-                  : data?.lendingInstitute.logo
+                  ? data?.aspirantInstitute?.logo
+                  : data?.lendingInstitute?.logo
               }
               className="w-[40px] h-[40px] rounded-full"
             />
             <div className="">
               {tab === "recieved"
-                ? data?.aspirantInstitute.instituteName
-                : data?.lendingInstitute.instituteName}
+                ? data?.aspirantInstitute?.instituteName
+                : data?.lendingInstitute?.instituteName}
             </div>
           </div>
         </th>

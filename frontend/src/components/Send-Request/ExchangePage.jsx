@@ -1,7 +1,8 @@
 import React from "react";
 import InputField from "../InputField";
 
-const ExchangePage = () => {
+const ExchangePage = ({data}) => {
+  console.log(data)
   return (
     <div className="py-3">
       <div className="text-2xl font-semibold">Request Active</div>
@@ -11,15 +12,15 @@ const ExchangePage = () => {
       <div className="mt-8 grid grid-cols-4 bg-white px-6 shadow-md py-4 rounded-md">
         <div className="">
           <div className="font-[700] text-sm text-gray-500">From</div>
-          <div className="font-semibold ">12 March 2022</div>
+          <div className="font-semibold ">{data?.startDate}</div>
         </div>
         <div className="">
           <div className="font-[700] text-sm text-gray-500">To</div>
-          <div className="font-semibold ">16 March 2022</div>
+          <div className="font-semibold ">{data?.endDate}</div>
         </div>
         <div className="">
           <div className="font-[700] text-sm text-gray-500">Status</div>
-          <div className="font-semibold text-orange-400">Not Approved</div>
+          <div className="font-semibold text-green-500">{data?.status}</div>
         </div>
         <div className="">
           <div className="font-[700] text-sm text-gray-500">

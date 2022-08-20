@@ -113,7 +113,7 @@ const Pending = ({data}) => {
 const Confirmation = ({data}) => {
   return (
     <div className="">
-    {/* <Pending/> */}
+    <Pending data={data}/>
     {/* <Cancelled/> */}
     </div>
   );

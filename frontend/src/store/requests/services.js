@@ -21,6 +21,12 @@ export const checkExistsAPI = async(id)=>{
 }
 
 export const updateRequestAPI = async(id,updates)=>{  
+    console.log(updates, "updates")
     const result = await serverInstance.patch(`/request/${id}`, updates);
+    return result;
+}
+
+export const verifySignatureAPI = async(signature)=>{  
+    const result = await serverInstance.post(`/request/verify-signature`, {signature});
     return result;
 }
