@@ -137,6 +137,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
     })
+
     let resources = []
     const state = await User.find({}).distinct('address.state')
     const institute = await User.find({}).distinct('instituteName')
@@ -149,6 +150,23 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
             resources.push(temp)
         }
     }
+    
+    if (req.query.university && !req.query.state && !req.query.budget) {
+        resources = resources.filter(p => p.instituteId.instituteName == req.query.university)
+    }
+    if (!req.query.university && req.query.state && !req.query.budget) {
+        resources = resources.filter(p => p.instituteId.address.state == req.query.state)
+    }
+    if (req.query.university && req.query.state && !req.query.budget) {
+        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university))
+    }
+    if (!req.query.university && !req.query.state && req.query.budget) {
+        resources = resources.filter(p => p.price < parseInt(budget))
+    }
+    if (req.query.university && req.query.state && req.query.budget) {
+        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university) && (p.price < parseInt(budget)))
+    }
+
     let startIndex = (page - 1) * limit;
     let endIndex = startIndex + limit;
     let totalDocuments = resources.length
