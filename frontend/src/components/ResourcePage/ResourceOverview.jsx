@@ -28,7 +28,7 @@ function ResourceOverview({ resource }) {
           </div>
 
           <div className="p-4">
-            <img className="w-92 h-92 object-cover" src={resource?.images?.length && resource?.images[active]?.url} alt="" />
+            <img className="w-[30rem] h-[30rem] object-cover" src={resource?.images?.length && resource?.images[active]?.url} alt="" />
           </div>
         </div>
 

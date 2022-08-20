@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import Breadcrum from "../components/Breadcrum";
@@ -31,7 +30,7 @@ function Resource() {
       <div className="p-10 flex flex-col w-full">
         <Breadcrum category={resource?.category} name={resource?.name} />
         <ResourceOverview resource={resource} />
-        <Description description={resource?.description} descriptionImage={resource?.descriptionImage} />
+        <Description description={resource?.description} descriptionImage={resource?.descriptionImage || `https://source.unsplash.com/random/?${resource?.name}}`} />
         <SimilarResources similar={resource.similar} />
         <div className="p-10">
           <Accordian heading="Condition of Use" content={resource?.conditions || ""} _id="One" />

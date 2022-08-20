@@ -7,7 +7,7 @@ import Switch from '@mui/material/Switch';
 import { toast } from 'react-toastify';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Input, { TwoFields } from "../Input";
-import { sendRequierement } from "../../store/requirements/actions";
+import { editRequirement, sendRequierement } from "../../store/requirements/actions";
 
 const INITIAL_FORM_STATE = {
     isFeatured: true,
@@ -20,13 +20,15 @@ const INITIAL_FORM_STATE = {
 }
 
 const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
-    const handleClose = () => setIsOpen(false);
     const [form, setForm] = useState(data || INITIAL_FORM_STATE);
     const { loading } = useSelector(state => state.requirements);
     const handleChange = (e) => setForm(prev => ({ ...form, [e.target.name]: e.target.value }));
     const dispatch = useDispatch();
-
-    console.log(data)
+    
+    console.log(isOpen)
+    const handleClose = () => {
+        setIsOpen(false)
+    }
 
     const handleSave = (e) => {
         e.preventDefault();
@@ -39,17 +41,17 @@ const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
             handleClose()
             setForm(INITIAL_FORM_STATE)
         }
-        if (isEdit) return dispatch(editResource(form, sucessCallback()));
+        if (isEdit) return dispatch(editRequirement(form, sucessCallback()));
 
         dispatch(sendRequierement(form, sucessCallback()));
     }
 
     return (
-        <Drawer open={isOpen} onClose={handleClose} anchor={"right"}>
+        <Drawer open={isOpen} anchor={"right"}>
             <div className="w-[50vw] p-4">
                 <div className="flex justify-between font-open items-center">
                     <div className="text-lg font-semibold">{isEdit ? 'Edit Requirement' : 'Add Requirement'}</div>
-                    <div className="" onClick={handleClose}>
+                    <div className="cursor-pointer" onClick={()=>handleClose()}>
                         <MdClear size={20} />
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const FilterResources = () => {
         <div className='text-gray-600 text-xl font-[600]'>FILTERS</div>
         <div className='text-secondary underline text-sm cursor-pointer'>Clear all</div>
       </div>
-      <CardCollection action='clear all' title={'Location'}>
+      <CardCollection action='clear all' title={'City'}>
         {locations.map((l, idx) => <FilterCheckbox title={l} idx={idx} data={filterLocations} setData={setFilterLocations} />)}
       </CardCollection>
       <CardCollection action='clear all' title={'University'}>

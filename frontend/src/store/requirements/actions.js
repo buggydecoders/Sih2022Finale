@@ -87,11 +87,10 @@ export const editRequirement = (data,successCallback)=>async(dispatch)=>{
     try {
         dispatch(setLoading('SAVE'));
         const result = await updateRequirementAPI(data._id,data);
-        console.log(data)
-        dispatch(editRequirementInStore(result.data.updatedRequirement));
-        toast(`${result.data.updatedRequirement.name} updated successfully!`);
-        console.log(result.data.updatedRequirement)
-        successCallback&&successCallback(result.data.updatedRequirement);
+        console.log(result)
+        dispatch(editRequirementInStore(result.data.requirement));
+        toast(`${result.data.requirement.name} updated successfully!`);
+        successCallback&&successCallback(result.data.requirement);
     }catch(err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
