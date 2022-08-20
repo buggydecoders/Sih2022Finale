@@ -19,12 +19,15 @@ const ManageRequestDrawer = ({data, isOpen, setIsOpen }) => {
               #89993344343332
             </div>
           </div>
-          <MdClear size={24} />
+          <MdClear size={24} onClick={handleClose}/>
         </div>
         {data?.status==='pending'&&<AcceptAndReview data={data}/>}
         {data?.status==='accepted'&&<AddContract data={data}/>}
-        {data?.status==='await'&&<ProcessRequest data={data}/>}
-        {data?.status==='confirmed'&&<ProcessRequest data={data}/>}
+        {data?.status==='await-sign'&&<ProcessRequest data={data}/>}
+        {data?.status==='signed'&&<ProcessRequest data={data}/>}
+        {data?.status==='approved'&&<ProcessRequest data={data}/>}
+        {data?.status==='cancelled'&&<ProcessRequest data={data}/>}
+        {data?.status==='completed'&&<ProcessRequest data={data}/>}
       </div>
     </Drawer>
   );

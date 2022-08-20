@@ -10,8 +10,9 @@ const INITIAL_STATE = {
 }
 
 export default function contractReducer(state=INITIAL_STATE,action) {
-    switch(action.payload) {
+    switch(action.type) {
         case CONSTANTS.SET_CONTRACTS : return {...state,contracts : action.payload};
+        case CONSTANTS.ADD_CONTRACT : return {...state,contracts : [...state.contracts,action.payload]}
         case CONSTANTS.SET_DATA : return {...state,...action.payload}
         case CONSTANTS.SET_LOADING : return {...state, loading : action.payload};
         case CONSTANTS.EDIT_CONTRACT : return {...state, contracts : [...state.contracts.filter(c=>c._id!==action.payload._id), action.payload]}
