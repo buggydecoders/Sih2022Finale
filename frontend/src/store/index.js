@@ -10,6 +10,7 @@ import MyResourceReducer from "./myresources/reducers";
 import chatRoomReducer from "./chatRoom/reducers";
 import ResourcesReducer from "./resources/reducers";
 import RequestReducer from "./requests/reducer";
+import contractReducer from "./contracts/reducer";
 
 
 const rootReducer = combineReducers({
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
     myResources : MyResourceReducer,
     resources: ResourcesReducer,
     chatRoom : chatRoomReducer,
-    requests : RequestReducer
+    requests : RequestReducer,
+    contracts : contractReducer
 });
 // // Middleware: Redux Persist Config
 const persistConfig = {

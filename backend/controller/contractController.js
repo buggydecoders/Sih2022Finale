@@ -19,7 +19,7 @@ exports.getAllContract = catchAsync(async (req, res, next) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
-    let totalDocuments = await Request.countDocuments(queryObject)
+    let totalDocuments = await Contracts.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
 
@@ -29,6 +29,7 @@ exports.getAllContract = catchAsync(async (req, res, next) => {
         .skip(skipIndex)
         .exec();
 
+        console.log(contracts);
     res.json({ success: true, contracts, totalPages, page, limit })
 })
 
