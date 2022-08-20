@@ -150,7 +150,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
             resources.push(temp)
         }
     }
-    
+
     if (req.query.university && !req.query.state && !req.query.budget) {
         resources = resources.filter(p => p.instituteId.instituteName == req.query.university)
     }
@@ -161,10 +161,10 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
         resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university))
     }
     if (!req.query.university && !req.query.state && req.query.budget) {
-        resources = resources.filter(p => p.price < parseInt(budget))
+        resources = resources.filter(p => p.price < parseInt(req.query.budget))
     }
     if (req.query.university && req.query.state && req.query.budget) {
-        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university) && (p.price < parseInt(budget)))
+        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university) && (p.price < parseInt(req.query.budget)))
     }
 
     let startIndex = (page - 1) * limit;
