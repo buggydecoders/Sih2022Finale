@@ -6,10 +6,11 @@ import Input from "../components/Input";
 import {BsPlusCircle} from 'react-icons/bs';
 import InputField from "../components/InputField";
 import { useDispatch, useSelector } from "react-redux";
-import { createContract, editContract, fetchContracts } from "../store/contracts/actions";
+import { createContract, deleteContract, editContract, fetchContracts } from "../store/contracts/actions";
+import { toast } from "react-toastify";
 
 const ContractCard = ({data,selected,setSelected})=>{
-    const isSelected = selected._id===data._id
+    const isSelected = selected?._id===data?._id
     return (
         <div onClick={()=>setSelected(data)} className={`${isSelected?'bg-secondary bg-opacity-5':'bg-white'} font-open hover:bg-secondary hover:bg-opacity-5 hover:shadow-md tansition-all flex justify-between items-center  px-5 py-4`}>
             <div>
@@ -22,23 +23,25 @@ const ContractCard = ({data,selected,setSelected})=>{
 }
 
 
-const ContractInput = ({data})=>{
+const ContractInput = ({form,setForm,data})=>{
     const {loading} = useSelector(state=>state.contracts);
+  
 
-    const [form,setForm] = useState({
-        title : data?.title || '',
-        terms : data?.terms
-    })
+
+    console.log(form);
     const dispatch = useDispatch();
     const handleChange = (e)=>setForm(prev=>({...prev,[e.target.name] : e.target.value}));
     const handleSubmit = ()=>{
         if (data) {
             console.log('Adding...');
-            dispatch(editContract(data._id,{title : form.title,terms : form.terms}));
+            const successCallback = ()=>toast('Contract has been edited successfully!')
+
+            dispatch(editContract(data._id,{title : form.title,terms : form.terms},successCallback));
 
         }else {
             console.log('Adding...');
-            dispatch(createContract({title : form.title,terms : form.terms}));
+            const successCallback = ()=>toast('Contract has been registered successfully!')
+            dispatch(createContract({title : form.title,terms : form.terms}, successCallback));
 
         }
     }
@@ -47,7 +50,7 @@ const ContractInput = ({data})=>{
         <InputField name='title' onChange={handleChange} value={form.title} label='Title'/>
         <InputField name='terms' onChange={handleChange} value={form.terms} label='Terms & conditions' area={true} rows={12}/>
         <div className="pt-5 flex justify-end gap-6 items-center font-open">
-           {data&&<button className="py-2 px-3 bg-primary border-primary border-[1px]  text-white rounded-md">Delete</button>}
+           {data&&<button onClick={()=>dispatch(deleteContract(data._id))} disabled={loading==="DEL"} className="py-2 px-3 bg-primary border-primary border-[1px]  text-white rounded-md">{loading==="DEL"?'Loading..':'Delete'}</button>}
             <button disabled={loading==='SAVE'} className="border-[1px] py-2 px-3 rounded-md text-primary font-semibold border-primary" onClick={handleSubmit}>{loading==='SAVE'?'Loading...':'Submit'}</button>
         </div>
     </div>
@@ -57,11 +60,21 @@ const ContractInput = ({data})=>{
 const Contracts = () => {
     const dispatch  = useDispatch();
     const [selected,setSelected] = useState();
-    const {loading,contracts} = useSelector(state=>state.contracts);
+    const {loading,contracts,page,totalPages} = useSelector(state=>state.contracts);
+    const [form,setForm] = useState({
+      title : selected?.title || '',
+      terms : selected?.terms || ''
+  })
+  useEffect(()=>{
+    setForm(prev=>({...prev,title : selected?.title || '', terms : selected?.terms || ''}))
+  }, [selected])
     useEffect(()=>{
         dispatch(fetchContracts(1,10));
     }, [])
     console.log(contracts,loading);
+    const  handlePaginationChange = (e,value)=>{
+      dispatch(fetchContracts(value,10));
+    }
   return (
     <Layout>
       <div className="py-8 px-12">
@@ -78,15 +91,15 @@ const Contracts = () => {
         </div>
         <div className="grid grid-cols-[1fr_3fr] gap-4 mt-7">
             <div className="bg-lightGray rounded-sm w-full p-3 space-y-6">
-                <div className="border-[2px] w-full text-center py-5 border-dashed justify-center items-center hover:shadow-md border-gray-400 flex gap-4"><BsPlusCircle/>Add</div>
-                {contracts?.length>0?<div className="">Loading..</div>:<>
+                <div onClick={()=>setSelected(null)} className="border-[2px] w-full text-center py-5 border-dashed justify-center items-center hover:shadow-md border-gray-400 flex gap-4"><BsPlusCircle/>Add</div>
+                {!contracts?.length>0?<div className="">No contract was found</div>:<>
                 {contracts?.map(c=><ContractCard data={c} selected={selected} setSelected={setSelected}/>)}
                 </>}
                 <div className="flex justify-center w-full items-center">
-                <Pagination page={1} count={1}/>
+                <Pagination page={page} count={totalPages} onChange={handlePaginationChange}/>
                 </div>
             </div>
-           <ContractInput data={selected}/>
+           <ContractInput form={form} setForm={setForm} data={selected}/>
         </div>
       </div>
     </Layout>

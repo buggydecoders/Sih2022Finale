@@ -86,7 +86,7 @@ export const getSingleContract = (id) => async (dispatch) => {
   }
 };
 
-export const createContract = (data) => async (dispatch) => {
+export const createContract = (data,successCallback) => async (dispatch) => {
   try {
     console.log('creating contract...');
     dispatch(setLoading("SAVE"));
@@ -94,6 +94,7 @@ export const createContract = (data) => async (dispatch) => {
     const { contract } = result.data;
     console.log(contract)
     dispatch(addContract(contract));
+    successCallback&&successCallback(data);
   } catch (err) {
     console.log(err);
     toast(err?.response?.data?.message || "Something went wrong!");
@@ -102,12 +103,13 @@ export const createContract = (data) => async (dispatch) => {
   }
 };
 
-export const editContract = (id, data) => async (dispatch) => {
+export const editContract = (id, data,successCallback) => async (dispatch) => {
   try {
     dispatch(setLoading("SAVE"));
     const result = await editContractAPI(id, data);
     const { contract } = result.data;
     dispatch(editContractInStore(contract));
+    successCallback&&successCallback(contract);
   } catch (err) {
     console.log(err);
     toast(err?.response?.data?.message || "Something went wrong!");
@@ -118,9 +120,10 @@ export const editContract = (id, data) => async (dispatch) => {
 
 export const deleteContract = (id) => async (dispatch) => {
   try {
-    dispatch(setLoading(true));
+    dispatch(setLoading('DEL'));
     const result = await deleteContractAPI(id);
     dispatch(deleteContractInStore(id));
+    toast(`Contract with id ${id} has been deleted successfully!`)
   } catch (err) {
     console.log(err);
     toast(err?.response?.data?.message || "Something went wrong!");

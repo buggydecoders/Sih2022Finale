@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GrDown } from "react-icons/gr";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { fetchContracts } from "../../store/contracts/actions";
+import { editRequest } from "../../store/requests/actions";
 import InputField from "../InputField";
 
-const ContractCard = ({ selected, setSelected, id }) => {
-  const isSelected = id === selected;
+const ContractCard = ({ selected, setSelected, data }) => {
+  const isSelected = data?._id === selected;
 
   return (
     <div>
       <div
-        onClick={() => setSelected(id)}
+        onClick={() => setSelected(data?._id)}
         className={`${
           isSelected
             ? "bg-secondary text-white"
@@ -21,9 +26,9 @@ const ContractCard = ({ selected, setSelected, id }) => {
               isSelected ? "text-gray-200" : "text-gray-400"
             } text-xs `}
           >
-            12 Januray 2022
+            {data?.createdAt}
           </div>
-          <div className="font-[600]">Virtual Resource Contract</div>
+          <div className="font-[600]">{data?.title}</div>
         </div>
         <div>
           <GrDown />
@@ -31,7 +36,7 @@ const ContractCard = ({ selected, setSelected, id }) => {
       </div>
       {isSelected && (
         <div className="bg-lightgray">
-          <InputField value='These are contract terms...' disabled={true} area={true} rows={10} />
+          <InputField value={data?.terms}  disabled={true} area={true} rows={10} />
         </div>
       )}
     </div>
@@ -40,21 +45,31 @@ const ContractCard = ({ selected, setSelected, id }) => {
 
 const AddContract = ({data}) => {
   const [selected, setSelected] = useState(null);
+  const dispatch = useDispatch();
+  const {loading : contractLoading,contracts} = useSelector(state=>state.contracts)
+  const navigate = useNavigate();
+  useEffect(()=>{
+    dispatch(fetchContracts(1,10));
+  }, [])
+
+  const handleSend = ()=>{
+    if (!selected) return toast('Please select a contract before continuing!');
+    const successCallback = ()=>toast('Request has been updated to await-signature')
+    dispatch(editRequest(selected,{contract : selected,status : 'await-sign'}));
+  }
 
   return (
     <div className="mt-6 w-full">
       <div className="text-base font-semibold">Add Contract</div>
-      <div className="text-xs text-secondary underline font-[500]">Add New</div>
+      <div className="text-xs text-secondary underline font-[500]" onClick={()=>navigate('/contracts')}>Add New</div>
       <div className="mt-5 w-full ">
         <div className="space-y-3">
-          <ContractCard selected={selected} setSelected={setSelected} id={1} />
-          <ContractCard selected={selected} setSelected={setSelected} id={2} />
-          <ContractCard selected={selected} setSelected={setSelected} id={3} />
+        {contractLoading?<div>Loading...</div>:contracts?.length===0?<div>No Contracts were found, Please create one</div>:contracts?.map(c=><ContractCard data={c} selected={selected} setSelected={setSelected}/>)}
         </div>
       </div>
       <div className="mt-5 flex justify-end items-center gap-5">
         <button className="py-2 px-5 border-b-[1px] text-red-600 border-red-600 font-[500]">Cancel Request</button>
-        <button disba className=" bg-secondary text-white px-5 py-2 rounded-md">Send Contract</button>
+        <button disba className=" bg-secondary text-white px-5 py-2 rounded-md" onClick={handleSend}>Send Contract</button>
       </div>
     </div>
   );
