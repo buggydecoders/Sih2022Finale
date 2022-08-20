@@ -138,11 +138,12 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
         headers: { "Content-Type": "multipart/form-data" },
     })
     let resources = []
+    const state = await User.find({}).distinct('address.state')
+    const institute = await User.find({}).distinct('instituteName')
+
     for (let i = 0; i < data.length; i++) {
         queryObject['_id'] = data[i].$oid
-        console.log(queryObject)
         const resource = await Resource.findOne(queryObject)
-        console.log(resource.instituteId.toString() != req.user.id)
         if (resource.instituteId.toString() != req.user.id) {
             const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
             resources.push(temp)
@@ -153,7 +154,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     let totalDocuments = resources.length
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
-    res.json({ success: true, resources, totalPages, page, limit })
+    res.json({ success: true, resources, totalPages, page, limit, state, institute })
 
     //TESTING DATA
     // let queryObject = {}
