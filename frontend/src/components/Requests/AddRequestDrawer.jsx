@@ -22,24 +22,26 @@ const INITIAL_FORM_STATE = {
 const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
     const handleClose = () => setIsOpen(false);
     const [form, setForm] = useState(data || INITIAL_FORM_STATE);
-    const { loading } = useSelector(state => state.myResources);
+    const { loading } = useSelector(state => state.requirements);
     const handleChange = (e) => setForm(prev => ({ ...form, [e.target.name]: e.target.value }));
     const dispatch = useDispatch();
 
+    console.log(data)
+
     const handleSave = (e) => {
         e.preventDefault();
-        if (!form.category) return toast('Select a valid category');
-        if (!form.name) return toast('Name is missing');
-        if (!form.description) return toast('Description is missing');
-        if (!form.budget) return toast('budget is missing');
+        if (!form?.category) return toast('Select a valid category');
+        if (!form?.name) return toast('Name is missing');
+        if (!form?.description) return toast('Description is missing');
+        if (!form?.budget) return toast('budget is missing');
 
         const sucessCallback = () => {
             handleClose()
             setForm(INITIAL_FORM_STATE)
         }
-        if (isEdit) return dispatch(editResource({ ...form, state: 'available' }, sucessCallback()));
+        if (isEdit) return dispatch(editResource(form, sucessCallback()));
 
-        dispatch(sendRequierement({ ...form }, sucessCallback()));
+        dispatch(sendRequierement(form, sucessCallback()));
     }
 
     return (
@@ -59,7 +61,7 @@ const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
                 <form onSubmit={handleSave}>
                     <div className="mt-5 font-open">
                         <select
-                            defaultValue={form.category || "selectCategory"}
+                            defaultValue={form?.category || "selectCategory"}
                             name="category"
                             onChange={handleChange}
                             required={true}
@@ -75,7 +77,7 @@ const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
                         </select>
                     </div>
 
-                    <FormControlLabel control={<Switch checked={form.isActive} onChange={(e) => setForm(prev => ({ ...prev, isFeatured: e.target.checked }))} />} label="Featured" />
+                    <FormControlLabel control={<Switch checked={form?.isActive} onChange={(e) => setForm(prev => ({ ...prev, isFeatured: e.target.checked }))} />} label="Featured" />
 
                     <div className="mt-6 space-y-6">
                         <Input
@@ -96,11 +98,11 @@ const AddRequestDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
                             value={form?.description}
                             note="Give your resource a short and clear description."
                         />
-                        <Input required={true} value={form.budget} name="budget" onChange={handleChange} label="Budget" type="string" note="Give your budget for the resource" />
+                        <Input required={true} value={form?.budget} name="budget" onChange={handleChange} label="Budget" type="string" note="Give your budget for the resource" />
 
                         <TwoFields>
-                            <Input required={true} value={form.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date" note="" />
-                            <Input required={true} value={form.durationTo} onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
+                            <Input required={true} value={form?.durationFrom} onChange={handleChange} name="durationFrom" label="Available from" type="date" note="" />
+                            <Input required={true} value={form?.durationTo} onChange={handleChange} name="durationTo" label="Available to" type="date" note="Eg: Per/day, per/month" />
                         </TwoFields>
                     </div>
                     <div className="mt-4 flex gap-5 items-center justify-between">

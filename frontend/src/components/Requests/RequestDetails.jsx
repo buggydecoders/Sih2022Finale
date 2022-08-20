@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const RequestDetails = ({ selected }) => {
   const { requirements, loading } = useSelector(state => state.requirements)
   const data = requirements[selected]
-  console.log(data)
+  // console.log(data)
   const navigate = useNavigate()
   return (
     <div className="bg-white shadow-md px-6 py-5">

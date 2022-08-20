@@ -8,4 +8,9 @@ router
     .get(checkAuth, requirementController.getRequirements)
     .post(checkAuth, requirementController.createRequirement)
 
+router
+    .route('/:id')
+    .patch(checkAuth, requirementController.updateRequirement)
+    .delete(checkAuth, requirementController.deleteRequirement)
+
 module.exports = router

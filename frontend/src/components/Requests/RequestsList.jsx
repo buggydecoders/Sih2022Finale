@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import RequestCard from './RequestCard'
 import { useSelector } from 'react-redux'
 
