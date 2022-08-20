@@ -13,6 +13,10 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Resource"
     },
+    contract: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Contract'
+    },
     startDate: {
         type: String,
     },
@@ -29,7 +33,7 @@ const RequestSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['pending', 'accepted', 'signed', 'approved', 'cancelled', 'completed'],
+        enum: ['pending', 'accepted', 'await-sign', 'signed', 'approved', 'cancelled', 'completed'],
         default: 'pending'
     },
     isActive: {
