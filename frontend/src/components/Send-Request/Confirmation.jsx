@@ -113,8 +113,8 @@ const Pending = ({data}) => {
 const Confirmation = ({data}) => {
   return (
     <div className="">
-      {data.status==='pending'&&<Pending data={data} />}
-      {data.status==='cancelled'&&<Cancelled data={data}/>}
+    {/* <Pending/> */}
+    {/* <Cancelled/> */}
     </div>
   );
 };

@@ -35,7 +35,7 @@ const persistConfig = {
   // Merge two-levels deep.
   stateReconciler: autoMergeLevel2,
   // Whitelist (Save Specific Reducers)
-  whitelist: ["auth"],
+  whitelist: ["auth", "resources"],
   // Blacklist (Don't Save Specific Reducers)
   blacklist: [
     

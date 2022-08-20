@@ -26,19 +26,17 @@ const RequestStatus = () => {
   console.log(requestData)
 
 
-  const renderComponent = ()=>{
+  const RenderComponent = ()=>{
     switch(requestData.status) {
       case 'pending' : return <Confirmation data={requestData}/>
       case 'cancelled' : return <Confirmation data={requestData}/>
-      case 'accepeted' : return <SignContract data={requestData}/>
+      case 'await-sign' : return <SignContract data={requestData}/>
       case 'signed' : return <Payment data={requestData}/>
       case 'approved' : return <ExchangePage data={requestData}/>
     }
   }
 
-
-
-
+  //pending, await-sign, signed, approve c
 
   return (
     <Layout >
@@ -48,7 +46,13 @@ const RequestStatus = () => {
             <div className='mt-4'><Progress/></div>
             <div className='mt-8 grid grid-cols-[2.3fr_1fr] gap-5'>
               <div className=''>
-               {(requestData.status==='pending' || requestData.status==='cancelled')&&<Confirmation data={requestData}/>}
+              {/* <RenderComponent/> */}
+              {/* <SignContract/> */}
+              <Payment/>
+              {/* <SignContract data={requestData}/> */}
+              {/* <ExchangePage/> */}
+
+              
               </div>
               <ResourceCard data={{...requestData.resource,instituteId :requestData.lendingInstitute }} institute={requestData.lendingInstitute}/>
               {/* <PaymentInfo/> */}
