@@ -51,36 +51,41 @@ exports.getRequest = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {
-    let queryObject = { aspirantInstitute: req.user.id }
+
+    let queryObject = {  }
     const { isActive, status, type } = req.query;
     if (isActive) queryObject.isActive = isActive
-    if (status) queryObject.status = status
+    if (status && status !=='undefined') queryObject.status = status
 
-    if (state==='recieved'){
+    if (type==='recieved'){
         queryObject.lendingInstitute = req.user.id
     }
-    if (state==='sent'){
+    if (type==='sent'){
         queryObject.aspirantInstitute = req.user.id
     }
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
-    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalDocuments = await Request.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
+    const requests = await Request.find(queryObject).sort("-createdAt")
 
-    const requests = await Request.find(queryObject)
         .populate('aspirantInstitute')
         .populate('lendingInstitute')
         .populate('resource')
         .limit(limit)
         .skip(skipIndex)
         .exec();
-    res.json({ success: true, requests, totalPages, page, limit })
+
+
+    res.json({ requests, totalPages, page, limit })
+
 })
 
+
 exports.updateRequest = catchAsync(async (req, res, next) => {
-    const request = await Request.findOne({ id: req.params.id, lendingInstitute: req.user.id })
+    const request = await Request.findOne({ id: req.params.id, lendingInstitute: req.user.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (!request) {
         return next(
             new AppError(`Resource with ${id} not found or you are not allowed to update the request.`, 404)
@@ -94,7 +99,7 @@ exports.getRecievedRequest = catchAsync(async (req, res, next) => {
     let queryObject = {
         lendingInstitute: req.user.id
     }
-    const requests = await Request.find(queryObject)
+    const requests = await Request.find(queryObject).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     res.json({ success: true, requests })
 })
 

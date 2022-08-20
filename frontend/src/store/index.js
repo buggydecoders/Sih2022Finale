@@ -10,8 +10,10 @@ import MyResourceReducer from "./myresources/reducers";
 import chatRoomReducer from "./chatRoom/reducers";
 import ResourcesReducer from "./resources/reducers";
 import RequestReducer from "./requests/reducer";
+
 import RequirementsReducer from "./requirements/reducer";
 
+import contractReducer from "./contracts/reducer";
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
@@ -20,7 +22,9 @@ const rootReducer = combineReducers({
     resources: ResourcesReducer,
     chatRoom : chatRoomReducer,
     requests : RequestReducer,
-    requirements : RequirementsReducer
+    requirements : RequirementsReducer,
+    contracts : contractReducer
+
 });
 // // Middleware: Redux Persist Config
 const persistConfig = {

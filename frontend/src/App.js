@@ -22,6 +22,7 @@ import ProfileV2 from "./pages/ProfileV2";
 import NotFound from "./pages/404";
 import RequestStatus from "./pages/Status/RequestStatus";
 import StatusV2 from "./pages/Status/StatusV2";
+import Contracts from "./pages/Contracts";
 
 
 
@@ -66,6 +67,16 @@ export default function App() {
           
         >
           <Route exact path='/status' element={<StatusV2 />} />
+        </Route>
+        <Route
+          exact
+          path="/contracts"
+          element={
+            <ProtectedRoute access="private"  scope={"institute"} />
+          }
+          
+        >
+          <Route exact path='/contracts' element={<Contracts />} />
         </Route>
         <Route
           exact
