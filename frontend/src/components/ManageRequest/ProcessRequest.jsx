@@ -171,15 +171,14 @@ const Confirmed = ({data})=>{
 const Completed = ({data})=>{
   const navigate = useNavigate();
   return (<>
-    <div className="border-[1px] bg-primary bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
-   <div className="w-[60px] flex items-center justify-center h-[60px] rounded-full bg-green-400">
+    <div className="border-[1px] bg-green-600 bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
+   <div className="w-[60px] flex items-center justify-center h-[60px] rounded-full bg-green-600">
      <BsPatchCheck size={30} className="text-white" />
    </div>
    <div>
-     <div className="text-xl font-[600]">Signed & Paid!</div>
+     <div className="text-xl font-[600]">Completed</div>
      <div className="text-sm text-gray-600">
-       Wohoo! Your resource has been accepted, wait for the signup the
-       contract!
+       Request completed! Don't forget to give your fellow HEI a nice feedback :)
      </div>
    </div>
  </div>
@@ -204,21 +203,13 @@ const Completed = ({data})=>{
        </button>
      </div>
  </div>
- <div className="mt-5">
-   <div className="font-[600] font-open">Update Status</div>
-   <div className="mt-3 w-full flex items-center gap-4">
-       <select className="w-full py-3 px-2 border-secondary border-[1px] rounded-md outline-none">
-       <option defaultChecked disabled={true} value="#">Select Status</option>
-           <option value="">Confimed</option>
-           <option value="">Cancelled</option>
-           <option value="">Completed</option>
-       </select>
-       <div className="bg-secondary text-white px-6 py-3 rounded-md">Update</div>
-   </div>
- </div>
+ 
  <div className="mt-6 font-open font-[600]">
-   <div className="">Add Comment</div>
+   <div className="">Feedback</div>
    <InputField area={true}/>
+   <div className="mt-6 justify-end flex">
+    <button className="px-4 py-2 bg-secondary rounded-md text-white">Add Feedback</button>
+   </div>
  </div>
    </>)
 }
