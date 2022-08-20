@@ -55,7 +55,7 @@ const AddContract = ({data}) => {
   const handleSend = ()=>{
     if (!selected) return toast('Please select a contract before continuing!');
     const successCallback = ()=>toast('Request has been updated to await-signature')
-    dispatch(editRequest(selected,{contract : selected,status : 'await-sign'}));
+    dispatch(editRequest(selected,{contract : selected,status : 'await-sign'}, successCallback));
   }
 
   return (
