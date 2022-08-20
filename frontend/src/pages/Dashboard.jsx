@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CardCollection from "../components/Dashboard/CardCollection";
 import CollegeProfileCard from "../components/Dashboard/CollegeProfileCard";
@@ -10,10 +10,32 @@ import Layout from "../components/Layout";
 import { BsClockHistory } from "react-icons/bs";
 import { BiBadgeCheck } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
-
+import { fetchDashboardResources } from "../store/resources/actions";
+import { useDispatch } from "react-redux";
 const Dashboard = () => {
-  const { loading, list } = useSelector((state) => state.myResources);
-  const navigate = useNavigate()
+  const { loading, list } = useSelector((state) => state.resources);
+  const navigate = useNavigate();
+
+  const [filters,setFilters] = useState({
+    university : [],
+    location : [],
+    budget : []
+   });
+   const dispatch = useDispatch();
+
+
+   useEffect(() => {
+    let budget = filters.budget.length>0?filters.budget.join('-'):"";
+    let location = filters.location.length>0?filters.location.join('-'):"";
+    let university = filters.university.length>0?filters.university.join('-'):"";
+    dispatch(fetchDashboardResources(1,10,budget,university,location,""));
+  }, [filters]);
+
+
+
+
+   
+   
 
   const Card = ({ data }) => {
     return (
@@ -57,7 +79,7 @@ const Dashboard = () => {
             <Resources />
           </div>
           <div>
-            <FilterResources />
+            <FilterResources filters={filters} setFilters={setFilters}/>
           </div>
         </div>
       </div>

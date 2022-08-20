@@ -9,9 +9,7 @@ import Loading from "../Loading";
 const Resources = () => {
   const { list, loading,page,totalPages,limit } = useSelector((state) => state.resources);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchDashboardResources());
-  }, []);
+
   const handlePaginationChange = (e, value)=>{
     dispatch(fetchDashboardResources(value,limit));
   }
