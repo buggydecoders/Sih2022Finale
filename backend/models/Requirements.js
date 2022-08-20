@@ -11,6 +11,9 @@ const RequirementSchema = new mongoose.Schema({
     type: {
         type: String,
     },
+    category: {
+        type: String
+    },
     description: {
         type: String
     },

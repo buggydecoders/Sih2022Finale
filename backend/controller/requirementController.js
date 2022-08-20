@@ -2,11 +2,12 @@ const Requirements = require('../models/Requirements')
 const catchAsync = require('../utils/catchAsync')
 
 exports.createRequirement = catchAsync(async (req, res, next) => {
-    const { name, type, description, budget, durationFrom, durationTo, isFeatured } = req.body
+    const { name, type, description, category, budget, durationFrom, durationTo, isFeatured } = req.body
     const newRequirement = new Requirements({
         name,
         type,
         description,
+        category,
         budget,
         durationFrom,
         durationTo,
