@@ -24,7 +24,7 @@ const SideProfile = ({data}) => {
     <div className='mt-2'>
       <div className='text-sm font-semibold'>Contact Person</div>
       {data?.contactPerson?.name?<div className='flex  items-center gap-3 mt-3'>
-        <img src={POCImg} className='w-[50px] rounded-md'/>
+        <img src={data?.contactPerson?.image} className='w-[50px] rounded-md'/>
         <div className='text-sm'>
             <div className='font-semibold'>{data?.contactPerson?.phone || 'Phone unset'}</div>
             <div className='text-gray-400 font-[500]'>{data?.contactPerson?.email || 'email unset'}</div>
