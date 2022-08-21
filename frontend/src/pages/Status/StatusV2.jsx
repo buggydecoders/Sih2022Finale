@@ -47,10 +47,12 @@ const RequestCard = ({ data, tab }) => {
       case "pending":
         return "yellow"
         break;
-      case "signed" || "completed":
+      case "signed":
         return "green"
         break;
-    
+      case "completed":
+        return "green"
+        break;
       default:
         break;
     }
@@ -124,7 +126,7 @@ const RequestCard = ({ data, tab }) => {
 
 const StatusV2 = () => {
   const query = useQueryParams();
-  const [tab, setTab] = useState(query("tab") || 1);
+  const [tab, setTab] = useState(query("tab") || "recieved");
   const {
     loading: requestsLoading,
     requests,

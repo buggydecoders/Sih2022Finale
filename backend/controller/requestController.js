@@ -51,7 +51,7 @@ exports.getRequest = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {
-    const { isActive, status, type } = req.query;
+    let { isActive, status, type } = req.query;
     let queryObject = {}
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
@@ -78,17 +78,17 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
         queryObject.status = 'cancelled'
     }
     if (type === 'completed') {
-        const request1 = await Request.find({ aspirantInstitute: req.user.id, status: 'completed' })
+        let request1 = await Request.find({ aspirantInstitute: req.user.id, status: 'completed' })
             .sort("-createdAt")
             .populate('aspirantInstitute')
             .populate('lendingInstitute')
             .populate('resource')
-        const request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
+        let request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
             .sort("-createdAt")
             .populate('aspirantInstitute')
             .populate('lendingInstitute')
             .populate('resource')
-        const requests = request1.concat(request2)
+        let requests = request1.concat(request2)
 
         let startIndex = (page - 1) * limit;
         let endIndex = startIndex + limit;
