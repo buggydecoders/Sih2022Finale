@@ -23,6 +23,7 @@ import NotFound from "./pages/404";
 import RequestStatus from "./pages/Status/RequestStatus";
 import StatusV2 from "./pages/Status/StatusV2";
 import Contracts from "./pages/Contracts";
+import Auth from "./pages/Admin/Auth";
 
 
 
@@ -170,6 +171,10 @@ export default function App() {
 
         {/* Extra Routes */}
         <Route exact path="/not-found" element={<NotFound/>}></Route>
+
+        {/* Admin Routes */}
+        <Route exact path="/admin/auth" element={<Auth/>}></Route>
+
       </Routes>
       <ToastContainer position="top-right"/>
       </>

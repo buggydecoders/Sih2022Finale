@@ -119,7 +119,7 @@ const Dashboard = () => {
               />
               <select
               onChange={(e)=>setCategory(e.target.value)}
-                className={`px-5 py-3 outline-none text-sm rounded-3xl bg-gray-100  hover:bg-primary shadow-md transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
+                className={`px-5 py-3 font-[600]  outline-none text-sm rounded-3xl bg-gray-100  hover:bg-primary shadow-md transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
               >
                 <option value="" selected disabled>
                  More
