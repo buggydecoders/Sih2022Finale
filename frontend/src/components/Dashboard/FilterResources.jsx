@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import FilterComponent from '../FilterComponent/FilterComponent';
 import CardCollection from './CardCollection'
@@ -6,7 +5,7 @@ import FilterCheckbox from './FilterCheckbox'
 
 const locations = ['Indore', 'Bhopal', 'Salem'];
 const Universities = ['DAVV', 'TIME', 'SONA'];
-const Budget = ['1000-2000', '3000-5000', '6000-7000', '10000-13000', '150000+'];
+const Budget = ['1000-2000', '2000-5000', '5000-7000', '7000-15000', '15000+'];
 
 const FilterResources = ({filters,setFilters}) => {
 
