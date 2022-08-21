@@ -51,9 +51,11 @@ exports.getRequest = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {
-
-    let queryObject = {}
     const { isActive, status, type } = req.query;
+    let queryObject = {}
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
     if (isActive) queryObject.isActive = isActive
     if (status && status !== 'undefined') queryObject.status = status
 
@@ -71,8 +73,33 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
         queryObject.aspirantInstitute = req.user.id;
         queryObject.status = 'cancelled'
     }
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
+    if (type === 'rejected') {
+        queryObject.aspirantInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
+    if (type === 'completed') {
+        const request1 = await Request.find({ aspirantInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+        const request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+        const requests = request1.concat(request2)
+
+        let startIndex = (page - 1) * limit;
+        let endIndex = startIndex + limit;
+        let totalDocuments = requests.length
+        let totalPages = Math.ceil(totalDocuments / limit);
+        requests = requests.slice(startIndex, endIndex)
+
+        return res.json({ requests, totalPages, page, limit })
+
+    }
+
 
     let totalDocuments = await Request.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
