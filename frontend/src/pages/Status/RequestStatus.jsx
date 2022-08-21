@@ -25,7 +25,7 @@ const RequestStatus = () => {
   }, [])
 
   const [cancelled, setCancelled] = useState(-1);
-  
+
   const RenderComponent = () => {
     switch (requestData.status) {
       case 'pending': return <Confirmation data={requestData} />

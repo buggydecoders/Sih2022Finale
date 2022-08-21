@@ -43,7 +43,7 @@ exports.requestExists = catchAsync(async (req, res, next) => {
 
 
 exports.getRequest = catchAsync(async (req, res, next) => {
-    const checkReq = await Request.findOne({ id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource').populate('contract')
+    const checkReq = await Request.findOne({ _id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource').populate('contract')
     if (checkReq) {
         return res.json({ state: true, message: "Request exist Already", request: checkReq })
     }

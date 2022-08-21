@@ -26,7 +26,7 @@ const Tab = ({ title, selected, setSelected, count, id }) => {
         } px-5 py-3 text-sm rounded-3xl  hover:bg-primary transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
     >
       <div className="font-[600]">{title}</div>
-      <div className="font-[500]">{count}</div>
+      {/* <div className="font-[500]">{count}</div> */}
     </div>
   );
 };
@@ -37,6 +37,27 @@ const RequestCard = ({ data, tab }) => {
   const handleResourceClick = () => {
     if (tab === 'sent') return navigate(`/status/${data._id}`);
     else setIsOpen(true);
+  }
+
+  const getColor = (status)=>{
+    switch (status) {
+      case "cancelled":
+        return "red"
+        break;
+      case "pending":
+        return "yellow"
+        break;
+      case "signed" || "completed":
+        return "green"
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
   return (
@@ -84,8 +105,8 @@ const RequestCard = ({ data, tab }) => {
           {moment(data?.resource?.durationTo).format("DD-MM-YYYY")}
         </td>
         <td className="py-4 px-6">
-          <div className="font-open text-green-500 font-[700] underline rounded-xl px-3 py-1">
-            {data?.status}
+          <div className={`font-open text-${getColor(data?.status)}-500 font-[700] underline rounded-xl px-3 py-1`}>
+            {capitalize(data?.status)}
           </div>
         </td>
         <td className="py-4 px-3 font-open">
@@ -114,7 +135,6 @@ const StatusV2 = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(tab)
     dispatch(fetchRequests(tab, 1, 10, "", ""));
   }, [tab]);
 
@@ -140,28 +160,35 @@ const StatusV2 = () => {
                 <Tab
                   title="Recieved"
                   count={1}
-                  id={1}
+                  id={"recieved"}
                   selected={tab}
                   setSelected={setTab}
                 />
                 <Tab
                   title="Sent"
                   count={13}
-                  id={2}
+                  id={"sent"}
                   selected={tab}
                   setSelected={setTab}
                 />
                 <Tab
                   title="Rejected"
                   count={20}
-                  id={3}
+                  id={"rejected"}
                   selected={tab}
                   setSelected={setTab}
                 />
                 <Tab
                   title="Cancelled"
                   count={0}
-                  id={4}
+                  id={"cancelled"}
+                  selected={tab}
+                  setSelected={setTab}
+                />
+                <Tab
+                  title="Completed"
+                  count={0}
+                  id={"completed"}
                   selected={tab}
                   setSelected={setTab}
                 />

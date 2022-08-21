@@ -21,7 +21,6 @@ export const checkExistsAPI = async (id) => {
 }
 
 export const updateRequestAPI = async (id, updates) => {
-    console.log(id)
     const result = await serverInstance.patch(`/request/${id}`, updates);
     return result;
 }
