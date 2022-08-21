@@ -19,8 +19,6 @@ const FilterResources = ({ filters, setFilters }) => {
   const {institutes,states,loading} = useSelector(state=>state.filters);
   
   // console.log(insitutes, states);
-
-  console.log(filters);
   return (
     <div className="space-y-5 w-full">
       <div className="justify-between flex items-center bg-white py-3 px-5">
