@@ -17,7 +17,6 @@ const FilterComponent = ({title,options,addSelected,removeSelected,selected}) =>
 
     const filterOptions = (query) => {
       let sortedList = cosine.sortMatch(query, options.map(o=>o.label));
-      console.log(sortedList);
       sortedList = sortedList.reverse();
       let maxRating = 0;
       for (let i = 0; i < sortedList.length; ++i) {
@@ -26,7 +25,6 @@ const FilterComponent = ({title,options,addSelected,removeSelected,selected}) =>
       let accuracy = maxRating - 0.2;
       let finalOptions = sortedList.filter((r) => r.rating >= accuracy);
       finalOptions = finalOptions.map(m=>(idToData[m.member]));
-      console.log(finalOptions);
       setFilteredOptions(finalOptions)
     };
 

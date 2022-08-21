@@ -61,7 +61,7 @@ const RequestCard = ({ data, tab }) => {
   function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
+  console.log(data)
   return (
     <>
       <tr
@@ -234,7 +234,7 @@ const StatusV2 = () => {
                   <tr></tr>
                 </thead>
                 <tbody>
-                  {requests.map((r) => (
+                  {requests?.map((r) => (
                     <RequestCard data={r} tab={tab} />
                   ))}
                 </tbody>

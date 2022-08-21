@@ -38,6 +38,7 @@ const Cancelled = () => {
 
 const Pending = ({ data }) => {
   const navigate = useNavigate();
+  console.log(data)
   return (
     <div>
       <div className="border-[1px] bg-gray-500 bg-opacity-10 border-gray-200 rounded-md flex gap-5  px-5 py-3 items-center">

@@ -36,9 +36,6 @@ const RequestStatus = () => {
     }
   }
 
-
-  
-
   return (
     <Layout >
       {loading ? <div>Loading...</div> : <div className='py-16 px-10 bg-lightGray'>

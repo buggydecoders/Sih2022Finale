@@ -26,8 +26,9 @@ const SignContract = ({ data }) => {
   const handleSubmit = async () => {
     const res = await verifySignatureAPI(signature)
     const confirmation = res.data.isVerified;
-    const successCallback = ()=>toast('Contract signed!')
-    const errorCallBack = (err)=>()=>toast(err)
+    console.log(confirmation)
+    const successCallback = () => toast('Contract signed!')
+    const errorCallBack = (err) => () => toast(err)
     confirmation ? dispatch(editRequest(data._id, { status: "signed" }, successCallback, errorCallBack)) : console.log("failed")
   }
 
@@ -51,8 +52,8 @@ const SignContract = ({ data }) => {
           Please read before confirming & upload a digital signature.
         </div>
         <div className="h-[50vh] border-[1px] p-3 text-sm mt-6 overflow-y-auto border-gray-200 rounded-md w-full">
-          <p className="font-[600] mb-3">{data.contract.title}</p>
-          {data.contract.terms}
+          <p className="font-[600] mb-3">{data?.contract?.title}</p>
+          {data?.contract?.terms}
         </div>
         <div className="mt-5 flex justify-between items-center">
 
