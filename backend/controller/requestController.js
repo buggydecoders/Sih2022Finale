@@ -63,6 +63,14 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     if (type === 'sent') {
         queryObject.aspirantInstitute = req.user.id
     }
+    if (type === 'cancelled') {
+        queryObject.lendingInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
+    if (type === 'rejected') {
+        queryObject.aspirantInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
@@ -70,7 +78,6 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
     const requests = await Request.find(queryObject).sort("-createdAt")
-
         .populate('aspirantInstitute')
         .populate('lendingInstitute')
         .populate('resource')
@@ -85,7 +92,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
 
 
 exports.updateRequest = catchAsync(async (req, res, next) => {
-    const request = await Request.findOne({ id: req.params.id}).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+    const request = await Request.findOne({ id: req.params.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (!request) {
         return next(
             new AppError(`Resource with ${id} not found or you are not allowed to update the request.`, 404)
