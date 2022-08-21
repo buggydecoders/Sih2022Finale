@@ -8,17 +8,9 @@ const locations = ['Indore', 'Bhopal', 'Salem'];
 const Universities = ['DAVV', 'TIME', 'SONA'];
 const Budget = ['1000-2000', '3000-5000', '6000-7000', '10000-13000', '150000+'];
 
-const FilterResources = () => {
-  const [filterLocations, setFilterLocations] = useState([]);
-  const [filterUniversities, setFilterUniversities] = useState([]);
-  const [filterBudget, setFilterBudget] = useState([]);
-  let filter = {
-    locations: filterLocations,
-    universities: filterUniversities,
-    budget: filterBudget
-  }
+const FilterResources = ({filters,setFilters}) => {
 
-  console.log(filter)
+ console.log(filters);
   return (
     <div className='space-y-5 w-full'>
       <div className='justify-between flex items-center bg-white py-3 px-5'>
