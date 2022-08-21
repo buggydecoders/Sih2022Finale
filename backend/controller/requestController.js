@@ -83,13 +83,11 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
             .populate('aspirantInstitute')
             .populate('lendingInstitute')
             .populate('resource')
-            .limit(limit)
         const request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
             .sort("-createdAt")
             .populate('aspirantInstitute')
             .populate('lendingInstitute')
             .populate('resource')
-            .limit(limit)
         const requests = request1.concat(request2)
 
         let startIndex = (page - 1) * limit;
