@@ -79,7 +79,17 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     }
     if (type === 'completed') {
         const request1 = await Request.find({ aspirantInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+            .limit(limit)
         const request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+            .limit(limit)
         const requests = request1.concat(request2)
 
         let startIndex = (page - 1) * limit;
@@ -88,7 +98,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
         let totalPages = Math.ceil(totalDocuments / limit);
         requests = requests.slice(startIndex, endIndex)
 
-        return res.json({ requests, totalPages, page, limit  })
+        return res.json({ requests, totalPages, page, limit })
 
     }
 
