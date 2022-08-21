@@ -121,7 +121,7 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 })
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
-    let { university: universityQuery, state: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
+    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
     let queryObject = {}
 
     if (categoryQuery) queryObject['category'] = categoryQuery
@@ -145,6 +145,9 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     for (let i = 0; i < data.length; i++) {
         queryObject['_id'] = data[i].$oid
         const resource = await Resource.findOne(queryObject)
+        if (!resource) {
+            return res.json({ resources: [] })
+        }
         if (resource.instituteId.toString() != req.user.id) {
             const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
             resources.push(temp)
@@ -153,17 +156,23 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
 
     if (universityQuery && !stateQuery && !budgetQuery) {
         resources = resources.filter(p => {
-            if (universityQuery.includes(p.instituteId.id)) return p
+            if (universityQuery.includes(p.instituteId.id)) {
+                return p
+            }
         })
     }
     if (!universityQuery && stateQuery && !budgetQuery) {
         resources = resources.filter(p => {
-            if (stateQuery.includes(p.instituteId.address.state)) return p
+            if (stateQuery.includes(p.instituteId.address.state)) {
+                return p
+            }
         })
     }
     if (universityQuery && stateQuery && !budgetQuery) {
         resources = resources.filter(p => {
-            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id))) return p
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id))) {
+                return p
+            }
         })
     }
     if (!universityQuery && !stateQuery && budgetQuery) {
@@ -175,7 +184,11 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     }
     if (universityQuery && stateQuery && budgetQuery) {
         console.log(universityQuery, stateQuery, budgetQuery)
-        resources = resources.filter(p => (stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id)) && ((p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1]))))
+        resources = resources.filter(p => {
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id)) && ((p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1])))) {
+                return p
+            }
+        })
     }
 
     let startIndex = (page - 1) * limit;
