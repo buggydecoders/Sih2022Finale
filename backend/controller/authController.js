@@ -167,8 +167,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllInstitutes = catchAsync(async (req, res, next) => {
-    const institute = await User.find({}).select({ instituteName: 1 })
-    res.json({ succcess: true, institute })
+    const institutes = await User.find({}).select({ instituteName: 1 })
+    res.json({ succcess: true, institutes })
 })
 
 // exports.usernameScript = catchAsync(async (req, res, next) => {
