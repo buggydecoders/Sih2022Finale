@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Layout from '../../components/Layout'
 import BasicInfoForm from '../../components/Send-Request/BasicInfoForm'
@@ -23,27 +23,26 @@ const RequestStatus = () => {
     }
     dispatch(fetchSingleRequest(requestId, null, errorCallback));
   }, [])
-  console.log(requestData)
 
-
+  const [cancelled, setCancelled] = useState(-1);
+  
   const RenderComponent = () => {
     switch (requestData.status) {
       case 'pending': return <Confirmation data={requestData} />
-      case 'cancelled': return <Confirmation data={requestData} />
+      case 'cancelled': return <Confirmation cancelled={true} data={requestData} />
       case 'await-sign': return <SignContract data={requestData} />
       case 'signed': return <Payment data={requestData} />
       case 'approved': return <ExchangePage data={requestData} />
     }
   }
 
-  //pending, await-sign, signed, approve c
 
   return (
     <Layout >
       {loading ? <div>Loading...</div> : <div className='py-16 px-10 bg-lightGray'>
         <div className='text-4xl font-bold'>Request Status</div>
         <div className='mt-2 text-gray-400'>Your resource is just a few clicks away. </div>
-        <div className='mt-4'><Progress status={requestData.status}/></div>
+        <div className='mt-4'><Progress cancelled={cancelled} status={requestData.status} /></div>
         <div className='mt-8 grid grid-cols-[2.3fr_1fr] gap-5'>
           <div className=''>
             <RenderComponent />

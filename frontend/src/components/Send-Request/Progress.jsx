@@ -8,16 +8,13 @@ import StepLabel from '@mui/material/StepLabel';
 import Typography from '@mui/material/Typography';
 
 const steps = ['Confirmation', 'Sign Contract', 'Payment', 'Exchange duration'];
-const isStepFailed = (step) => {
-    return step === 1;
-};
 
 const getStatus = (status) => {
     switch (status) {
-        case 'pending': return 1
-        case 'await-sign': return 2
-        case 'signed': return 3
-        case 'approved': return 4
+        case 'pending': return 0
+        case 'await-sign': return 1
+        case 'signed': return 2
+        case 'approved': return 3
     }
 }
 
@@ -28,9 +25,9 @@ const Progress = ({ status, cancelled }) => {
                 <Stepper className='w-1/2' activeStep={getStatus(status)} alternativeLabel>
                     {steps.map((label, idx) => {
                         const labelProps = {};
-                        if (isStepFailed(idx)) {
+                        if (cancelled===idx) {
                             labelProps.optional = (
-                                <Typography variant="caption" color="error">
+                                <Typography variant="caption" className='text-center' color="error">
                                     Alert message
                                 </Typography>
                             );
@@ -38,9 +35,11 @@ const Progress = ({ status, cancelled }) => {
                             labelProps.error = true;
                         }
 
-                        <Step className='items-start' key={idx}>
-                            <StepLabel className='w-full'>{label}</StepLabel>
-                        </Step>
+                        return (
+                            <Step className='items-start' key={idx}>
+                                <StepLabel {...labelProps} className='w-full'>{label}</StepLabel>
+                            </Step>
+                        )
                     })}
                 </Stepper>
             </div>

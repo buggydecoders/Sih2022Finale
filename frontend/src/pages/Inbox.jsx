@@ -15,8 +15,6 @@ const Inbox = () => {
   const { loading,rooms,activeRoom } = useSelector((state) => state.chatRoom);
   const {createVideoCall} = useContext(VideoChatContext);
   const {user} = useSelector(state=>state.auth);
-  // console.log(activeRoom);
-  // console.log(rooms, 'ROOMS');
   useEffect(() => {
     dispatch(fetchRooms());
     let userId = query("chat");

@@ -1,19 +1,21 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { BsPatchCheck } from "react-icons/bs";
 import { editRequest } from "../../store/requests/actions";
 import { verifySignatureAPI } from "../../store/requests/services";
 import { getFileLink } from "../../utils/generateImageLink";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 
 const SignContract = ({ data }) => {
 
   const [uploadLoading, setUploadLoading] = useState(false);
   const [signature, setSignature] = useState("");
+  const dispatch = useDispatch()
 
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
       setUploadLoading(true);
       let link = await getFileLink(e.target.files[0]);
-      console.log(link)
       setUploadLoading(false);
       setSignature(link);
     } else {
@@ -24,8 +26,9 @@ const SignContract = ({ data }) => {
   const handleSubmit = async () => {
     const res = await verifySignatureAPI(signature)
     const confirmation = res.data.isVerified;
-    console.log(confirmation)
-    confirmation? editRequest(data._id, {status: "signed"}) : console.log("failed")
+    const successCallback = ()=>toast('Contract signed!')
+    const errorCallBack = (err)=>()=>toast(err)
+    confirmation ? dispatch(editRequest(data._id, { status: "signed" }, successCallback, errorCallBack)) : console.log("failed")
   }
 
   return (
@@ -56,7 +59,7 @@ const SignContract = ({ data }) => {
           <div className="flex items-center gap-3 relative">
             <input onChange={handleFileChange} type="file" className="absolute top-0 left-0 opacity-0" />
             <div className="border-primary border-[1px] rounded-md text-primary px-3 py-1 text-sm font-[600] cursor-pointer">Choose File</div>
-            <div className="text-sm font-[500] text-gray-500">Select a clear signature picture.</div>
+            {signature ? <img src={signature} alt="uploadedSignature" className="h-20 object-cover" /> : <div className="text-sm font-[500] text-gray-500">{uploadLoading ? "Uploading..." : "Select a clear signature picture."}</div>}
           </div>
 
           <button className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>Continue to Payment</button>

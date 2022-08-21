@@ -8,7 +8,7 @@
     "iiqa_submitted_date": "2022-07-12",
     "date_of_decleration": "2027-07-11 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;6824&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6824&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -20,7 +20,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;7565&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;7565&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -32,7 +32,7 @@
     "iiqa_submitted_date": "2022-06-21",
     "date_of_decleration": "2027-06-20 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;6954&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6954&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -44,7 +44,7 @@
     "iiqa_submitted_date": "2022-05-03",
     "date_of_decleration": "2027-05-02 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;7103&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;7103&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -56,7 +56,7 @@
     "iiqa_submitted_date": "2022-06-21",
     "date_of_decleration": "2027-06-20 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;7162&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;7162&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -68,7 +68,7 @@
     "iiqa_submitted_date": "2022-05-10",
     "date_of_decleration": "2027-05-09 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;6976&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6976&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -80,7 +80,7 @@
     "iiqa_submitted_date": "2022-06-28",
     "date_of_decleration": "2027-06-27 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6247&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6247&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -92,7 +92,7 @@
     "iiqa_submitted_date": "2022-07-12",
     "date_of_decleration": "2027-07-11 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;6178&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6178&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -104,7 +104,7 @@
     "iiqa_submitted_date": "2021-12-06",
     "date_of_decleration": "2026-12-05 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6906&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6906&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -116,7 +116,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;3902&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3902&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -128,7 +128,7 @@
     "iiqa_submitted_date": "2022-06-21",
     "date_of_decleration": "2027-06-20 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6630&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6630&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -140,7 +140,7 @@
     "iiqa_submitted_date": "2022-04-12",
     "date_of_decleration": "2027-04-11 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;6649&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6649&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -152,7 +152,7 @@
     "iiqa_submitted_date": "2022-06-07",
     "date_of_decleration": "2027-06-06 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;6634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -164,7 +164,7 @@
     "iiqa_submitted_date": "2022-05-31",
     "date_of_decleration": "2027-05-30 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6453&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6453&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -176,7 +176,7 @@
     "iiqa_submitted_date": "2021-12-21",
     "date_of_decleration": "2026-12-20 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;6349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -188,7 +188,7 @@
     "iiqa_submitted_date": "2022-02-22",
     "date_of_decleration": "2027-02-21 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6585&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6585&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -200,7 +200,7 @@
     "iiqa_submitted_date": "2022-01-25",
     "date_of_decleration": "2027-01-24 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;6559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -212,7 +212,7 @@
     "iiqa_submitted_date": "2022-03-29",
     "date_of_decleration": "2027-03-28 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;6531&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6531&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -224,7 +224,7 @@
     "iiqa_submitted_date": "2022-07-12",
     "date_of_decleration": "2027-07-11 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;6213&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6213&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -236,7 +236,7 @@
     "iiqa_submitted_date": "2022-02-08",
     "date_of_decleration": "2027-02-07 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;6407&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6407&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -248,7 +248,7 @@
     "iiqa_submitted_date": "2022-03-08",
     "date_of_decleration": "2027-03-07 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4623&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4623&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -260,7 +260,7 @@
     "iiqa_submitted_date": "2021-12-21",
     "date_of_decleration": "2026-12-20 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;5373&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5373&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -272,7 +272,7 @@
     "iiqa_submitted_date": "2021-10-26",
     "date_of_decleration": "2026-10-25 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;6245&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6245&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -284,7 +284,7 @@
     "iiqa_submitted_date": "2021-12-28",
     "date_of_decleration": "2026-12-27 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;5194&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5194&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -296,7 +296,7 @@
     "iiqa_submitted_date": "2022-04-05",
     "date_of_decleration": "2027-04-04 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5532&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5532&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -308,7 +308,7 @@
     "iiqa_submitted_date": "2022-04-26",
     "date_of_decleration": "2027-04-25 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;6231&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6231&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -320,7 +320,7 @@
     "iiqa_submitted_date": "2021-12-21",
     "date_of_decleration": "2026-12-20 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;6031&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;6031&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -332,7 +332,7 @@
     "iiqa_submitted_date": "2022-03-22",
     "date_of_decleration": "2027-03-21 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;5477&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5477&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -344,7 +344,7 @@
     "iiqa_submitted_date": "2022-06-28",
     "date_of_decleration": "2027-06-27 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5873&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5873&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -356,7 +356,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5905&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5905&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -368,7 +368,7 @@
     "iiqa_submitted_date": "2021-11-03",
     "date_of_decleration": "2026-11-02 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5610&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5610&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -380,7 +380,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5759&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5759&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -392,7 +392,7 @@
     "iiqa_submitted_date": "2022-03-15",
     "date_of_decleration": "2027-03-14 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5827&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5827&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -404,7 +404,7 @@
     "iiqa_submitted_date": "2021-11-22",
     "date_of_decleration": "2026-11-21 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5720&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5720&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -416,7 +416,7 @@
     "iiqa_submitted_date": "2021-10-20",
     "date_of_decleration": "2026-10-19 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5174&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5174&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -428,7 +428,7 @@
     "iiqa_submitted_date": "2022-01-11",
     "date_of_decleration": "2027-01-10 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;5559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5559&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -440,7 +440,7 @@
     "iiqa_submitted_date": "2021-11-16",
     "date_of_decleration": "2026-11-15 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5732&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5732&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -452,7 +452,7 @@
     "iiqa_submitted_date": "2022-07-12",
     "date_of_decleration": "2027-07-11 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;5806&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5806&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -464,7 +464,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;5664&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5664&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -476,7 +476,7 @@
     "iiqa_submitted_date": "2021-11-30",
     "date_of_decleration": "2026-11-29 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -488,7 +488,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "D",
-    "edit_button": "&lt;a id=&quot;5782&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5782&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -500,7 +500,7 @@
     "iiqa_submitted_date": "2022-01-11",
     "date_of_decleration": "2027-01-10 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5775&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5775&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -512,7 +512,7 @@
     "iiqa_submitted_date": "2021-12-14",
     "date_of_decleration": "2026-12-13 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5542&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5542&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -524,7 +524,7 @@
     "iiqa_submitted_date": "2021-09-20",
     "date_of_decleration": "2026-09-19 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -536,7 +536,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5736&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5736&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -548,7 +548,7 @@
     "iiqa_submitted_date": "2021-11-03",
     "date_of_decleration": "2026-11-02 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5731&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5731&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -560,7 +560,7 @@
     "iiqa_submitted_date": "2021-09-13",
     "date_of_decleration": "2026-09-12 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5466&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5466&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -572,7 +572,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5727&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5727&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -584,7 +584,7 @@
     "iiqa_submitted_date": "2022-01-04",
     "date_of_decleration": "2027-01-03 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5596&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5596&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -596,7 +596,7 @@
     "iiqa_submitted_date": "2022-02-15",
     "date_of_decleration": "2027-02-14 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5711&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5711&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -608,7 +608,7 @@
     "iiqa_submitted_date": "2021-09-28",
     "date_of_decleration": "2026-09-27 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5712&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5712&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -620,7 +620,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5583&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5583&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -632,7 +632,7 @@
     "iiqa_submitted_date": "2022-05-10",
     "date_of_decleration": "2029-05-09 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;5332&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5332&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -644,7 +644,7 @@
     "iiqa_submitted_date": "2022-07-12",
     "date_of_decleration": "2027-07-11 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5536&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5536&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -656,7 +656,7 @@
     "iiqa_submitted_date": "2021-12-21",
     "date_of_decleration": "2026-12-20 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5654&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5654&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -668,7 +668,7 @@
     "iiqa_submitted_date": "2021-11-30",
     "date_of_decleration": "2026-11-29 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5622&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5622&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -680,7 +680,7 @@
     "iiqa_submitted_date": "2021-10-26",
     "date_of_decleration": "2026-10-25 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5524&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5524&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -692,7 +692,7 @@
     "iiqa_submitted_date": "2021-09-20",
     "date_of_decleration": "2026-09-19 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;2533&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2533&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -704,7 +704,7 @@
     "iiqa_submitted_date": "2021-11-16",
     "date_of_decleration": "2026-11-15 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5169&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5169&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -716,7 +716,7 @@
     "iiqa_submitted_date": "2022-07-05",
     "date_of_decleration": "2027-07-04 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5592&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5592&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -728,7 +728,7 @@
     "iiqa_submitted_date": "2021-12-06",
     "date_of_decleration": "2026-12-05 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5451&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5451&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -740,7 +740,7 @@
     "iiqa_submitted_date": "2022-06-21",
     "date_of_decleration": "2027-06-20 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -752,7 +752,7 @@
     "iiqa_submitted_date": "2022-03-22",
     "date_of_decleration": "2027-03-21 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;5364&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5364&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -764,7 +764,7 @@
     "iiqa_submitted_date": "2021-08-31",
     "date_of_decleration": "2026-08-30 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;5472&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5472&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -776,7 +776,7 @@
     "iiqa_submitted_date": "2021-12-06",
     "date_of_decleration": "2026-12-05 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;5455&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5455&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -788,7 +788,7 @@
     "iiqa_submitted_date": "2021-11-22",
     "date_of_decleration": "2026-11-21 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5386&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5386&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -800,7 +800,7 @@
     "iiqa_submitted_date": "2022-03-29",
     "date_of_decleration": "2027-03-28 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5382&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5382&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -812,7 +812,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;5242&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5242&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -824,7 +824,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -836,7 +836,7 @@
     "iiqa_submitted_date": "2022-01-18",
     "date_of_decleration": "2027-01-17 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;5256&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5256&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -848,7 +848,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5212&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5212&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -860,7 +860,7 @@
     "iiqa_submitted_date": "2021-10-05",
     "date_of_decleration": "2026-10-04 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;5201&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;5201&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -872,7 +872,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;4089&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4089&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -884,7 +884,7 @@
     "iiqa_submitted_date": "2021-09-07",
     "date_of_decleration": "2026-09-06 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;4419&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4419&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -896,7 +896,7 @@
     "iiqa_submitted_date": "2021-11-03",
     "date_of_decleration": "2026-11-02 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;4987&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4987&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -908,7 +908,7 @@
     "iiqa_submitted_date": "2021-02-23",
     "date_of_decleration": "2026-02-22 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4958&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4958&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -920,7 +920,7 @@
     "iiqa_submitted_date": "2022-05-10",
     "date_of_decleration": "2027-05-09 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;4476&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4476&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -932,7 +932,7 @@
     "iiqa_submitted_date": "2022-02-08",
     "date_of_decleration": "2027-02-07 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4850&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4850&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -944,7 +944,7 @@
     "iiqa_submitted_date": "2021-08-17",
     "date_of_decleration": "2026-08-16 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4835&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4835&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -956,7 +956,7 @@
     "iiqa_submitted_date": "2021-11-03",
     "date_of_decleration": "2026-11-02 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;4694&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4694&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -968,7 +968,7 @@
     "iiqa_submitted_date": "2021-08-17",
     "date_of_decleration": "2026-08-16 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -980,7 +980,7 @@
     "iiqa_submitted_date": "2021-08-31",
     "date_of_decleration": "2026-08-30 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4764&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4764&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -992,7 +992,7 @@
     "iiqa_submitted_date": "2021-11-30",
     "date_of_decleration": "2026-11-29 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;4639&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4639&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1004,7 +1004,7 @@
     "iiqa_submitted_date": "2022-06-14",
     "date_of_decleration": "2027-06-13 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;4747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4747&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1016,7 +1016,7 @@
     "iiqa_submitted_date": "2021-12-14",
     "date_of_decleration": "2026-12-13 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4347&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4347&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1028,7 +1028,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;4673&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4673&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1040,7 +1040,7 @@
     "iiqa_submitted_date": "2021-02-15",
     "date_of_decleration": "2026-02-14 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4439&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4439&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1052,7 +1052,7 @@
     "iiqa_submitted_date": "2021-09-28",
     "date_of_decleration": "2026-09-27 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;4464&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4464&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1064,7 +1064,7 @@
     "iiqa_submitted_date": "2022-07-19",
     "date_of_decleration": "2027-07-18 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;3573&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3573&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1076,7 +1076,7 @@
     "iiqa_submitted_date": "2021-01-25",
     "date_of_decleration": "2026-01-24 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;3773&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3773&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1088,7 +1088,7 @@
     "iiqa_submitted_date": "2021-04-19",
     "date_of_decleration": "2026-04-18 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;3787&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3787&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1100,7 +1100,7 @@
     "iiqa_submitted_date": "2021-09-20",
     "date_of_decleration": "2026-09-19 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;3434&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3434&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1112,7 +1112,7 @@
     "iiqa_submitted_date": "2021-08-31",
     "date_of_decleration": "2026-08-30 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4392&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4392&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1124,7 +1124,7 @@
     "iiqa_submitted_date": "2021-04-08",
     "date_of_decleration": "2026-04-07 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;4365&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4365&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1136,7 +1136,7 @@
     "iiqa_submitted_date": "2021-03-01",
     "date_of_decleration": "2026-02-28 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;4013&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4013&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1148,7 +1148,7 @@
     "iiqa_submitted_date": "2021-11-03",
     "date_of_decleration": "2026-11-02 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;4270&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4270&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1160,7 +1160,7 @@
     "iiqa_submitted_date": "2021-12-14",
     "date_of_decleration": "2026-12-13 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;3946&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3946&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1172,7 +1172,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1184,7 +1184,7 @@
     "iiqa_submitted_date": "2022-05-24",
     "date_of_decleration": "2027-05-23 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;4039&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4039&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1196,7 +1196,7 @@
     "iiqa_submitted_date": "2021-02-08",
     "date_of_decleration": "2026-02-07 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;4287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4287&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1208,7 +1208,7 @@
     "iiqa_submitted_date": "2021-03-31",
     "date_of_decleration": "2026-03-30 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;4238&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4238&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1220,7 +1220,7 @@
     "iiqa_submitted_date": "2021-02-23",
     "date_of_decleration": "2026-02-22 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4101&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4101&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1232,7 +1232,7 @@
     "iiqa_submitted_date": "2021-09-20",
     "date_of_decleration": "2026-09-19 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;4156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;4156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1244,7 +1244,7 @@
     "iiqa_submitted_date": "2021-02-02",
     "date_of_decleration": "2026-02-01 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;3926&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3926&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1256,7 +1256,7 @@
     "iiqa_submitted_date": "2021-01-25",
     "date_of_decleration": "2026-01-24 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;3994&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3994&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1268,7 +1268,7 @@
     "iiqa_submitted_date": "2021-01-08",
     "date_of_decleration": "2026-01-07 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;3920&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3920&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1280,7 +1280,7 @@
     "iiqa_submitted_date": "2022-03-29",
     "date_of_decleration": "2027-03-28 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3925&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3925&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1292,7 +1292,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3901&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3901&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1304,7 +1304,7 @@
     "iiqa_submitted_date": "2021-01-08",
     "date_of_decleration": "2026-01-07 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;3884&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3884&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1316,7 +1316,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "D",
-    "edit_button": "&lt;a id=&quot;3778&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3778&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1328,7 +1328,7 @@
     "iiqa_submitted_date": "2021-03-31",
     "date_of_decleration": "2026-03-30 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;3746&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3746&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1340,7 +1340,7 @@
     "iiqa_submitted_date": "2020-03-11",
     "date_of_decleration": "2025-03-10 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;2541&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2541&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1352,7 +1352,7 @@
     "iiqa_submitted_date": "2020-02-14",
     "date_of_decleration": "2025-02-13 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;3680&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3680&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1364,7 +1364,7 @@
     "iiqa_submitted_date": "2020-03-11",
     "date_of_decleration": "2025-03-10 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3577&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3577&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1376,7 +1376,7 @@
     "iiqa_submitted_date": "2020-01-08",
     "date_of_decleration": "2025-01-07 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;3566&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3566&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1388,7 +1388,7 @@
     "iiqa_submitted_date": "2021-03-16",
     "date_of_decleration": "2026-03-15 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;3508&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3508&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1400,7 +1400,7 @@
     "iiqa_submitted_date": "2020-01-08",
     "date_of_decleration": "2025-01-07 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3500&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3500&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1412,7 +1412,7 @@
     "iiqa_submitted_date": "2020-01-08",
     "date_of_decleration": "2025-01-07 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3356&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3356&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1424,7 +1424,7 @@
     "iiqa_submitted_date": "2019-10-18",
     "date_of_decleration": "2024-10-17 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;3260&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3260&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1436,7 +1436,7 @@
     "iiqa_submitted_date": "2019-11-15",
     "date_of_decleration": "2024-11-14 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;3144&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;3144&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1448,7 +1448,7 @@
     "iiqa_submitted_date": "2019-09-09",
     "date_of_decleration": "2024-09-08 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;2116&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2116&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1460,7 +1460,7 @@
     "iiqa_submitted_date": "2019-11-26",
     "date_of_decleration": "2024-11-25 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;2916&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2916&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1472,7 +1472,7 @@
     "iiqa_submitted_date": "2019-11-26",
     "date_of_decleration": "2024-11-25 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;2789&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2789&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1484,7 +1484,7 @@
     "iiqa_submitted_date": "2019-05-20",
     "date_of_decleration": "2024-05-19 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;2768&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2768&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1496,7 +1496,7 @@
     "iiqa_submitted_date": "2019-08-09",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;2458&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2458&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1508,7 +1508,7 @@
     "iiqa_submitted_date": "2019-08-09",
     "date_of_decleration": "2024-08-08 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;2520&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2520&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1520,7 +1520,7 @@
     "iiqa_submitted_date": "2019-04-01",
     "date_of_decleration": "2024-03-31 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;2432&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2432&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1532,7 +1532,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;2471&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2471&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1544,7 +1544,7 @@
     "iiqa_submitted_date": "2019-11-26",
     "date_of_decleration": "2024-11-25 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;2460&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2460&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1556,7 +1556,7 @@
     "iiqa_submitted_date": "2019-09-09",
     "date_of_decleration": "2024-09-08 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;1990&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1990&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1568,7 +1568,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;2233&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2233&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1580,7 +1580,7 @@
     "iiqa_submitted_date": "2019-07-15",
     "date_of_decleration": "2024-07-14 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;2286&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2286&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1592,7 +1592,7 @@
     "iiqa_submitted_date": "2019-08-09",
     "date_of_decleration": "2024-08-08 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;2349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2349&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1604,7 +1604,7 @@
     "iiqa_submitted_date": "2019-05-20",
     "date_of_decleration": "2024-05-19 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;1647&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1647&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1616,7 +1616,7 @@
     "iiqa_submitted_date": "2019-03-04",
     "date_of_decleration": "2024-03-03 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;1634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1634&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1628,7 +1628,7 @@
     "iiqa_submitted_date": "2019-04-01",
     "date_of_decleration": "2024-03-31 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;2179&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2179&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1640,7 +1640,7 @@
     "iiqa_submitted_date": "2019-03-04",
     "date_of_decleration": "2024-03-03 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;2156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2156&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1652,7 +1652,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;2159&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2159&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1664,7 +1664,7 @@
     "iiqa_submitted_date": "2019-05-01",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;2099&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;2099&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1676,7 +1676,7 @@
     "iiqa_submitted_date": "2019-06-14",
     "date_of_decleration": "2024-06-13 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;1760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1760&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1688,7 +1688,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;1908&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1908&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1700,7 +1700,7 @@
     "iiqa_submitted_date": "2019-02-08",
     "date_of_decleration": "2024-02-07 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;1738&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1738&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1712,7 +1712,7 @@
     "iiqa_submitted_date": "2019-03-04",
     "date_of_decleration": "2024-03-03 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;1838&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1838&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1724,7 +1724,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;1937&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1937&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1736,7 +1736,7 @@
     "iiqa_submitted_date": "2019-03-04",
     "date_of_decleration": "2024-03-03 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;1817&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1817&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1748,7 +1748,7 @@
     "iiqa_submitted_date": "2019-03-28",
     "date_of_decleration": "2024-03-27 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;1770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1770&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1760,7 +1760,7 @@
     "iiqa_submitted_date": "2019-02-08",
     "date_of_decleration": "2024-02-07 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;1326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1772,7 +1772,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;1258&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1258&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1784,7 +1784,7 @@
     "iiqa_submitted_date": "2018-11-30",
     "date_of_decleration": "2023-11-29 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;1016&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1016&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1796,7 +1796,7 @@
     "iiqa_submitted_date": "2019-07-15",
     "date_of_decleration": "2024-07-14 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;1058&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1058&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1808,7 +1808,7 @@
     "iiqa_submitted_date": "2020-01-08",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;1095&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1095&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1820,7 +1820,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;1053&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1053&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1832,7 +1832,7 @@
     "iiqa_submitted_date": "2019-07-15",
     "date_of_decleration": "2024-07-14 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;52&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;52&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1844,7 +1844,7 @@
     "iiqa_submitted_date": "2018-11-30",
     "date_of_decleration": "2023-11-29 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;998&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;998&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1856,7 +1856,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;843&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;843&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1868,7 +1868,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;1009&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;1009&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1880,7 +1880,7 @@
     "iiqa_submitted_date": "2019-05-01",
     "date_of_decleration": "2024-04-30 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;202&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;202&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1892,7 +1892,7 @@
     "iiqa_submitted_date": "2019-02-08",
     "date_of_decleration": "2024-02-07 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;546&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;546&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1904,7 +1904,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;947&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;947&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1916,7 +1916,7 @@
     "iiqa_submitted_date": "2019-02-08",
     "date_of_decleration": "2024-02-07 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;484&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;484&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1928,7 +1928,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2023-08-15 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;769&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;769&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1940,7 +1940,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "A+",
-    "edit_button": "&lt;a id=&quot;655&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;655&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1952,7 +1952,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;980&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;980&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1964,7 +1964,7 @@
     "iiqa_submitted_date": "2019-05-01",
     "date_of_decleration": "2024-04-30 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;506&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1976,7 +1976,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;56&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;56&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -1988,7 +1988,7 @@
     "iiqa_submitted_date": "2018-11-30",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;961&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;961&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2000,7 +2000,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;607&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;607&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2012,7 +2012,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;677&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;677&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2024,7 +2024,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;581&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;581&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2036,7 +2036,7 @@
     "iiqa_submitted_date": "2018-11-30",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B++",
-    "edit_button": "&lt;a id=&quot;675&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;675&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2048,7 +2048,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;739&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;739&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2060,7 +2060,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;803&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;803&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2072,7 +2072,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "A++",
-    "edit_button": "&lt;a id=&quot;750&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;750&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2084,7 +2084,7 @@
     "iiqa_submitted_date": "2019-05-01",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;690&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;690&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2096,7 +2096,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2023-08-15 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;767&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;767&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2108,7 +2108,7 @@
     "iiqa_submitted_date": "2018-11-30",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;658&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;658&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2120,7 +2120,7 @@
     "iiqa_submitted_date": "2018-09-26",
     "date_of_decleration": "2023-09-25 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;568&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;568&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2132,7 +2132,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;410&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;410&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2144,7 +2144,7 @@
     "iiqa_submitted_date": "2018-07-03",
     "date_of_decleration": "2023-07-02 00:00:00",
     "naac_grade": "B+",
-    "edit_button": "&lt;a id=&quot;199&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;199&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2156,7 +2156,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;326&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2168,7 +2168,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2023-08-15 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;288&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;288&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2180,7 +2180,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2019-12-31 00:00:00",
     "naac_grade": "A",
-    "edit_button": "&lt;a id=&quot;135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;135&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2192,7 +2192,7 @@
     "iiqa_submitted_date": "2018-08-16",
     "date_of_decleration": "2023-08-15 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;36&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;36&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2204,7 +2204,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "C",
-    "edit_button": "&lt;a id=&quot;151&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;151&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2216,7 +2216,7 @@
     "iiqa_submitted_date": "2018-11-02",
     "date_of_decleration": "2023-11-01 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;128&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;128&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   },
   {
@@ -2228,7 +2228,7 @@
     "iiqa_submitted_date": "2018-07-03",
     "date_of_decleration": "2023-07-02 00:00:00",
     "naac_grade": "B",
-    "edit_button": "&lt;a id=&quot;43&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  class=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
+    "edit_button": "&lt;a id=&quot;43&quot; data-id=&quot;5&quot; href=&quot;javascript:void(0)&quot;                  className=&quot;edit_btn btn btn-xs btn-primary&quot;&gt;View&lt;/a&gt;",
     "status": "5"
   }
 ]

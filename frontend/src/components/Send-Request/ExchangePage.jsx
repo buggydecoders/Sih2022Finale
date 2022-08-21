@@ -2,7 +2,6 @@ import React from "react";
 import InputField from "../InputField";
 
 const ExchangePage = ({data}) => {
-  console.log(data)
   return (
     <div className="py-3">
       <div className="text-2xl font-semibold">Request Active</div>

@@ -15,8 +15,6 @@ const FilterResources = () => {
     universities: filterUniversities,
     budget: filterBudget
   }
-
-  console.log(filter)
   return (
     <div className='space-y-5 w-full'>
       <div className='justify-between flex items-center bg-white py-3 px-5'>

@@ -119,8 +119,6 @@ const ActiveConversation = () => {
 
   const { reciever, messagesLoading, messages, sendMessage } =
     useContext(MessageContext);
-  // console.log(messages);
-  // console.log(reciever);
   const messageContainerRef = useRef();
   useEffect(() => {
     if (messageContainerRef.current) {

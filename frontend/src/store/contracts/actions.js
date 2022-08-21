@@ -44,7 +44,6 @@ export const setLoading = (state) => {
 };
 
 export const setData = (data) => {
-  console.log(data, 'data');
   return {
     type: CONSTANTS.SET_DATA,
     payload: data,

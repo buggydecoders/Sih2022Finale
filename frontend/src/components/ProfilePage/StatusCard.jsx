@@ -7,7 +7,6 @@ import {BsFillEyeFill} from 'react-icons/bs'
 function StatusCard(props) {
 
   const Icon = ({icon})=>{
-    console.log(icon)
     switch (icon) {
       case 1: 
         return <RiCalendar2Line className='h-8 w-8'/>
