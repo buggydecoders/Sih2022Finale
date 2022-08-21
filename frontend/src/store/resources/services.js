@@ -1,8 +1,8 @@
 import { serverInstance } from "../../utils/serverInstance"
 
 
-export const fetchDashboardResourcesAPI = async(page,limit)=>{
-    const result = await serverInstance.get(`/resource/dashboard?page=${page || 1}&limit=${limit || 10}`);
+export const fetchDashboardResourcesAPI = async(page,limit,budget,university,location,category)=>{
+    const result = await serverInstance.get(`/resource/dashboard?page=${page || 1}&limit=${limit || 10}&budget=${budget}&university=${university}&location=${location}&category=${category}`);
     return result;
 }
 

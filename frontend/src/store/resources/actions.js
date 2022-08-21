@@ -33,10 +33,10 @@ export const setSearchReslts = (data)=>{
 
 
 
-export const fetchDashboardResources = (page,limit)=>async(dispatch,getState)=>{
+export const fetchDashboardResources = (page,limit,budget,university,location,category)=>async(dispatch,getState)=>{
     try {
         dispatch(setLoading("FETCH"));
-        const result = await fetchDashboardResourcesAPI(page,limit)
+        const result = await fetchDashboardResourcesAPI(page,limit,budget,university,location,category)
         let fetchedData = result.data;
         dispatch(setData({
             list : fetchedData.resources,
