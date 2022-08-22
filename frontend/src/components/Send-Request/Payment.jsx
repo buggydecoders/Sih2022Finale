@@ -25,11 +25,13 @@ const PaymentOption = () => {
 
 const Payment = ({ data }) => {
   const dispatch = useDispatch()
+
   const handlePayment = () => {
     const successCallback = () => toast('Payment Succesful')
     const errorCallBack = () => toast("Error")
-    dispatch(editRequest(data?._id, { status: "approved", successCallback, errorCallBack }));
+    dispatch(editRequest(data?._id, { status: "approved" }, successCallback, errorCallBack));
   }
+
   return (
     <div>
       <div className='py-3 bg-white px-5 rounded-xl'>
@@ -53,7 +55,9 @@ const Payment = ({ data }) => {
           </div>
         </div>
 
-        <button onClick={()=>handlePayment}>Pay and Proceed</button>
+        <div className="w-full relative">
+          <button type='button' className='bg-primary px-6 py-2 my-4 rounded-lg text-white absolute right-0' onClick={handlePayment}>Pay and Proceed</button>
+        </div>
       </div>
     </div>
   )

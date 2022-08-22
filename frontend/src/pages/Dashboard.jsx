@@ -16,9 +16,22 @@ import Tab from "../components/Tab";
 import { capitalize } from "@mui/material";
 import { fetchRequests } from "../store/requests/actions";
 import moment from "moment";
+import { fetchAllResources } from "../store/myresources/actions";
+import Loading from "../components/Loading";
 
 const Dashboard = () => {
   const { loading, list } = useSelector((state) => state.myResources);
+  const {
+    loading: requestsLoading,
+    requests,
+    totalPages,
+    page: activePage,
+    limit,
+  } = useSelector((state) => state.requests);
+  const { user } = useSelector(state => state.auth);
+  const { activeRoom, lastMessage } = useSelector(state => state.chatRoom);
+
+
   const navigate = useNavigate();
   const [category, setCategory] = useState("all");
 
@@ -29,31 +42,19 @@ const Dashboard = () => {
   });
   const dispatch = useDispatch();
 
+
+  useEffect(() => {
+    // dispatch(fetchRequests("completed", 1, 3, "", ""));
+    dispatch(fetchAllResources(limit))
+  }, []);
+
   useEffect(() => {
     let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";
     let location = filters.location.length > 0 ? filters.location.join("-") : "";
     let university = filters.university.length > 0 ? filters.university.join("-") : "";
     let categoryFetch = category === "all" ? "" : category;
-    dispatch(
-      fetchDashboardResources(
-        1,
-        10,
-        budget,
-        university,
-        location,
-        categoryFetch
-      )
-    );
-    dispatch(fetchRequests("completed", 1, 3, "", ""));
+    dispatch(fetchDashboardResources(1, 10, budget, university, location, categoryFetch));
   }, [filters, category]);
-
-  const {
-    loading: requestsLoading,
-    requests,
-    totalPages,
-    page: activePage,
-    limit,
-  } = useSelector((state) => state.requests);
 
   const getColor = (status) => {
     switch (status) {
@@ -141,8 +142,6 @@ const Dashboard = () => {
   };
 
   const MessageCard = ({ data }) => {
-    const { user } = useSelector(state => state.auth);
-    const { activeRoom, lastMessage } = useSelector(state => state.chatRoom);
     const isActive = data._id === activeRoom._id;
     let cardUserData = data?.users[0]._id === user._id ? data?.users[1] : data?.users[0];
 
@@ -180,9 +179,14 @@ const Dashboard = () => {
             <CollegeProfileCard />
             <CardCollection viewAll="/status" title="Shared Resources">
               <div className="space-y-2">
-                {requests?.map((item, idx) => {
-                  return <SharedResourceCard data={item} />;
-                })}
+                {
+                  loading ?
+                    requests?.map((item, idx) => {
+                      return <SharedResourceCard data={item} />;
+                    })
+                    :
+                    <Loading />
+                }
               </div>
             </CardCollection>
             <CardCollection viewAll="/profile" title="Listed Resources">

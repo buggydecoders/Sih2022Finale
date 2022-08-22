@@ -78,7 +78,7 @@ const ResourceCard = ({ data }) => {
           <SaveButton resourceId={data._id} />
         </div>
       </div>
-      <div className="mt-3 text-sm text-gray-400">{data?.description || "N/A"}</div>
+      <div className="mt-3 text-sm text-gray-400">{data?.description.substr(0, 300)}{data?.description < 300 ? "" : "..."}</div>
       <hr className="my-3" />
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-6 text-lg">
@@ -90,8 +90,8 @@ const ResourceCard = ({ data }) => {
           <div className="flex gap-1"></div>
         </div>
         <div className="flex items-center gap-3">
-          <Button variant="outlined"  onClick={()=>navigate(`/inbox?chat=${data.instituteId._id}`)}  >Send Enquiry</Button>
-          <Button variant="filled" onClick={()=>navigate(`/send-request/${data._id}`)}>Send Request</Button>
+          <Button variant="outlined"  onClick={()=>navigate(`/inbox?chat=${data?.instituteId?._id}`)}  >Send Enquiry</Button>
+          <Button variant="filled" onClick={()=>navigate(`/send-request/${data?._id}`)}>Send Request</Button>
         </div>
       </div>
     </div>
