@@ -24,6 +24,7 @@ import RequestStatus from "./pages/Status/RequestStatus";
 import StatusV2 from "./pages/Status/StatusV2";
 import Contracts from "./pages/Contracts";
 import Auth from "./pages/Admin/Auth";
+import AdminPanel from "./pages/Admin";
 
 
 
@@ -173,6 +174,7 @@ export default function App() {
         <Route exact path="/not-found" element={<NotFound/>}></Route>
 
         {/* Admin Routes */}
+        <Route exact path="/admin" element={<AdminPanel/>}></Route>
         <Route exact path="/admin/auth" element={<Auth/>}></Route>
 
       </Routes>
