@@ -34,7 +34,7 @@ const AdminPanel = () => {
           <StatComponent icon={<FaBookmark size={22}/>} title='Requirements' count='5,000'/>
           <StatComponent icon={<FaMoneyBillWave size={22}/>} title='Transactions' count='50,000'/>
         </div>
-        <div className='mt-8'></div>
+        <div className='mt-8 p-5 bg-white rounded-md'></div>
       </div>
      </div>
     </div>
