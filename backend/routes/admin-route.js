@@ -13,7 +13,7 @@ router
 
 router
     .route('/requirement')
-    .get(checkAuth, restrictTo('admin'), adminController.getRequirements)
+    .get(checkAuth, restrictTo('admin'), adminController.getAllRequirements)
 
 router
     .route('/request')
