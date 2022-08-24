@@ -4,15 +4,24 @@ const restrictTo = require('../middlewares/restrictTo')
 const adminController = require('../controller/adminController')
 
 router
-    .route('/institutes')
-    .get(checkAuth, restrictTo('admin'), adminController.getAllInstitutes)
-
-router
     .route('/stats')
     .get(checkAuth, restrictTo('admin'), adminController.getStats)
 
 router
-    .route('/requirements')
+    .route('/institutes')
+    .get(checkAuth, restrictTo('admin'), adminController.getAllInstitutes)
+
+router
+    .route('/requirement')
     .get(checkAuth, restrictTo('admin'), adminController.getRequirements)
+
+router
+    .route('/request')
+    .get(checkAuth, restrictTo('admin'), adminController.getAllRequests)
+
+router
+    .route('/resource')
+    .get(checkAuth, restrictTo('admin'), adminController.getAllResources)
+
 
 module.exports = router
