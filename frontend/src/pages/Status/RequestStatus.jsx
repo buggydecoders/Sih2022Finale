@@ -32,6 +32,7 @@ const RequestStatus = () => {
       case 'cancelled': return <Confirmation cancelled={true} data={requestData} />
       case 'await-sign': return <SignContract data={requestData} />
       case 'approved': return <ExchangePage data={requestData} />
+      case 'completed' : return <div>Completed...</div>
     }
   }
 

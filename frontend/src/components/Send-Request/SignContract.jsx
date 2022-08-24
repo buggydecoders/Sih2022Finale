@@ -4,7 +4,7 @@ import { editRequest } from "../../store/requests/actions";
 import { verifySignatureAPI } from "../../store/requests/services";
 import { getFileLink } from "../../utils/generateImageLink";
 import { toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Payment from "./Payment";
 
 const SignContract = ({ data }) => {
@@ -13,7 +13,7 @@ const SignContract = ({ data }) => {
   const [signature, setSignature] = useState("");
   const [isSigned,setIsSigned] = useState(false);
   const dispatch = useDispatch()
-
+  const {loading : EditReqLoading} = useSelector(state=>state.requests);
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
       setUploadLoading(true);
@@ -42,7 +42,6 @@ const SignContract = ({ data }) => {
 
   return (
     <>
-
     <div>
       <div className="border-[1px] bg-green-500 bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
         <div className="w-[60px] flex items-center justify-center h-[60px] rounded-full bg-green-400">
@@ -73,7 +72,7 @@ const SignContract = ({ data }) => {
             {signature ? <img src={signature} alt="uploadedSignature" className="h-20 object-cover" /> : <div className="text-sm font-[500] text-gray-500">{uploadLoading ? "Uploading..." : "Select a clear signature picture."}</div>}
           </div>
 
-          <button className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>Continue to Payment</button>
+          <button disabled={EditReqLoading} className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>{EditReqLoading?'Loading..':'Continue'}</button>
 
         </div>
       </div>
