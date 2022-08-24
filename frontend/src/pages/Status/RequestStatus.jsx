@@ -31,7 +31,6 @@ const RequestStatus = () => {
       case 'pending': return <Confirmation data={requestData} />
       case 'cancelled': return <Confirmation cancelled={true} data={requestData} />
       case 'await-sign': return <SignContract data={requestData} />
-      case 'signed': return <Payment data={requestData} />
       case 'approved': return <ExchangePage data={requestData} />
     }
   }

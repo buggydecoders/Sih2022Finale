@@ -5,11 +5,13 @@ import { verifySignatureAPI } from "../../store/requests/services";
 import { getFileLink } from "../../utils/generateImageLink";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
+import Payment from "./Payment";
 
 const SignContract = ({ data }) => {
 
   const [uploadLoading, setUploadLoading] = useState(false);
   const [signature, setSignature] = useState("");
+  const [isSigned,setIsSigned] = useState(false);
   const dispatch = useDispatch()
 
   const handleFileChange = async (e) => {
@@ -29,10 +31,18 @@ const SignContract = ({ data }) => {
     console.log(confirmation)
     const successCallback = () => toast('Contract signed!')
     const errorCallBack = (err) => () => toast(err)
-    confirmation ? dispatch(editRequest(data._id, { status: "signed" }, successCallback, errorCallBack)) : console.log("failed")
+    if (confirmation) {
+      setIsSigned(true);
+      dispatch(editRequest(data._id, { status: "approved" }, successCallback, errorCallBack))
+    }
+    else {
+      toast(`Enter a valid signature to proceed.`);
+    }
   }
 
   return (
+    <>
+
     <div>
       <div className="border-[1px] bg-green-500 bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
         <div className="w-[60px] flex items-center justify-center h-[60px] rounded-full bg-green-400">
@@ -68,6 +78,7 @@ const SignContract = ({ data }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
