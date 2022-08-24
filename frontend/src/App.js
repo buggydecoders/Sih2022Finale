@@ -25,6 +25,7 @@ import StatusV2 from "./pages/Status/StatusV2";
 import Contracts from "./pages/Contracts";
 import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
+import Messages from "./pages/Admin/Messages";
 
 
 
@@ -176,6 +177,7 @@ export default function App() {
         {/* Admin Routes */}
         <Route exact path="/admin" element={<AdminPanel/>}></Route>
         <Route exact path="/admin/auth" element={<Auth/>}></Route>
+        <Route exact path="/admin/messages" element={<Messages/>}></Route>
 
       </Routes>
       <ToastContainer position="top-right"/>
