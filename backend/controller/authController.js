@@ -168,7 +168,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 
 exports.setVerification = catchAsync(async (req, res, next) => {
     const { agreementContractAddress, walletAddress } = req.body;
-    let user = await User.findById(req.params.id)
+    let user = await User.findById(req.user.id)
     if (!user) {
         return next(
             new AppError('Invalid Id Provided', 404)
@@ -176,7 +176,10 @@ exports.setVerification = catchAsync(async (req, res, next) => {
     }
     user.agreementContractAddress = agreementContractAddress;
     user.walletAddress = walletAddress;
+    user.isVerified = true;
+
     const updatedUser = await user.save()
+
     res.json({ success: true, user: updatedUser })
 })
 

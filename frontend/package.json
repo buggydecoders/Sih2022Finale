@@ -13,6 +13,7 @@
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "draft-js": "^0.11.7",
+    "ethers": "^5.7.0",
     "framer-motion": "^7.2.0",
     "gsap": "^3.10.4",
     "i": "^0.3.7",
@@ -42,7 +43,8 @@
     "string-similarity": "^4.0.4",
     "ui": "^0.2.4",
     "validator": "^13.7.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3uikit": "^0.0.133"
   },
   "scripts": {
     "start": "react-scripts start",

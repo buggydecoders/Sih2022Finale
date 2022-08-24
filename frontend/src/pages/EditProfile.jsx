@@ -9,6 +9,7 @@ import slugify  from 'slugify';
 import POCDetails from "../components/EditProfile/POCDetails"
 import useQueryParams from "../hooks/useQueryParams";
 import {useNavigate} from 'react-router-dom'
+import ActivateAccount from "../components/EditProfile/ActivateAccount";
 
 
 const slugifyValue = (value)=>slugify(value,'-').toLowerCase();
@@ -20,7 +21,7 @@ function EditProfile() {
   console.log(query);
   const tabGroups = [
     { name: "Organization", tabs: ["Organization Details", "Contact Person Details"] },
-    { name: "Profile", tabs: ["Security", "Additional Settings"] },
+    { name: "Profile", tabs: ["Security", "Activate Account"] },
   ];
   const [activeTab, setActiveTab] = useState(query('tab') || slugifyValue(tabGroups[0].tabs[0]));
 
@@ -68,6 +69,9 @@ function EditProfile() {
 
       case "contact-person-details":
         return <POCDetails/>
+
+      case "activate-account":
+        return <ActivateAccount/>
 
       default:
     }

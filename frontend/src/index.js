@@ -11,17 +11,17 @@ import Store from "./store";
 import { Provider } from "react-redux";
 import SocketContextProvider from "./contexts/SocketContext";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  
   <Provider store={Store().store}>
-    <PersistGate loading={null} persistor={Store().persistor}>
-    <SocketContextProvider>
-        <BrowserRouter>
-        <App />
-        </BrowserRouter>
+
+      <PersistGate loading={null} persistor={Store().persistor}>
+        <SocketContextProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
         </SocketContextProvider>
-    </PersistGate>
+      </PersistGate>
+
   </Provider>
 );
