@@ -33,7 +33,7 @@ exports.loginUser = catchAsync(async (req, res, next) => {
 })
 
 exports.createUser = catchAsync(async (req, res, next) => {
-    const { email, password, aisheCode, walletAddress } = req.body;
+    const { email, password, aisheCode } = req.body;
     const checkMail = await User.find({ email })
     const checkAishe = await User.find({ aisheCode })
     if (checkMail.length != 0) {
@@ -49,11 +49,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
     if (!(email && password)) {
         return next(
             new AppError('Please Provide Email and Password')
-        )
-    }
-    if (!walletAddress) {
-        return next(
-            new AppError('Please Provide Wallet Address!', 403)
         )
     }
     let isAishe = false
@@ -90,7 +85,6 @@ exports.createUser = catchAsync(async (req, res, next) => {
         aisheCode,
         password: hashPass,
         naac,
-        walletAddress,
         address: {
             street,
             city,
@@ -171,6 +165,21 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     await user.save();
     res.json({ success: true, message: "Password Changed Succesfully" })
 })
+
+exports.setVerification = catchAsync(async (req, res, next) => {
+    const { agreementContractAddress, walletAddress } = req.body;
+    let user = await User.findById(req.params.id)
+    if (!user) {
+        return next(
+            new AppError('Invalid Id Provided', 404)
+        )
+    }
+    user.agreementContractAddress = agreementContractAddress;
+    user.walletAddress = walletAddress;
+    const updatedUser = await user.save()
+    res.json({ success: true, user: updatedUser })
+})
+
 
 // exports.usernameScript = catchAsync(async (req, res, next) => {
 //     const user = await User.find();

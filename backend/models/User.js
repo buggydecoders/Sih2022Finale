@@ -18,11 +18,18 @@ const UserSchema = new mongoose.Schema({
     website: {
         type: String
     },
+    isVerified: {
+        type: Boolean,
+        default: false
+    },
     walletAddress: {
         type: String
     },
     socialLinks: {
         type: Object
+    },
+    agreementContractAddress: {
+        type: String
     },
     password: {
         type: String

@@ -28,6 +28,10 @@ router
     .delete(checkAuth, restrictTo('admin'), authController.removeUser)
 
 router
+    .route("/verify-user/:id")
+    .delete(checkAuth, authController.setVerification)
+
+router
     .route("/get-user")
     .get(checkAuth, authController.getUser)
 
