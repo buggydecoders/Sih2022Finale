@@ -18,6 +18,9 @@ const UserSchema = new mongoose.Schema({
     website: {
         type: String
     },
+    walletAddress: {
+        type: String
+    },
     socialLinks: {
         type: Object
     },
