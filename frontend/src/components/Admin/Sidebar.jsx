@@ -31,7 +31,7 @@ const Sidebar = () => {
     </div>
     <div className='space-y-8 mt-28 px-3'>
         <SidebarLink icon={<AiOutlineAppstore size={22}/>} link='/admin' title='Dashboard'/>
-        <SidebarLink icon={<AiOutlineMessage size={22}/>} title='Messages'/>
+        <SidebarLink icon={<AiOutlineMessage size={22}/>} title='Messages' link='/admin/messages'/>
         <SidebarLink icon={<HiOutlineDocumentReport size={22}/>} title='Reports'/>
         <SidebarLink icon={<FiStopCircle size={22}/>} title='Requirements'/>
     </div>

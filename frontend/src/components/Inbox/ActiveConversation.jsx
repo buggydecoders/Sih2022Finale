@@ -10,6 +10,8 @@ import moment from "moment";
 import { VideoChatContext } from "../VideoChat/VideoChatContext";
 import VideoChat from "./VideoChat";
 import { NotificationContext } from "../../contexts/NotificationContext";
+import MessageCard from "./MessageCard";
+import MessageController from "./MessageController";
 
 const ProfileCard = ({ data }) => {
   const {createVideoCall} = useContext(VideoChatContext);
@@ -46,56 +48,9 @@ const ProfileCard = ({ data }) => {
   );
 };
 
-const MessageController = ({ sendMessage }) => {
-  const [text, setText] = useState("");
-  const handleSend = () => {
-    if (text.length > 0) {
-      sendMessage(text);
-      setText("");
-    }
-  };
-  return (
-    <div className="w-full bg-transparent flex items-center py-2 rounded-xl gap-3">
-      <div className="w-full">
-        <input
-          onKeyUp={(e) => e.key === "Enter" && handleSend()}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          className=" border-[1px] border-gray-300  w-full px-3 py-2 text-sm rounded-2xl outline-none"
-          placeholder="Type your Message here!"
-        />
-      </div>
-      <div
-        onClick={handleSend}
-        className="w-[40px] h-[40px] flex items-center rounded-full bg-secondary bg-opacity-10 justify-center"
-      >
-        <FiSend />
-      </div>
-    </div>
-  );
-};
 
-const MessageCard = ({ isSent, message }) => {
-  return (
-    <div className={`${isSent ? "justify-end" : "justify-start"} flex w-full`}>
-      <div className="py-2 px-3 bg-lightGray rounded-md max-w-[70%]">
-        <div
-          className={`${
-            !isSent ? "text-secondary" : "text-primary"
-          } border-b-[1px] font-open font-[500] text-xs`}
-        >
-          {message?.from?.instituteName} ·{" "}
-          <span className="text-gray-500 font-[500] ml-2">
-            {moment(message?.createdAt).format("HH:MM")}
-          </span>
-        </div>
-        <div className="font-[500] mt-2 text-xs text-gray-600 break-words">
-          {message?.content}{" "}
-        </div>
-      </div>
-    </div>
-  );
-};
+
+
 
 const ActiveConversation = () => {
   const { activeRoom } = useSelector((state) => state.chatRoom);
