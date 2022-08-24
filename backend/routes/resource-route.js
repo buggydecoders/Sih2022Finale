@@ -13,7 +13,8 @@ router
   .route("/dashboard")
   .get(checkAuth, resourceController.recommendedResources);
 
-router.route("/search").post(checkAuth, resourceController.searchResource);
+router.route("/search")
+  .post(checkAuth, resourceController.searchResource);
 
 // router.route("/feedback").post(checkAuth, resourceController.getFeedback);
 
@@ -26,7 +27,7 @@ router
 router
   .route("/save/:id")
   .post(checkAuth, resourceController.addSavedItem)
-  .delete(checkAuth,resourceController.deleteSavedItem);
+  .delete(checkAuth, resourceController.deleteSavedItem);
 
 
 

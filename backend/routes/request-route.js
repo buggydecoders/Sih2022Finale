@@ -1,26 +1,28 @@
 const router = require('express').Router()
 const checkAuth = require('../middlewares/checkAuth');
 const restrictTo = require('../middlewares/restrictTo');
-const requestController = require('../controller/requestController')
+const requestController = require('../controller/requestController');
+const checkVerification = require('../middlewares/checkVerification');
 
 router
     .route('/')
-    .get(checkAuth, requestController.getAllRequest)
-    .post(checkAuth, requestController.createRequest)
+    .get(checkAuth, checkVerification, requestController.getAllRequest)
+    .post(checkAuth, checkVerification, requestController.createRequest)
 
 router
     .route('/recieved')
-    .get(checkAuth, requestController.getRecievedRequest)
+    .get(checkAuth, checkVerification, requestController.getRecievedRequest)
 
 router
     .route('/verify-signature')
-    .post(checkAuth, requestController.checkSignature)
+    .post(checkAuth, checkVerification, requestController.checkSignature)
 
 router
     .route('/:id')
-    .get(checkAuth, requestController.getRequest)
-    .patch(checkAuth, requestController.updateRequest)
+    .get(checkAuth, checkVerification, requestController.getRequest)
+    .patch(checkAuth, checkVerification, requestController.updateRequest)
 
-router.route('/exists/:id').get(checkAuth,requestController.requestExists);
+router.route('/exists/:id')
+    .get(checkAuth, checkVerification, requestController.requestExists);
 
 module.exports = router;

@@ -69,10 +69,6 @@ exports.removeResource = catchAsync(async (req, res, next) => {
 })
 
 
-
-
-
-
 exports.addSavedItem = catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const foundUser = await User.findById(req.user.id).populate('savedItems');
@@ -125,7 +121,13 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 })
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
-    let queryObject = {}
+    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
+    let queryObject = { isVerified: true }
+    if (categoryQuery) queryObject['category'] = categoryQuery
+    if (universityQuery) universityQuery = universityQuery.split('-')
+    if (stateQuery) stateQuery = stateQuery.split('-')
+    if (budgetQuery) budgetQuery = budgetQuery.split('-')
+
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
@@ -139,32 +141,53 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     })
 
     let resources = []
-    const state = await User.find({}).distinct('address.state')
-    const institute = await User.find({}).distinct('instituteName')
-
     for (let i = 0; i < data.length; i++) {
         queryObject['_id'] = data[i].$oid
         const resource = await Resource.findOne(queryObject)
+        if (!resource) {
+            return res.json({ resources: [] })
+        }
         if (resource.instituteId.toString() != req.user.id) {
             const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
             resources.push(temp)
         }
     }
 
-    if (req.query.university && !req.query.state && !req.query.budget) {
-        resources = resources.filter(p => p.instituteId.instituteName == req.query.university)
+    if (universityQuery && !stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if (universityQuery.includes(p.instituteId.id)) {
+                return p
+            }
+        })
     }
-    if (!req.query.university && req.query.state && !req.query.budget) {
-        resources = resources.filter(p => p.instituteId.address.state == req.query.state)
+    if (!universityQuery && stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if (stateQuery.includes(p.instituteId.address.state)) {
+                return p
+            }
+        })
     }
-    if (req.query.university && req.query.state && !req.query.budget) {
-        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university))
+    if (universityQuery && stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id))) {
+                return p
+            }
+        })
     }
-    if (!req.query.university && !req.query.state && req.query.budget) {
-        resources = resources.filter(p => p.price < parseInt(req.query.budget))
+    if (!universityQuery && !stateQuery && budgetQuery) {
+        resources = resources.filter(p => {
+            if (p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1])) {
+                return p
+            }
+        })
     }
-    if (req.query.university && req.query.state && req.query.budget) {
-        resources = resources.filter(p => (p.instituteId.address.state == req.query.state) && (p.instituteId.instituteName == req.query.university) && (p.price < parseInt(req.query.budget)))
+    if (universityQuery && stateQuery && budgetQuery) {
+        console.log(universityQuery, stateQuery, budgetQuery)
+        resources = resources.filter(p => {
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id)) && ((p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1])))) {
+                return p
+            }
+        })
     }
 
     let startIndex = (page - 1) * limit;
@@ -172,21 +195,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     let totalDocuments = resources.length
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
-    res.json({ success: true, resources, totalPages, page, limit, state, institute })
-
-    //TESTING DATA
-    // let queryObject = {}
-    // const page = parseInt(req.query.page) || 1;
-    // const limit = parseInt(req.query.limit) || 10;
-    // const resource = await Resource.find(queryObject).populate('instituteId')
-    // let resources = []
-    // resources = resource.filter(p => p.instituteId.id != req.user.id)
-    // let startIndex = (page - 1) * limit;
-    // let endIndex = startIndex + limit;
-    // let totalDocuments = resources.length
-    // let totalPages = Math.ceil(totalDocuments / limit);
-    // resources = resources.slice(startIndex, endIndex)
-    // res.json({ success: true, resources, totalPages, page, limit })
+    res.json({ success: true, resources, totalPages, page, limit })
 })
 
 exports.searchResource = catchAsync(async (req, res, next) => {
@@ -256,7 +265,6 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
     res.json({ success: true, resources, totalPages, page, limit })
-
 })
 
 
