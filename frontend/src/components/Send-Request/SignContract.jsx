@@ -25,12 +25,24 @@ const SignContract = ({ data }) => {
     }
   };
 
+  const [contractLoading,setContractLoading] = useState(false);
+
   const handleSubmit = async () => {
+    setContractLoading(true);
     const res = await verifySignatureAPI(signature)
     const confirmation = res.data.isVerified;
     console.log(confirmation)
-    const successCallback = () => toast('Contract signed!')
-    const errorCallBack = (err) => () => toast(err)
+    if (!confirmation ){
+      setContractLoading(false);
+      return toast(`Signature is not valid!`);
+    }
+    const successCallback = () =>{
+      toast('Contract signed!');
+    }
+    const errorCallBack = (err) => () => {
+      toast(err);
+      setContractLoading(true);
+    }
     if (confirmation) {
       setIsSigned(true);
       dispatch(editRequest(data._id, { status: "approved" }, successCallback, errorCallBack))
@@ -72,7 +84,7 @@ const SignContract = ({ data }) => {
             {signature ? <img src={signature} alt="uploadedSignature" className="h-20 object-cover" /> : <div className="text-sm font-[500] text-gray-500">{uploadLoading ? "Uploading..." : "Select a clear signature picture."}</div>}
           </div>
 
-          <button disabled={EditReqLoading} className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>{EditReqLoading?'Loading..':'Continue'}</button>
+          <button disabled={contractLoading} className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer" onClick={handleSubmit}>{contractLoading?'Loading..':'Continue'}</button>
 
         </div>
       </div>
