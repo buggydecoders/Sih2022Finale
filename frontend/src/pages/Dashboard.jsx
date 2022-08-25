@@ -51,7 +51,9 @@ const Dashboard = () => {
       toast(err?.response?.data?.message || 'SOmething went wrong!');
       navigate('/not-found');
     }finally{
-      setLoading(false);
+      setTimeout(()=>{
+        setLoading(false);
+      }, 2000)
     }
   }
   
@@ -68,16 +70,11 @@ const Dashboard = () => {
     let location = filters.location.length > 0 ? filters.location.join("-") : "";
     let university = filters.university.length > 0 ? filters.university.join("-") : "";
     let categoryFetch = category === "all" ? "" : category;
-    fetchData(1,10,budget,university,location,categoryFetch);
-  }, [filters]);
+    fetchData(activePage,10,budget,university,location,categoryFetch);
+    // setTotalPages()
+  }, [filters,activePage]);
 
-  useEffect(()=>{
-    let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";
-    let location = filters.location.length > 0 ? filters.location.join("-") : "";
-    let university = filters.university.length > 0 ? filters.university.join("-") : "";
-    let categoryFetch = category === "all" ? "" : category;
-    fetchData(activePage,10,budget,location,university,categoryFetch);
-  }, [activePage])
+
   
 
 
