@@ -74,10 +74,6 @@ const Dashboard = () => {
     // setTotalPages()
   }, [filters,activePage]);
 
-
-  
-
-
   return (
     <Layout>
       <div className="bg-lightGray py-10">

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../../components/Admin/Header';
 import Sidebar from '../../components/Admin/Sidebar';
 import { MdArrowForwardIos } from 'react-icons/md';
@@ -9,10 +9,17 @@ import { GoGraph } from 'react-icons/go';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAdminInstitutes, fetchAdminRequests, fetchAdminRequirements, fetchAdminStats } from '../../store/adminPanel/actions';
 import Loading from '../../components/Loading';
+import moment from 'moment';
+import { useNavigate } from 'react-router-dom';
 
-const StatComponent = ({ count, title, icon }) => {
+const StatComponent = ({ count, title, icon, navigateTo, activeStatus, setActiveStatus, id }) => {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigateTo && navigate(navigateTo)
+    setActiveStatus(id)
+  }
   return (
-    <div className='p-4 bg-white w-full flex justify-between rounded-xl items-center'>
+    <div className={activeStatus ? `p-4 w-full flex justify-between rounded-xl items-center cursor-pointer bg-primary text-white` : `p-4 bg-white w-full flex justify-between rounded-xl items-center cursor-pointer`} onClick={handleClick}>
       <div className='flex gap-3 items-center'>
         <div className='h-[50px] w-[50px] bg-primary flex items-center justify-center text-center bg-opacity-30 rounded-xl text-primary'>
           {icon}
@@ -78,9 +85,9 @@ const InsituteCard = ({ institute, key }) => {
         <div className='text-sm'>{institute.instituteName}</div>
       </div>
       <div className='grid text-sm grid-cols-3 w-[50%]'>
-        <div className=''>20</div>
-        <div className=''>20</div>
-        <div className=''>Aug 18 2022</div>
+        <div className=''>{institute.sharedCount}</div>
+        <div className=''>{institute.resourceCount}</div>
+        <div className=''>{moment(institute.createdAt).format("DD-MM-YYYY")}</div>
       </div>
     </div>
   )
@@ -96,21 +103,22 @@ const AdminPanel = () => {
   }, []);
 
   const { stats, institutes, requests, loading, resources } = useSelector(state => state.admin)
+  const [activeStatus, setActiveStatus] = useState(0);
 
   return (
     <div className='grid grid-cols-[1fr_4fr] min-h-[100vh]'>
       <Sidebar />
       <div className='bg-lightGray'>
-        <Header />
+        <Header searchFor="dashboard"/>
         <div className='p-8 grid gap-6 grid-cols-[2.1fr_1fr]'>
           <div>
             {
               loading !== "LOADING_STATS" ?
                 <div className='grid grid-cols-2 gap-6'>
-                  <StatComponent icon={<FaBuilding size={24} />} title='institutes' count={stats?.institutesCount} />
-                  <StatComponent icon={<FaBox size={22} />} title='Resources' count={stats?.resourcesCount} />
-                  <StatComponent icon={<FaBookmark size={22} />} title='Requirements' count={stats?.requirementCount} />
-                  <StatComponent icon={<FaMoneyBillWave size={22} />} title='Requests' count={stats?.requestCount} />
+                  <StatComponent id={0} icon={<FaBuilding size={24} />} activeStatus={activeStatus} setActiveStatus={setActiveStatus} navigateTo="/admin/institutes" title='institutes' count={stats?.institutesCount} />
+                  <StatComponent id={1} icon={<FaBox size={22} />} activeStatus={activeStatus} setActiveStatus={setActiveStatus} navigateTo="/admin/resources" title='Resources' count={stats?.resourcesCount} />
+                  <StatComponent id={2} icon={<FaBookmark size={22} />} activeStatus={activeStatus} setActiveStatus={setActiveStatus} navigateTo="/admin/requirements" title='Requirements' count={stats?.requirementCount} />
+                  <StatComponent id={3} icon={<FaMoneyBillWave size={22} />} activeStatus={activeStatus} setActiveStatus={setActiveStatus} navigateTo="/admin/requests" title='Requests' count={stats?.requestCount} />
                 </div>
                 : <Loading />
             }
@@ -134,7 +142,7 @@ const AdminPanel = () => {
                   <div className='text-sm font-[600] text-gray-300'>Reg. date</div>
                 </div>
               </div>
-              <div className='mt-4 space-y-4 h-96 overflow-y-auto'>
+              <div className='mt-4 space-y-4 h-96 overflow-y-auto' id='institutes'>
                 {
                   loading !== "LOADING_INSTITUTES" ?
                     institutes.institutes?.map((institute, idx) => {

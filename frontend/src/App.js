@@ -26,27 +26,31 @@ import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
 import Messages from "./pages/Admin/Messages";
 import Requirements from "./components/Admin/Requirements";
+import Institutes from "./pages/Admin/Institutes";
+import AdminRequests from "./pages/Admin/AdminRequests";
+import AdminResources from "./pages/Admin/AdminResources";
+import Reports from "./pages/Admin/Reports";
 
 
 
 export default function App() {
   const dispatch = useDispatch();
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(checkAuth());
   }, [])
   return (
     <>
       <Routes>
         {/* <Route exact path="/" element={<ProtectedRoute access="private" scope={"institute"} restricted={true} />}><Dashboard /></Route> */}
-        <Route exact path="/profile" element={<ProtectedRoute access="private"  scope={"institute"} />} >
-        <Route exact path='/profile' element={<ProfileV2 />} /></Route>
+        <Route exact path="/profile" element={<ProtectedRoute access="private" scope={"institute"} />} >
+          <Route exact path='/profile' element={<ProfileV2 />} /></Route>
         {/* <Route exact path="/profilev2" element={<ProtectedRoute access="private"  scope={"institute"} />} >
         <Route exact path='/profilev2' element={<ProfileV2 />} /></Route> */}
         <Route
           exact
           path="/edit-profile"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/edit-profile' element={<EditProfile />} />
@@ -55,7 +59,7 @@ export default function App() {
           exact
           path="/"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/' element={<Dashboard />} />
@@ -65,9 +69,9 @@ export default function App() {
           exact
           path="/status"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
-          
+
         >
           <Route exact path='/status' element={<StatusV2 />} />
         </Route>
@@ -75,9 +79,9 @@ export default function App() {
           exact
           path="/contracts"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
-          
+
         >
           <Route exact path='/contracts' element={<Contracts />} />
         </Route>
@@ -85,9 +89,9 @@ export default function App() {
           exact
           path="/status/:id"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
-          
+
         >
           <Route exact path='/status/:id' element={<RequestStatus />} />
         </Route>
@@ -95,10 +99,10 @@ export default function App() {
           exact
           path="/saved-items"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
-        <Route exact path='/saved-items' element={<SavedItems />} />
+          <Route exact path='/saved-items' element={<SavedItems />} />
         </Route>
         <Route
           exact
@@ -119,7 +123,7 @@ export default function App() {
           exact
           path="/resources"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/resources' element={<Resources />} />
@@ -128,17 +132,17 @@ export default function App() {
           exact
           path="/resource/:id"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
-         <Route exact path='/resource/:id' element={<Resource />} />
+          <Route exact path='/resource/:id' element={<Resource />} />
         </Route>
 
         <Route
           exact
           path="/requests"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/requests' element={<Requests />} />
@@ -147,7 +151,7 @@ export default function App() {
           exact
           path="/inbox"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/inbox' element={<Inbox />} />
@@ -156,7 +160,7 @@ export default function App() {
           exact
           path="/send-request/:id"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/send-request/:id' element={<SendRequest />} />
@@ -165,23 +169,27 @@ export default function App() {
           exact
           path="/recieved-request"
           element={
-            <ProtectedRoute access="private"  scope={"institute"} />
+            <ProtectedRoute access="private" scope={"institute"} />
           }
         >
           <Route exact path='/recieved-request' element={<RecievedRequest />} />
         </Route>
 
         {/* Extra Routes */}
-        <Route exact path="/not-found" element={<NotFound/>}></Route>
+        <Route exact path="/not-found" element={<NotFound />}></Route>
 
         {/* Admin Routes */}
-        <Route exact path="/admin" element={<AdminPanel/>}></Route>
-        <Route exact path="/admin/auth" element={<Auth/>}></Route>
-        <Route exact path="/admin/messages" element={<Messages/>}></Route>
-        <Route exact path="/admin/requirements" element={<Requirements/>}></Route>
+        <Route exact path="/admin" element={<AdminPanel />}></Route>
+        <Route exact path="/admin/auth" element={<Auth />}></Route>
+        <Route exact path="/admin/messages" element={<Messages />}></Route>
+        <Route exact path="/admin/requirements" element={<Requirements />}></Route>
+        <Route exact path="/admin/institutes" element={<Institutes />}></Route>
+        <Route exact path="/admin/resources" element={<AdminResources/>}></Route>
+        <Route exact path="/admin/requests" element={<AdminRequests/>}></Route>
+        <Route exact path="/admin/reports" element={<Reports/>}></Route>
 
       </Routes>
-      <ToastContainer position="top-right"/>
-      </>
+      <ToastContainer position="top-right" />
+    </>
   );
 }

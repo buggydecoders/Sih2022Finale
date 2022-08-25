@@ -11,18 +11,26 @@ exports.getAllInstitutes = catchAsync(async (req, res, next) => {
     let totalDocuments = await User.countDocuments({ role: "institute" })
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
-    const institutes = await User.find({ role: "institute" })
+    let institutes = await User.find({ role: "institute" })
         .limit(limit)
         .skip(skipIndex)
         .exec();
+    let sentInsList = [];
     for (let i = 0; i < institutes.length; i++) {
-        const resourceCount = Resource.countDocuments({ instituteId: institutes[i].id })
-        institutes.resourcesCount = resourceCount
-        const aspCount = Request.countDocuments({aspirantInstitute:institutes[i].id})
-        const lenCount = Request.countDocuments({lendingInstitute:institutes[i].id})
-        institutes.sharedCount = parseInt(aspCount) + parseInt(lenCount)
+        // console.log(institutes[i].id)
+
+        // console.log(resourceCount)
+
+
+        let sharedCount = await Request.countDocuments({ lendingInstitute: institutes[i].id, status: 'completed' });
+        let resourceCount = await Resource.countDocuments({ instituteId: institutes[i].id });
+        let jsonI = JSON.parse(JSON.stringify(institutes[i]));
+        let insSent = { ...jsonI, sharedCount, resourceCount }
+        sentInsList.push(insSent);
+        // console.log(institutes[i].resourcesCount, institutes[i].sharedCount)
     }
-    res.json({ success: true, institutes, totalPages, page, limit })
+
+    res.json({ success: true, institutes: sentInsList, totalPages, page, limit })
 })
 
 exports.getAllResources = catchAsync(async (req, res, next) => {
@@ -34,6 +42,7 @@ exports.getAllResources = catchAsync(async (req, res, next) => {
     let skipIndex = (page - 1) * limit;
 
     const resources = await Resource.find()
+        .populate('instituteId')
         .limit(limit)
         .skip(skipIndex)
         .exec();
