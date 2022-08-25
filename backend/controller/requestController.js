@@ -10,17 +10,6 @@ const imageToBase64 = require('image-to-base64');
 const moment = require('moment')
 const { storeTokenUriMetaData } = require("../utils/pinataSDK");
 
-// PINATA 
-const getPinataURIs = async (id) => {
-    const request = await Request.findById(id).populate('lendingInstitute').populate('contract').populate('aspirantInstitute')
-    let base64Active = imageToBase64(request.lendingInstitute.logo);
-
-    const activeTemplate = returnTemplate(request, base64Active);
-    const pinataURIActive = await storeTokenUriMetaData(activeTemplate);
-    return {
-        activeTokenURI: `ipfs://${pinataURIActive.IpfsHash}`
-    }
-}
 
 const returnTemplate = (request, URI, expired) => {
     const duration = moment(request.endDate).diff(request.startDate,'days');
@@ -37,6 +26,19 @@ const returnTemplate = (request, URI, expired) => {
     }
     return metaDataTemplate;
 }
+
+
+// PINATA 
+const getPinataURIs = async (id) => {
+    const request = await Request.findById(id).populate('lendingInstitute').populate('contract').populate('aspirantInstitute')
+    let base64Active = imageToBase64(request.lendingInstitute.logo);
+
+    const activeTemplate = returnTemplate(request, base64Active);
+    const pinataURIActive = await storeTokenUriMetaData(activeTemplate);
+    return `ipfs://${pinataURIActive.IpfsHash}`;
+    
+}
+
 
 exports.createRequest = catchAsync(async (req, res, next) => {
     const { resourceId, startDate, endDate, note } = req.body;
@@ -160,10 +162,10 @@ exports.updateRequest = catchAsync(async (req, res, next) => {
             new AppError(`Resource with ${id} not found or you are not allowed to update the request.`, 404)
         )
     }
-    const updatedRequest = await Request.findByIdAndUpdate(request.id, req.body, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+    let updatedRequest = await Request.findByIdAndUpdate(request.id, req.body, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if(Object.keys(req.body).includes("contract")){
-        updatedRequest.ipfsURI = getPinataURIs(updatedRequest.id);
-        updatedRequest.save()
+        let tokenURI = await getPinataURIs(request.id);
+        updatedRequest = await Request.findByIdAndUpdate(request.id, {ipfsURI :tokenURI}, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     }
     res.json({ success: true, updatedRequest })
 })

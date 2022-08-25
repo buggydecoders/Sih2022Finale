@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsPatchCheck } from "react-icons/bs";
-import { editRequest } from "../../store/requests/actions";
+import { editRequest, setLoading, setRequest } from "../../store/requests/actions";
 import { verifySignatureAPI } from "../../store/requests/services";
 import { getFileLink } from "../../utils/generateImageLink";
 import { toast } from "react-toastify";
@@ -19,6 +19,7 @@ const SignContract = ({ data }) => {
   const [isRequested, setIsRequested] = useState(false);
   const dispatch = useDispatch();
   const { loading: EditReqLoading } = useSelector((state) => state.requests);
+  const [requestLoading,setRequestLoading] = useState(false);
   const [isProcessed,setIsProcessed] = useState(false);
   const handleFileChange = async (e) => {
     if (e.target.files.length > 0) {
@@ -38,16 +39,22 @@ const SignContract = ({ data }) => {
   console.log(data.lendingInstitute.agreementContractAddress);
 
   const handleSubmit = async () => {
+    setRequestLoading(true);
     const res = await verifySignatureAPI(signature);
     const confirmation = res.data.isVerified;
     console.log(confirmation);
-    const successCallback = () => toast("Contract signed!");
+    const successCallback = () => {
+      toast("Contract signed!");
+      setRequestLoading(false);
+    };
     const errorCallBack = (err) => () => toast(err);
     if (confirmation) {
       setIsSigned(true);
       handleMintNFT(data._id);
+
     } else {
       toast(`Enter a valid signature to proceed.`);
+      setRequestLoading(false);
     }
   };
 
@@ -74,7 +81,8 @@ const SignContract = ({ data }) => {
                   tokenURI: tokenURI,
                   status: "approved",
                 },
-                () => toast("Token minted successfully!")
+                () => {toast("Token minted successfully!"); setRequestLoading(false);},
+                ()=>{setRequestLoading(false)}
               )
             );
           }
@@ -101,8 +109,8 @@ const SignContract = ({ data }) => {
       );
       const mintedNFT = await AgreementContract.mintNftWithRequest(
         address,
-        233224,
-        "TEST:URI"
+        data._id,
+        data.ipfsURI
       );
       console.log(mintedNFT);
       setIsRequested(true);
