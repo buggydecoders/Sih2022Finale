@@ -24,6 +24,9 @@ const RequestSchema = new mongoose.Schema({
     tokenId: {
         type: Number
     },
+    tokenURI : {
+        type : String
+    },
     startDate: {
         type: String,
     },
