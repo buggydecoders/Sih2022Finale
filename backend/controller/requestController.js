@@ -43,7 +43,7 @@ exports.requestExists = catchAsync(async (req, res, next) => {
 
 
 exports.getRequest = catchAsync(async (req, res, next) => {
-    const checkReq = await Request.findOne({ id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+    const checkReq = await Request.findOne({ _id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource').populate('contract')
     if (checkReq) {
         return res.json({ state: true, message: "Request exist Already", request: checkReq })
     }
@@ -51,9 +51,11 @@ exports.getRequest = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllRequest = catchAsync(async (req, res, next) => {
-
+    let { isActive, status, type } = req.query;
     let queryObject = {}
-    const { isActive, status, type } = req.query;
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
     if (isActive) queryObject.isActive = isActive
     if (status && status !== 'undefined') queryObject.status = status
 
@@ -63,14 +65,46 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     if (type === 'sent') {
         queryObject.aspirantInstitute = req.user.id
     }
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
+    if (type === 'cancelled') {
+        queryObject.lendingInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
+    if (type === 'rejected') {
+        queryObject.aspirantInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
+    if (type === 'rejected') {
+        queryObject.aspirantInstitute = req.user.id;
+        queryObject.status = 'cancelled'
+    }
+    if (type === 'completed') {
+        let request1 = await Request.find({ aspirantInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+        let request2 = await Request.find({ lendingInstitute: req.user.id, status: 'completed' })
+            .sort("-createdAt")
+            .populate('aspirantInstitute')
+            .populate('lendingInstitute')
+            .populate('resource')
+        let requests = request1.concat(request2)
+
+        let startIndex = (page - 1) * limit;
+        let endIndex = startIndex + limit;
+        let totalDocuments = requests.length
+        let totalPages = Math.ceil(totalDocuments / limit);
+        requests = requests.slice(startIndex, endIndex)
+
+        return res.json({ requests, totalPages, page, limit })
+
+    }
+
 
     let totalDocuments = await Request.countDocuments(queryObject)
     let totalPages = Math.ceil(totalDocuments / limit);
     let skipIndex = (page - 1) * limit;
     const requests = await Request.find(queryObject).sort("-createdAt")
-
         .populate('aspirantInstitute')
         .populate('lendingInstitute')
         .populate('resource')
@@ -85,7 +119,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
 
 
 exports.updateRequest = catchAsync(async (req, res, next) => {
-    const request = await Request.findOne({ id: req.params.id, lendingInstitute: req.user.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+    const request = await Request.findOne({ _id: req.params.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (!request) {
         return next(
             new AppError(`Resource with ${id} not found or you are not allowed to update the request.`, 404)

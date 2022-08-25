@@ -83,7 +83,6 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
   }
 
   const handleMediaChange = (e)=>{
-    console.log(e.target.files);
     if (e.target.files.length>0) {
       setUploadedFiles(e.target.files);
     }

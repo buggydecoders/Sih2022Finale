@@ -122,7 +122,12 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
+
     let queryObject = { isVerified: true }
+
+ 
+
+
     if (categoryQuery) queryObject['category'] = categoryQuery
     if (universityQuery) universityQuery = universityQuery.split('-')
     if (stateQuery) stateQuery = stateQuery.split('-')
@@ -130,7 +135,9 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
 
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
-
+    let startIndex = (page - 1) * limit;
+    let endIndex = startIndex + limit;
+    
     let bodyFormData = new FormData()
     bodyFormData.append('id', req.user.id)
     let { data } = await axios({
@@ -190,8 +197,6 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
         })
     }
 
-    let startIndex = (page - 1) * limit;
-    let endIndex = startIndex + limit;
     let totalDocuments = resources.length
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)

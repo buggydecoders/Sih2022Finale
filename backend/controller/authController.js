@@ -166,6 +166,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     res.json({ success: true, message: "Password Changed Succesfully" })
 })
 
+
 exports.setVerification = catchAsync(async (req, res, next) => {
     const { agreementContractAddress, walletAddress } = req.body;
     let user = await User.findById(req.user.id)
@@ -181,6 +182,13 @@ exports.setVerification = catchAsync(async (req, res, next) => {
     const updatedUser = await user.save()
 
     res.json({ success: true, user: updatedUser })
+})
+
+
+
+exports.getAllInstitutes = catchAsync(async (req, res, next) => {
+    const institutes = await User.find({}).select({ instituteName: 1 })
+    res.json({ succcess: true, institutes })
 })
 
 

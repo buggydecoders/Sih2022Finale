@@ -14,17 +14,15 @@ const ContractCard = ({ selected, setSelected, data }) => {
     <div>
       <div
         onClick={() => setSelected(data?._id)}
-        className={`${
-          isSelected
+        className={`${isSelected
             ? "bg-secondary text-white"
             : "hover:bg-secondary  hover:bg-opacity-10"
-        } px-5 flex cursor-pointer justify-between items-center w-full rounded-md font-open py-3 transition-all bg-lightGray`}
+          } px-5 flex cursor-pointer justify-between items-center w-full rounded-md font-open py-3 transition-all bg-lightGray`}
       >
         <div>
           <div
-            className={`${
-              isSelected ? "text-gray-200" : "text-gray-400"
-            } text-xs `}
+            className={`${isSelected ? "text-gray-200" : "text-gray-400"
+              } text-xs `}
           >
             {data?.createdAt}
           </div>
@@ -36,35 +34,37 @@ const ContractCard = ({ selected, setSelected, data }) => {
       </div>
       {isSelected && (
         <div className="bg-lightgray">
-          <InputField value={data?.terms}  disabled={true} area={true} rows={10} />
+          <InputField value={data?.terms} disabled={true} area={true} rows={10} />
         </div>
       )}
     </div>
   );
 };
 
-const AddContract = ({data}) => {
+const AddContract = ({ data }) => {
   const [selected, setSelected] = useState(null);
   const dispatch = useDispatch();
-  const {loading : contractLoading,contracts} = useSelector(state=>state.contracts)
+  const { loading: contractLoading, contracts } = useSelector(state => state.contracts)
   const navigate = useNavigate();
-  useEffect(()=>{
-    dispatch(fetchContracts(1,10));
+  useEffect(() => {
+    dispatch(fetchContracts(1, 10));
   }, [])
 
-  const handleSend = ()=>{
+  console.log(data._id)
+
+  const handleSend = () => {
     if (!selected) return toast('Please select a contract before continuing!');
-    const successCallback = ()=>toast('Request has been updated to await-signature')
-    dispatch(editRequest(selected,{contract : selected,status : 'await-sign'}, successCallback));
+    const successCallback = () => toast('Request has been updated to await-signature')
+    dispatch(editRequest(data?._id, { contract: selected, status: 'await-sign' }, successCallback));
   }
 
   return (
     <div className="mt-6 w-full">
       <div className="text-base font-semibold">Add Contract</div>
-      <div className="text-xs text-secondary underline font-[500]" onClick={()=>navigate('/contracts')}>Add New</div>
+      <div className="text-xs text-secondary underline font-[500]" onClick={() => navigate('/contracts')}>Add New</div>
       <div className="mt-5 w-full ">
         <div className="space-y-3">
-        {contractLoading?<div>Loading...</div>:contracts?.length===0?<div>No Contracts were found, Please create one</div>:contracts?.map(c=><ContractCard data={c} selected={selected} setSelected={setSelected}/>)}
+          {contractLoading ? <div>Loading...</div> : contracts?.length === 0 ? <div>No Contracts were found, Please create one</div> : contracts?.map(c => <ContractCard data={c} selected={selected} setSelected={setSelected} />)}
         </div>
       </div>
       <div className="mt-5 flex justify-end items-center gap-5">

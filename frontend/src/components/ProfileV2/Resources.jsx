@@ -62,8 +62,6 @@ const CategoryType = ({
 const Resources = () => {
   const { loading, list, page, limit, state, category, totalPages } =
     useSelector((state) => state.myResources);
-  //   console.log(loading, list, page, limit, state, category, totalPages);
-  console.log('CATEGORY_STATE', category)
   const [firstRender, setFirstRender] = useState(false);
   const dispatch = useDispatch();
   const [addSidebar, setAddSidebar] = useState(false);
@@ -77,7 +75,6 @@ const Resources = () => {
   };
 
   const handleCategoryChange = (value) => {
-    console.log(value);
     dispatch(fetchAllResources(state, value, limit));
   };
 

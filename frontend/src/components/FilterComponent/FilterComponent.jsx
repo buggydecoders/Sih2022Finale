@@ -5,6 +5,9 @@ const {cosine} = stringComparison;
 
 const FilterComponent = ({title,options,addSelected,removeSelected,selected}) => {
     const [filteredOptions,setFilteredOptions] = useState(options);
+    useEffect(()=>{
+      setFilteredOptions(options);
+    }, [options])
     const [search,setSearch] = useState('');
     useEffect(()=>{
       filterOptions(search);
@@ -14,7 +17,6 @@ const FilterComponent = ({title,options,addSelected,removeSelected,selected}) =>
 
     const filterOptions = (query) => {
       let sortedList = cosine.sortMatch(query, options.map(o=>o.label));
-      console.log(sortedList);
       sortedList = sortedList.reverse();
       let maxRating = 0;
       for (let i = 0; i < sortedList.length; ++i) {
@@ -23,7 +25,6 @@ const FilterComponent = ({title,options,addSelected,removeSelected,selected}) =>
       let accuracy = maxRating - 0.2;
       let finalOptions = sortedList.filter((r) => r.rating >= accuracy);
       finalOptions = finalOptions.map(m=>(idToData[m.member]));
-      console.log(finalOptions);
       setFilteredOptions(finalOptions)
     };
 
@@ -31,7 +32,7 @@ const FilterComponent = ({title,options,addSelected,removeSelected,selected}) =>
     <div>
         <div className='flex flex-col'>
             <input type='text' value={search} className='w-full border-b-[1px] outline-none' onChange={(e)=>setSearch(e.target.value)} placeholder={`Search ${title}`}/>
-            <div className='mt-4 space-y-3'>
+            <div className='mt-4 space-y-3 max-h-[250px] overflow-y-auto'>
                 {filteredOptions.map(o=><FilterCheckbox selected={selected} key={o.value} value={o.value} addSelected={addSelected} removeSelected={removeSelected} label={o.label}/>)}
             </div>
         </div>
