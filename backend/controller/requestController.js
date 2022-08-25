@@ -5,6 +5,7 @@ const AppError = require('../utils/appError')
 const catchAsync = require('../utils/catchAsync')
 const axios = require('axios')
 const FormData = require('form-data');
+const generateUniqueId = require("generate-unique-id");
 
 exports.createRequest = catchAsync(async (req, res, next) => {
     const { resourceId, startDate, endDate, note } = req.body;
@@ -12,7 +13,12 @@ exports.createRequest = catchAsync(async (req, res, next) => {
     if (!foundResource) return next(new AppError(`Resource with id ${resourceId} was not found!`, 404));
     const isRequest = await Request.findOne({ aspirantInstitute: req.user.id, isActive: true, resource: resourceId });
     if (isRequest) return next(new AppError(`You already have a request ongoing for the same resource`, 406));
+
     let newRequest = new Request({
+        _id: generateUniqueId({
+            length: 10,
+            useLetters: false,
+        }),
         resource: resourceId,
         aspirantInstitute: req.user.id,
         lendingInstitute: foundResource.instituteId._id,
@@ -158,5 +164,5 @@ exports.setMinting = catchAsync(async (req, res, next) => {
     const request = await Request.findById(req.params.id)
     request.tokenId = tokenId;
     const updatedRequest = await request.save()
-    res.json({success:true, updatedRequest })
+    res.json({ success: true, updatedRequest })
 })
