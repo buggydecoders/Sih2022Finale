@@ -8,7 +8,7 @@ const checkVerification = async (req, res, next) => {
         const user = await User.findById(data.user.id)
         console.log(data.user.id, user);
         if (user.isVerified) {
-            return return next()
+             return next()
         }
         res.status(403).json({ success: false, message: "Verification Needed" })
     }
