@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pinata/sdk": "^1.1.26",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -30,6 +31,7 @@
     "generate-unique-id": "^2.0.1",
     "helmet": "^5.1.0",
     "hpp": "^0.2.3",
+    "image-to-base64": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
     "mongoose": "^6.4.3",
