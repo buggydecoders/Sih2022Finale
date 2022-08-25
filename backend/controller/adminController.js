@@ -15,6 +15,13 @@ exports.getAllInstitutes = catchAsync(async (req, res, next) => {
         .limit(limit)
         .skip(skipIndex)
         .exec();
+    for (let i = 0; i < institutes.length; i++) {
+        const resourceCount = Resource.countDocuments({ instituteId: institutes[i].id })
+        institutes.resourcesCount = resourceCount
+        const aspCount = Request.countDocuments({aspirantInstitute:institutes[i].id})
+        const lenCount = Request.countDocuments({lendingInstitute:institutes[i].id})
+        institutes.sharedCount = parseInt(aspCount) + parseInt(lenCount)
+    }
     res.json({ success: true, institutes, totalPages, page, limit })
 })
 
