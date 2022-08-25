@@ -26,6 +26,8 @@ import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
 import Messages from "./pages/Admin/Messages";
 import CollegeProfile from "./pages/CollegeProfile";
+import FacultyLogin from "./pages/faculty/FacultyLogin";
+import FacultySignup from "./pages/faculty/FacultySignup";
 
 
 
@@ -107,6 +109,22 @@ export default function App() {
         >
           <Route exact path='/login' element={<Login />} />
         </Route>
+
+        <Route
+          exact
+          path="/faculty/login"
+          element={<ProtectedRoute access="public" restricted={true} />}
+        >
+          <Route exact path='/faculty/login' element={<FacultyLogin />} />
+        </Route>
+        <Route
+          exact
+          path="/faculty/signup"
+          element={<ProtectedRoute access="public" restricted={true} />}
+        >
+          <Route exact path='/faculty/signup' element={<FacultySignup />} />
+        </Route>
+
         <Route
           exact
           path="/signup"
