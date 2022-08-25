@@ -28,6 +28,10 @@ router
     .get(checkAuth, authController.getAllInstitutes)
 
 router
+    .route('/get-resources/:id')
+    .get(checkAuth, authController.getInstituteResource)
+
+router
     .route('/get-institute/:slug')
     .get(checkAuth, authController.getInstituteBySlug)
 

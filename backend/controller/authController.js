@@ -8,6 +8,7 @@ const aishe = require('../utils/aishe.json')
 const SavedItem = require('../models/SavedResource')
 const updateReputationPoint = require('../utils/reputation')
 var slugify = require('slugify')
+const Resource = require('../models/Resource')
 
 exports.loginUser = catchAsync(async (req, res, next) => {
     let success = false;
@@ -202,6 +203,31 @@ exports.getInstituteBySlug = catchAsync(async (req, res, next) => {
     res.json({ success: true, institute })
 })
 
+exports.getInstituteResource = catchAsync(async (req, res, next) => {
+    let queryObject = { instituteId: req.params.id }
+    let { state, category } = req.query;
+
+    if (state && state === 'all') state = '';
+    if (category && category === 'all') category = '';
+
+
+    if (state) queryObject.state = req.query.state
+    if (category) queryObject.category = req.query.category
+
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    let totalDocuments = await Resource.countDocuments(queryObject)
+    let totalPages = Math.ceil(totalDocuments / limit);
+
+    const skipIndex = (page - 1) * limit;
+    const resources = await Resource.find(queryObject)
+        .limit(limit)
+        .skip(skipIndex)
+        .exec();
+
+    res.json({ success: true, resources, totalPages, page, limit, state: state || 'all', category: category || 'all' })
+})
 // exports.usernameScript = catchAsync(async (req, res, next) => {
 //     const user = await User.find();
 //     for (let i = 0; i < user.length; i++) {
