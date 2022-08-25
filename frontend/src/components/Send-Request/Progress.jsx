@@ -7,7 +7,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Typography from '@mui/material/Typography';
 
-const steps = ['Confirmation', 'Sign Contract', 'Payment', 'Exchange duration'];
+const steps = ['Confirmation', 'Sign Contract', 'Payment', 'Exchange duration', 'Completed'];
 
 const getStatus = (status) => {
     switch (status) {
@@ -15,6 +15,7 @@ const getStatus = (status) => {
         case 'await-sign': return 1
         case 'signed': return 2
         case 'approved': return 3
+        case 'completed' : return 4
     }
 }
 

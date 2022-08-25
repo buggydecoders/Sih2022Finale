@@ -132,14 +132,15 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     if (universityQuery) universityQuery = universityQuery.split('-')
     if (stateQuery) stateQuery = stateQuery.split('-')
     if (budgetQuery) budgetQuery = budgetQuery.split('-')
-
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     let startIndex = (page - 1) * limit;
     let endIndex = startIndex + limit;
-    
+
     let bodyFormData = new FormData()
     bodyFormData.append('id', req.user.id)
+    bodyFormData.append('startIndex', startIndex)
+    bodyFormData.append('endIndex', endIndex)
     let { data } = await axios({
         method: "post",
         url: "https://flask-sih.herokuapp.com/recommendation",
@@ -207,10 +208,14 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     let queryObject = {}
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
-
+    let startIndex = (page - 1) * limit;
+    let endIndex = startIndex + limit;
+    
     let bodyFormData = new FormData()
     bodyFormData.append('id', req.user.id)
     bodyFormData.append('title', req.body.name)
+    bodyFormData.append('startIndex', startIndex)
+    bodyFormData.append('endIndex', endIndex)
 
     let { data } = await axios({
         method: "post",
@@ -229,47 +234,9 @@ exports.searchResource = catchAsync(async (req, res, next) => {
             resources.push(temp)
         }
     }
-    let startIndex = (page - 1) * limit;
-    let endIndex = startIndex + limit;
     let totalDocuments = resources.length
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
     res.json({ success: true, resources, totalPages, page, limit })
 
 })
-
-exports.searchResource = catchAsync(async (req, res, next) => {
-    let queryObject = {}
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
-
-    let bodyFormData = new FormData()
-    bodyFormData.append('id', req.user.id)
-    bodyFormData.append('title', req.body.name)
-
-    let { data } = await axios({
-        method: "post",
-        url: "https://flask-sih.herokuapp.com/recommendation/search",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
-    })
-    let resources = []
-    for (let i = 0; i < data.length; i++) {
-        queryObject['_id'] = data[i].$oid
-        console.log(queryObject)
-        const resource = await Resource.findOne(queryObject)
-        console.log(resource.instituteId.toString() != req.user.id)
-        if (resource.instituteId.toString() != req.user.id) {
-            const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
-            resources.push(temp)
-        }
-    }
-    let startIndex = (page - 1) * limit;
-    let endIndex = startIndex + limit;
-    let totalDocuments = resources.length
-    let totalPages = Math.ceil(totalDocuments / limit);
-    resources = resources.slice(startIndex, endIndex)
-    res.json({ success: true, resources, totalPages, page, limit })
-})
-
-

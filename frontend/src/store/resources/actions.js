@@ -38,6 +38,7 @@ export const fetchDashboardResources = (page,limit,budget,university,location,ca
         dispatch(setLoading("FETCH"));
         const result = await fetchDashboardResourcesAPI(page,limit,budget,university,location,category)
         let fetchedData = result.data;
+        console.log(fetchedData,'FETCHED DATA IN REDUX')
         dispatch(setData({
             list : fetchedData.resources,
             page : fetchedData.page,
