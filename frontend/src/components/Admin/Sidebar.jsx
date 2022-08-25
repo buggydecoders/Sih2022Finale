@@ -32,8 +32,8 @@ const Sidebar = () => {
     <div className='space-y-8 mt-28 px-3'>
         <SidebarLink icon={<AiOutlineAppstore size={22}/>} link='/admin' title='Dashboard'/>
         <SidebarLink icon={<AiOutlineMessage size={22}/>} title='Messages' link='/admin/messages'/>
-        <SidebarLink icon={<HiOutlineDocumentReport size={22}/>} title='Reports'/>
-        <SidebarLink icon={<FiStopCircle size={22}/>} title='Requirements'/>
+        <SidebarLink icon={<HiOutlineDocumentReport size={22}/>} title='Reports' link='/admin/reports'/>
+        <SidebarLink icon={<FiStopCircle size={22}/>} title='Requirements' link='/admin/requirements'/>
     </div>
         <div className='justify-end px-3 absolute bottom-10 flex flex-col'>
         <div className={`flex gap-3 items-center text-primary`}>

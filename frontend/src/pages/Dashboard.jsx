@@ -115,12 +115,12 @@ const Dashboard = () => {
                 title="Virtual"
                 id="virtual"
               />
-              <Tab
+              {/* <Tab
                 selected={category}
                 setSelected={setCategory}
                 title="Product Design"
                 id="product-design"
-              />
+              /> */}
               <select
                 onChange={(e) => setCategory(e.target.value)}
                 className={`px-5 py-3 outline-none text-sm rounded-3xl bg-gray-100  hover:bg-primary shadow-md transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}

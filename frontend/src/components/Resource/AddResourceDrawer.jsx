@@ -138,7 +138,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data,isEdit }) => {
             </option>
             <option value="research">Research</option>
             <option value="physical">Physical</option>
-            <option value="productDesign">Product Design</option>
+            {/* <option value="productDesign">Product Design</option> */}
             <option value="virtual">Virtual</option>
           </select>
         </div>

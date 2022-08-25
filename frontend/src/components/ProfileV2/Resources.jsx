@@ -60,7 +60,7 @@ const CategoryType = ({
 };
 
 const Resources = () => {
-  const { loading, list, page, limit, state, category, totalPages } =useSelector((state) => state.myResources);
+  const { loading, list, page, limit, state, category, totalPages } = useSelector((state) => state.myResources);
   const [firstRender, setFirstRender] = useState(false);
   const dispatch = useDispatch();
   const [addSidebar, setAddSidebar] = useState(false);
@@ -108,13 +108,13 @@ const Resources = () => {
             title="Research"
             icon={<MdOutlineScience />}
           />
-          <CategoryType
+          {/* <CategoryType
             categoryState={category}
             setCategoryState={handleCategoryChange}
             value="productDesign"
             title="Product Design"
             icon={<FiPackage />}
-          />
+          /> */}
           <CategoryType
             categoryState={category}
             setCategoryState={handleCategoryChange}

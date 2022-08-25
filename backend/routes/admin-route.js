@@ -3,25 +3,26 @@ const checkAuth = require('../middlewares/checkAuth')
 const restrictTo = require('../middlewares/restrictTo')
 const adminController = require('../controller/adminController')
 
+// restrictTo('admin')
 router
     .route('/stats')
-    .get(checkAuth, restrictTo('admin'), adminController.getStats)
+    .get(checkAuth, adminController.getStats)
 
 router
     .route('/institutes')
-    .get(checkAuth, restrictTo('admin'), adminController.getAllInstitutes)
+    .get(checkAuth, adminController.getAllInstitutes)
 
 router
     .route('/requirement')
-    .get(checkAuth, restrictTo('admin'), adminController.getAllRequirements)
+    .get(checkAuth, adminController.getAllRequirements)
 
 router
     .route('/request')
-    .get(checkAuth, restrictTo('admin'), adminController.getAllRequests)
+    .get(checkAuth, adminController.getAllRequests)
 
 router
     .route('/resource')
-    .get(checkAuth, restrictTo('admin'), adminController.getAllResources)
+    .get(checkAuth, adminController.getAllResources)
 
 
 module.exports = router

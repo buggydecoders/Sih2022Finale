@@ -25,6 +25,7 @@ import Contracts from "./pages/Contracts";
 import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
 import Messages from "./pages/Admin/Messages";
+import Requirements from "./components/Admin/Requirements";
 
 
 
@@ -177,6 +178,7 @@ export default function App() {
         <Route exact path="/admin" element={<AdminPanel/>}></Route>
         <Route exact path="/admin/auth" element={<Auth/>}></Route>
         <Route exact path="/admin/messages" element={<Messages/>}></Route>
+        <Route exact path="/admin/requirements" element={<Requirements/>}></Route>
 
       </Routes>
       <ToastContainer position="top-right"/>
