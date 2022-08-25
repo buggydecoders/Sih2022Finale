@@ -18,10 +18,20 @@ import { fetchRequests } from "../store/requests/actions";
 import moment from "moment";
 import { fetchAllResources } from "../store/myresources/actions";
 import Loading from "../components/Loading";
+import { fetchDashboardResourcesAPI } from "../store/resources/services";
+import { toast } from "react-toastify";
+import { fetchInstitutes, fetchStates } from "../store/filters/actions";
+
+
 
 const Dashboard = () => {
 
   const [category, setCategory] = useState("all");
+  const [resources,setResources] = useState([]);
+  const [loading,setLoading] = useState(false);
+  const [activePage,setActivePage] = useState(1);
+  const [totalPages,setTotalPages] = useState(1);
+  const navigate = useNavigate();
 
   const [filters, setFilters] = useState({
     university: [],
@@ -30,17 +40,45 @@ const Dashboard = () => {
   });
   const dispatch = useDispatch();
 
+  const fetchData = async(page,limit,budget,university,location,categoryFetch)=>{
+    try {
+    setLoading(true);
+    const result = await fetchDashboardResourcesAPI(page,limit,budget,university,location,categoryFetch);
+    setResources(result.data.resources);
+    setTotalPages(result.data.totalPages);
+    }catch(err) {
+      console.log(err);
+      toast(err?.response?.data?.message || 'SOmething went wrong!');
+      navigate('/not-found');
+    }finally{
+      setLoading(false);
+    }
+  }
+  
 
-  useEffect(() => {
+  useEffect(()=>{
+    dispatch(fetchInstitutes());
+    dispatch(fetchStates());
+  }, [])
+
+
+
+  useEffect(()=>{
     let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";
     let location = filters.location.length > 0 ? filters.location.join("-") : "";
     let university = filters.university.length > 0 ? filters.university.join("-") : "";
     let categoryFetch = category === "all" ? "" : category;
-    dispatch(fetchDashboardResources(1, 10, budget, university, location, categoryFetch));
-  }, [filters, category]);
+    fetchData(1,10,budget,university,location,categoryFetch);
+  }, [filters]);
 
- 
-
+  useEffect(()=>{
+    let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";
+    let location = filters.location.length > 0 ? filters.location.join("-") : "";
+    let university = filters.university.length > 0 ? filters.university.join("-") : "";
+    let categoryFetch = category === "all" ? "" : category;
+    fetchData(activePage,10,budget,location,university,categoryFetch);
+  }, [activePage])
+  
 
 
   return (
@@ -96,7 +134,7 @@ const Dashboard = () => {
                 <option value="">Remark</option>
               </select>
             </div>
-            <Resources />
+            <Resources  loading={loading} totalPages={totalPages} page={activePage} setActivePage={setActivePage} resources={resources} />
           </div>
           <div>
             <FilterResources filters={filters} setFilters={setFilters} />
