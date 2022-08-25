@@ -6,6 +6,37 @@ const catchAsync = require('../utils/catchAsync')
 const axios = require('axios')
 const FormData = require('form-data');
 const generateUniqueId = require("generate-unique-id");
+const imageToBase64 = require('image-to-base64');
+const moment = require('moment')
+const { storeTokenUriMetaData } = require("../utils/pinataSDK");
+
+// PINATA 
+const getPinataURIs = async (id) => {
+    const request = await Request.findById(id).populate('lendingInstitute').populate('contract').populate('aspirantInstitute')
+    let base64Active = imageToBase64(request.lendingInstitute.logo);
+
+    const activeTemplate = returnTemplate(request, base64Active);
+    const pinataURIActive = await storeTokenUriMetaData(activeTemplate);
+    return {
+        activeTokenURI: `ipfs://${pinataURIActive.IpfsHash}`
+    }
+}
+
+const returnTemplate = (request, URI, expired) => {
+    const duration = moment(request.endDate).diff(request.startDate,'days');
+    const metaDataTemplate = {
+        name: request.contract.title,
+        description: request.contract.terms,
+        image: URI,
+        attributes: [{
+            "Request ID": request.id,
+            "lending Institute": request.lendingInstitute.instituteName,
+            "Aspirant Institute": request.aspirantInstitute.instituteName,
+            "Duration": `${duration} Days`,
+        }]
+    }
+    return metaDataTemplate;
+}
 
 exports.createRequest = catchAsync(async (req, res, next) => {
     const { resourceId, startDate, endDate, note } = req.body;
@@ -46,7 +77,6 @@ exports.requestExists = catchAsync(async (req, res, next) => {
         status: false, message: "Request doesn't exists"
     })
 });
-
 
 exports.getRequest = catchAsync(async (req, res, next) => {
     const checkReq = await Request.findOne({ _id: req.params.id, isActive: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource').populate('contract')
@@ -123,7 +153,6 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
 
 })
 
-
 exports.updateRequest = catchAsync(async (req, res, next) => {
     const request = await Request.findOne({ _id: req.params.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if (!request) {
@@ -132,6 +161,10 @@ exports.updateRequest = catchAsync(async (req, res, next) => {
         )
     }
     const updatedRequest = await Request.findByIdAndUpdate(request.id, req.body, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+    if(Object.keys(req.body).includes("contract")){
+        updatedRequest.tokenURI = getPinataURIs(updatedRequest.id);
+        updatedRequest.save()
+    }
     res.json({ success: true, updatedRequest })
 })
 
