@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const RequestSchema = new mongoose.Schema({
+    _id :{
+        type: Number
+    },
     lendingInstitute: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
