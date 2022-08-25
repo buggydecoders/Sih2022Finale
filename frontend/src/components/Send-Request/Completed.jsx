@@ -4,7 +4,7 @@ import Input from '../Input'
 const Completed = ({data}) => {
   return (
 <div className="py-3">
-      <div className="text-2xl font-semibold">Request Active</div>
+      <div className="text-2xl font-semibold">Request Completed</div>
       <div className="text-green-500 text-sm font-[600]">
        
       </div>
