@@ -12,6 +12,7 @@ import SignContract from '../../components/Send-Request/SignContract'
 import { fetchSingleRequest } from '../../store/requests/actions'
 import { useParams, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
+import Completed from '../../components/Send-Request/Completed'
 const RequestStatus = () => {
   const { loading, activeRequest: requestData } = useSelector(state => state.requests)
   const dispatch = useDispatch();
@@ -29,10 +30,11 @@ const RequestStatus = () => {
   const RenderComponent = () => {
     switch (requestData.status) {
       case 'pending': return <Confirmation data={requestData} />
+      case 'accepted': return <Confirmation data={requestData} />
       case 'cancelled': return <Confirmation cancelled={true} data={requestData} />
       case 'await-sign': return <SignContract data={requestData} />
       case 'approved': return <ExchangePage data={requestData} />
-      case 'completed' : return <div>Completed...</div>
+      case 'completed' : return  <Completed data={requestData} />
     }
   }
 

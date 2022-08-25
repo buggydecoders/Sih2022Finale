@@ -1,9 +1,9 @@
-import React from "react";
-import InputField from "../InputField";
+import React from 'react'
+import Input from '../Input'
 
-const ExchangePage = ({data}) => {
+const Completed = ({data}) => {
   return (
-    <div className="py-3">
+<div className="py-3">
       <div className="text-2xl font-semibold">Request Active</div>
       <div className="text-green-500 text-sm font-[600]">
        
@@ -29,14 +29,17 @@ const ExchangePage = ({data}) => {
         </div>
       </div>
       <div className="mt-10">
-        <div className="text-lg font-[600]">Add Comment</div>
+       <Input label={'Feedback'} area={true} cols={5} note="Please add a valid feedback"/>
+       <div className='mt-5 flex justify-end'>
+        <button className='bg-secondary px-4 rounded-md py-2 text-white'>Send</button>
+       </div>
         <hr className="my-5" />
         {/* <div className='grid grid-cols-[1fr_2fr]'>
         <InputField area={true} label='Comment'/>
       </div> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ExchangePage;
+export default Completed
