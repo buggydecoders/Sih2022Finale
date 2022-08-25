@@ -1,3 +1,3 @@
 export const getContractAddresses = {
-    1337 : '0x240C6553938bd17AA0d4e5fb13c96ae53C38513d'
+    1337 : '0xFC2446972153C6bE92b709c6d69D1bB04F796F9A'
 }

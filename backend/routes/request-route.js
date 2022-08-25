@@ -6,7 +6,7 @@ const checkVerification = require('../middlewares/checkVerification');
 
 router
     .route('/')
-    .get(checkAuth, checkVerification, requestController.getAllRequest)
+    .get(checkAuth, requestController.getAllRequest)
     .post(checkAuth, checkVerification, requestController.createRequest)
 
 router

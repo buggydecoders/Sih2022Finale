@@ -6,6 +6,7 @@ import { getFileLink } from "../../utils/generateImageLink";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import Payment from "./Payment";
+import getProvider from "../../utils/etherUtils";
 
 const SignContract = ({ data }) => {
 
@@ -24,6 +25,12 @@ const SignContract = ({ data }) => {
       setSignature(null);
     }
   };
+
+  // const handleMintNFT = (requestId)=>{
+  //   const {provider,signer,address} = await getProvider();
+  //   const AgreementContract = 
+  // }
+  console.log(data.lendingInstitute);
 
   const handleSubmit = async () => {
     const res = await verifySignatureAPI(signature)
