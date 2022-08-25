@@ -191,6 +191,16 @@ exports.getAllInstitutes = catchAsync(async (req, res, next) => {
     res.json({ succcess: true, institutes })
 })
 
+exports.getInstituteBySlug = catchAsync(async (req, res, next) => {
+    const { slug } = req.params;
+    const institute = await User.findOne({ username: slug })
+    if (!institute) {
+        return next(
+            new AppError('Institute Not Found', 404)
+        )
+    }
+    res.json({ success: true, institute })
+})
 
 // exports.usernameScript = catchAsync(async (req, res, next) => {
 //     const user = await User.find();
