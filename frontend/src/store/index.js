@@ -15,6 +15,7 @@ import RequirementsReducer from "./requirements/reducer";
 
 import contractReducer from "./contracts/reducer";
 import filterReducer from "./filters/reducer";
+import dashboardReducer from "./dashboard/reducer";
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
     requests : RequestReducer,
     requirements : RequirementsReducer,
     contracts : contractReducer,
-    filters : filterReducer
+    filters : filterReducer,
+    dashboard : dashboardReducer
 
 });
 // // Middleware: Redux Persist Config

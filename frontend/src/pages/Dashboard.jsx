@@ -10,7 +10,7 @@ import Layout from "../components/Layout";
 import { BsClockHistory } from "react-icons/bs";
 import { BiBadgeCheck } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
-import { fetchDashboardResources } from "../store/resources/actions";
+
 import { useDispatch } from "react-redux";
 import Tab from "../components/Tab";
 import { capitalize } from "@mui/material";
@@ -21,17 +21,13 @@ import Loading from "../components/Loading";
 import { fetchDashboardResourcesAPI } from "../store/resources/services";
 import { toast } from "react-toastify";
 import { fetchInstitutes, fetchStates } from "../store/filters/actions";
+import { fetchDashboardResources } from "../store/dashboard/actions";
 
 
 
 const Dashboard = () => {
 
-  const [category, setCategory] = useState("all");
-  const [resources,setResources] = useState([]);
-  const [loading,setLoading] = useState(false);
-  const [activePage,setActivePage] = useState(1);
-  const [totalPages,setTotalPages] = useState(1);
-  const navigate = useNavigate();
+  const {resources,loading,page,totalPages} = useSelector(state=>state.dashboard);
 
   const [filters, setFilters] = useState({
     university: [],
@@ -40,28 +36,15 @@ const Dashboard = () => {
   });
   const dispatch = useDispatch();
 
-  const fetchData = async(page,limit,budget,university,location,categoryFetch)=>{
-    try {
-    setLoading(true);
-    const result = await fetchDashboardResourcesAPI(page,limit,budget,university,location,categoryFetch);
-    setResources(result.data.resources);
-    setTotalPages(result.data.totalPages);
-    }catch(err) {
-      console.log(err);
-      toast(err?.response?.data?.message || 'SOmething went wrong!');
-      navigate('/not-found');
-    }finally{
-      setTimeout(()=>{
-        setLoading(false);
-      }, 2000)
-    }
-  }
+
   
 
   useEffect(()=>{
     dispatch(fetchInstitutes());
     dispatch(fetchStates());
   }, [])
+
+  const [category,setCategory] = useState('all')
 
 
 
@@ -70,9 +53,17 @@ const Dashboard = () => {
     let location = filters.location.length > 0 ? filters.location.join("-") : "";
     let university = filters.university.length > 0 ? filters.university.join("-") : "";
     let categoryFetch = category === "all" ? "" : category;
-    fetchData(activePage,10,budget,university,location,categoryFetch);
+    dispatch(fetchDashboardResources(1,10,university,location,budget,categoryFetch));
     // setTotalPages()
-  }, [filters,activePage]);
+  }, [filters]);
+
+const handlePageChange = (e,value)=>{
+  let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";
+  let location = filters.location.length > 0 ? filters.location.join("-") : "";
+  let university = filters.university.length > 0 ? filters.university.join("-") : "";
+  let categoryFetch = category === "all" ? "" : category;
+  dispatch(fetchDashboardResources(value,10,university,location,budget,categoryFetch))
+}
 
 
   
@@ -131,7 +122,7 @@ const Dashboard = () => {
                 <option value="">Remark</option>
               </select>
             </div>
-            <Resources  loading={loading} totalPages={totalPages} page={activePage} setActivePage={setActivePage} resources={resources} />
+            <Resources  loading={loading} totalPages={totalPages} page={page} handlePageChange={handlePageChange} resources={resources} />
           </div>
           <div>
             <FilterResources filters={filters} setFilters={setFilters} />

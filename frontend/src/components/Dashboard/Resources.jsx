@@ -8,7 +8,7 @@ import Loading from "../Loading";
 import { serverInstance } from "../../utils/serverInstance";
 import { fetchDashboardResourcesAPI } from "../../store/resources/services";
 
-const Resources = ({totalPages,setActivePage,page,resources,loading}) => {
+const Resources = ({totalPages,handlePageChange,page,resources,loading}) => {
 
   return (<>
     <div>
@@ -21,7 +21,7 @@ const Resources = ({totalPages,setActivePage,page,resources,loading}) => {
         <Pagination
           page={page}
           count={totalPages}
-          onChange={(e,value)=>setActivePage(value)}
+          onChange={handlePageChange}
         />
       </div>
     </div></>

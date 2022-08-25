@@ -3,15 +3,16 @@ import { FiSearch } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux'
 import { searchResource } from '../../store/resources/actions';
 import { ImCross } from 'react-icons/im'
+import { SearchDashboardResources } from '../../store/dashboard/actions';
 
 const Search = () => {
     const dispatch = useDispatch()
     const [searchTerm, setSearchTerm] = useState("");
     const handleSubmit = (reset) => {
-        reset ? dispatch(searchResource("")) : dispatch(searchResource(searchTerm))
+        reset ? dispatch(SearchDashboardResources("")) : dispatch(SearchDashboardResources(searchTerm))
         if(reset) setSearchTerm("")
     }
-    const { list, loading } = useSelector(state => state.resources)
+    const { resources, loading } = useSelector(state => state.dashboard)
 
     return (
         <div className='bg-white px-5 py-5 rounded-sm'>
@@ -30,7 +31,7 @@ const Search = () => {
                 </div>
             </div>
             <div className='mt-4 w-full py-3 rounded-md cursor-pointer hover:bg-opacity-80 hover:text-white transition-all duration-500 font-[400] text-center bg-secondary bg-opacity-10 text-secondary'>
-                {list.length} Resources Found
+                {resources.length} Resources Found
             </div>
         </div>
     )
