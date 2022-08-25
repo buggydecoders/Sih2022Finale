@@ -1,11 +1,10 @@
+import { CircularProgress } from '@mui/material'
 import React from 'react'
 
 function Loading() {
     return (
-        <div className='w-full flex justify-center items-center'>
-            <p>
-                Loading....
-            </p>
+        <div className='flex items-center justify-center h-full w-full'>
+            <CircularProgress/>
         </div>
     )
 }
