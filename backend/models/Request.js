@@ -17,6 +17,13 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Contract'
     },
+    isMinted: {
+        type: Boolean,
+        default: false
+    },
+    tokenId: {
+        type: Number
+    },
     startDate: {
         type: String,
     },

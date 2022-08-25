@@ -118,3 +118,11 @@ exports.checkSignature = catchAsync(async (req, res, next) => {
     })
     res.json({ isVerified: data })
 })
+
+exports.setMinting = catchAsync(async (req, res, next) => {
+    const { tokenId } = req.body
+    const request = await Request.findById(req.params.id)
+    request.tokenId = tokenId;
+    const updatedRequest = await request.save()
+    res.json({success:true, updatedRequest })
+})
