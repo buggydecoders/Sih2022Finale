@@ -25,6 +25,7 @@ import Contracts from "./pages/Contracts";
 import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
 import Messages from "./pages/Admin/Messages";
+import CollegeProfile from "./pages/CollegeProfile";
 
 
 
@@ -112,6 +113,14 @@ export default function App() {
           element={<ProtectedRoute access="public" restricted={true} />}
         >
           <Route exact path='/signup' element={<Signup />} />
+        </Route>
+
+        <Route
+          exact
+          path="/institute/:slug"
+          element={<ProtectedRoute access="private" scope={"institute"} />}
+        >
+          <Route exact path='/institute/:slug' element={<CollegeProfile />} />
         </Route>
 
         <Route
