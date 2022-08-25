@@ -11,6 +11,7 @@ import { Pagination } from "@mui/material";
 import { fetchRequests } from "../../store/requests/actions";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
+
 const Tab = ({ title, selected, setSelected, count, id }) => {
   const isSelected = id == selected;
   const navigate = useNavigate();
@@ -21,29 +22,51 @@ const Tab = ({ title, selected, setSelected, count, id }) => {
   return (
     <div
       onClick={handleSelect}
-      className={`${
-        isSelected ? "bg-primary text-white" : "text-gray-700 bg-gray-100"
-      } px-5 py-3 text-sm rounded-3xl  hover:bg-primary transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
+      className={`${isSelected ? "bg-primary text-white" : "text-gray-700 bg-gray-100"
+        } px-5 py-3 text-sm rounded-3xl  hover:bg-primary transition-all flex gap-4 cursor-pointer items-center  hover:text-white`}
     >
       <div className="font-[600]">{title}</div>
-      <div className="font-[500]">{count}</div>
+      {/* <div className="font-[500]">{count}</div> */}
     </div>
   );
 };
 
-
 const RequestCard = ({ data, tab }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const handleResourceClick = ()=>{
-    if (tab==='sent') return navigate(`/status/${data._id}`);
+  const handleResourceClick = () => {
+    if (tab === 'sent') return navigate(`/status/${data._id}`);
     else setIsOpen(true);
   }
+
+  const getColor = (status)=>{
+    switch (status) {
+      case "cancelled":
+        return "red"
+        break;
+      case "pending":
+        return "yellow"
+        break;
+      case "signed":
+        return "green"
+        break;
+      case "completed":
+        return "green"
+        break;
+      default:
+        break;
+    }
+  }
+
+  function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
   return (
     <>
       <tr
         onClick={handleResourceClick}
-        class="border-b-[1px] hover:bg-lightGray transition-all duration-300 cursor-pointer  dark:border-gray-100"
+        className="border-b-[1px] hover:bg-lightGray transition-all duration-300 cursor-pointer  dark:border-gray-100"
       >
 
         <th
@@ -54,15 +77,15 @@ const RequestCard = ({ data, tab }) => {
             <img
               src={
                 tab === "recieved"
-                  ? data?.aspirantInstitute.logo
-                  : data?.lendingInstitute.logo
+                  ? data?.aspirantInstitute?.logo
+                  : data?.lendingInstitute?.logo
               }
               className="w-[40px] h-[40px] rounded-full"
             />
             <div className="">
               {tab === "recieved"
-                ? data?.aspirantInstitute.instituteName
-                : data?.lendingInstitute.instituteName}
+                ? data?.aspirantInstitute?.instituteName
+                : data?.lendingInstitute?.instituteName}
             </div>
           </div>
         </th>
@@ -79,19 +102,19 @@ const RequestCard = ({ data, tab }) => {
           </div>
         </th>
 
-        <td class="py-4 px-6 font-open">
+        <td className="py-4 px-6 font-open">
           {moment(data?.resource?.durationFrom).format("DD-MM-YYYY")} |{" "}
           {moment(data?.resource?.durationTo).format("DD-MM-YYYY")}
         </td>
-        <td class="py-4 px-6">
-          <div className="font-open text-green-500 font-[700] underline rounded-xl px-3 py-1">
-            {data?.status}
+        <td className="py-4 px-6">
+          <div className={`font-open text-${getColor(data?.status)}-500 font-[700] underline rounded-xl px-3 py-1`}>
+            {capitalize(data?.status)}
           </div>
         </td>
-        <td class="py-4 px-3 font-open">
+        <td className="py-4 px-3 font-open">
           {moment(data?.createdAt).format("DD MMMM YYYY")}
         </td>
-        <td class="py-4 px-3 text-gray-700 font-open">
+        <td className="py-4 px-3 text-gray-700 font-open">
           <IoIosArrowForward size={28} />
         </td>
 
@@ -153,14 +176,21 @@ const StatusV2 = () => {
                 <Tab
                   title="Rejected"
                   count={20}
-                  id={3}
+                  id={"rejected"}
                   selected={tab}
                   setSelected={setTab}
                 />
                 <Tab
                   title="Cancelled"
                   count={0}
-                  id={4}
+                  id={"cancelled"}
+                  selected={tab}
+                  setSelected={setTab}
+                />
+                <Tab
+                  title="Completed"
+                  count={0}
+                  id={"completed"}
                   selected={tab}
                   setSelected={setTab}
                 />
@@ -182,29 +212,29 @@ const StatusV2 = () => {
             </div>
 
             <div className="mt-7 overflow-x-auto w-full">
-              <table class="w-full text-left text-black">
-                <thead class=" text-gray-700 ">
+              <table className="w-full text-left text-black">
+                <thead className=" text-gray-700 ">
                   <tr className="border-b-[1px] ">
-                    <th scope="col" class="py-4 pb-4 px-6">
+                    <th scope="col" className="py-4 pb-4 px-6">
                       Institute
                     </th>
-                    <th scope="col" class="py-4 pb-4 px-6">
+                    <th scope="col" className="py-4 pb-4 px-6">
                       Resource
                     </th>
-                    <th scope="col" class="py-4 pb-4 px-6">
+                    <th scope="col" className="py-4 pb-4 px-6">
                       Duration
                     </th>
-                    <th scope="col" class="py-4 pb-4 px-6">
+                    <th scope="col" className="py-4 pb-4 px-6">
                       Status
                     </th>
-                    <th scope="col" class="py-4 pb-4 px-6">
+                    <th scope="col" className="py-4 pb-4 px-6">
                       Requested Date
                     </th>
                   </tr>
                   <tr></tr>
                 </thead>
                 <tbody>
-                  {requests.map((r) => (
+                  {requests?.map((r) => (
                     <RequestCard data={r} tab={tab} />
                   ))}
                 </tbody>

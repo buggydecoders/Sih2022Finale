@@ -7,7 +7,6 @@ export const createContractAPI = async(data)=>{
 
 export const getContractsAPI = async(page,limit)=>{
     const result = await serverInstance.get(`/contract?page=${page || 1}&limit=${limit || 10}`);
-    console.log(result);
     return result;
   
 }

@@ -24,7 +24,6 @@ const NotificationContextProvider = ({children})=>{
 
         if (socket) {
             socket.on('recieve-notification', (result)=>{
-                console.log(result);
                 alert('hi')
                 if (result.type==='call') {
                     return toast(<div className="">

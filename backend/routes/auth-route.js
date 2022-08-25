@@ -24,6 +24,10 @@ router
     .patch(checkAuth, authController.updateUser)
 
 router
+    .route('/get-institutes')
+    .get(checkAuth, authController.getAllInstitutes)
+
+router
     .route("/remove-user/:id")
     .delete(checkAuth, restrictTo('admin'), authController.removeUser)
 

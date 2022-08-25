@@ -38,7 +38,6 @@ const SendRequest = () => {
   useEffect(() => {
     setPageLoad(true);
     const existsCallback = (data) => {
-      console.log(data, "xists call back");
       navigate(`/status/${data.request._id}`);
       toast(
         "Request already exists! You cannot put another request until that one is completed."

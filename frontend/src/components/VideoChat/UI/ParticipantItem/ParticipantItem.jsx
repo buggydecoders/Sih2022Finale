@@ -31,8 +31,6 @@ const ParticipantItem = ({ participant, isSelf, controls,...props }) => {
           if (!speakingState){
           setSpeakingState(true);
           }
-      
-          // console.log('Eee')
         } else {
           setSpeakingState(false);
         }

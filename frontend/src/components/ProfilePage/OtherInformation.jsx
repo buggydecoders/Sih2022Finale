@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 function OtherInformation() {
   const { user } = useSelector((state) => state.auth);
-  console.log(user);
 
   return (
     <div className="w-full p-4 rounded-2xl bg-lightGray my-10">

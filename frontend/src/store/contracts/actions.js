@@ -44,7 +44,6 @@ export const setLoading = (state) => {
 };
 
 export const setData = (data) => {
-    console.log(data,'data');
   return {
     type: CONSTANTS.SET_DATA,
     payload: data,
@@ -86,7 +85,7 @@ export const getSingleContract = (id) => async (dispatch) => {
   }
 };
 
-export const createContract = (data,successCallback) => async (dispatch) => {
+export const createContract = (data, successCallback) => async (dispatch) => {
   try {
     console.log('creating contract...');
     dispatch(setLoading("SAVE"));
@@ -94,7 +93,7 @@ export const createContract = (data,successCallback) => async (dispatch) => {
     const { contract } = result.data;
     console.log(contract)
     dispatch(addContract(contract));
-    successCallback&&successCallback(data);
+    successCallback && successCallback(data);
   } catch (err) {
     console.log(err);
     toast(err?.response?.data?.message || "Something went wrong!");
@@ -103,13 +102,13 @@ export const createContract = (data,successCallback) => async (dispatch) => {
   }
 };
 
-export const editContract = (id, data,successCallback) => async (dispatch) => {
+export const editContract = (id, data, successCallback) => async (dispatch) => {
   try {
     dispatch(setLoading("SAVE"));
     const result = await editContractAPI(id, data);
     const { contract } = result.data;
     dispatch(editContractInStore(contract));
-    successCallback&&successCallback(contract);
+    successCallback && successCallback(contract);
   } catch (err) {
     console.log(err);
     toast(err?.response?.data?.message || "Something went wrong!");

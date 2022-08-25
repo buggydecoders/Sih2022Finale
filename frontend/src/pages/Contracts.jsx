@@ -25,10 +25,6 @@ const ContractCard = ({data,selected,setSelected})=>{
 
 const ContractInput = ({form,setForm,data})=>{
     const {loading} = useSelector(state=>state.contracts);
-  
-
-
-    console.log(form);
     const dispatch = useDispatch();
     const handleChange = (e)=>setForm(prev=>({...prev,[e.target.name] : e.target.value}));
     const handleSubmit = ()=>{
@@ -71,7 +67,6 @@ const Contracts = () => {
     useEffect(()=>{
         dispatch(fetchContracts(1,10));
     }, [])
-    console.log(contracts,loading);
     const  handlePaginationChange = (e,value)=>{
       dispatch(fetchContracts(value,10));
     }

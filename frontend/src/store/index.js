@@ -14,6 +14,7 @@ import RequestReducer from "./requests/reducer";
 import RequirementsReducer from "./requirements/reducer";
 
 import contractReducer from "./contracts/reducer";
+import filterReducer from "./filters/reducer";
 
 const rootReducer = combineReducers({
     test : ()=>'Hello',
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
     chatRoom : chatRoomReducer,
     requests : RequestReducer,
     requirements : RequirementsReducer,
-    contracts : contractReducer
+    contracts : contractReducer,
+    filters : filterReducer
 
 });
 // // Middleware: Redux Persist Config

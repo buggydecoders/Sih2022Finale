@@ -12,7 +12,6 @@ export default function MessageContextProvider({children}) {
     const {user} = useSelector(state=>state.auth); 
     // const [socket,setSocket] = useState(null);
     const {activeRoom} = useSelector(state=>state.chatRoom);
-    console.log(activeRoom)
     const [loading,setLoading] = useState(false);
     const [messages,setMessages] = useState([]);
     const [error,setError] =useState('');
@@ -22,10 +21,6 @@ export default function MessageContextProvider({children}) {
     useEffect(()=>{
       if (socket) {
         socket.on('receive-message', (result)=>{
-          console.log('recieved!');
-          // alert('recieved!!');
-          // console.log(result);
-          // let message = 
           dispatch(setRoomsLastMessage(result.room, result));
           setMessages((list)=>[...list,result]);
         })

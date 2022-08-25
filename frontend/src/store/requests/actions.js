@@ -76,7 +76,6 @@ export const fetchRequests = (type,page,limit,status,isActive)=>async(dispatch)=
     try {
         dispatch(setLoading('FETCH_REQUESTS'));
         const result = await fetchAllRequestsAPI(type,page,limit,status,isActive);
-        console.log(result);
         dispatch(setData(result.data));
     }catch(err) {
         console.log(err);
