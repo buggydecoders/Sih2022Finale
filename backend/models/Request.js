@@ -20,6 +20,9 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Contract'
     },
+    ipfsURI:{
+        type:String
+    },
     isMinted: {
         type: Boolean,
         default: false

@@ -162,7 +162,7 @@ exports.updateRequest = catchAsync(async (req, res, next) => {
     }
     const updatedRequest = await Request.findByIdAndUpdate(request.id, req.body, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     if(Object.keys(req.body).includes("contract")){
-        updatedRequest.tokenURI = getPinataURIs(updatedRequest.id);
+        updatedRequest.ipfsURI = getPinataURIs(updatedRequest.id);
         updatedRequest.save()
     }
     res.json({ success: true, updatedRequest })
