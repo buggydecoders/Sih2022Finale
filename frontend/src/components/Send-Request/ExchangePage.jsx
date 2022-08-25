@@ -28,6 +28,10 @@ const ExchangePage = ({data}) => {
           <div className="font-semibold">4.5</div>
         </div>
       </div>
+      <div className="mt-14">
+        <div className=""><span className="font-semibold">Token ID : </span>{data?.tokenId}</div>
+        <div className=""><span className="font-semibold">Token URI : </span>{data?.tokenURI}</div>
+      </div>
       <div className="mt-10">
         <div className="text-lg font-[600]">Add Comment</div>
         <hr className="my-5" />
