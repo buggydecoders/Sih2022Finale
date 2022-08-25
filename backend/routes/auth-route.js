@@ -28,6 +28,10 @@ router
     .get(checkAuth, authController.getAllInstitutes)
 
 router
+    .route('/get-institute/:slug')
+    .get(checkAuth, authController.getInstituteBySlug)
+
+router
     .route("/remove-user/:id")
     .delete(checkAuth, restrictTo('admin'), authController.removeUser)
 
