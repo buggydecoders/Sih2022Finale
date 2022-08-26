@@ -29,7 +29,7 @@ router
 
 router
     .route("/remove-user/:id")
-    .delete(checkAuth, restrictTo('admin'), authController.removeUser)
+    .delete(checkAuth, authController.removeUser)
 
 router
     .route("/verify-user")
