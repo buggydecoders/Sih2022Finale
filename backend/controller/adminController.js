@@ -1,6 +1,7 @@
 const Request = require("../models/Request");
 const Requirement = require("../models/Requirements");
 const Resource = require("../models/Resource");
+const Coupon = require("../models/Coupon");
 const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
 
@@ -88,4 +89,20 @@ exports.getStats = catchAsync(async (req, res, next) => {
     const requestCount = await Request.countDocuments({ status: "apporoved" })
     const requirementCount = await Requirement.countDocuments()
     res.json({ success: true, institutesCount, resourcesCount, requestCount, requirementCount })
+})
+
+exports.addCoupon = catchAsync(async (req, res, next) => {
+    const { resourceId, discount, code } = req.body
+    const coupon = new Coupon({
+        resource: resourceId,
+        discount,
+        code
+    })
+    const createdCoupon = await coupon.save()
+    res.json({ success: true, createdCoupon })
+})
+
+exports.getCoupon = catchAsync(async (req, res, next) => {
+    const coupons = await Coupon.find()
+    res.json({ success: true, coupons })
 })
