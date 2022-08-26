@@ -108,22 +108,8 @@ const UserSchema = new mongoose.Schema({
         aadharNumber: {
             type: String
         },
-        interest: {
+        skills: {
             type: String
-        },
-        address: {
-            street: {
-                type: String
-            },
-            city: {
-                type: String
-            },
-            state: {
-                type: String
-            },
-            pincode: {
-                type: String
-            }
         },
     },
     savedItems: [{

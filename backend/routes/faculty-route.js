@@ -9,4 +9,9 @@ router
     .route('/login')
     .post(facultyController.loginUser)
 
+router
+    .route('/requirement')
+    .post(checkAuth, facultyController.addRequirement)
+    .get(checkAuth, facultyController.getRequirements)
+    
 module.exports = router
