@@ -18,7 +18,7 @@ router
   .post(checkAuth, resourceController.searchResource);
 
 router
-  .route("/feedback")
+  .route("/feedback/:id")
   .post(checkAuth, resourceController.getFeedback);
 
 router
