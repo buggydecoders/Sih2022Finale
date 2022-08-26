@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const RequestSchema = new mongoose.Schema({
-    _id :{
+    _id: {
         type: Number
     },
     lendingInstitute: {
@@ -20,18 +20,21 @@ const RequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Contract'
     },
-    ipfsURI:{
-        type:String
+    ipfsURI: {
+        type: String
     },
     isMinted: {
         type: Boolean,
         default: false
     },
+    accessKeys: {
+        type: String
+    },
     tokenId: {
         type: Number
     },
-    tokenURI : {
-        type : String
+    tokenURI: {
+        type: String
     },
     startDate: {
         type: String,

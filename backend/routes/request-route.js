@@ -18,6 +18,10 @@ router
     .post(checkAuth, checkVerification, requestController.checkSignature)
 
 router
+    .route('/check-verification')
+    .post(requestController.checkAccessKey)
+    
+router
     .route('/:id')
     .get(checkAuth, checkVerification, requestController.getRequest)
     .patch(checkAuth, checkVerification, requestController.updateRequest)

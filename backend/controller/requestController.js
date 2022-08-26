@@ -12,7 +12,7 @@ const { storeTokenUriMetaData } = require("../utils/pinataSDK");
 
 
 const returnTemplate = (request, URI, expired) => {
-    const duration = moment(request.endDate).diff(request.startDate,'days');
+    const duration = moment(request.endDate).diff(request.startDate, 'days');
     const metaDataTemplate = {
         name: request.contract.title,
         description: request.contract.terms,
@@ -36,7 +36,7 @@ const getPinataURIs = async (id) => {
     const activeTemplate = returnTemplate(request, base64Active);
     const pinataURIActive = await storeTokenUriMetaData(activeTemplate);
     return `ipfs://${pinataURIActive.IpfsHash}`;
-    
+
 }
 
 
@@ -163,9 +163,9 @@ exports.updateRequest = catchAsync(async (req, res, next) => {
         )
     }
     let updatedRequest = await Request.findByIdAndUpdate(request.id, req.body, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
-    if(Object.keys(req.body).includes("contract")){
+    if (Object.keys(req.body).includes("contract")) {
         let tokenURI = await getPinataURIs(request.id);
-        updatedRequest = await Request.findByIdAndUpdate(request.id, {ipfsURI :tokenURI}, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
+        updatedRequest = await Request.findByIdAndUpdate(request.id, { ipfsURI: tokenURI }, { new: true }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')
     }
     res.json({ success: true, updatedRequest })
 })
@@ -200,4 +200,15 @@ exports.setMinting = catchAsync(async (req, res, next) => {
     request.tokenId = tokenId;
     const updatedRequest = await request.save()
     res.json({ success: true, updatedRequest })
+})
+
+exports.checkAccessKey = catchAsync(async (req, res, next) => {
+    const { key } = req.body;
+    const requests = await Request.find({ status: { '$ne': "completed" }, accessKeys: { '$in': [key] } })
+    if (!requests) {
+        return next(
+            new AppError('Not Verified.', 403)
+        )
+    }
+    res.json({ success: true, requests })
 })
