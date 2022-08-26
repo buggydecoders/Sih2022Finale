@@ -21,6 +21,12 @@ const ResourceSchema = new mongoose.Schema({
     durationTo: {
         type: String
     },
+    resourceURL : {
+        type : String
+    },
+    resourceType : {
+        type : String
+    },
     per:{
         type:String
     },

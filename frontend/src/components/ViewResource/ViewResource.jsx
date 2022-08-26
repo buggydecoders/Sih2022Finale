@@ -1,12 +1,12 @@
 import React from 'react'
+import Layout from '../../components/Layout'
 import FileViewer from 'react-file-viewer';
-import Layout from '../Layout';
 const ViewResource = () => {
   return (
     <Layout>
     <FileViewer
-    fileType='png'
-    filePath='https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/800px-Google_Images_2015_logo.svg.png'
+    fileType='mp4'
+    filePath='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
     />
     </Layout>
   )
