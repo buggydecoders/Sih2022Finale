@@ -15,6 +15,7 @@ const ActivateAccount = () => {
   const [isRequested, setIsRequested] = useState(false);
   useEffect(() => {
     const callFunc = async () => {
+      setLoading(true);
       const { provider, signer, address } = await getProvider();
       const { chainId } = await provider.getNetwork();
       const InstituteContract = new ethers.Contract(
@@ -30,8 +31,11 @@ const ActivateAccount = () => {
         });
         console.log(result);
         toast("Account activated successfully!, You will be loggedout in 3s");
+         setLoading(false);
+
         setTimeout(() => {
           dispatch(logoutUser());
+          
         }, 3000);
       }
       });
@@ -70,13 +74,13 @@ const ActivateAccount = () => {
           <div className="text-red-500">Account not verified</div>
         )}
         {user?.isVerified ? (
-          <div>
-            <div>Wallet Address : {user?.walletAddress}</div>
-            <div>Agreement Address : {user?.agreementContractAddress}</div>
+          <div className="text-base mt-5 space-y-2">
+            <div><span className="font-semibold">Wallet Address </span>: {user?.walletAddress}</div>
+            <div><span className="font-semibold">Agreement Address :</span> {user?.agreementContractAddress}</div>
           </div>
         ) : (
           <div>
-            <button onClick={handleVerify}>Verify</button>
+            <button disabled={loading} className="mt-4 text-base bg-secondary text-white px-10 rounded-md py-2" onClick={handleVerify}>{loading?'Loading...':'Verify'}</button>
           </div>
         )}
       </div>
