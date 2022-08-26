@@ -10,8 +10,8 @@ const TableEntry = ({ data, idx }) => {
   console.log(data)
   return (
       <tr className="border-b" key={idx}>
-          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              <div className="flex items-center gap-2">
+          <td className="text-sm text-gray-900 font-light px-6 py-4">
+              <div className="flex items-center gap-2 max-w-1/4">
                   <div className="text-black font-semibold">{data?.lendingInstitute?.instituteName}</div>
               </div>
           </td>
@@ -50,7 +50,7 @@ function AdminRequests() {
   console.log(requests)
 
   useEffect(() => {
-    fetchAdminRequests(activePage, 10);
+    dispatch(fetchAdminRequests(activePage, 10))
   }, [activePage]);
 
   return (
@@ -94,7 +94,7 @@ function AdminRequests() {
           </thead>
           <tbody>
             {
-              loading !== "LOADIN_INSTITUTE" ?
+              loading !== "LOADING_REQUESTS" ?
                 requests.requests?.map((request, idx) => {
                   return <TableEntry data={request} idx={idx} />
                 })

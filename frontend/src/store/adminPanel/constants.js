@@ -11,6 +11,7 @@ const AdminConstants = {
     SET_REQUIREMENTS : 'SET_REQUIREMENTS',
     SET_REQUESTS : 'SET_REQUESTS',
     SET_RESOURCES : 'SET_RESOURCES',
+    REMOVE_USER : 'REMOVE_USER',
 }
 
 export default AdminConstants;

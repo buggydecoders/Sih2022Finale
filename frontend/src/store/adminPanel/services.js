@@ -35,3 +35,8 @@ export const addDiscountAPI = async (data) => {
     const result = await serverInstance.post(`/admin/coupon`, data);
     return result;
 }
+
+export const removeUserAPI = async (id) => {
+    const result = await serverInstance.delete(`/auth/remove-user/${id}`);
+    return result;
+}
