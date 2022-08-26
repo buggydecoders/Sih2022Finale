@@ -24,9 +24,9 @@ const TableEntry = ({ data, idx }) => {
                     <div className="font-semibold">{data?.durationTo}</div>
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <div className="font-semibold">{data?.instituteId.instituteName || "unassigned"}</div>
+                    <div className="font-semibold">{data?.instituteId?.instituteName || "unassigned"}</div>
                     <div className="mt-1 text-gray-400 text-sm font-[500]">
-                        {data?.instituteId.email || "email"}
+                        {data?.instituteId?.email || "email"}
                     </div>
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
@@ -56,7 +56,7 @@ function AdminResources() {
     const totalPages = resources.totalPages
 
     useEffect(() => {
-        fetchAdminResources(activePage, 10);
+        dispatch(fetchAdminResources(activePage, 10))
     }, [activePage]);
 
     return (
@@ -106,8 +106,8 @@ function AdminResources() {
                     </thead>
                     <tbody>
                         {
-                            loading !== "LOADIN_INSTITUTE" ?
-                                resources.resources?.map((resource, idx) => {
+                            loading !== "LOADING_RESOURCES" ?
+                                resources.resources &&resources?.resources?.map((resource, idx) => {
                                     return <TableEntry data={resource} idx={idx} />
                                 })
                                 : <Loading />

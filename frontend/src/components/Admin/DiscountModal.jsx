@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { addDiscountAPI } from '../../store/adminPanel/services';
+import { toast } from 'react-toastify';
 
 const style = {
     position: 'absolute',
@@ -17,19 +19,25 @@ const style = {
 };
 
 function DiscountModal({ open, setOpen, data }) {
-    const handleClose = () => setOpen(false);
-    const [form, setForm] = useState([]);
+    const [formData, updateFormData] = useState({ resourceId: data._id });
+    const handleClose = () => setOpen(false)
 
-    const handleSubmit = ()=>{
-        setForm([])
+    const handleChange = (e) => {
+        updateFormData({
+            ...formData,
+
+            // Trimming any whitespace
+            [e.target.name]: e.target.value.trim()
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const res = await addDiscountAPI(formData)
+        updateFormData({})
         handleClose()
-    }
-
-    const handleChange = (e)=>{
-        form[e.target.name] = [...form[e.target.name] , e.target.value]
-    }
-
-    console.log(form)
+        res.data.success === true ? toast("Discount Added") : toast("Some Error Occured")
+    };
 
     return (
         <div>
@@ -43,18 +51,22 @@ function DiscountModal({ open, setOpen, data }) {
                     <Typography id="modal-modal-title" className='text-center' variant="h6" component="h2">
                         Add discount to {data?.name}
                     </Typography>
-                    <form className=''>
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cuponCode">
-                            Coupon Code
-                        </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cuponCode" type="text" placeholder="Coupon Code"/>
+                    <form className='flex flex-col gap-4'>
+                        <div className="">\
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cuponCode">
+                                Coupon Code
+                            </label>
+                            <input onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="code" id="cuponCode" type="text" placeholder="Coupon Code" />
+                        </div>
 
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="discountPercentage">
-                            Discount Percentage
-                        </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="discountPercentage" type="number" placeholder="Discount Percentage"/>
+                        <div className="">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="discountPercentage">
+                                Discount Percentage
+                            </label>
+                            <input onChange={handleChange} name="discount" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="discountPercentage" type="number" placeholder="Discount Percentage" />
+                        </div>
 
-                        <button onClick={handleSubmit}>Add Discount</button>
+                        <button className='px-6 py-2 bg-primary text-white rounded-lg' onClick={handleSubmit}>Add Discount</button>
                     </form>
                 </Box>
             </Modal>

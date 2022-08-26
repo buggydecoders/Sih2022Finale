@@ -36,7 +36,7 @@ const Sidebar = ({searchFor}) => {
     <div className='space-y-8 mt-16 px-3'>
         <SidebarLink icon={<AiOutlineAppstore size={22}/>} link='/admin' title='Dashboard'/>
         <SidebarLink icon={<AiOutlineMessage size={22}/>} title='Messages' link='/admin/messages'/>
-        <SidebarLink icon={<HiOutlineDocumentReport size={22}/>} title='Reports' link='/admin/reports'/>
+        {/* <SidebarLink icon={<HiOutlineDocumentReport size={22}/>} title='Reports' link='/admin/reports'/> */}
         <SidebarLink icon={<BsPatchCheckFill size={22}/>} title='Requirements' link='/admin/requirements'/>
         <SidebarLink icon={<FaBuilding size={22}/>} title='Institutes' link='/admin/institutes'/>
         <SidebarLink icon={<GrResources size={22}/>} title='Resources' link='/admin/resources'/>

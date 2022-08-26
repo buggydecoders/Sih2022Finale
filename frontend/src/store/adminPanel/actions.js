@@ -1,6 +1,6 @@
 import CONSTANTS from './constants';
 import { toast } from 'react-toastify'
-import { fetchAdminInstituteAPI, fetchAdminRequestAPI, fetchAdminRequirementAPI, fetchAdminResourceAPI, fetchAdminStatsAPI } from './services';
+import { fetchAdminInstituteAPI, fetchAdminRequestAPI, fetchAdminRequirementAPI, fetchAdminResourceAPI, fetchAdminStatsAPI, removeUserAPI } from './services';
 
 // stats
 // institute
@@ -50,10 +50,17 @@ const setLoading = (data) => {
     }
 }
 
-export const fetchAdminStats = () => async (dispatch, page, limit) => {
+const removeUserInStore = (data) => {
+    return {
+        type: CONSTANTS.REMOVE_USER,
+        payload: data
+    }
+}
+
+export const fetchAdminStats = (page, limit) => async (dispatch) => {
     try {
         dispatch(setLoading("LOADING_STATS"));
-        const {data} = await fetchAdminStatsAPI(page, limit);
+        const { data } = await fetchAdminStatsAPI(page, limit);
         dispatch(setStats(data));
     } catch (err) {
         console.log(err);
@@ -64,10 +71,10 @@ export const fetchAdminStats = () => async (dispatch, page, limit) => {
     }
 }
 
-export const fetchAdminInstitutes = () => async (dispatch, page, limit) => {
+export const fetchAdminInstitutes = (page, limit) => async (dispatch) => {
     try {
         dispatch(setLoading("LOADING_INSTITUTES"));
-        const {data} = await fetchAdminInstituteAPI(page, limit);
+        const { data } = await fetchAdminInstituteAPI(page, limit);
         dispatch(setInstitutes(data));
     } catch (err) {
         console.log(err);
@@ -78,10 +85,10 @@ export const fetchAdminInstitutes = () => async (dispatch, page, limit) => {
     }
 }
 
-export const fetchAdminRequirements = () => async (dispatch, page, limit) => {
+export const fetchAdminRequirements = (page, limit) => async (dispatch) => {
     try {
         dispatch(setLoading("LOADING_REQUIREMENTS"));
-        const {data} = await fetchAdminRequirementAPI(page, limit);
+        const { data } = await fetchAdminRequirementAPI(page, limit);
         dispatch(setRequirements(data));
     } catch (err) {
         console.log(err);
@@ -92,10 +99,10 @@ export const fetchAdminRequirements = () => async (dispatch, page, limit) => {
     }
 }
 
-export const fetchAdminRequests = () => async (dispatch, page, limit) => {
+export const fetchAdminRequests = (page, limit) => async (dispatch) => {
     try {
         dispatch(setLoading("LOADING_REQUESTS"));
-        const {data} = await fetchAdminRequestAPI(page, limit);
+        const { data } = await fetchAdminRequestAPI(page, limit);
         dispatch(setRequests(data));
     } catch (err) {
         console.log(err);
@@ -106,11 +113,25 @@ export const fetchAdminRequests = () => async (dispatch, page, limit) => {
     }
 }
 
-export const fetchAdminResources = () => async (dispatch, page, limit) => {
+export const fetchAdminResources = (page, limit) => async (dispatch) => {
     try {
         dispatch(setLoading("LOADING_RESOURCES"));
-        const {data} = await fetchAdminResourceAPI(page, limit);
+        const { data } = await fetchAdminResourceAPI(page, limit);
         dispatch(setResources(data));
+    } catch (err) {
+        console.log(err);
+        toast(err?.response?.data?.message || 'Something went wrong!');
+
+    } finally {
+        dispatch(setLoading(false));
+    }
+}
+
+export const removeUser = (id) => async (dispatch) => {
+    try {
+        dispatch(setLoading("REMOVE_USER"));
+        await removeUserAPI(id);
+        dispatch(removeUserInStore(id));
     } catch (err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');

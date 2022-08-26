@@ -3,10 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import AdminLayout from '../../components/Admin/AdminLayout'
 import Loading from '../../components/Loading';
 import { Pagination } from "@mui/material";
-import { fetchAdminInstitutes } from '../../store/adminPanel/actions';
+import { fetchAdminInstitutes, removeUser } from '../../store/adminPanel/actions';
 
 const TableEntry = ({ data, idx }) => {
     const poc = data?.contactPerson
+    const dispatch = useDispatch()
+
+    const handleClick = ()=>{
+        dispatch(removeUser(data?._id))
+    }
+
     return (
         <tr className="border-b" key={idx}>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
@@ -31,7 +37,7 @@ const TableEntry = ({ data, idx }) => {
                 }
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <button className='bg-primary text-white py-2 px-6 rounded-lg'>Activate</button>
+                <button  className='bg-primary text-white py-2 px-6 rounded-lg' onClick={handleClick}>Deactivate</button>
             </td>
         </tr>
     );
@@ -49,7 +55,7 @@ function Institutes() {
     const [activePage, setActivePage] = useState(1);
 
     useEffect(() => {
-        fetchAdminInstitutes(activePage, 10);
+        dispatch(fetchAdminInstitutes(activePage, 10))
     }, [activePage]);
 
     return (
@@ -93,7 +99,7 @@ function Institutes() {
                     </thead>
                     <tbody>
                         {
-                            loading !== "LOADIN_INSTITUTE" ?
+                            loading !== "LOADING_INSTITUTES" ?
                                 institutes.institutes?.map((institute, idx) => {
                                     return <TableEntry data={institute} idx={idx} />
                                 })
