@@ -130,9 +130,9 @@ exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
     
     if (!universityQuery && !stateQuery && !category) {
         let totalDocs = await Resource.countDocuments();
-        let resources =  await Resource.find({})
+        let resources =  await Resource.find({}).skip((parseInt(page)-1)*(parseInt(limit || 10))).limit(parseInt(limit || 10)).populate('instituteId');
 
-        return res.json({totalPages : 10, resources,page,limit})
+        return res.json({totalPages : (totalDocs/parseInt(limit || 10)), resources,page,limit})
     }
     const universityFilters = universityQuery?universityQuery.split('-'):[];
     const location = stateQuery?stateQuery.split('-'):[];
@@ -153,7 +153,7 @@ exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
     let totalPages = Math.ceil(totalDocs/parseInt(limit || 10));
     const filteredResources = await Resource.find({
         "$and" : queryObj
-    }).skip((page-1)*(10)).limit(10);
+    }).skip((page-1)*(10)).limit(10).populate('instituteId');
 
     res.json({
         success: true, resources : filteredResources, totalPages, page, limit
