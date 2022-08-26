@@ -49,7 +49,6 @@ const SignContract = ({ data }) => {
     console.log(confirmation);
     if (!confirmation) {
       setSignError('Invalid Sign')
-      setRequestLoading(false)
       return toast('Upload a valid signature');
     }
   

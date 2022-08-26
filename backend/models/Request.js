@@ -29,6 +29,9 @@ const RequestSchema = new mongoose.Schema({
     accessType : {
         type : String
     },
+    accessKeys : [{
+        type : String
+    }],
     isExpired : {
         type : Boolean,
         default : false
