@@ -25,7 +25,6 @@ export default function adminReducer(state = INITIAL_STATE, action) {
         case CONSTANTS.SET_REQUESTS: return { ...state, requests: action.payload };
         case CONSTANTS.SET_RESOURCES: return { ...state, resources: action.payload };
         case CONSTANTS.SET_ADMIN_LOADING: return { ...state, loading: action.payload };
-
         default: return state;
     }
 }
