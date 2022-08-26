@@ -124,7 +124,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
 
     let queryObject = {}
-    let resources = await Resource.find(queryObject)
+    let resources = await Resource.find(queryObject).populate('instituteId')
     if (universityQuery && !stateQuery && !budgetQuery) {
         resources = resources.filter(p => {
             if (universityQuery.includes(p.instituteId.id)) {
