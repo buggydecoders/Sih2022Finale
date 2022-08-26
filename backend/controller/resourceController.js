@@ -6,7 +6,7 @@ const updateReputationPoint = require('../utils/reputation');
 const axios = require('axios')
 const FormData = require('form-data');
 const User = require('../models/User');
-
+const {cosine} = require('string-comparison');
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name,resourceURL,resourceType, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
 
@@ -124,6 +124,8 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 
     })
 })
+
+
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;

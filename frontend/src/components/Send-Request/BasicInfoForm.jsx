@@ -10,7 +10,8 @@ const BasicInfoForm = ({resource,success,setSuccess}) => {
     const [form,setForm] = useState({
         startDate : '',
         endDate : '',
-        note : ''
+        note : '',
+        accessType : 'one-time'
     });
     const handleChange = (e)=>setForm(prev=>({...prev,[e.target.name]  :e.target.value}));
     const {loading} = useSelector(state=>state.requests);
@@ -34,11 +35,15 @@ const BasicInfoForm = ({resource,success,setSuccess}) => {
     }
   return (
     <form onSubmit={handleSubmit} className='px-8'>
+        {resource.category==='virtual'&&<select onChange={handleChange} name='accessType' placeholder={'Select Access Type'} className='w-full py-3 px-2 border-[1px] border-gray-300 rounded-lg outline-none focus:shadow-sm'>
+            <option value="one-time">One Time</option>
+            <option value="duration">Duration based</option>
+        </select>}
         <div className='font-semibold text-2xl'>Duration</div>
-        <div className='grid grid-cols-2 gap-5 mt-5'>
+        {(form.accessType==='duration' || resource.category!=='virtual')&&<div className='grid grid-cols-2 gap-5 mt-5'>
             <InputField required={true} name="startDate" value={form.startDate} onChange={handleChange} type="date" label='From' placeholder='Enter Start Date'/>
             <InputField required={true} name="endDate" value={form.endDate} onChange={handleChange} type="date" label='To' placeholder='Enter End Date'/>
-        </div>
+        </div>}
         <div className=' mt-5'>
             <InputField   disabled={true} value={user.email} type="email" label='Email' placeholder='Enter Email'/>
         </div>

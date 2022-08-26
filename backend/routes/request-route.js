@@ -17,6 +17,8 @@ router
     .route('/verify-signature')
     .post(checkAuth, checkVerification, requestController.checkSignature)
 
+router.route('/verify-token').post(checkAuth,checkVerification,requestController.verifyRequestToken)
+
 router
     .route('/:id')
     .get(checkAuth, checkVerification, requestController.getRequest)

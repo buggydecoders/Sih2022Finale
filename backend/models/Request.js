@@ -29,6 +29,10 @@ const RequestSchema = new mongoose.Schema({
     accessType : {
         type : String
     },
+    isExpired : {
+        type : Boolean,
+        default : false
+    },
     isMinted: {
         type: Boolean,
         default: false
