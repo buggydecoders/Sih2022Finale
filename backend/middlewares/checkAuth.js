@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 const User = require('../models/User')
 
-const checkAuth = (req, res, next) => {
+const checkAuth = async (req, res, next) => {
     try {
         const token = req.header("auth") || req.cookies.auth
         if (!token) {
