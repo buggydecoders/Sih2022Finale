@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const RequestSchema = new mongoose.Schema({
-    _id :{
+    _id: {
         type: Number
     },
     lendingInstitute: {
@@ -27,8 +27,8 @@ const RequestSchema = new mongoose.Schema({
     tokenId: {
         type: Number
     },
-    tokenURI : {
-        type : String
+    tokenURI: {
+        type: String
     },
     startDate: {
         type: String,
@@ -52,6 +52,19 @@ const RequestSchema = new mongoose.Schema({
     isActive: {
         type: Boolean,
         default: true
+    },
+    orderId: {
+        type: String
+    },
+    paymentId: {
+        type: String
+    },
+    isPaid: {
+        type: Boolean,
+        default: false
+    },
+    price:{
+        type:String
     }
 }, {
     timestamps: true
