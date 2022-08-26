@@ -54,7 +54,7 @@ function Institutes() {
 
     return (
         <AdminLayout searchFor="institutes">
-            <div className="flex flex-col gap-4 w-full h-[560px] max-w-[1200px] m-auto overflow-scroll">
+            <div className="flex flex-col gap-4 w-full h-[560px]  max-w-[1200px] m-auto overflow-scroll">
                 <h1 className='text-2xl font-bold w-full text-center mt-4'>Institutes List</h1>
                 <table className="">
                     <thead className="border-b">

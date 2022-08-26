@@ -58,6 +58,8 @@ exports.getAllRequests = catchAsync(async (req, res, next) => {
     let skipIndex = (page - 1) * limit;
 
     const requests = await Request.find()
+        .populate("lendingInstitute")
+        .populate("aspirantInstitute")
         .limit(limit)
         .skip(skipIndex)
         .exec();

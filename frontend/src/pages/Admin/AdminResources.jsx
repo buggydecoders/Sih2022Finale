@@ -4,36 +4,43 @@ import AdminLayout from '../../components/Admin/AdminLayout'
 import Loading from '../../components/Loading';
 import { Pagination } from "@mui/material";
 import { fetchAdminResources } from '../../store/adminPanel/actions';
+import { TbDiscount2 } from 'react-icons/tb'
+import DiscountModal from '../../components/Admin/DiscountModal';
 
 const TableEntry = ({ data, idx }) => {
-    console.log(data)
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+
     return (
-        <tr className="border-b" key={idx}>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <div className="flex items-center gap-2">
-                    <div className="text-black font-semibold">{data?.name}</div>
-                </div>
-            </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <div className="font-semibold">{data?.durationFrom}</div>
-                <div className="font-semibold">{data?.durationTo}</div>
-            </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <div className="font-semibold">{data?.instituteId.instituteName || "unassigned"}</div>
-                <div className="mt-1 text-gray-400 text-sm font-[500]">
-                    {data?.instituteId.email || "email"}
-                </div>
-            </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                {data?.price}
-            </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                {data?.state}
-            </td>
-            {/* <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <button className='bg-primary text-white py-2 px-6 rounded-lg'>Activate</button>
-            </td> */}
-        </tr>
+        <>
+            <tr className="border-b" key={idx}>
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center gap-2">
+                        <div className="text-black font-semibold">{data?.name}</div>
+                    </div>
+                </td>
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <div className="font-semibold">{data?.durationFrom}</div>
+                    <div className="font-semibold">{data?.durationTo}</div>
+                </td>
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <div className="font-semibold">{data?.instituteId.instituteName || "unassigned"}</div>
+                    <div className="mt-1 text-gray-400 text-sm font-[500]">
+                        {data?.instituteId.email || "email"}
+                    </div>
+                </td>
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    ₹{data?.price}
+                </td>
+                <td className="text-sm font-medium text-green-500 px-6 py-4 whitespace-nowrap">
+                    {data?.state}
+                </td>
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <button className='bg-primary space-x-2 flex items-center justify-center text-white py-2 px-6 rounded-lg' type='button' onClick={handleOpen}><span>Add Discount</span> <TbDiscount2 /></button>
+                </td>
+            </tr>
+            <DiscountModal open={open} setOpen={setOpen} data={data}/>
+        </>
     );
 };
 
@@ -54,7 +61,7 @@ function AdminResources() {
 
     return (
         <AdminLayout searchFor="resources">
-            <div className="flex flex-col gap-4 w-full h-[560px] max-w-[1200px] m-auto overflow-scroll">
+            <div className="flex flex-col gap-4 w-full h-[560px]  max-w-[1200px] m-auto overflow-scroll">
                 <h1 className='text-2xl font-bold w-full text-center mt-4'>Resources List</h1>
                 <table className="">
                     <thead className="border-b">
@@ -88,6 +95,12 @@ function AdminResources() {
                                 className="text-sm font-bold text-gray-900 px-6 py-4 text-left"
                             >
                                 Status
+                            </th>
+                            <th
+                                scope="col"
+                                className="text-sm font-bold text-gray-900 px-6 py-4 text-left"
+                            >
+                                Discounts
                             </th>
                         </tr>
                     </thead>
