@@ -5,6 +5,27 @@ const Coupon = require("../models/Coupon");
 const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
 
+exports.loginAdmin = catchAsync(async (req, res, next) => {
+    const { email, password } = req.body
+    const user = await User.findOne({ email }).populate("savedItems");
+    if (!user) {
+        return next(
+            new AppError('User Not Exists', 404)
+        )
+    }
+    const passCompare = await bcrypt.compare(password, user.password)
+    if (!passCompare) {
+        return next(
+            new AppError('Try Logging In with Correct Credentials', 404)
+        )
+    }
+    success = true;
+    const authToken = createToken(user.id)
+    res.cookie('auth', authToken, {
+        httpOnly: true,
+    })
+    res.status(200).json({ success, user });
+})
 exports.getAllInstitutes = catchAsync(async (req, res, next) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;

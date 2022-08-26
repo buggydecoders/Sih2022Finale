@@ -4,7 +4,10 @@ const restrictTo = require('../middlewares/restrictTo')
 const adminController = require('../controller/adminController')
 const { route } = require('./request-route')
 
-// restrictTo('admin')
+router
+    .route('/login')
+    .post(checkAuth, adminController.loginAdmin)
+
 router
     .route('/stats')
     .get(checkAuth, adminController.getStats)
