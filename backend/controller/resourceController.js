@@ -125,10 +125,10 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
 
     // let queryObject = { isVerified: true }
 
- 
 
 
-   
+
+
 
     // let totalDocuments = resources.length
     // let totalPages = Math.ceil(totalDocuments / limit);
@@ -140,7 +140,7 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 10;
     // const resources = await Resources
 
-    
+
 
 
 
@@ -195,6 +195,13 @@ exports.getFeedback = catchAsync(async (req, res, next) => {
             new AppError('Please provide Institute Id to Continue', 403)
         )
     }
-    const updatedData = updateReputationPoint(req.body.insId, feedback)
+    const request = await Request.findById(req.params.id)
+    let updatedData = ""
+    if (req.user.id == request.lendingInstitute) {
+        updatedData = updateReputationPoint(request.aspirantInstitute, feedback)
+    }
+    if (req.user.id == request.aspirantInstitute) {
+        updatedData = updateReputationPoint(request.lendingInstitute, feedback)
+    }
     res.json({ success: true, updatedData })
 })
