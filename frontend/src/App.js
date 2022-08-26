@@ -178,15 +178,86 @@ export default function App() {
         {/* Extra Routes */}
         <Route exact path="/not-found" element={<NotFound />}></Route>
 
-        {/* Admin Routes */}
-        <Route exact path="/admin" element={<AdminPanel />}></Route>
-        <Route exact path="/admin/auth" element={<Auth />}></Route>
-        <Route exact path="/admin/messages" element={<Messages />}></Route>
-        <Route exact path="/admin/requirements" element={<Requirements />}></Route>
-        <Route exact path="/admin/institutes" element={<Institutes />}></Route>
-        <Route exact path="/admin/resources" element={<AdminResources/>}></Route>
-        <Route exact path="/admin/requests" element={<AdminRequests/>}></Route>
-        <Route exact path="/admin/reports" element={<Reports/>}></Route>
+
+        <Route
+          exact
+          path="/admin"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin' element={<AdminPanel />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/auth"
+          element={
+            <ProtectedRoute access="public" restricted={true} />
+          }
+        >
+          <Route exact path='/admin/auth' element={<Auth />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/message"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/message' element={<Messages />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/requirements"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/requirements' element={<Requirements />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/institutes"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/institutes' element={<Institutes />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/resource"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/resource' element={<AdminResources />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/requests"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/requests' element={<AdminRequests />} />
+        </Route>
+
+        <Route
+          exact
+          path="/admin/reports"
+          element={
+            <ProtectedRoute access="private" scope={"admin"} />
+          }
+        >
+          <Route exact path='/admin/reports' element={<Reports />} />
+        </Route>
 
       </Routes>
       <ToastContainer position="top-right" />

@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import AdminLayout from '../../components/Admin/AdminLayout'
 import Loading from '../../components/Loading';
 import { Pagination } from "@mui/material";
-import { fetchAdminInstitutes, removeUser } from '../../store/adminPanel/actions';
+import { fetchAdminInstitutes, updatedBan } from '../../store/adminPanel/actions';
 
 const TableEntry = ({ data, idx }) => {
     const poc = data?.contactPerson
     const dispatch = useDispatch()
 
+    const resId = data._id
     const handleClick = ()=>{
-        dispatch(removeUser(data?._id))
+        const isBan = data?.isBan? false : true
+        dispatch(updatedBan(resId, isBan))
     }
 
     return (
@@ -37,7 +39,7 @@ const TableEntry = ({ data, idx }) => {
                 }
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <button  className='bg-primary text-white py-2 px-6 rounded-lg' onClick={handleClick}>Deactivate</button>
+                <button  className='bg-primary text-white py-2 px-6 rounded-lg' onClick={handleClick}>{data?.isBan? "Activate" : "Deactivate"}</button>
             </td>
         </tr>
     );
@@ -61,7 +63,7 @@ function Institutes() {
     return (
         <AdminLayout searchFor="institutes">
             <div className="flex flex-col gap-4 w-full h-[560px]  max-w-[1200px] m-auto overflow-scroll">
-                <h1 className='text-2xl font-bold w-full text-center mt-4'>Institutes List</h1>
+                <h1 className='text-2xl font-bold w-full text-center my-6'>Institutes List</h1>
                 <table className="">
                     <thead className="border-b">
                         <tr>

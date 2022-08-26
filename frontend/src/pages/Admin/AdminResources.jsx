@@ -62,7 +62,7 @@ function AdminResources() {
     return (
         <AdminLayout searchFor="resources">
             <div className="flex flex-col gap-4 w-full h-[560px]  max-w-[1200px] m-auto overflow-scroll">
-                <h1 className='text-2xl font-bold w-full text-center mt-4'>Resources List</h1>
+                <h1 className='text-2xl font-bold w-full text-center my-6'>Resources List</h1>
                 <table className="">
                     <thead className="border-b">
                         <tr>

@@ -1,6 +1,7 @@
 import CONSTANTS from './constants';
 import { toast } from 'react-toastify'
-import { fetchAdminInstituteAPI, fetchAdminRequestAPI, fetchAdminRequirementAPI, fetchAdminResourceAPI, fetchAdminStatsAPI, removeUserAPI } from './services';
+import { adminAuthAPI, fetchAdminInstituteAPI, fetchAdminRequestAPI, fetchAdminRequirementAPI, fetchAdminResourceAPI, fetchAdminStatsAPI, updateBanAPI } from './services';
+import { useNavigate } from 'react-router-dom';
 
 // stats
 // institute
@@ -50,9 +51,23 @@ const setLoading = (data) => {
     }
 }
 
-const removeUserInStore = (data) => {
+const setAdmin = (data) => {
     return {
-        type: CONSTANTS.REMOVE_USER,
+        type: CONSTANTS.SET_ADMIN_USER,
+        payload: data
+    }
+}
+
+const setAdminLoading = (data) => {
+    return {
+        type: CONSTANTS.SET_ADMIN_LOADING,
+        payload: data
+    }
+}
+
+const updatedBanInStore = (data) => {
+    return {
+        type: CONSTANTS.UPDATE_BAN,
         payload: data
     }
 }
@@ -127,11 +142,12 @@ export const fetchAdminResources = (page, limit) => async (dispatch) => {
     }
 }
 
-export const removeUser = (id) => async (dispatch) => {
+export const updatedBan = (id, isBan) => async (dispatch) => {
     try {
-        dispatch(setLoading("REMOVE_USER"));
-        await removeUserAPI(id);
-        dispatch(removeUserInStore(id));
+        dispatch(setLoading("UPDATE_BAN"));
+        const data = {id, isBan}
+        await updateBanAPI(data);
+        dispatch(updatedBanInStore(data)) 
     } catch (err) {
         console.log(err);
         toast(err?.response?.data?.message || 'Something went wrong!');
@@ -140,4 +156,20 @@ export const removeUser = (id) => async (dispatch) => {
         dispatch(setLoading(false));
     }
 }
+
+export const loginAdmin =
+  (data, callback, errorCallback) => async (dispatch) => {
+    try {
+      dispatch(setAdminLoading(true));
+      const result = await adminAuthAPI(data);
+      dispatch(setAdmin(result.data.user));
+      callback && callback(result.data);
+    } catch (err) {
+      console.log(err);
+      errorCallback &&
+        errorCallback(err?.response?.data?.message || "Something went wrong!");
+    } finally {
+      dispatch(setAdminLoading(false));
+    }
+  };
 

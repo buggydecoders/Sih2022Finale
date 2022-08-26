@@ -36,7 +36,19 @@ export const addDiscountAPI = async (data) => {
     return result;
 }
 
-export const removeUserAPI = async (id) => {
-    const result = await serverInstance.delete(`/auth/remove-user/${id}`);
+export const getDiscountAPI = async (data) => {
+    const result = await serverInstance.get(`/admin/coupon`);
+    return result;
+}
+
+export const updateBanAPI = async (data) => {
+    const {id, isBan} = data
+    const result = await serverInstance.patch(`/auth/ban-user/${id}`, { isBan } );
+    return result;
+}
+
+export const adminAuthAPI = async (formData) => {
+    const result = await serverInstance.post(`/admin/login`, formData );
+    console.log(result)
     return result;
 }

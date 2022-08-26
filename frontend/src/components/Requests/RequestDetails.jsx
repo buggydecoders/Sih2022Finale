@@ -82,7 +82,7 @@ const RequestDetails = ({ selected }) => {
           </div>
         </div>
         <div className="mt-8 flex items-center font-[500] gap-8">
-          <button className="px-12 text-white py-2 bg-primary border-[1px] rounded-md">Fullfil Request</button>
+          {/* <button className="px-12 text-white py-2 bg-primary border-[1px] rounded-md">Fullfil Request</button> */}
           <button className="px-12 py-2 border-primary text-primary border-[1px] rounded-md" onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)}>Message</button>
         </div>
       </div>

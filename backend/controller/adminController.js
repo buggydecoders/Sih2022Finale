@@ -4,7 +4,9 @@ const Resource = require("../models/Resource");
 const Coupon = require("../models/Coupon");
 const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
-
+const AppError = require('../utils/appError')
+const bcrypt = require('bcrypt')
+const createToken = require('../utils/createToken')
 exports.loginAdmin = catchAsync(async (req, res, next) => {
     const { email, password } = req.body
     const user = await User.findOne({ email }).populate("savedItems");

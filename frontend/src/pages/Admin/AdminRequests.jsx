@@ -5,9 +5,15 @@ import AdminLayout from '../../components/Admin/AdminLayout'
 import Loading from '../../components/Loading';
 import { fetchAdminRequests } from '../../store/adminPanel/actions';
 import moment from 'moment'
+import { toast } from 'react-toastify';
+
 
 const TableEntry = ({ data, idx }) => {
-  console.log(data)
+  function copyToClipboard() {
+    navigator.clipboard.writeText(data?.tokenURI);
+    toast("Copied to clipboard!")
+  }
+
   return (
       <tr className="border-b" key={idx}>
           <td className="text-sm text-gray-900 font-light px-6 py-4">
@@ -22,8 +28,8 @@ const TableEntry = ({ data, idx }) => {
           </td>
           <td className="text-sm text-gray-900 font-light px-6 py-4">
               <div className="font-semibold">Tocken ID: {data?.tokenId || "unassigned"}</div>
-              <div className="mt-1 text-gray-400 text-sm font-[500]">
-                  Token URI: {data?.tokenURI}
+              <div target="_blank" className="mt-1 text-gray-400 text-sm font-[500] cursor-pointer" onClick={copyToClipboard}>
+                 <b className='font-semibold'>Token URI: </b> {data?.tokenURI?.substr(25)}....
               </div>
           </td>
           <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
@@ -56,7 +62,7 @@ function AdminRequests() {
   return (
     <AdminLayout searchFor="requests">
       <div className="flex flex-col gap-4 w-full h-[560px] max-w-[1200px] m-auto overflow-scroll">
-        <h1 className='text-2xl font-bold w-full text-center mt-4'>Requests List</h1>
+        <h1 className='text-2xl font-bold w-full text-center my-6'>Requests List</h1>
         <table className="">
           <thead className="border-b whitespace-nowrap">
             <tr>

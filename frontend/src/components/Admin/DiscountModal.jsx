@@ -52,7 +52,7 @@ function DiscountModal({ open, setOpen, data }) {
                         Add discount to {data?.name}
                     </Typography>
                     <form className='flex flex-col gap-4'>
-                        <div className="">\
+                        <div className="">
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cuponCode">
                                 Coupon Code
                             </label>

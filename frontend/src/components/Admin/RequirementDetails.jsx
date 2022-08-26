@@ -7,11 +7,8 @@ const RequirementDetails = ({ data }) => {
 console.log(data)
   const navigate = useNavigate()
   return (
-    <div className="bg-white shadow-md px-6 py-5 mt-8">
-      <div className="flex items-center gap-2">
-        <div className="">
-          {/* <img src={data?.aspirantInstitute?.logo} className="w-[90px] rounded-full" /> */}
-        </div>
+    <div className="bg-white shadow-md px-6 py-5 mt-8 w-full">
+      <div className="flex items-center gap-2 w-full">
         <div className="font-semibold w-full text-black text-lg flex justify-between">
           <div>
             <div>{data?.name}</div>
@@ -58,10 +55,10 @@ console.log(data)
             </div>
           </div>
         </div>
-        <div className="mt-10">
-          <div className="font-semibold">University Details</div>
-          <div className="flex justify-between mt-3 items-center">
-            <div className="flex items-center gap-2">
+        {/* <div className="mt-10"> */}
+          {/* <div className="font-semibold">University Details</div> */}
+          {/* <div className="flex justify-between mt-3 items-center"> */}
+            {/* <div className="flex items-center gap-2">
               <div className="">
                 <img src={data?.aspirantInstitute?.logo} className="w-[65px] rounded-full" />
               </div>
@@ -70,16 +67,16 @@ console.log(data)
                 <div className="text-sm text-gray-400">{data?.aspirantInstitute?.address?.city}, {data?.aspirantInstitute?.address?.state}</div>
               </div>
 
-            </div>
+            </div> */}
             {/* <div className="text-sm">
               <div className="font-semibold">Reputation P.</div>
               <div className="text-gray-700">4.5</div>
             </div> */}
-          </div>
-        </div>
+          {/* </div> */}
+        {/* </div> */}
         <div className="mt-8 flex items-center font-[500] gap-8">
-          <button className="px-12 text-white py-2 bg-primary border-[1px] rounded-md">Fullfil Request</button>
-          <button className="px-12 py-2 border-primary text-primary border-[1px] rounded-md" onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)}>Message</button>
+          {/* <button className="px-12 text-white py-2 bg-primary border-[1px] rounded-md">Fullfil Request</button> */}
+          <button className="px-12 py-2 border-primary text-primary border-[1px] rounded-md" onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute}`)}>Message</button>
         </div>
       </div>
     </div>

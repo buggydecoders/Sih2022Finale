@@ -109,7 +109,7 @@ const AdminPanel = () => {
     <div className='grid grid-cols-[1fr_4fr] min-h-[100vh]'>
       <Sidebar />
       <div className='bg-lightGray'>
-        <Header searchFor="dashboard"/>
+        <Header searchFor="dashboard" />
         <div className='p-8 grid gap-6 grid-cols-[2.1fr_1fr]'>
           <div>
             {

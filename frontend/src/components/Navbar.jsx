@@ -5,7 +5,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 // import {GrStatusCritical} from 'react-icons/gr'
 import { BsBagCheck } from "react-icons/bs";
 import { RiAccountCircleLine } from "react-icons/ri";
-import {FiLogOut} from 'react-icons/fi';
+import { FiLogOut } from 'react-icons/fi';
 import { BsCheck2All } from "react-icons/bs";
 // import Status from "../pages/Status";
 import { MdOutlineGames } from "react-icons/md";
@@ -14,16 +14,15 @@ import logo from "../assets/UGC_LOGO.png";
 import NotificationDrawer from "./NotificationDrawer";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../store/auth/actions";
-import {TbMessageCircle2} from "react-icons/tb"
+import { TbMessageCircle2 } from "react-icons/tb"
 const NavbarLink = ({ text, icon, href }) => {
   const location = useLocation();
   const active = location.pathname === href;
   return (
     <Link
       to={href || "/"}
-      className={`${
-        active ? " bg-opacity-20 " : "bg-opacity-0 hover:bg-opacity-5"
-      } transition-all rounded-xl text-primary bg-primary flex items-center gap-2 py-3 px-6`}
+      className={`${active ? " bg-opacity-20 " : "bg-opacity-0 hover:bg-opacity-5"
+        } transition-all rounded-xl text-primary bg-primary flex items-center gap-2 py-3 px-6`}
     >
       {icon}
       <p>{text}</p>
@@ -34,9 +33,9 @@ const NavbarLink = ({ text, icon, href }) => {
 
 function Navbar() {
   const navigate = useNavigate()
-  const [isOpen,setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const handleLogout = ()=>{
+  const handleLogout = () => {
     dispatch(logoutUser());
   }
 
@@ -81,12 +80,12 @@ function Navbar() {
         />
       </ul>
       <div className="flex gap-3 items-center">
-      <button onClick={()=>setIsOpen(true)} className="rounded-full bg-lightGray p-4"> <AiFillBell /> </button>
-      <button onClick={()=>navigate("/inbox")} className="rounded-full bg-lightGray p-4"> <TbMessageCircle2/> </button>
-      <button onClick={handleLogout} className="rounded-full bg-lightGray p-4"> <FiLogOut /> </button>
+        <button onClick={() => setIsOpen(true)} className="rounded-full bg-lightGray p-4"> <AiFillBell /> </button>
+        <button onClick={() => navigate("/inbox")} className="rounded-full bg-lightGray p-4"> <TbMessageCircle2 /> </button>
+        <button onClick={handleLogout} className="rounded-full bg-lightGray p-4"> <FiLogOut /> </button>
       </div>
 
-      <NotificationDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <NotificationDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }
