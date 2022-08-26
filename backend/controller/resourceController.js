@@ -6,7 +6,7 @@ const updateReputationPoint = require('../utils/reputation');
 const axios = require('axios')
 const FormData = require('form-data');
 const User = require('../models/User');
-const {cosine} = require('string-comparison');
+
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name,resourceURL,resourceType, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
 
@@ -125,7 +125,40 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
     })
 })
 
+exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
+    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category,page,limit } = req.query;
+    
+    if (!universityQuery && !stateQuery && !category) {
+        let totalDocs = await Resource.countDocuments();
+        let resources =  await Resource.find({})
 
+        return res.json({totalPages : 10, resources,page,limit})
+    }
+    const universityFilters = universityQuery?universityQuery.split('-'):[];
+    const location = stateQuery?stateQuery.split('-'):[];
+    let queryObj = [];
+    const institutes = await User.find({});
+    let institutesInStates = institutes.filter(r=>location.includes(r.address.state)).map(d=>d.id);
+
+    if (universityFilters.length>0) {
+        queryObj.push({instituteId : {"$in" : universityFilters}})
+    }
+    if (location.length>0) {
+        queryObj.push({instituteId : {"$in" : institutesInStates }})
+    }
+    if (category) {
+        queryObj.push({category});
+    }
+    let totalDocs = await Resource.countDocuments({"$and" : queryObj})
+    let totalPages = Math.ceil(totalDocs/parseInt(limit || 10));
+    const filteredResources = await Resource.find({
+        "$and" : queryObj
+    }).skip((page-1)*(10)).limit(10);
+
+    res.json({
+        success: true, resources : filteredResources, totalPages, page, limit
+    })
+})
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;

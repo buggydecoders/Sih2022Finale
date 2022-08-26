@@ -11,7 +11,7 @@ router
 
 router
   .route("/dashboard")
-  .get(checkAuth, resourceController.recommendedResources);
+  .get(checkAuth, resourceController.fetchDashboardResources);
 
 router
   .route("/search")
