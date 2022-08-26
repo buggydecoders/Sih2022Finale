@@ -44,7 +44,7 @@ const Dashboard = () => {
     dispatch(fetchStates());
   }, [])
 
-  const [category,setCategory] = useState('all')
+  const [category,setCategory] = useState('all');
 
 
 
@@ -55,7 +55,7 @@ const Dashboard = () => {
     let categoryFetch = category === "all" ? "" : category;
     dispatch(fetchDashboardResources(1,10,university,location,budget,categoryFetch));
     // setTotalPages()
-  }, [filters]);
+  }, [filters,category]);
 
 const handlePageChange = (e,value)=>{
   let budget = filters.budget.length > 0 ? filters.budget.join("-") : "";

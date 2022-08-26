@@ -32,6 +32,8 @@ const SignContract = ({ data }) => {
     }
   };
 
+  const [signError,setSignError] = useState('');
+
   // const handleMintNFT = (requestId)=>{
   //   const {provider,signer,address} = await getProvider();
   //   const AgreementContract =
@@ -40,14 +42,16 @@ const SignContract = ({ data }) => {
 
   const handleSubmit = async () => {
     setRequestLoading(true);
-    const res = await verifySignatureAPI(signature);
+    setSignError(false);
+    try {
+        const res = await verifySignatureAPI(signature);
     const confirmation = res.data.isVerified;
     console.log(confirmation);
-    const successCallback = () => {
-      toast("Contract signed!");
-      setRequestLoading(false);
-    };
-    const errorCallBack = (err) => () => toast(err);
+    if (!confirmation) {
+      setSignError('Invalid Sign')
+      return toast('Upload a valid signature');
+    }
+  
     if (confirmation) {
       setIsSigned(true);
       handleMintNFT(data._id);
@@ -56,6 +60,10 @@ const SignContract = ({ data }) => {
       toast(`Enter a valid signature to proceed.`);
       setRequestLoading(false);
     }
+  }catch(err) {
+    console.log(err);
+    toast(err?.message || 'Something went wrong!');
+  }
   };
 
   useEffect(() => {
@@ -170,11 +178,11 @@ const SignContract = ({ data }) => {
             </div>
 
             <button
-              disabled={EditReqLoading}
-              className="bg-primary px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer"
+              disabled={requestLoading}
+              className="bg-primary disabled:opacity-30 px-5 py-2 rounded-md text-white text-sm font-[500] cursor-pointer"
               onClick={handleSubmit}
             >
-              {EditReqLoading ? "Loading.." : "Continue"}
+              {requestLoading ? "Loading.." : "Continue"}
             </button>
           </div>
         </div>

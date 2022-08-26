@@ -6,15 +6,18 @@ const updateReputationPoint = require('../utils/reputation');
 const axios = require('axios')
 const FormData = require('form-data');
 const User = require('../models/User');
-
+const {cosine} = require('string-comparison');
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
+    const { name,resourceURL,resourceType, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
+
     const newRes = new Resource({
         images,
         name,
         price,
         durationFrom,
         durationTo,
+        resourceURL,
+        resourceType,
         category,
         per,
         brief,
@@ -25,7 +28,9 @@ exports.addResource = catchAsync(async (req, res, next) => {
     })
     const resource = await newRes.save()
     res.json({ success: true, message: "Resource Added Successfully", resource })
-})
+});
+
+
 
 exports.getMyResource = catchAsync(async (req, res, next) => {
     let queryObject = { instituteId: req.user.id }
@@ -120,42 +125,69 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
     })
 })
 
-exports.recommendedResources = catchAsync(async (req, res, next) => {
-    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
-    let queryObject = { isVerified: true }
-    if (categoryQuery) queryObject['category'] = categoryQuery
-    if (universityQuery) universityQuery = universityQuery.split('-')
-    if (stateQuery) stateQuery = stateQuery.split('-')
-    if (budgetQuery) budgetQuery = budgetQuery.split('-')
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
-    let startIndex = (page - 1) * limit;
-    let endIndex = startIndex + limit;
 
-    let bodyFormData = new FormData()
-    bodyFormData.append('id', req.user.id)
-    bodyFormData.append('startIndex', startIndex)
-    bodyFormData.append('endIndex', endIndex)
-    let { data } = await axios({
-        method: "post",
-        url: "https://flask-sih.herokuapp.com/recommendation",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
+exports.SearchData = catchAsync(async(req,res,next)=>{
+    let resources = await Resource.find({}).populate('instituteId');
+    let {key,page,limit} = req.query;
+    console.log(key,page,limit)
+    let tags = resources.map(r=>JSON.stringify(r));
+    let sortedList = cosine.sortMatch(key,tags);
+    sortedList = sortedList.reverse();
+    let maxRating = 0;
+    for (let i = 0; i < sortedList.length; ++i) {
+        if (sortedList[i].rating > maxRating) maxRating = sortedList[i].rating;
+      }
+      let accuracy = maxRating - 0.2;
+      let finalOptions = sortedList.filter((r) => r.rating >= accuracy);
+      finalOptions = finalOptions.map(m=>(JSON.parse(m.member)));
+
+  
+    return res.json({
+        resources : finalOptions,totalPages : 10,page,limit
     })
 
-    let resources = []
-    for (let i = 0; i < data.length; i++) {
-        queryObject['_id'] = data[i].$oid
-        const resource = await Resource.findOne(queryObject)
-        if (!resource) {
-            return res.json({ resources: [] })
-        }
-        if (resource.instituteId.toString() != req.user.id) {
-            const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
-            resources.push(temp)
-        }
-    }
+})
 
+exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
+    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category,page,limit } = req.query;
+    
+    if (!universityQuery && !stateQuery && !category) {
+        let totalDocs = await Resource.countDocuments();
+        let resources =  await Resource.find({}).skip((parseInt(page)-1)*(parseInt(limit || 10))).limit(parseInt(limit || 10)).populate('instituteId');
+
+        return res.json({totalPages : Math.ceil(totalDocs/parseInt(limit || 10)), resources,page,limit})
+    }
+    const universityFilters = universityQuery?universityQuery.split('-'):[];
+    const location = stateQuery?stateQuery.split('-'):[];
+    let queryObj = [{instituteId : {"$ne" : req.user.id}}];
+    const institutes = await User.find({});
+    let institutesInStates = institutes.filter(r=>location.includes(r.address.state)).map(d=>d.id);
+
+    if (universityFilters.length>0) {
+        queryObj.push({instituteId : {"$in" : universityFilters}})
+    }
+    if (location.length>0) {
+        queryObj.push({instituteId : {"$in" : institutesInStates }})
+    }
+    if (category) {
+        queryObj.push({category});
+    }
+    let totalDocs = await Resource.countDocuments({"$and" : queryObj})
+    let totalPages = Math.ceil(totalDocs/parseInt(limit || 10));
+    const filteredResources = await Resource.find({
+        "$and" : queryObj
+    }).skip((page-1)*(10)).limit(10).populate('instituteId');
+
+    res.json({
+        success: true, resources : filteredResources, totalPages, page, limit
+    })
+})
+
+exports.recommendedResources = catchAsync(async (req, res, next) => {
+    let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
+
+    let queryObject = {}
+    let resources = await Resource.find(queryObject).populate('instituteId')
     if (universityQuery && !stateQuery && !budgetQuery) {
         resources = resources.filter(p => {
             if (universityQuery.includes(p.instituteId.id)) {
@@ -192,7 +224,11 @@ exports.recommendedResources = catchAsync(async (req, res, next) => {
             }
         })
     }
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
 
+    let startIndex = (page - 1) * limit;
+    let endIndex = startIndex + limit;
     let totalDocuments = resources.length
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
@@ -221,9 +257,9 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     let resources = []
     for (let i = 0; i < data.length; i++) {
         queryObject['_id'] = data[i].$oid
-        console.log(queryObject)
+        // console.log(queryObject)
         const resource = await Resource.findOne(queryObject)
-        console.log(resource.instituteId.toString() != req.user.id)
+        // console.log(resource.instituteId.toString() != req.user.id)
         if (resource.instituteId.toString() != req.user.id) {
             const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
             resources.push(temp)
@@ -242,6 +278,13 @@ exports.getFeedback = catchAsync(async (req, res, next) => {
             new AppError('Please provide Institute Id to Continue', 403)
         )
     }
-    const updatedData = updateReputationPoint(req.body.insId, feedback)
+    const request = await Request.findById(req.params.id)
+    let updatedData = ""
+    if (req.user.id == request.lendingInstitute) {
+        updatedData = updateReputationPoint(request.aspirantInstitute, feedback)
+    }
+    if (req.user.id == request.aspirantInstitute) {
+        updatedData = updateReputationPoint(request.lendingInstitute, feedback)
+    }
     res.json({ success: true, updatedData })
 })

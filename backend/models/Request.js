@@ -23,6 +23,19 @@ const RequestSchema = new mongoose.Schema({
     ipfsURI: {
         type: String
     },
+    accessToken : {
+        type : String,
+    },
+    accessType : {
+        type : String
+    },
+    accessKeys : [{
+        type : String
+    }],
+    isExpired : {
+        type : Boolean,
+        default : false
+    },
     isMinted: {
         type: Boolean,
         default: false

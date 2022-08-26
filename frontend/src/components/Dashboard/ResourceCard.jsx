@@ -61,7 +61,7 @@ const ResourceCard = ({ data }) => {
           <div className="">
             <div className="text-2xl font-bold text-gray-500">{data?.name || 'Not Found'}</div>
             <div className="mt-2 text-gray-400">
-              {data?.instituteId.instituteName || 'Not Found'}
+              {data?.instituteId?.instituteName || 'Not Found'}
             </div>
             <div className="mt-3 flex gap-10">
               <div className="flex gap-2 items-center text-sm">
@@ -78,7 +78,7 @@ const ResourceCard = ({ data }) => {
           <SaveButton resourceId={data._id} />
         </div>
       </div>
-      <div className="mt-3 text-sm text-gray-400">{data?.description.substr(0, 300)}{data?.description < 300 ? "" : "..."}</div>
+      <div className="mt-3 text-sm text-gray-400">{data?.description?.substr(0, 300)}{data?.description < 300 ? "" : "..."}</div>
       <hr className="my-3" />
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-6 text-lg">

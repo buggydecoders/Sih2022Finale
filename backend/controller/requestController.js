@@ -9,6 +9,7 @@ const generateUniqueId = require("generate-unique-id");
 const imageToBase64 = require('image-to-base64');
 const moment = require('moment')
 const { storeTokenUriMetaData } = require("../utils/pinataSDK");
+const { sign, verify } = require('jsonwebtoken');
 
 
 const returnTemplate = (request, URI, expired) => {
@@ -28,6 +29,8 @@ const returnTemplate = (request, URI, expired) => {
 }
 
 
+
+
 // PINATA 
 const getPinataURIs = async (id) => {
     const request = await Request.findById(id).populate('lendingInstitute').populate('contract').populate('aspirantInstitute')
@@ -41,12 +44,12 @@ const getPinataURIs = async (id) => {
 
 
 exports.createRequest = catchAsync(async (req, res, next) => {
-    const { resourceId, startDate, endDate, note } = req.body;
+    const { resourceId, startDate, endDate, note,accessType } = req.body;
     const foundResource = await Resource.findById(resourceId).populate('instituteId');
     if (!foundResource) return next(new AppError(`Resource with id ${resourceId} was not found!`, 404));
-    const isRequest = await Request.findOne({ aspirantInstitute: req.user.id, isActive: true, resource: resourceId });
+    const isRequest = await Request.findOne({ aspirantInstitute: req.user.id, isActive: true, resource: resourceId, status : {"$in" : ['pending','payment','signed','approved']} });
     if (isRequest) return next(new AppError(`You already have a request ongoing for the same resource`, 406));
-
+    const token = sign({resourceId,accessType},'mysecret',{expiresIn : accessType==='duration'?moment(endDate).diff(moment(startDate),'minutes'):'3d'});
     let newRequest = new Request({
         _id: generateUniqueId({
             length: 10,
@@ -57,7 +60,9 @@ exports.createRequest = catchAsync(async (req, res, next) => {
         lendingInstitute: foundResource.instituteId._id,
         startDate,
         endDate,
-        note
+        accessToken : token,
+        note,
+        accessType
     })
     newRequest = await newRequest.save();
 
@@ -66,10 +71,38 @@ exports.createRequest = catchAsync(async (req, res, next) => {
         message: `Request for resource ${resourceId} has been created successfully!`,
         request: newRequest
     })
+});
+
+exports.verifyRequestToken = catchAsync(async(req,res,next)=>{
+    const {token} = req.body;
+    console.log(token);
+    const request = await Request.findOne({accessToken : token, isExpired : false});
+    console.log(request,'DIDNT FIND')
+    if (!request) return next(new AppError('Invalid Access Token',404));
+    console.log('DIDNT MAKE IT')
+    try {
+        let decoded = verify(token,'mysecret');
+        const resource = await Resource.findById(decoded.resourceId);
+        if (decoded.accessType==='one-time') {
+            request.isExpired = true;
+            request.status = 'completed';
+            await request.save();
+        }
+        return res.json({
+            resourceURL : resource.resourceURL,
+            resourceType : resource.resourceType
+        });
+    }catch(err) {
+        console.log(err);
+        return next(new AppError('Invalid Access Token',404));
+    }
 })
 
 exports.requestExists = catchAsync(async (req, res, next) => {
-    const foundReq = await Request.findOne({ resource: req.params.id, aspirantInstitute: req.user.id, isActive: true });
+    const foundReq = await Request.findOne({ resource: req.params.id, aspirantInstitute: req.user.id, isActive: true , status : {"$in" : ['pending','payment','signed','approved']}}).populate('resource');
+    if (!foundReq || foundReq.resource.category==='virtual') return res.json({
+        status : false,message :'Request doesnt exist'
+    })
     if (foundReq) {
         return res.json({
             status: true, message: 'Request exists', request: foundReq
@@ -154,6 +187,7 @@ exports.getAllRequest = catchAsync(async (req, res, next) => {
     res.json({ requests, totalPages, page, limit })
 
 })
+
 
 exports.updateRequest = catchAsync(async (req, res, next) => {
     const request = await Request.findOne({ _id: req.params.id }).populate('aspirantInstitute').populate('lendingInstitute').populate('resource')

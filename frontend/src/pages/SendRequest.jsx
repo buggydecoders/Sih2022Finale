@@ -44,12 +44,14 @@ const SendRequest = () => {
       );
     };
     const resourceSuccessCallback = (data) => {
+      if (data.category==='virtual') return setPageLoad(false);
       setIsVacant(
         moment().isBetween(moment(data.durationFrom), moment(data.durationTo))
       );
       setPageLoad(false);
     };
     const resourceErrorCallback=(err)=>{
+      console.log(err);
       navigate('/not-found', {replace : false})
     }
     dispatch(fetchSingleResource(resourceId, resourceSuccessCallback,resourceErrorCallback));

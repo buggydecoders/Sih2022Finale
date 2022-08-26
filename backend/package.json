@@ -40,6 +40,7 @@
     "nodemailer": "^6.7.7",
     "slugify": "^1.6.5",
     "socket.io": "^4.5.1",
+    "string-comparison": "^1.1.0",
     "util": "^0.12.4",
     "xss-clean": "^0.1.1"
   }

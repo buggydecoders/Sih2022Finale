@@ -26,6 +26,7 @@ import Auth from "./pages/Admin/Auth";
 import AdminPanel from "./pages/Admin";
 import Messages from "./pages/Admin/Messages";
 import CollegeProfile from "./pages/CollegeProfile";
+import ViewResource from "./components/ViewResource/ViewResource";
 
 
 
@@ -70,6 +71,16 @@ export default function App() {
           
         >
           <Route exact path='/status' element={<StatusV2 />} />
+        </Route>
+        <Route
+          exact
+          path="/viewer/:token"
+          element={
+            <ProtectedRoute access="private"  scope={"institute"} />
+          }
+          
+        >
+          <Route exact path='/viewer/:token' element={<ViewResource />} />
         </Route>
         <Route
           exact

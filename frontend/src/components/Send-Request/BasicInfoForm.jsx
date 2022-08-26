@@ -10,21 +10,22 @@ const BasicInfoForm = ({resource,success,setSuccess}) => {
     const [form,setForm] = useState({
         startDate : '',
         endDate : '',
-        note : ''
+        note : '',
+        accessType : 'one-time'
     });
     const handleChange = (e)=>setForm(prev=>({...prev,[e.target.name]  :e.target.value}));
     const {loading} = useSelector(state=>state.requests);
     const dispatch = useDispatch();
     const handleSubmit = (e)=>{
         e.preventDefault();
-        
+        if (resource.category!=='virtual') {
         if (moment(form.startDate).isBefore(moment())) return toast('Start date cannot be a past date');
         const isStartDateHigher = moment(form.endDate).diff(form.startDate)<=0;
         if (isStartDateHigher) return toast('End date must be after start date!');
         
         const isDurationCorrect = moment(form.startDate).isBetween(moment(resource.durationFrom),moment(resource.durationTo)) && moment(form.endDate).isBetween(moment(resource.durationFrom),moment(resource.durationTo));
         if (!isDurationCorrect) return toast('You have asked for a different duration than availablity, Please contact the insitute for that.');
-
+        }
 
         let dataToSend = {resourceId : resource._id, ...form}
         const successCallback = (data)=>{
@@ -34,11 +35,15 @@ const BasicInfoForm = ({resource,success,setSuccess}) => {
     }
   return (
     <form onSubmit={handleSubmit} className='px-8'>
+        {resource.category==='virtual'&&<select onChange={handleChange} name='accessType' placeholder={'Select Access Type'} className='w-full py-3 mb-5 px-2 border-[1px] border-gray-300 rounded-lg outline-none focus:shadow-sm'>
+            <option value="one-time">One Time</option>
+            <option value="duration">Duration based</option>
+        </select>}
         <div className='font-semibold text-2xl'>Duration</div>
-        <div className='grid grid-cols-2 gap-5 mt-5'>
+        {(form.accessType==='duration' || resource.category!=='virtual')&&<div className='grid grid-cols-2 gap-5 mt-5'>
             <InputField required={true} name="startDate" value={form.startDate} onChange={handleChange} type="date" label='From' placeholder='Enter Start Date'/>
             <InputField required={true} name="endDate" value={form.endDate} onChange={handleChange} type="date" label='To' placeholder='Enter End Date'/>
-        </div>
+        </div>}
         <div className=' mt-5'>
             <InputField   disabled={true} value={user.email} type="email" label='Email' placeholder='Enter Email'/>
         </div>

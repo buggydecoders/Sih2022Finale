@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { fetchContracts } from "../../store/contracts/actions";
+import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
+import moment from 'moment'
 import { editRequest } from "../../store/requests/actions";
 import InputField from "../InputField";
 
@@ -43,6 +45,7 @@ const ContractCard = ({ selected, setSelected, data }) => {
 
 const AddContract = ({ data }) => {
   const [selected, setSelected] = useState(null);
+  const [loading,setLoading] = useState(false);
   const dispatch = useDispatch();
   const { loading: contractLoading, contracts } = useSelector(state => state.contracts)
   const navigate = useNavigate();
@@ -50,15 +53,38 @@ const AddContract = ({ data }) => {
     dispatch(fetchContracts(1, 10));
   }, [])
 
-  console.log(data._id)
+  console.log(data._id);
 
   const handleSend = () => {
     if (!selected) return toast('Please select a contract before continuing!');
-    const successCallback = () => toast('Request has been updated to await-signature')
-    dispatch(editRequest(data?._id, { contract: selected, status: 'await-sign' }, successCallback));
+    setLoading(true);
+    const successCallback = () => {
+      setLoading(false);
+      toast('Request has been updated to await-signature');
+    }
+    dispatch(editRequest(data?._id, { contract: selected, status: 'await-sign' }, successCallback,()=>setLoading(false)));
   }
 
   return (
+    <>
+    <div className="mt-8">
+      <div className="text-base font-[600]">Resource Details</div>
+      <div className="justify-between flex items-center">
+        <div className="flex items-center gap-3 mt-4">
+          <img
+            src={RESOURCE_FALLBACK_IMG}
+            className="w-[80px] h-[80px] rounded-md"
+          />
+          <div className="font-open">
+            <div className="font-[600]">{data?.resource?.name}</div>
+            <div className="text-sm text-gray-500">on : {moment(data?.createdAt).format('DD MMMM YYYY')}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="underline text-primary cursor-pointer" onClick={()=>navigate(`/resource/${data?.resource?._id}`)}>More about Resource</div>
+        </div>
+      </div>
+    </div>
     <div className="mt-6 w-full">
       <div className="text-base font-semibold">Add Contract</div>
       <div className="text-xs text-secondary underline font-[500]" onClick={() => navigate('/contracts')}>Add New</div>
@@ -69,9 +95,10 @@ const AddContract = ({ data }) => {
       </div>
       <div className="mt-5 flex justify-end items-center gap-5">
         <button className="py-2 px-5 border-b-[1px] text-red-600 border-red-600 font-[500]">Cancel Request</button>
-        <button disba className=" bg-secondary text-white px-5 py-2 rounded-md" onClick={handleSend}>Send Contract</button>
+        <button disabled={loading} className=" bg-secondary disabled:opacity-40 text-white px-5 py-2 rounded-md" onClick={handleSend}>{loading?'Loading...':'Send Contract'}</button>
       </div>
     </div>
+    </>
   );
 };
 

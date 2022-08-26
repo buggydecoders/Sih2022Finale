@@ -102,10 +102,14 @@ const RequestCard = ({ data, tab }) => {
           </div>
         </th>
 
-        <td className="py-4 px-6 font-open">
+        {data.accessType!=='one-time'&&<td className="py-4 px-6 font-open">
           {moment(data?.resource?.durationFrom).format("DD-MM-YYYY")} |{" "}
           {moment(data?.resource?.durationTo).format("DD-MM-YYYY")}
-        </td>
+        </td>}
+
+        {data.accessType==='one-time'&&<td className="py-4 px-6 font-open">
+          One-Time
+        </td>}
         <td className="py-4 px-6">
           <div className={`font-open text-${getColor(data?.status)}-500 font-[700] underline rounded-xl px-3 py-1`}>
             {capitalize(data?.status)}

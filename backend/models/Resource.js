@@ -5,7 +5,7 @@ const ResourceSchema = new mongoose.Schema({
         name: String,
         url: {
             type: String,
-            default:"https://res.cloudinary.com/unesco-admin/image/upload/v1660719679/325-3256246_fa-fa-product-icon-transparent-cartoons-fa-fa_qlti2r.jpg"
+            default: "https://res.cloudinary.com/unesco-admin/image/upload/v1660719679/325-3256246_fa-fa-product-icon-transparent-cartoons-fa-fa_qlti2r.jpg"
         },
         size: String
     }],
@@ -15,11 +15,20 @@ const ResourceSchema = new mongoose.Schema({
     price: {
         type: String
     },
+    feedback: {
+        type: String
+    },
     durationFrom: {
         type: String
     },
     durationTo: {
         type: String
+    },
+    resourceURL : {
+        type : String
+    },
+    resourceType : {
+        type : String
     },
     per:{
         type:String

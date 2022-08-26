@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../assets/DAVV_LOGO.png";
-
+import moment from 'moment'
 import { MdPendingActions, MdOutlineCancel } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { RESOURCE_FALLBACK_IMG } from "../../utils/fallbackImages";
@@ -27,6 +27,24 @@ const Pending = ({ data }) => {
           </div>
         </div>
       </div>
+      <div className="mt-8">
+      <div className="text-base font-[600]">Resource Details</div>
+      <div className="justify-between flex items-center">
+        <div className="flex items-center gap-3 mt-4">
+          <img
+            src={data?.resource?.images[0].url}
+            className="w-[80px] h-[80px] rounded-md"
+          />
+          <div className="font-open">
+            <div className="font-[600]">{data?.resource?.name}</div>
+            <div className="text-sm text-gray-500">on : {moment(data?.createdAt).format('DD MMMM YYYY')}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="underline text-primary cursor-pointer" onClick={()=>navigate(`/resource/${data?.resource?._id}`)}>More about Resource</div>
+        </div>
+      </div>
+    </div>
       <div className="mt-8 font-semibold">
         Meanwhile, Learn more about the{" "}
         <span className="text-primary ml-2 font-semibold">{data?.aspirantInstitute?.instituteName}</span>
@@ -144,7 +162,7 @@ const Confirmed = ({ data }) => {
           <button onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)} className="w-fit py-2 text-xs px-2 border-[1px] border-primary rounded-md bg-primary text-white">
             Send Message
           </button>
-          <button className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
+          <button  onClick={()=>navigate(`/institute/${data?.aspirantInstitute?.username}`)} className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
             Profile
           </button>
         </div>
@@ -184,6 +202,7 @@ const Approved = ({ data }) => {
 
   return (
     <>
+    
       <div className="border-[1px] bg-green-500 bg-opacity-10 border-green-200 rounded-md flex gap-5  px-5 py-3 items-center">
         <div className="w-[60px] flex items-center justify-center h-[60px] rounded-full bg-green-400">
           <BsPatchCheck size={30} className="text-white" />
@@ -212,7 +231,7 @@ const Approved = ({ data }) => {
           <button onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)} className="w-fit py-2 text-xs px-2 border-[1px] border-primary rounded-md bg-primary text-white">
             Send Message
           </button>
-          <button className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
+          <button  onClick={()=>navigate(`/institute/${data?.aspirantInstitute?.username}`)} className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
             Profile
           </button>
         </div>
@@ -250,6 +269,24 @@ const Completed = ({ data }) => {
         </div>
       </div>
     </div>
+    <div className="mt-8">
+      <div className="text-base font-[600]">Resource Details</div>
+      <div className="justify-between flex items-center">
+        <div className="flex items-center gap-3 mt-4">
+          <img
+            src={RESOURCE_FALLBACK_IMG}
+            className="w-[80px] h-[80px] rounded-md"
+          />
+          <div className="font-open">
+            <div className="font-[600]">{data?.resource?.name}</div>
+            <div className="text-sm text-gray-500">on : {moment(data?.createdAt).format('DD MMMM YYYY')}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="underline text-primary cursor-pointer" onClick={()=>navigate(`/resource/${data?.resource?._id}`)}>More about Resource</div>
+        </div>
+      </div>
+    </div>
     <div className="flex  flex-row justify-between items-center mt-7">
       <div className="flex gap-5 items-center">
         <img src={data?.aspirantInstitute?.logo} className="w-[90px] rounded-full h-[90px]" />
@@ -266,7 +303,7 @@ const Completed = ({ data }) => {
         <button onClick={() => navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)} className="w-fit py-2 text-xs px-2 border-[1px] border-primary rounded-md bg-primary text-white">
           Send Message
         </button>
-        <button className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
+        <button  onClick={()=>navigate(`/institute/${data?.aspirantInstitute?.username}`)} className="w-fit py-2 text-xs px-2  border-[1px] border-primary rounded-md text-primary">
           Profile
         </button>
       </div>

@@ -11,15 +11,17 @@ router
 
 router
   .route("/dashboard")
-  .get(checkAuth, resourceController.recommendedResources);
+  .get(checkAuth, resourceController.fetchDashboardResources);
 
 router
   .route("/search")
-  .post(checkAuth, resourceController.searchResource);
+  .get(checkAuth, resourceController.SearchData);
 
 router
-  .route("/feedback")
+  .route("/feedback/:id")
   .post(checkAuth, resourceController.getFeedback);
+
+
 
 router
   .route("/:id")

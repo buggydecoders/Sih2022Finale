@@ -6,7 +6,7 @@ const ResourceCard = ({data}) => {
   return (
     <div className='w-full bg-white px-3 py-4 rounded-xl'>
         <div className='w-full flex gap-2 p-2 rounded-xl border-[1px] border-gray-300'>
-            <img src={RESOURCE_FALLBACK_IMG} className='w-[100px] h-fit rounded-xl'/>
+            <img src={data?.images?.length>0?data?.images[0]?.url:RESOURCE_FALLBACK_IMG} className='w-[100px] h-fit rounded-xl'/>
             <div className=''>
                 <div className='font-bold text-base mt-1'>{data?.name}</div>
                 <div className='text-xs text-primary  font-[600]'>{data?.instituteId?.instituteName}</div>

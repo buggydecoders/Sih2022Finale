@@ -52,8 +52,8 @@ const BannerAndProfile = () => {
       <div className='flex justify-between items-center'>
         <div className='flex gap-5 items-center relative -top-[40px] px-3'>
           <img src={user?.logo} className='w-[170px] h-[170px] object-cover border-[5px] border-white rounded-full' />
-          <div className=''>
-            <div className='font-[700] text-xl'>{user?.instituteName}</div>
+          <div className='mt-5'>
+            <div className='font-[700] text-xl max-w-[620px] break-words'>{user?.instituteName}</div>
             <div className='text-sm text-gray-400'>{user?.address?.city} , {user?.address?.state}</div>
             <div className='text-xs mt-2 text-gray-400'> Joined on : 12 March 2022</div>
           </div>

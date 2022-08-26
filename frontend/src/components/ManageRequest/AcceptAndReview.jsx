@@ -51,7 +51,7 @@ const AcceptAndReview = ({data}) => {
           <button className="px-3 py-1 font-open text-sm text-primary border-primary border-[2px] rounded-xl" onClick={()=>navigate(`/inbox?chat=${data?.aspirantInstitute?._id}`)}>
             Send Message
           </button>
-          <button className="px-3 py-1 font-open text-sm text-white bg-primary border-[2px] rounded-xl">
+          <button onClick={()=>navigate(`/institute/${data?.aspirantInstitute?.username}`)} className="px-3 py-1 font-open text-sm text-white bg-primary border-[2px] rounded-xl">
             View Profile
           </button>
         </div>
