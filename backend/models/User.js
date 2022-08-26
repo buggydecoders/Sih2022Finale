@@ -86,6 +86,10 @@ const UserSchema = new mongoose.Schema({
     reputationPoint: {
         type: String
     },
+    isBan: {
+        type: Boolean,
+        default: false
+    },
     role: {
         type: String,
         enum: ['institute', 'admin'],
@@ -103,6 +107,6 @@ const UserSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const User =  mongoose.model("User", UserSchema);
+const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
