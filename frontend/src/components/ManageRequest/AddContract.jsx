@@ -43,6 +43,7 @@ const ContractCard = ({ selected, setSelected, data }) => {
 
 const AddContract = ({ data }) => {
   const [selected, setSelected] = useState(null);
+  const [loading,setLoading] = useState(false);
   const dispatch = useDispatch();
   const { loading: contractLoading, contracts } = useSelector(state => state.contracts)
   const navigate = useNavigate();
@@ -50,12 +51,16 @@ const AddContract = ({ data }) => {
     dispatch(fetchContracts(1, 10));
   }, [])
 
-  console.log(data._id)
+  console.log(data._id);
 
   const handleSend = () => {
     if (!selected) return toast('Please select a contract before continuing!');
-    const successCallback = () => toast('Request has been updated to await-signature')
-    dispatch(editRequest(data?._id, { contract: selected, status: 'await-sign' }, successCallback));
+    setLoading(true);
+    const successCallback = () => {
+      setLoading(false);
+      toast('Request has been updated to await-signature');
+    }
+    dispatch(editRequest(data?._id, { contract: selected, status: 'await-sign' }, successCallback,()=>setLoading(false)));
   }
 
   return (
@@ -69,7 +74,7 @@ const AddContract = ({ data }) => {
       </div>
       <div className="mt-5 flex justify-end items-center gap-5">
         <button className="py-2 px-5 border-b-[1px] text-red-600 border-red-600 font-[500]">Cancel Request</button>
-        <button disabled={contractLoading} className=" bg-secondary text-white px-5 py-2 rounded-md" onClick={handleSend}>{contractLoading?'Loading...':'Send Contract'}</button>
+        <button disabled={loading} className=" bg-secondary disabled:opacity-40 text-white px-5 py-2 rounded-md" onClick={handleSend}>{loading?'Loading...':'Send Contract'}</button>
       </div>
     </div>
   );
