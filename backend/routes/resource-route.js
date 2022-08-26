@@ -15,11 +15,13 @@ router
 
 router
   .route("/search")
-  .post(checkAuth, resourceController.searchResource);
+  .get(checkAuth, resourceController.SearchData);
 
 router
   .route("/feedback/:id")
   .post(checkAuth, resourceController.getFeedback);
+
+
 
 router
   .route("/:id")

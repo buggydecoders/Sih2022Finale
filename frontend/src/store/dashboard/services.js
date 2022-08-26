@@ -7,6 +7,6 @@ export const fetchDashboardResourcesAPI = async(page,limit,university,location,b
 }
 
 export const searchDashboardAPI = async(query,page,limit)=>{
-    const resources = await serverInstance.post(`/resource/search?page=${page || 1}&limit=${limit || 10}`, {name : query});
+    const resources = await serverInstance.get(`/resource/search?key=${query}&page=${page || 1}&limit=${limit || 10}`, {name : query});
     return resources;
 }

@@ -6,7 +6,7 @@ const updateReputationPoint = require('../utils/reputation');
 const axios = require('axios')
 const FormData = require('form-data');
 const User = require('../models/User');
-
+const {cosine} = require('string-comparison');
 exports.addResource = catchAsync(async (req, res, next) => {
     const { name,resourceURL,resourceType, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
 
@@ -125,6 +125,29 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
     })
 })
 
+
+exports.SearchData = catchAsync(async(req,res,next)=>{
+    let resources = await Resource.find({}).populate('instituteId');
+    let {key,page,limit} = req.query;
+    console.log(key,page,limit)
+    let tags = resources.map(r=>JSON.stringify(r));
+    let sortedList = cosine.sortMatch(key,tags);
+    sortedList = sortedList.reverse();
+    let maxRating = 0;
+    for (let i = 0; i < sortedList.length; ++i) {
+        if (sortedList[i].rating > maxRating) maxRating = sortedList[i].rating;
+      }
+      let accuracy = maxRating - 0.2;
+      let finalOptions = sortedList.filter((r) => r.rating >= accuracy);
+      finalOptions = finalOptions.map(m=>(JSON.parse(m.member)));
+
+  
+    return res.json({
+        resources : finalOptions,totalPages : 10,page,limit
+    })
+
+})
+
 exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category,page,limit } = req.query;
     
@@ -132,11 +155,11 @@ exports.fetchDashboardResources= catchAsync(async(req,res,next)=>{
         let totalDocs = await Resource.countDocuments();
         let resources =  await Resource.find({}).skip((parseInt(page)-1)*(parseInt(limit || 10))).limit(parseInt(limit || 10)).populate('instituteId');
 
-        return res.json({totalPages : (totalDocs/parseInt(limit || 10)), resources,page,limit})
+        return res.json({totalPages : Math.ceil(totalDocs/parseInt(limit || 10)), resources,page,limit})
     }
     const universityFilters = universityQuery?universityQuery.split('-'):[];
     const location = stateQuery?stateQuery.split('-'):[];
-    let queryObj = [];
+    let queryObj = [{instituteId : {"$ne" : req.user.id}}];
     const institutes = await User.find({});
     let institutesInStates = institutes.filter(r=>location.includes(r.address.state)).map(d=>d.id);
 
@@ -234,9 +257,9 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     let resources = []
     for (let i = 0; i < data.length; i++) {
         queryObject['_id'] = data[i].$oid
-        console.log(queryObject)
+        // console.log(queryObject)
         const resource = await Resource.findOne(queryObject)
-        console.log(resource.instituteId.toString() != req.user.id)
+        // console.log(resource.instituteId.toString() != req.user.id)
         if (resource.instituteId.toString() != req.user.id) {
             const temp = await Resource.findOne({ _id: resource.id }).populate('instituteId')
             resources.push(temp)

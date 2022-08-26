@@ -84,16 +84,18 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
 
     if (form.images.length === 0) return toast("Add atleast one image");
 
+    console.log({...form,resourceURL});
+
     const sucessCallback = () => {
       handleClose();
       setForm(INITIAL_FORM_STATE);
     };
     if (isEdit)
       return dispatch(
-        editResource({ ...form, state: "available" }, sucessCallback())
+        editResource({...form,resourceURL, state: "available" }, sucessCallback())
       );
 
-    dispatch(AddResource({ ...form, state: "available" }, sucessCallback()));
+    dispatch(AddResource({...form,resourceURL, state: "available" }, sucessCallback()));
   };
 
   const handleResourceUploadChange = (e)=>{
@@ -103,13 +105,15 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
       setResourceUpload(null);
     }
   }
+  const [resourceURL,setResourceURL] = useState('');
 
   const handleResourceUploadAdd = async()=>{
     if (resourceUpload) {
     setResourceUploadLoading(true);
     try{
     const url = await getFileLink(resourceUpload);
-    setForm(prev=>({...prev,resourceURL : url}));
+    console.log(url,'URLLL')
+    setResourceURL(url);
     }catch(err) {
       console.log(err);
       toast('Something went wrong!');
@@ -121,7 +125,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
   }
 
   const handleMediaChange = (e) => {
-    setForm(prev=>({...prev,resourceURL : ''}))
+
     if (e.target.files.length > 0) {
       setUploadedFiles(e.target.files);
     } else {
@@ -218,7 +222,7 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
               {resourceUpload ? resourceUpload?.name : "Upload Resource"}
               <input onChange={handleResourceUploadChange} type="file" className="absolute top-50% left-[50%] -translate-x-[50%] opacity-0 -translate-y-[50%]"/>
             </div>
-            <div onClick={handleResourceUploadAdd} className={`${form.resourceURL?'bg-primary text-white':''} border-b-[2px] text-center rounded-md boder-primary py-1 border-[2px]`}>
+            <div onClick={handleResourceUploadAdd} className={`${resourceURL?'bg-primary text-white':''} border-b-[2px] text-center rounded-md boder-primary py-1 border-[2px]`}>
               {resourceUploadLoading?'Loading...':form.resourceURL?'Added':'Add'}
             </div>
           </div>}
@@ -248,6 +252,10 @@ const AddResourceDrawer = ({ isOpen, setIsOpen, data, isEdit }) => {
             <option value="mp4">mp4</option>
             <option value="xslx">xslx</option>
             <option value="mp3">mp3</option>
+            <option value="gif">gif</option>
+            <option value="jpeg">jpeg</option>
+            <option value="bmp">bmp</option>
+            <option value="jpg">jpg</option>
             <option value="other">other</option>
 
               </select>

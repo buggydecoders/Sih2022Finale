@@ -45,7 +45,7 @@ exports.createRequest = catchAsync(async (req, res, next) => {
     const { resourceId, startDate, endDate, note,accessType } = req.body;
     const foundResource = await Resource.findById(resourceId).populate('instituteId');
     if (!foundResource) return next(new AppError(`Resource with id ${resourceId} was not found!`, 404));
-    const isRequest = await Request.findOne({ aspirantInstitute: req.user.id, isActive: true, resource: resourceId });
+    const isRequest = await Request.findOne({ aspirantInstitute: req.user.id, isActive: true, resource: resourceId, status : {"$in" : ['pending','payment','signed','approved']} });
     if (isRequest) return next(new AppError(`You already have a request ongoing for the same resource`, 406));
     const token = sign({resourceId,accessType},'mysecret',{expiresIn : accessType==='duration'?moment(endDate).diff(moment(startDate),'minutes'):'3d'});
     let newRequest = new Request({
@@ -73,13 +73,17 @@ exports.createRequest = catchAsync(async (req, res, next) => {
 
 exports.verifyRequestToken = catchAsync(async(req,res,next)=>{
     const {token} = req.body;
+    console.log(token);
     const request = await Request.findOne({accessToken : token, isExpired : false});
+    console.log(request,'DIDNT FIND')
     if (!request) return next(new AppError('Invalid Access Token',404));
+    console.log('DIDNT MAKE IT')
     try {
         let decoded = verify(token,'mysecret');
         const resource = await Resource.findById(decoded.resourceId);
         if (decoded.accessType==='one-time') {
             request.isExpired = true;
+            request.status = 'completed';
             await request.save();
         }
         return res.json({
@@ -87,12 +91,16 @@ exports.verifyRequestToken = catchAsync(async(req,res,next)=>{
             resourceType : resource.resourceType
         });
     }catch(err) {
+        console.log(err);
         return next(new AppError('Invalid Access Token',404));
     }
 })
 
 exports.requestExists = catchAsync(async (req, res, next) => {
-    const foundReq = await Request.findOne({ resource: req.params.id, aspirantInstitute: req.user.id, isActive: true });
+    const foundReq = await Request.findOne({ resource: req.params.id, aspirantInstitute: req.user.id, isActive: true , status : {"$in" : ['pending','payment','signed','approved']}}).populate('resource');
+    if (!foundReq || foundReq.resource.category==='virtual') return res.json({
+        status : false,message :'Request doesnt exist'
+    })
     if (foundReq) {
         return res.json({
             status: true, message: 'Request exists', request: foundReq
