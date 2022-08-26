@@ -8,13 +8,16 @@ const FormData = require('form-data');
 const User = require('../models/User');
 
 exports.addResource = catchAsync(async (req, res, next) => {
-    const { name, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
+    const { name,resourceURL,resourceType, price, durationFrom, durationTo, category, brief, description, per, condition, instruction, images } = req.body
+
     const newRes = new Resource({
         images,
         name,
         price,
         durationFrom,
         durationTo,
+        resourceURL,
+        resourceType,
         category,
         per,
         brief,
@@ -25,7 +28,9 @@ exports.addResource = catchAsync(async (req, res, next) => {
     })
     const resource = await newRes.save()
     res.json({ success: true, message: "Resource Added Successfully", resource })
-})
+});
+
+
 
 exports.getMyResource = catchAsync(async (req, res, next) => {
     let queryObject = { instituteId: req.user.id }
