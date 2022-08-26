@@ -27,6 +27,10 @@ router
     .route('/get-institutes')
     .get(checkAuth, authController.getAllInstitutes)
 
+router  
+    .route('/ban-user/:id')
+    .patch(checkAuth,authController.banUser)
+    
 router
     .route("/remove-user/:id")
     .delete(checkAuth, authController.removeUser)
