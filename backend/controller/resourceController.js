@@ -123,26 +123,46 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
 
-    // let queryObject = { isVerified: true }
-
-
-
-
-
-
-    // let totalDocuments = resources.length
-    // let totalPages = Math.ceil(totalDocuments / limit);
-    // resources = resources.slice(startIndex, endIndex)
-    // res.json({ success: true, resources, totalPages, page, limit })
-
     let queryObject = {}
+    let resources = await Resource.find(queryObject)
+    if (universityQuery && !stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if (universityQuery.includes(p.instituteId.id)) {
+                return p
+            }
+        })
+    }
+    if (!universityQuery && stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if (stateQuery.includes(p.instituteId.address.state)) {
+                return p
+            }
+        })
+    }
+    if (universityQuery && stateQuery && !budgetQuery) {
+        resources = resources.filter(p => {
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id))) {
+                return p
+            }
+        })
+    }
+    if (!universityQuery && !stateQuery && budgetQuery) {
+        resources = resources.filter(p => {
+            if (p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1])) {
+                return p
+            }
+        })
+    }
+    if (universityQuery && stateQuery && budgetQuery) {
+        console.log(universityQuery, stateQuery, budgetQuery)
+        resources = resources.filter(p => {
+            if ((stateQuery.includes(p.instituteId.address.state)) && (universityQuery.includes(p.instituteId.id)) && ((p.price > parseInt(budgetQuery[0]) && p.price < parseInt(budgetQuery[1])))) {
+                return p
+            }
+        })
+    }
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
-    // const resources = await Resources
-
-
-
-
 
     let startIndex = (page - 1) * limit;
     let endIndex = startIndex + limit;
