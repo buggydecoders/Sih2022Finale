@@ -122,12 +122,7 @@ exports.deleteSavedItem = catchAsync(async (req, res, next) => {
 
 exports.recommendedResources = catchAsync(async (req, res, next) => {
     let { university: universityQuery, location: stateQuery, budget: budgetQuery, category: categoryQuery } = req.query;
-
     let queryObject = { isVerified: true }
-
- 
-
-
     if (categoryQuery) queryObject['category'] = categoryQuery
     if (universityQuery) universityQuery = universityQuery.split('-')
     if (stateQuery) stateQuery = stateQuery.split('-')
@@ -210,7 +205,7 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 10;
     let startIndex = (page - 1) * limit;
     let endIndex = startIndex + limit;
-    
+
     let bodyFormData = new FormData()
     bodyFormData.append('id', req.user.id)
     bodyFormData.append('title', req.body.name)
@@ -238,5 +233,15 @@ exports.searchResource = catchAsync(async (req, res, next) => {
     let totalPages = Math.ceil(totalDocuments / limit);
     resources = resources.slice(startIndex, endIndex)
     res.json({ success: true, resources, totalPages, page, limit })
+})
 
+exports.getFeedback = catchAsync(async (req, res, next) => {
+    const { feedback } = req.body;
+    if (!req.body.insId) {
+        return next(
+            new AppError('Please provide Institute Id to Continue', 403)
+        )
+    }
+    const updatedData = updateReputationPoint(req.body.insId, feedback)
+    res.json({ success: true, updatedData })
 })

@@ -13,10 +13,13 @@ router
   .route("/dashboard")
   .get(checkAuth, resourceController.recommendedResources);
 
-router.route("/search")
+router
+  .route("/search")
   .post(checkAuth, resourceController.searchResource);
 
-// router.route("/feedback").post(checkAuth, resourceController.getFeedback);
+router
+  .route("/feedback")
+  .post(checkAuth, resourceController.getFeedback);
 
 router
   .route("/:id")

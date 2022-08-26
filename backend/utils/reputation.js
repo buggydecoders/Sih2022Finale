@@ -29,7 +29,7 @@ const updateReputationPoint = async (id, feedback) => {
         bodyFormData.append('feedback', feedback)
         let sa = await axios({
             method: "post",
-            url: "http://127.0.0.1:5001/sentiments",
+            url: "https://flask-sih.herokuapp.com/sentiments",
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
         })
