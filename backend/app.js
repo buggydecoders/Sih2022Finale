@@ -20,6 +20,7 @@ const chatRoomRouter = require('./routes/chatRoom-route');
 const requirementroute = require('./routes/requirement-route')
 const contractRoute = require('./routes/contract-route')
 const adminRoute = require('./routes/admin-route')
+const facultyRoute = require('./routes/faculty-route')
 // view engine setup
 
 // var whitelist = ['http://example1.com', 'http://example2.com']
@@ -101,6 +102,7 @@ app.use('/api/chat-room', chatRoomRouter);
 app.use('/api/requirement', requirementroute);
 app.use('/api/contract', contractRoute);
 app.use('/api/admin', adminRoute)
+app.use('/api/faculty', facultyRoute)
 
 
 

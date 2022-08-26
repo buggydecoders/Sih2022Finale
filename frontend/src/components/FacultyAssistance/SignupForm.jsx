@@ -51,7 +51,7 @@ function FacultySignup() {
       const formImgData = new FormData();
       formImgData.append('adhaarUrl', url);
 
-      const result = await serverInstance.post('https://67ce-115-247-148-6.in.ngrok.io/aadhar/',formImgData);
+      const result = await axios.post('http://localhost:5001/aadhar/',formImgData);
       let adhaarNumberFetched = result.data.adhaarNumber.includes(',')?result.data.adhaarNumber.split(',')[0]:result.data.adhaarNumber;
       let dobFetched = result.data.date.includes(',')?result.data.date.split(',')[0]:result.data.date;
       let name = result.data.name;

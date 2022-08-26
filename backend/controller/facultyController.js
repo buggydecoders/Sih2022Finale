@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
-
+const FormData = require('form-data')
+const axios = require('axios')
 exports.signupFaculty = catchAsync(async (req, res, next) => {
     const { name, dob, resume, aadharNumber, interest, email, password, address } = req.body
     const checkMail = await User.find({ email })
@@ -55,4 +56,18 @@ exports.addRequirement = catchAsync(async (req, res, next) => {
 
 exports.getRequirements = catchAsync(async (req, res, next) => {
 
+})
+
+exports.checkAadhar = catchAsync(async (req, res, next) => {
+    const { aadharUrl } = req.body;
+    let bodyFormData = new FormData()
+    bodyFormData.append('aadharUrl', aadharUrl)
+    let { data } = await axios({
+        method: "post",
+        url: "http://localhost:5001/aadhar",
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data" },
+    })
+    console.log(data)
+    res.end()
 })
