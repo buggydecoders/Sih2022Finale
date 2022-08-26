@@ -88,12 +88,43 @@ const UserSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['institute', 'admin'],
+        enum: ['institute', 'faculty', 'admin'],
         default: 'institute'
     },
     resetToken: {
         type: String,
         default: ""
+    },
+    faculty: {
+        name: {
+            type: String
+        },
+        dob: {
+            type: Number
+        },
+        resume: {
+            type: String
+        },
+        aadharNumber: {
+            type: String
+        },
+        interest: {
+            type: String
+        },
+        address: {
+            street: {
+                type: String
+            },
+            city: {
+                type: String
+            },
+            state: {
+                type: String
+            },
+            pincode: {
+                type: String
+            }
+        },
     },
     savedItems: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -103,6 +134,6 @@ const UserSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const User =  mongoose.model("User", UserSchema);
+const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
